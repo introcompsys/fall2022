@@ -1,7 +1,7 @@
 # Book settings
 title: Introduction to Computer Systems
 author: Professor Sarah M Brown
-logo: log.png
+logo: logo.png
 
 html:
   favicon                   : ""  # A path to a favicon image
@@ -15,7 +15,7 @@ html:
 
 
 repository:
-  url                       : https://github.com/introcompsys/ # The URL to your book's repository
+  url                       : https://github.com/introcompsys/fall2022 # The URL to your book's repository
   path_to_book              : ""  # A path to your book's folder, relative to the repository root.
   branch                    : main  # Which branch of the repository should be used when creating links
 
@@ -56,8 +56,6 @@ parse:
       [commit history](https://github.com/introcompsys/fall2022/commits)
     repo_issue: |
       [issue](https://github.com/introcompsys/fall2022/issues)
-    bscalendar: |
-      [Course Calendar on BrightSpace](FIXME)
     bssite: |
-      [Brightspace site](https://brightspace.uri.edu/d2l/home/174751)
-    ghinstructors: FIXMEinstructors
+      [Brightspace site](https://brightspace.uri.edu/d2l/home/202430)
+    ghinstructors: fa22instructors

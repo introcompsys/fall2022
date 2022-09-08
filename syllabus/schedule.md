@@ -10,13 +10,14 @@ The following is a rough outline of topics in an order, these things will be fil
 
 ### How does this class work?
 
-_one week_
+*one week*
 
- We'll spend the first two classes introducing some basics of GitHub and setting expectations for how the course will work. This will include how you are expected to learn in this class which requires a bit about how knowledge production in computer science works and a bit of the history.  
+We'll spend the first two classes introducing some basics of GitHub and setting expectations for how the course will work. This will include how you are expected to learn in this class which requires a bit about how knowledge production in computer science works and a bit of the history.  
 
 ### How do all of these topics relate?
 
-_approximatley two weeks_
+*approximatley two weeks*
+
 ````{margin}
 ```{tip}
 We will integrate history throughout the whole course.  Connecting ideas to
@@ -25,6 +26,7 @@ one another, and especially in a sort of narrative form can help improve retenti
 We'll also come back to different topics multiple times with a slightly different framing each time.  This will both connect ideas, give you chance to practice recalling (more recall practice improves long term retention of things you learn), and give you a chance to learn things in different ways.
 ```
 ````
+
 We'll spend a few classes doing an overview where we go through each topic in a little more depth than an introduction, but not as deep as the rest of the semester. In this section, we will focus on how the different things we will see later all relate to one another more than a deep understanding of each one.  At the end of this unit, we'll work on your grading contracts.
 
 We'll also learn more key points in history of computing to help tie concepts together in a narrative.
