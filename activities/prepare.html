@@ -90,6 +90,11 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">Introduction to Computer Systems</h1>
@@ -130,6 +135,11 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus/schedule.html">
+   Schedule
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../syllabus/policies.html">
    Grading Policies
   </a>
@@ -147,6 +157,18 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../syllabus/communication.html">
    Office Hours &amp; Comms
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Notes
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../notes/2022-09-07.html">
+   1. Welcome and Introduction
   </a>
  </li>
 </ul>
@@ -289,7 +311,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/introcompsys//main?urlpath=tree/activities/prepare.md"
+        <a href="https://mybinder.org/v2/gh/introcompsys/fall2022/main?urlpath=tree/activities/prepare.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -332,7 +354,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://github.com/introcompsys/"
+        <a href="https://github.com/introcompsys/fall2022"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -349,7 +371,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/introcompsys//issues/new?title=Issue%20on%20page%20%2Factivities/prepare.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/introcompsys/fall2022/issues/new?title=Issue%20on%20page%20%2Factivities/prepare.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -366,7 +388,7 @@ title="Open an issue"
       </li>
       
       <li>
-        <a href="https://github.com/github.com/introcompsys/edit/main/activities/prepare.md"
+        <a href="https://github.com/introcompsys/fall2022/edit/main/activities/prepare.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -488,18 +510,6 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">os</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Markdown</span><span class="p">,</span> <span class="n">display</span>
-<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">prep_file_list</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="s1">&#39;../_prepare/&#39;</span><span class="p">))</span>
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;../_prepare/&#39;
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
@@ -512,16 +522,13 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="k">for</span> <span class="n">prep_file</span> <span class="ow">in</span> <span class="n">prep_file_list</span><span class="p">:</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span>     <span class="n">date_str</span> <span class="o">=</span> <span class="n">prep_file</span><span class="p">[:</span><span class="o">-</span><span class="mi">3</span><span class="p">]</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="n">date_link</span> <span class="o">=</span> <span class="s1">&#39;[&#39;</span> <span class="o">+</span> <span class="n">date_str</span> <span class="o">+</span> <span class="s1">&#39;](../notes/&#39;</span> <span class="o">+</span> <span class="n">date_str</span> <span class="o">+</span> <span class="s1">&#39;)&#39;</span>
-
-<span class="ne">NameError</span>: name &#39;prep_file_list&#39; is not defined
-</pre></div>
-</div>
+<p><a class="reference internal" href="../notes/2022-09-07.html"><span class="doc std std-doc">2022-09-07</span></a></p>
+<ul class="simple">
+<li><p>Read the syllabus, explore <a class="reference external" href="https://introcompsys.github.io/fall2022/">website</a></p></li>
+<li><p>Bring questions about the course</p></li>
+<li><p>Think about one thing you've learned really well (computing or not) and how do you know that you know it?  (bring your example)</p></li>
+<li><p>Post an introduction to your classmates <a class="reference external" href="https://github.com/introcompsys/fa22community/discussions/1">on our discussion forum</a></p></li>
+</ul>
 </div>
 </div>
 </section>
