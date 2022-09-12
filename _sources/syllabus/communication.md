@@ -32,15 +32,15 @@ help_df = pd.read_csv('../_data/help_hours.csv')
 
 TBA
 
-<!--
+
 ```{code-cell}
 :tags: ["remove-input"]
 
 help_df.style.hide_index()
-``` -->
-Online office hours locations are linked in the #help channel on slack
-<!--
+``` 
 
+<!--
+Online office hours locations are linked in the #help channel on slack
 We have several different ways to communicate in this course. This section summarizes them -->
 
 <!--
