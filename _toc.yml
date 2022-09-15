@@ -17,6 +17,7 @@ parts:
     chapters:
       - file: notes/2022-09-07
       - file: notes/2022-09-12
+      - file: notes/2022-09-14
   - caption: Activities
     chapters:
     - file: activities/kwl
