@@ -1,0 +1,1301 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>4. Why Do I Need to Use a terminal? &#8212; Introduction to Computer Systems</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="KWL Chart" href="../activities/kwl.html" />
+    <link rel="prev" title="3. How can I use GitHub offline?" href="2022-09-14.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Introduction to Computer Systems</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    About this Site
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Syllabus
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus/about.html">
+   Basic Facts
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus/tools.html">
+   Tools and Resources
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus/grading.html">
+   Grading
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus/schedule.html">
+   Schedule
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus/policies.html">
+   Grading Policies
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus/uri_resources.html">
+   Support
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus/uri_statements.html">
+   General URI Policies
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus/communication.html">
+   Office Hours &amp; Comms
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Notes
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="2022-09-07.html">
+   1. Welcome and Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2022-09-12.html">
+   2. Course Logistics and Learning
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2022-09-14.html">
+   3. How can I use GitHub offline?
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   4. Why Do I Need to Use a terminal?
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Activities
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../activities/kwl.html">
+   KWL Chart
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../activities/prepare.html">
+   Prepare for the next class
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../activities/practice.html">
+   More Practice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../activities/explore.html">
+   Deeper Explorations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../activities/projects.html">
+   Project Information
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  FAQ
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../faq/syllabus.html">
+   Syllabus and Grading FAQ
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../faq/github.html">
+   Git and GitHub
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Resources
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../resources/tips.html">
+   General Tips and Resources
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../resources/learning.html">
+   How to Study in this class
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../resources/gettinghelp.html">
+   Getting Help with Programming
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../resources/organization.html">
+   Getting Organized for class
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://introcompsys.github.io/spring2022/resources/testimonials.html">
+   Advice from Spring 2022 Students
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/introcompsys/fall2022"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/introcompsys/fall2022/issues/new?title=Issue%20on%20page%20%2Fnotes/2022-09-19.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/introcompsys/fall2022/edit/main/notes/2022-09-19.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/notes/2022-09-19.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#review">
+   4.1. Review
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#scenario">
+   4.2. Scenario
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#one-versus-two">
+     4.2.1. one versus two &gt;&gt;
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#making-directories">
+   4.3. Making Directories
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#moving-files">
+   4.4. Moving files
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#getting-help-in-bash">
+     4.4.1. Getting help in bash
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#prepare-for-next-class">
+   4.5. Prepare for Next Class
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#software-reflection">
+     4.5.1. Software Reflection
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   4.6. Prepare for Next Class
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#more-practice">
+   4.7. More Practice
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#questions-after-class">
+   4.8. Questions After Class
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#whats-the-difference-in-creating-a-file-using-touch-vs-echo">
+     4.8.1. What’s the difference in creating a file using touch vs echo?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#i-thought-you-could-restore-the-state-of-the-system-using-snapshots-say-if-you-remove-something-or-something-gets-corrupted">
+     4.8.2. I thought you could restore the state of the system using snapshots? Say if you remove something or something gets corrupted
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-are-other-things-i-can-do-with-the-terminal">
+     4.8.3. what are other things I can do with the terminal?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-are-examples-of-what-we-are-learning-used-in-a-professional-setting">
+     4.8.4. What are examples of what we are learning used in a professional setting?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#if-you-commit-something-offline-and-then-close-the-terminal-can-you-push-it-next-time-you-log-on-or-is-it-lost">
+     4.8.5. if you commit something offline and then close the terminal, can you push it next time you log on or is it lost?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-can-we-edit-files-on-the-terminal">
+     4.8.6. How can we edit files on the terminal?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#where-am-i-supposed-to-add-the-terminal-md-file">
+     4.8.7. Where am I supposed to add the “terminal.md” file?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#show-should-the-team-repo-be-laid-out-and-should-we-each-determine-our-responsibilities-for-them-what-should-be-expected-to-be-inside-the-team-repo">
+     4.8.8. Show should the team repo be laid out and should we each determine our responsibilities for them? What should be expected to be inside the team repo?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#when-will-grading-start">
+     4.8.9. When will grading start?
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Why Do I Need to Use a terminal?</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#review">
+   4.1. Review
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#scenario">
+   4.2. Scenario
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#one-versus-two">
+     4.2.1. one versus two &gt;&gt;
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#making-directories">
+   4.3. Making Directories
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#moving-files">
+   4.4. Moving files
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#getting-help-in-bash">
+     4.4.1. Getting help in bash
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#prepare-for-next-class">
+   4.5. Prepare for Next Class
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#software-reflection">
+     4.5.1. Software Reflection
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   4.6. Prepare for Next Class
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#more-practice">
+   4.7. More Practice
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#questions-after-class">
+   4.8. Questions After Class
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#whats-the-difference-in-creating-a-file-using-touch-vs-echo">
+     4.8.1. What’s the difference in creating a file using touch vs echo?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#i-thought-you-could-restore-the-state-of-the-system-using-snapshots-say-if-you-remove-something-or-something-gets-corrupted">
+     4.8.2. I thought you could restore the state of the system using snapshots? Say if you remove something or something gets corrupted
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-are-other-things-i-can-do-with-the-terminal">
+     4.8.3. what are other things I can do with the terminal?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-are-examples-of-what-we-are-learning-used-in-a-professional-setting">
+     4.8.4. What are examples of what we are learning used in a professional setting?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#if-you-commit-something-offline-and-then-close-the-terminal-can-you-push-it-next-time-you-log-on-or-is-it-lost">
+     4.8.5. if you commit something offline and then close the terminal, can you push it next time you log on or is it lost?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-can-we-edit-files-on-the-terminal">
+     4.8.6. How can we edit files on the terminal?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#where-am-i-supposed-to-add-the-terminal-md-file">
+     4.8.7. Where am I supposed to add the “terminal.md” file?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#show-should-the-team-repo-be-laid-out-and-should-we-each-determine-our-responsibilities-for-them-what-should-be-expected-to-be-inside-the-team-repo">
+     4.8.8. Show should the team repo be laid out and should we each determine our responsibilities for them? What should be expected to be inside the team repo?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#when-will-grading-start">
+     4.8.9. When will grading start?
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="why-do-i-need-to-use-a-terminal">
+<h1><span class="section-number">4. </span>Why Do I Need to Use a terminal?<a class="headerlink" href="#why-do-i-need-to-use-a-terminal" title="Permalink to this headline">#</a></h1>
+<p>We will go back to the same repository we worked with on Friday, for me that was</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> Documents/inclass/systems/github-in-class-brownsarahm/
+</pre></div>
+</div>
+<section id="review">
+<h2><span class="section-number">4.1. </span>Review<a class="headerlink" href="#review" title="Permalink to this headline">#</a></h2>
+<p>We use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> to check on the state of a git repo.</p>
+<p>If we get an error that says this is not a git repo, it means there is no <code class="docutils literal notranslate"><span class="pre">.git</span></code> directory in our current working directory or its parents.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls
+README.md	about.md
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls -a
+.		.git		README.md
+..		.github		about.md
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> .git
+<span class="o">(</span>base<span class="o">)</span> brownsarahm@.git $ ls
+COMMIT_EDITMSG	description	info		packed-refs
+HEAD		hooks		logs		refs
+config		index		objects
+<span class="o">(</span>base<span class="o">)</span> brownsarahm@.git $ <span class="nb">cd</span> ..
+</pre></div>
+</div>
+<p>Parents mean working to the left in the path and children are to the right.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">pwd</span>
+</pre></div>
+</div>
+<p>So <code class="docutils literal notranslate"><span class="pre">systems</span></code> is a child of <code class="docutils literal notranslate"><span class="pre">inclass</span></code> and the parent directory of <code class="docutils literal notranslate"><span class="pre">github-inclass-brownsarahm</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">brownsarahm</span><span class="o">/</span><span class="n">Documents</span><span class="o">/</span><span class="n">inclass</span><span class="o">/</span><span class="n">systems</span><span class="o">/</span><span class="n">github</span><span class="o">-</span><span class="n">inclass</span><span class="o">-</span><span class="n">brownsarahm</span>
+
+</pre></div>
+</div>
+</section>
+<section id="scenario">
+<h2><span class="section-number">4.2. </span>Scenario<a class="headerlink" href="#scenario" title="Permalink to this headline">#</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A common question is about how to organize projects.  While our main focus
+in this class session is the <code class="docutils literal notranslate"><span class="pre">bash</span></code> commands to do it, the <em>task</em> that we are
+going to do is to organize a hypothetical python project</p>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>touch abstract_base_class.py helper_functions.py important_classes.py alternative_classes.py README.md LICENSE.md CONTRIBUTING.md setup.py tests_abc.py test_help.py test_imp.py test_alt.py overview.md API.md _config.yml
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>touch _toc.yml philosophy.md example.md Untitled.ipynb Untitled01.ipynb Untitled02.ipynb
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls
+</pre></div>
+</div>
+<p>Now we have all of these files,  named in abstract ways to
+signal hypothetical contents and suggest how to organize them.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">API</span><span class="o">.</span><span class="n">md</span>			<span class="n">_toc</span><span class="o">.</span><span class="n">yml</span>		<span class="n">philosophy</span><span class="o">.</span><span class="n">md</span>
+<span class="n">CONTRIBUTING</span><span class="o">.</span><span class="n">md</span>		<span class="n">about</span><span class="o">.</span><span class="n">md</span>		<span class="n">setup</span><span class="o">.</span><span class="n">py</span>
+<span class="n">LICENSE</span><span class="o">.</span><span class="n">md</span>		<span class="n">abstract_base_class</span><span class="o">.</span><span class="n">py</span>	<span class="n">test_alt</span><span class="o">.</span><span class="n">py</span>
+<span class="n">README</span><span class="o">.</span><span class="n">md</span>		<span class="n">alternative_classes</span><span class="o">.</span><span class="n">py</span>	<span class="n">test_help</span><span class="o">.</span><span class="n">py</span>
+<span class="n">Untitled</span><span class="o">.</span><span class="n">ipynb</span>		<span class="n">example</span><span class="o">.</span><span class="n">md</span>		<span class="n">test_imp</span><span class="o">.</span><span class="n">py</span>
+<span class="n">Untitled01</span><span class="o">.</span><span class="n">ipynb</span>	<span class="n">helper_functions</span><span class="o">.</span><span class="n">py</span>	<span class="n">tests_abc</span><span class="o">.</span><span class="n">py</span>
+<span class="n">Untitled02</span><span class="o">.</span><span class="n">ipynb</span>	<span class="n">important_classes</span><span class="o">.</span><span class="n">py</span>
+<span class="n">_config</span><span class="o">.</span><span class="n">yml</span>		<span class="n">overview</span><span class="o">.</span><span class="n">md</span>
+
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat README.md
+<span class="c1"># github-inclass-brownsarahm</span>
+github-inclass-brownsarahm created by GitHub Classroom
+</pre></div>
+</div>
+<p>We can add contents to files with <code class="docutils literal notranslate"><span class="pre">echo</span></code> and <code class="docutils literal notranslate"><span class="pre">&gt;&gt;</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s2">&quot;Sarah Brown&quot;</span> &gt;&gt; README.md
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat README.md
+<span class="c1"># github-inclass-brownsarahm</span>
+github-inclass-brownsarahm created by GitHub Classroom
+Sarah Brown
+</pre></div>
+</div>
+<section id="one-versus-two">
+<h3><span class="section-number">4.2.1. </span>one versus two &gt;&gt;<a class="headerlink" href="#one-versus-two" title="Permalink to this headline">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat about.md
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s2">&quot;a sample project&quot;</span> &gt;&gt; about.md
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> <span class="nb">echo</span> <span class="s2">&quot;testing one &gt;&quot;</span> &gt; about.md
+</pre></div>
+</div>
+<p>One <em>writes</em> a file and two <em>appends</em></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat about.md
+testing one &gt;
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> <span class="nb">echo</span> <span class="s2">&quot;|file | contents |</span>
+<span class="s2">&gt; | ------| ------- |</span>
+<span class="s2">&gt; | abstract_base_class.py | core abstract classes for the project |</span>
+<span class="s2">&gt; | helper_functions.py | utitly funtions that are called by many classes |</span>
+<span class="s2">&gt; | important_classes.py | classes that inherit from the abc |</span>
+<span class="s2">&gt; | alternative_classes.py | classes that inherit from the abc |</span>
+<span class="s2">&gt; | LICENSE.md | the info on how the code can be reused|</span>
+<span class="s2">&gt; | CONTRIBUTING.md | instructions for how people can contribute to the project|</span>
+<span class="s2">&gt; | setup.py | file with function with instructions for pip |</span>
+<span class="s2">&gt; | tests_abc.py | tests for constructors and methods in abstract_base_class.py|</span>
+<span class="s2">&gt; | tests_helpers.py | tests for constructors and methods in helper_functions.py|</span>
+<span class="s2">&gt; | tests_imp.py | tests for constructors and methods in important_classes.py|</span>
+<span class="s2">&gt; | tests_alt.py | tests for constructors and methods in alternative_classes.py|</span>
+<span class="s2">&gt; | API.md | jupyterbook file to generate api documentation |</span>
+<span class="s2">&gt; | _config.yml | jupyterbook config for documentation |</span>
+<span class="s2">&gt; | _toc.yml | jupyter book toc file for documentation |</span>
+<span class="s2">&gt; | philosophy.md | overview of how the code is organized for docs |</span>
+<span class="s2">&gt; | example.md | myst notebook example of using the code |</span>
+<span class="s2">&gt; | scratch.ipynb | jupyter notebook from dev |&quot;</span> &gt;&gt; README.md
+</pre></div>
+</div>
+<p>this explains each file a little bit more than the name of it does.
+We see there are sort of 5 groups of files:</p>
+<ul class="simple">
+<li><p>about the project/repository</p></li>
+<li><p>code that defines a python module</p></li>
+<li><p>test code</p></li>
+<li><p>documentation</p></li>
+<li><p>extra files that “we know” we can delete.</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat README.md
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># github-inclass-brownsarahm</span>
+<span class="n">github</span><span class="o">-</span><span class="n">inclass</span><span class="o">-</span><span class="n">brownsarahm</span> <span class="n">created</span> <span class="n">by</span> <span class="n">GitHub</span> <span class="n">Classroom</span>
+<span class="n">Sarah</span> <span class="n">Brown</span>
+<span class="o">|</span><span class="n">file</span> <span class="o">|</span> <span class="n">contents</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">------|</span> <span class="o">-------</span> <span class="o">|</span>
+<span class="o">|</span> <span class="n">abstract_base_class</span><span class="o">.</span><span class="n">py</span> <span class="o">|</span> <span class="n">core</span> <span class="n">abstract</span> <span class="n">classes</span> <span class="k">for</span> <span class="n">the</span> <span class="n">project</span> <span class="o">|</span>
+<span class="o">|</span> <span class="n">helper_functions</span><span class="o">.</span><span class="n">py</span> <span class="o">|</span> <span class="n">utitly</span> <span class="n">funtions</span> <span class="n">that</span> <span class="n">are</span> <span class="n">called</span> <span class="n">by</span> <span class="n">many</span> <span class="n">classes</span> <span class="o">|</span>
+<span class="o">|</span> <span class="n">important_classes</span><span class="o">.</span><span class="n">py</span> <span class="o">|</span> <span class="n">classes</span> <span class="n">that</span> <span class="n">inherit</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">abc</span> <span class="o">|</span>
+<span class="o">|</span> <span class="n">alternative_classes</span><span class="o">.</span><span class="n">py</span> <span class="o">|</span> <span class="n">classes</span> <span class="n">that</span> <span class="n">inherit</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">abc</span> <span class="o">|</span>
+<span class="o">|</span> <span class="n">LICENSE</span><span class="o">.</span><span class="n">md</span> <span class="o">|</span> <span class="n">the</span> <span class="n">info</span> <span class="n">on</span> <span class="n">how</span> <span class="n">the</span> <span class="n">code</span> <span class="n">can</span> <span class="n">be</span> <span class="n">reused</span><span class="o">|</span>
+<span class="o">|</span> <span class="n">CONTRIBUTING</span><span class="o">.</span><span class="n">md</span> <span class="o">|</span> <span class="n">instructions</span> <span class="k">for</span> <span class="n">how</span> <span class="n">people</span> <span class="n">can</span> <span class="n">contribute</span> <span class="n">to</span> <span class="n">the</span> <span class="n">project</span><span class="o">|</span>
+<span class="o">|</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="o">|</span> <span class="n">file</span> <span class="k">with</span> <span class="n">function</span> <span class="k">with</span> <span class="n">instructions</span> <span class="k">for</span> <span class="n">pip</span> <span class="o">|</span>
+<span class="o">|</span> <span class="n">tests_abc</span><span class="o">.</span><span class="n">py</span> <span class="o">|</span> <span class="n">tests</span> <span class="k">for</span> <span class="n">constructors</span> <span class="ow">and</span> <span class="n">methods</span> <span class="ow">in</span> <span class="n">abstract_base_class</span><span class="o">.</span><span class="n">py</span><span class="o">|</span>
+<span class="o">|</span> <span class="n">tests_helpers</span><span class="o">.</span><span class="n">py</span> <span class="o">|</span> <span class="n">tests</span> <span class="k">for</span> <span class="n">constructors</span> <span class="ow">and</span> <span class="n">methods</span> <span class="ow">in</span> <span class="n">helper_functions</span><span class="o">.</span><span class="n">py</span><span class="o">|</span>
+<span class="o">|</span> <span class="n">tests_imp</span><span class="o">.</span><span class="n">py</span> <span class="o">|</span> <span class="n">tests</span> <span class="k">for</span> <span class="n">constructors</span> <span class="ow">and</span> <span class="n">methods</span> <span class="ow">in</span> <span class="n">important_classes</span><span class="o">.</span><span class="n">py</span><span class="o">|</span>
+<span class="o">|</span> <span class="n">tests_alt</span><span class="o">.</span><span class="n">py</span> <span class="o">|</span> <span class="n">tests</span> <span class="k">for</span> <span class="n">constructors</span> <span class="ow">and</span> <span class="n">methods</span> <span class="ow">in</span> <span class="n">alternative_classes</span><span class="o">.</span><span class="n">py</span><span class="o">|</span>
+<span class="o">|</span> <span class="n">API</span><span class="o">.</span><span class="n">md</span> <span class="o">|</span> <span class="n">jupyterbook</span> <span class="n">file</span> <span class="n">to</span> <span class="n">generate</span> <span class="n">api</span> <span class="n">documentation</span> <span class="o">|</span>
+<span class="o">|</span> <span class="n">_config</span><span class="o">.</span><span class="n">yml</span> <span class="o">|</span> <span class="n">jupyterbook</span> <span class="n">config</span> <span class="k">for</span> <span class="n">documentation</span> <span class="o">|</span>
+<span class="o">|</span> <span class="n">_toc</span><span class="o">.</span><span class="n">yml</span> <span class="o">|</span> <span class="n">jupyter</span> <span class="n">book</span> <span class="n">toc</span> <span class="n">file</span> <span class="k">for</span> <span class="n">documentation</span> <span class="o">|</span>
+<span class="o">|</span> <span class="n">philosophy</span><span class="o">.</span><span class="n">md</span> <span class="o">|</span> <span class="n">overview</span> <span class="n">of</span> <span class="n">how</span> <span class="n">the</span> <span class="n">code</span> <span class="ow">is</span> <span class="n">organized</span> <span class="k">for</span> <span class="n">docs</span> <span class="o">|</span>
+<span class="o">|</span> <span class="n">example</span><span class="o">.</span><span class="n">md</span> <span class="o">|</span> <span class="n">myst</span> <span class="n">notebook</span> <span class="n">example</span> <span class="n">of</span> <span class="n">using</span> <span class="n">the</span> <span class="n">code</span> <span class="o">|</span>
+<span class="o">|</span> <span class="n">scratch</span><span class="o">.</span><span class="n">ipynb</span> <span class="o">|</span> <span class="n">jupyter</span> <span class="n">notebook</span> <span class="kn">from</span> <span class="nn">dev</span> <span class="o">|</span>
+
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>using the open quote <code class="docutils literal notranslate"><span class="pre">&quot;</span></code> then you stay inside that until you close it. when you press enter the command does not run until after you close the quotes</p>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> <span class="nb">echo</span> <span class="s2">&quot; kasdlkfjsdljf</span>
+<span class="s2">&gt; kjsdfksdj</span>
+<span class="s2">&gt; sdfjdsl</span>
+<span class="s2">&gt; fsklsdjf</span>
+<span class="s2">&gt; &quot;</span>
+ kasdlkfjsdljf
+kjsdfksdj
+sdfjdsl
+fsklsdjf
+</pre></div>
+</div>
+<p>You can use the up arrow to repeat a command</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> <span class="nb">echo</span> <span class="s2">&quot; kasdlkfjsdljf</span>
+<span class="s2">kjsdfksdj</span>
+<span class="s2">sdfjdsl</span>
+<span class="s2">fsklsdjf</span>
+<span class="s2">&quot;</span> &gt;&gt; junk
+</pre></div>
+</div>
+<p>and we can see that it keeps the new line characters from the terminal in the file.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> cat junk
+ kasdlkfjsdljf
+kjsdfksdj
+sdfjdsl
+fsklsdjf
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rm junk
+</pre></div>
+</div>
+</section>
+</section>
+<section id="making-directories">
+<h2><span class="section-number">4.3. </span>Making Directories<a class="headerlink" href="#making-directories" title="Permalink to this headline">#</a></h2>
+<p>First we will make directories. We saw <code class="docutils literal notranslate"><span class="pre">mkdir</span></code> on Friday</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir docs
+</pre></div>
+</div>
+<p>This doesn’t return anything, but we can see the effect with <code class="docutils literal notranslate"><span class="pre">ls</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">API</span><span class="o">.</span><span class="n">md</span>			<span class="n">_toc</span><span class="o">.</span><span class="n">yml</span>		<span class="n">overview</span><span class="o">.</span><span class="n">md</span>
+<span class="n">CONTRIBUTING</span><span class="o">.</span><span class="n">md</span>		<span class="n">about</span><span class="o">.</span><span class="n">md</span>		<span class="n">philosophy</span><span class="o">.</span><span class="n">md</span>
+<span class="n">LICENSE</span><span class="o">.</span><span class="n">md</span>		<span class="n">abstract_base_class</span><span class="o">.</span><span class="n">py</span>	<span class="n">setup</span><span class="o">.</span><span class="n">py</span>
+<span class="n">README</span><span class="o">.</span><span class="n">md</span>		<span class="n">alternative_classes</span><span class="o">.</span><span class="n">py</span>	<span class="n">test_alt</span><span class="o">.</span><span class="n">py</span>
+<span class="n">Untitled</span><span class="o">.</span><span class="n">ipynb</span>		<span class="n">docs</span>			<span class="n">test_help</span><span class="o">.</span><span class="n">py</span>
+<span class="n">Untitled01</span><span class="o">.</span><span class="n">ipynb</span>	<span class="n">example</span><span class="o">.</span><span class="n">md</span>		<span class="n">test_imp</span><span class="o">.</span><span class="n">py</span>
+<span class="n">Untitled02</span><span class="o">.</span><span class="n">ipynb</span>	<span class="n">helper_functions</span><span class="o">.</span><span class="n">py</span>	<span class="n">tests_abc</span><span class="o">.</span><span class="n">py</span>
+<span class="n">_config</span><span class="o">.</span><span class="n">yml</span>		<span class="n">important_classes</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>We might not want to make them all one at a time. Like with <code class="docutils literal notranslate"><span class="pre">touch</span></code> we can
+pass multiple names to mkdir with spaces between to make multiple at once.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir tests mymodule
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls
+</pre></div>
+</div>
+<p>and again check what happened</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">API</span><span class="o">.</span><span class="n">md</span>			<span class="n">about</span><span class="o">.</span><span class="n">md</span>		<span class="n">philosophy</span><span class="o">.</span><span class="n">md</span>
+<span class="n">CONTRIBUTING</span><span class="o">.</span><span class="n">md</span>		<span class="n">abstract_base_class</span><span class="o">.</span><span class="n">py</span>	<span class="n">setup</span><span class="o">.</span><span class="n">py</span>
+<span class="n">LICENSE</span><span class="o">.</span><span class="n">md</span>		<span class="n">alternative_classes</span><span class="o">.</span><span class="n">py</span>	<span class="n">test_alt</span><span class="o">.</span><span class="n">py</span>
+<span class="n">README</span><span class="o">.</span><span class="n">md</span>		<span class="n">docs</span>			<span class="n">test_help</span><span class="o">.</span><span class="n">py</span>
+<span class="n">Untitled</span><span class="o">.</span><span class="n">ipynb</span>		<span class="n">example</span><span class="o">.</span><span class="n">md</span>		<span class="n">test_imp</span><span class="o">.</span><span class="n">py</span>
+<span class="n">Untitled01</span><span class="o">.</span><span class="n">ipynb</span>	<span class="n">helper_functions</span><span class="o">.</span><span class="n">py</span>	<span class="n">tests</span>
+<span class="n">Untitled02</span><span class="o">.</span><span class="n">ipynb</span>	<span class="n">important_classes</span><span class="o">.</span><span class="n">py</span>	<span class="n">tests_abc</span><span class="o">.</span><span class="n">py</span>
+<span class="n">_config</span><span class="o">.</span><span class="n">yml</span>		<span class="n">mymodule</span>
+<span class="n">_toc</span><span class="o">.</span><span class="n">yml</span>		<span class="n">overview</span><span class="o">.</span><span class="n">md</span>
+
+</pre></div>
+</div>
+</section>
+<section id="moving-files">
+<h2><span class="section-number">4.4. </span>Moving files<a class="headerlink" href="#moving-files" title="Permalink to this headline">#</a></h2>
+<p>we can move files with <code class="docutils literal notranslate"><span class="pre">mv</span></code>. We’ll first move the <a class="reference external" href="http://philosophy.md">philosophy.md</a> file into docs
+and check that it worked.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mv philosophy.md docs/
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mv example.md docs/
+</pre></div>
+</div>
+<section id="getting-help-in-bash">
+<h3><span class="section-number">4.4.1. </span>Getting help in bash<a class="headerlink" href="#getting-help-in-bash" title="Permalink to this headline">#</a></h3>
+<p>To learn more about the mv command, we can use the man(ual) file.</p>
+<p>For GitBash:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mv --help
+</pre></div>
+</div>
+<p>for *nix (including macos)</p>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>press <code class="docutils literal notranslate"><span class="pre">q</span></code> to exit the program that starts when you do this.</p>
+</div>
+</aside>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>man mv
+</pre></div>
+</div>
+<p>use enter/return or arrows to scroll and <code class="docutils literal notranslate"><span class="pre">q</span></code> to quit</p>
+<p>If we type something wrong, the error message also provides some help</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mv</span> <span class="n">ls</span>
+<span class="n">usage</span><span class="p">:</span> <span class="n">mv</span> <span class="p">[</span><span class="o">-</span><span class="n">f</span> <span class="o">|</span> <span class="o">-</span><span class="n">i</span> <span class="o">|</span> <span class="o">-</span><span class="n">n</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">v</span><span class="p">]</span> <span class="n">source</span> <span class="n">target</span>
+       <span class="n">mv</span> <span class="p">[</span><span class="o">-</span><span class="n">f</span> <span class="o">|</span> <span class="o">-</span><span class="n">i</span> <span class="o">|</span> <span class="o">-</span><span class="n">n</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">v</span><span class="p">]</span> <span class="n">source</span> <span class="o">...</span> <span class="n">directory</span>
+</pre></div>
+</div>
+<p>We can use man on any bash command to see the options so we do not need to
+remember them all, or go to the internet every time we need help.  We have high
+quality help for the details right in the shell, if we remember the basics.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> ls
+API.md			_toc.yml		overview.md
+CONTRIBUTING.md		about.md		setup.py
+LICENSE.md		abstract_base_class.py	test_alt.py
+README.md		alternative_classes.py	test_help.py
+Untitled.ipynb		docs			test_imp.py
+Untitled01.ipynb	helper_functions.py	tests
+Untitled02.ipynb	important_classes.py	tests_abc.py
+_config.yml		mymodule
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> cat README.md
+<span class="c1"># github-inclass-brownsarahm</span>
+github-inclass-brownsarahm created by GitHub Classroom
+Sarah Brown
+<span class="p">|</span>file <span class="p">|</span> contents <span class="p">|</span>
+<span class="p">|</span> ------<span class="p">|</span> ------- <span class="p">|</span>
+<span class="p">|</span> abstract_base_class.py <span class="p">|</span> core abstract classes <span class="k">for</span> the project <span class="p">|</span>
+<span class="p">|</span> helper_functions.py <span class="p">|</span> utitly funtions that are called by many classes <span class="p">|</span>
+<span class="p">|</span> important_classes.py <span class="p">|</span> classes that inherit from the abc <span class="p">|</span>
+<span class="p">|</span> alternative_classes.py <span class="p">|</span> classes that inherit from the abc <span class="p">|</span>
+<span class="p">|</span> LICENSE.md <span class="p">|</span> the info on how the code can be reused<span class="p">|</span>
+<span class="p">|</span> CONTRIBUTING.md <span class="p">|</span> instructions <span class="k">for</span> how people can contribute to the project<span class="p">|</span>
+<span class="p">|</span> setup.py <span class="p">|</span> file with <span class="k">function</span> with instructions <span class="k">for</span> pip <span class="p">|</span>
+<span class="p">|</span> tests_abc.py <span class="p">|</span> tests <span class="k">for</span> constructors and methods <span class="k">in</span> abstract_base_class.py<span class="p">|</span>
+<span class="p">|</span> tests_helpers.py <span class="p">|</span> tests <span class="k">for</span> constructors and methods <span class="k">in</span> helper_functions.py<span class="p">|</span>
+<span class="p">|</span> tests_imp.py <span class="p">|</span> tests <span class="k">for</span> constructors and methods <span class="k">in</span> important_classes.py<span class="p">|</span>
+<span class="p">|</span> tests_alt.py <span class="p">|</span> tests <span class="k">for</span> constructors and methods <span class="k">in</span> alternative_classes.py<span class="p">|</span>
+<span class="p">|</span> API.md <span class="p">|</span> jupyterbook file to generate api documentation <span class="p">|</span>
+<span class="p">|</span> _config.yml <span class="p">|</span> jupyterbook config <span class="k">for</span> documentation <span class="p">|</span>
+<span class="p">|</span> _toc.yml <span class="p">|</span> jupyter book toc file <span class="k">for</span> documentation <span class="p">|</span>
+<span class="p">|</span> philosophy.md <span class="p">|</span> overview of how the code is organized <span class="k">for</span> docs <span class="p">|</span>
+<span class="p">|</span> example.md <span class="p">|</span> myst notebook example of using the code <span class="p">|</span>
+<span class="p">|</span> scratch.ipynb <span class="p">|</span> jupyter notebook from dev <span class="p">|</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> mv *.yml docs/
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> ls
+API.md			about.md		overview.md
+CONTRIBUTING.md		abstract_base_class.py	setup.py
+LICENSE.md		alternative_classes.py	test_alt.py
+README.md		docs			test_help.py
+Untitled.ipynb		helper_functions.py	test_imp.py
+Untitled01.ipynb	important_classes.py	tests
+Untitled02.ipynb	mymodule		tests_abc.py
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> mv test* tests/
+mv: rename tests to tests/tests: Invalid argument
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> ls
+API.md			Untitled02.ipynb	important_classes.py
+CONTRIBUTING.md		about.md		mymodule
+LICENSE.md		abstract_base_class.py	overview.md
+README.md		alternative_classes.py	setup.py
+Untitled.ipynb		docs			tests
+Untitled01.ipynb	helper_functions.py
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> ls tests/
+test_alt.py	test_help.py	test_imp.py	tests_abc.py
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> ls
+API.md			Untitled02.ipynb	important_classes.py
+CONTRIBUTING.md		about.md		mymodule
+LICENSE.md		abstract_base_class.py	overview.md
+README.md		alternative_classes.py	setup.py
+Untitled.ipynb		docs			tests
+Untitled01.ipynb	helper_functions.py
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> mv *.py mymodule/
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> mv mymodule/setup.py .
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> ls
+API.md			Untitled01.ipynb	overview.md
+CONTRIBUTING.md		Untitled02.ipynb	setup.py
+LICENSE.md		about.md		tests
+README.md		docs
+Untitled.ipynb		mymodule
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> mv setup.py mymodule/
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> ls
+API.md			Untitled.ipynb		docs
+CONTRIBUTING.md		Untitled01.ipynb	mymodule
+LICENSE.md		Untitled02.ipynb	overview.md
+README.md		about.md		tests
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> <span class="nb">cd</span> mymodule/
+<span class="o">(</span>base<span class="o">)</span> brownsarahm@mymodule $ ls
+abstract_base_class.py	helper_functions.py	setup.py
+alternative_classes.py	important_classes.py
+<span class="o">(</span>base<span class="o">)</span> brownsarahm@mymodule $ mv setup.py ..
+<span class="o">(</span>base<span class="o">)</span> brownsarahm@mymodule $ <span class="nb">cd</span> ..
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> ls
+API.md			Untitled01.ipynb	overview.md
+CONTRIBUTING.md		Untitled02.ipynb	setup.py
+LICENSE.md		about.md		tests
+README.md		docs
+Untitled.ipynb		mymodule
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> mv setup.py mymodule/
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> ls
+API.md			Untitled01.ipynb	overview.md
+CONTRIBUTING.md		Untitled02.ipynb	setup.py
+LICENSE.md		about.md		tests
+README.md		docs
+Untitled.ipynb		mymodule
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> touch mymodule/__init__.py
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> ls mymodule/
+__init__.py		alternative_classes.py	important_classes.py
+abstract_base_class.py	helper_functions.py
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> cp README.md docs/overview.md
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> cp about.md docs/
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> ls docs/
+_config.yml	about.md	overview.md
+_toc.yml	example.md	philosophy.md
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> cat about.md
+testing one &gt;
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> cat docs/about.md
+testing one &gt;
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> rm Untitled
+rm: Untitled: No such file or directory
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> rm Untitled*
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> ls
+API.md		LICENSE.md	about.md	mymodule	setup.py
+CONTRIBUTING.md	README.md	docs		overview.md	tests
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> mv API.md docs/
+</pre></div>
+</div>
+</section>
+</section>
+<section id="prepare-for-next-class">
+<h2><span class="section-number">4.5. </span>Prepare for Next Class<a class="headerlink" href="#prepare-for-next-class" title="Permalink to this headline">#</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is what is required, before the next class and will be checked or if you
+don’t do it you will have trouble participating in class</p>
+</div>
+<ol class="simple">
+<li><p>Examine a large project you have done or by finding an open source project on GitHub.  Answer the reflection questions in <code class="docutils literal notranslate"><span class="pre">software.md</span></code> in your kwl repo. (will be in notes)</p></li>
+<li><p><a class="reference external" href="https://www.nand2tetris.org/software">install h/w simulator</a></p></li>
+<li><p>Add a glossary, cheatsheet entry, or historical context fact to the site.</p></li>
+<li><p>map out how you think about data moving through a small program and bring it with you to class (no need to submit)</p></li>
+</ol>
+<section id="software-reflection">
+<h3><span class="section-number">4.5.1. </span>Software Reflection<a class="headerlink" href="#software-reflection" title="Permalink to this headline">#</a></h3>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="k">1.</span> link to public repo if applicable or title of your project
+<span class="k">1.</span> What types of files are there that are not code?
+<span class="k">1.</span> What different types of code files are in the project? Do they serve different goals?
+<span class="k">1.</span> Is it all in one language or are there multiple?
+<span class="k">1.</span> Try to figure out (remember) how the project works. What types of things, without running the code can you look at at a high level?
+</pre></div>
+</div>
+</section>
+</section>
+<section id="id1">
+<h2><span class="section-number">4.6. </span>Prepare for Next Class<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Activities in this section are optional, but things that may help you prepare,
+or (in future classes) extend the idea.</p>
+</div>
+<ol class="simple">
+<li><p>Once your PRs in your kwl are merged, add a Table of Contents to the README with relative links to each file</p></li>
+<li><p>Add cheatsheet entry to your team repo to do something of interest. Make an issue for it first and assign yourself so that your team mates know you are working on that topic.</p></li>
+</ol>
+</section>
+<section id="more-practice">
+<h2><span class="section-number">4.7. </span>More Practice<a class="headerlink" href="#more-practice" title="Permalink to this headline">#</a></h2>
+<ol class="simple">
+<li><p>Once your PRs in your kwl are merged, add a Table of Contents to the README with relative links to each file</p></li>
+<li><p>Add cheatsheet entry to your team repo to do something of interest. Make an issue for it first and assign yourself so that your team mates know you are working on that topic.</p></li>
+</ol>
+</section>
+<section id="questions-after-class">
+<h2><span class="section-number">4.8. </span>Questions After Class<a class="headerlink" href="#questions-after-class" title="Permalink to this headline">#</a></h2>
+<section id="whats-the-difference-in-creating-a-file-using-touch-vs-echo">
+<h3><span class="section-number">4.8.1. </span>What’s the difference in creating a file using touch vs echo?<a class="headerlink" href="#whats-the-difference-in-creating-a-file-using-touch-vs-echo" title="Permalink to this headline">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">touch</span></code> creates an empty file <code class="docutils literal notranslate"><span class="pre">echo</span></code> writes content to a place.  We used with with <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> and <code class="docutils literal notranslate"><span class="pre">&gt;&gt;</span></code> to redirect that output to a file for today, but we will learn more about that later.</p>
+</section>
+<section id="i-thought-you-could-restore-the-state-of-the-system-using-snapshots-say-if-you-remove-something-or-something-gets-corrupted">
+<h3><span class="section-number">4.8.2. </span>I thought you could restore the state of the system using snapshots? Say if you remove something or something gets corrupted<a class="headerlink" href="#i-thought-you-could-restore-the-state-of-the-system-using-snapshots-say-if-you-remove-something-or-something-gets-corrupted" title="Permalink to this headline">#</a></h3>
+<p>You can restore if a snapshot was created, not all computers have that, and most recovery snapshots are not created very frequently (like once a day or week).</p>
+</section>
+<section id="what-are-other-things-i-can-do-with-the-terminal">
+<h3><span class="section-number">4.8.3. </span>what are other things I can do with the terminal?<a class="headerlink" href="#what-are-other-things-i-can-do-with-the-terminal" title="Permalink to this headline">#</a></h3>
+<p>There are lots of small programs and you can pipe them all together.  We will come back to the shell in the coming weeks.</p>
+</section>
+<section id="what-are-examples-of-what-we-are-learning-used-in-a-professional-setting">
+<h3><span class="section-number">4.8.4. </span>What are examples of what we are learning used in a professional setting?<a class="headerlink" href="#what-are-examples-of-what-we-are-learning-used-in-a-professional-setting" title="Permalink to this headline">#</a></h3>
+<p>Most companies use git to track their code and most dev jobs you will need to log into a server that only has a shell at some point.</p>
+</section>
+<section id="if-you-commit-something-offline-and-then-close-the-terminal-can-you-push-it-next-time-you-log-on-or-is-it-lost">
+<h3><span class="section-number">4.8.5. </span>if you commit something offline and then close the terminal, can you push it next time you log on or is it lost?<a class="headerlink" href="#if-you-commit-something-offline-and-then-close-the-terminal-can-you-push-it-next-time-you-log-on-or-is-it-lost" title="Permalink to this headline">#</a></h3>
+<p>Yes, the file is saved in your computer.  You do not actually even <em>need</em> to ever push it to a remote to be using git as version control.</p>
+</section>
+<section id="how-can-we-edit-files-on-the-terminal">
+<h3><span class="section-number">4.8.6. </span>How can we edit files on the terminal?<a class="headerlink" href="#how-can-we-edit-files-on-the-terminal" title="Permalink to this headline">#</a></h3>
+<p>To edit files in more detailed ways, you use a text editor, some are built for the command line. We will see one later.</p>
+</section>
+<section id="where-am-i-supposed-to-add-the-terminal-md-file">
+<h3><span class="section-number">4.8.7. </span>Where am I supposed to add the “<a class="reference external" href="http://terminal.md">terminal.md</a>” file?<a class="headerlink" href="#where-am-i-supposed-to-add-the-terminal-md-file" title="Permalink to this headline">#</a></h3>
+<p>To your KWL repo</p>
+</section>
+<section id="show-should-the-team-repo-be-laid-out-and-should-we-each-determine-our-responsibilities-for-them-what-should-be-expected-to-be-inside-the-team-repo">
+<h3><span class="section-number">4.8.8. </span>Show should the team repo be laid out and should we each determine our responsibilities for them? What should be expected to be inside the team repo?<a class="headerlink" href="#show-should-the-team-repo-be-laid-out-and-should-we-each-determine-our-responsibilities-for-them-what-should-be-expected-to-be-inside-the-team-repo" title="Permalink to this headline">#</a></h3>
+<p>The repo has some outline in it. Remember it is <em>not</em> a team project where you are graded together.  You will have various activities assigned there throughout the semester in order to practice collaborating.  Every student will need to do every role, so that you get to learn them all.</p>
+</section>
+<section id="when-will-grading-start">
+<h3><span class="section-number">4.8.9. </span>When will grading start?<a class="headerlink" href="#when-will-grading-start" title="Permalink to this headline">#</a></h3>
+<p>Next week, we’ll start your grading contracts on Wednesday.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notes"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="2022-09-14.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">3. </span>How can I use GitHub offline?</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../activities/kwl.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">KWL Chart</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Professor Sarah M Brown<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

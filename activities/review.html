@@ -179,6 +179,11 @@ const thebe_selector_output = ".output, .cell_output"
    3. How can I use GitHub offline?
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../notes/2022-09-19.html">
+   4. Why Do I Need to Use a terminal?
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -311,6 +316,35 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/introcompsys/fall2022/main?urlpath=tree/activities/review.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -394,6 +428,23 @@ title="Edit this page"
   </button>
   <div class="menu-dropdown__content">
     <ul>
+      <li>
+        <a href="../_sources/activities/review.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download notebook file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
       <li>
         <a href="../_sources/activities/review.md"
    class="headerbtn"
@@ -518,6 +569,57 @@ title="Print to PDF"
 <section id="review-after-class">
 <h2>Review After Class<a class="headerlink" href="#review-after-class" title="Permalink to this headline">#</a></h2>
 <p>After each class, you will need to review the day’s material. This includes reviewing prismia chat to see any questions you got wrong and reading the notes. Some days there will be specific additional activities and questions to answer.  These should be in your KWL repo.</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Markdown</span><span class="p">,</span> <span class="n">display</span>
+
+<span class="n">rev_file_list</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="s1">&#39;../_review/&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">rev_file</span> <span class="ow">in</span> <span class="n">rev_file_list</span><span class="p">:</span>
+    <span class="n">date_str</span> <span class="o">=</span> <span class="n">rev_file</span><span class="p">[:</span><span class="o">-</span><span class="mi">3</span><span class="p">]</span>
+    <span class="n">date_link</span> <span class="o">=</span> <span class="s1">&#39;[&#39;</span> <span class="o">+</span> <span class="n">date_str</span> <span class="o">+</span> <span class="s1">&#39;](../notes/&#39;</span> <span class="o">+</span> <span class="n">date_str</span> <span class="o">+</span> <span class="s1">&#39;)&#39;</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="n">date_link</span><span class="p">))</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="s1">&#39;../_review/&#39;</span> <span class="o">+</span> <span class="n">rev_file</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p><a class="reference internal" href="../notes/2022-09-07.html"><span class="doc std std-doc">2022-09-07</span></a></p>
+<ol class="simple">
+<li><p>More practice with <a class="reference external" href="https://classroom.github.com/a/0Focv0x-">GitHub terminology</a></p></li>
+<li><p>Review the notes after I post them</p></li>
+</ol>
+<p><a class="reference internal" href="../notes/2022-09-12.html"><span class="doc std std-doc">2022-09-12</span></a></p>
+<ol class="simple">
+<li><p>review notes after they are posted, both rendered and the raw markdown</p></li>
+<li><p>map out your computing knowledge and add it to your kwl chart repo. this can be an image that you upload or a text-based outline. (optional) try mapping out using <a class="reference external" href="https://mermaid-js.github.io/mermaid/#/">mermaid</a> syntax, we'll be using other tools that will faciltate rendering later</p></li>
+<li><p>fill in hte first two columns of your KWL chart</p></li>
+</ol>
+<p><a class="reference internal" href="../notes/2022-09-14.html"><span class="doc std std-doc">2022-09-14</span></a></p>
+<ol class="simple">
+<li><p>Follow along with the classmate issue in your inclass repo from today. Work with someone you know or find a collaborator in the <a class="reference external" href="https://github.com/introcompsys/fa22community/discussions/">Discussion board</a></p></li>
+<li><p>read the notes</p></li>
+<li><p>try using git in your IDE of choice, Share a tip in the <a class="reference external" href="https://github.com/introcompsys/fa22community/discussions/7">course discussion repo</a></p></li>
+</ol>
+<p><a class="reference internal" href="../notes/2022-09-19.html"><span class="doc std std-doc">2022-09-19</span></a></p>
+<ol class="simple">
+<li><p>Review the notes</p></li>
+<li><p>Reorganize a folder on your computer ( good candidate may be  desktop or downloads folder), using only a terminal to make new directories, move files, check what's inside them, etc. Answer reflection questions (will be in notes) in a new file, <code class="docutils literal notranslate"><span class="pre">terminal.md</span></code> in your kwl repo.</p></li>
+<li><p>Make a PR that adds a glossary entry to your team repo to define a term we have learned so far. Create an issue and tag yourself to &quot;claim&quot; a term and check the issues and PRs that are open before your.</p></li>
+<li><p>Review past classes activities (eg via the activities section on the left) and catchup if appropriate</p></li>
+</ol>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/home/runner/work/fall2022/fall2022/activities/review.md</span>, line 7)</p>
+<p>Non-consecutive header level increase; 0 to 3 [myst.header]</p>
+</div>
+</div>
+</div>
 </section>
 <section id="collaboration">
 <h2>Collaboration<a class="headerlink" href="#collaboration" title="Permalink to this headline">#</a></h2>
@@ -530,10 +632,10 @@ There will be assignments that are to be completed in that repo as well.  These 
 <p>If there are minor errors/typos, suggest corrections inline.</p>
 <p>In your summary comments answer the following:</p>
 <ul class="simple">
-<li><p>how does the contribution read? is it clear and concise?</p></li>
-<li><p>is it verifiable (either testable or cited source) and correct?</p></li>
-<li><p>is it clear? does it rely on specific references or could another CS student understand it?</p></li>
-<li><p>what could make it more clear or more helpful?</p></li>
+<li><p>Is the contribution clear and concise? Identify any aspect of the writing that tripped you up as a reader.</p></li>
+<li><p>Are the statements in the contribution verifiable (either testable or cited source)? If so, how do you know they are correct?</p></li>
+<li><p>Does the contribution offer complete information? That is, does it rely on specific outside knowledge or could another CS student not taking our class understand it?</p></li>
+<li><p>Identify one strength in the contribution, and identify one aspect that could be strengthened further.</p></li>
 </ul>
 <p>Choose an action:</p>
 <ul class="simple">
