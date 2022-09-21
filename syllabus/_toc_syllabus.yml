@@ -1,0 +1,14 @@
+format: jb-book
+root: index
+parts:
+  - caption: Syllabus
+    chapters:
+    - file: syllabus/about
+    - file: syllabus/tools
+    - file: syllabus/grading
+    - file: syllabus/contract
+    - file: syllabus/schedule
+    - file: syllabus/policies
+    - file: syllabus/uri_resources
+    - file: syllabus/uri_statements
+    - file: syllabus/communication

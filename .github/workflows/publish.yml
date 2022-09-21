@@ -31,6 +31,15 @@ jobs:
         mv _build/pdf/book.pdf _build/html/coursemanual.pdf
         jupyter-book build .
 
+    # Build the syllabus only
+    - name: Build the syllaubs
+      run: |
+        cd syllabus/
+        jupyter-book build .  --toc _toc_syllabus.yml --builder pdfhtml --all
+        mv _build/pdf/book.pdf ../_build/html/syllabus.pdf
+
+
+
     # Push the book's html to github-pages
     - name: GitHub Pages action
       uses: peaceiris/actions-gh-pages@v3.6.1
