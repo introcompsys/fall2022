@@ -7,6 +7,7 @@ parts:
     - file: syllabus/about
     - file: syllabus/tools
     - file: syllabus/grading
+    - file: syllabus/contract
     - file: syllabus/schedule
     - file: syllabus/policies
     - file: syllabus/uri_resources
@@ -22,6 +23,7 @@ parts:
   - caption: Activities
     chapters:
     - file: activities/kwl
+    - file: activities/review
     - file: activities/prepare
     - file: activities/practice
     - file: activities/explore
