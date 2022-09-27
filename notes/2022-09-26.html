@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>6. How do we study Computer Systems? &#8212; Introduction to Computer Systems</title>
+    <title>6. Admin &#8212; Introduction to Computer Systems</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -198,7 +198,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   6. How do we study Computer Systems?
+   6. Admin
   </a>
  </li>
 </ul>
@@ -481,55 +481,123 @@ title="Print to PDF"
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#admin">
-   6.1. Admin
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   6. Admin
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#systems">
-   6.2. Systems
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#studying-systems">
+   7. Studying Systems
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#behavior">
+     7.1. Behavior
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#components">
+     7.2. Components
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#abstraction">
+     7.3. Abstraction
+    </a>
+   </li>
+  </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#abstraction">
-   6.3. Abstraction
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#using-the-simulator">
-   6.4. Using the simulator
+   8. Using the simulator
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#how-does-the-computer-actually-add-constants">
-   6.5. How does the computer actually add constants?
+   9. How does the computer actually add constants?
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#hardware-overview">
-   6.6. Hardware Overview
+   10. Hardware Overview
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#review-todays-class">
-   6.7. Review today’s class
+   11. Review today’s class
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#prepare-for-next-class">
-   6.8. Prepare for Next Class
+   12. Prepare for Next Class
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#more-practice">
-   6.9. More Practice
+   13. More Practice
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#questions-after-class">
-   6.10. Questions After Class
+   14. Questions After Class
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#content">
+     14.1. Content
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#more-about-the-hardware-architecture-abstractions">
+       14.1.1. More about the hardware architecture abstractions
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#how-the-cpu-performs-addition-and-stores-the-result-in-a-memory-location-on-the-ram">
+       14.1.2. how the CPU performs addition and stores the result in a memory location on the RAM
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#explain-more-levels-of-abstraction-and-how-they-are-connected">
+       14.1.3. Explain more levels of abstraction and how they are connected
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#are-there-other-simulators-that-we-can-play-with">
+     14.2. Are there other simulators that we can play with?
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#logistics">
+     14.3. Logistics
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#when-requesting-a-review-for-a-pr-or-something-similar-would-the-only-thing-to-do-be-tagging-mention-the-instructional-team">
+       14.3.1. When requesting a review for a PR or something similar, would the only thing to do be tagging (@mention) the instructional team?
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#with-our-collaborative-repo-would-we-facilitate-the-merges-and-reviews-or-would-you-need-to-have-the-last-review-of-the-information">
+       14.3.2. With our collaborative repo, would we facilitate the merges and reviews or would you need to have the last review of the information?
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#should-we-assume-that-when-you-ask-to-write-a-document-we-should-create-a-markdown-file-with-a-similar-name-as-opposed-to-an-assignment-with-the-description-add-branches-md-to-your-kwl-repo">
+       14.3.3. Should we assume that when you ask to write a document, we should create a markdown file with a similar name (as opposed to an assignment with the description “add branches.md to your KWL repo”)
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#for-my-grading-contract-if-i-choose-to-go-for-an-a-and-stick-with-the-a-but-dont-meet-the-requirements-how-much-is-my-grade-affected">
+       14.3.4. for my grading contract if i choose to go for an A and stick with the A but don’t meet the requirements how much is my grade affected
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -540,7 +608,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>How do we study Computer Systems?</h1>
+                <h1>Admin</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -550,55 +618,123 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#admin">
-   6.1. Admin
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   6. Admin
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#systems">
-   6.2. Systems
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#studying-systems">
+   7. Studying Systems
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#behavior">
+     7.1. Behavior
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#components">
+     7.2. Components
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#abstraction">
+     7.3. Abstraction
+    </a>
+   </li>
+  </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#abstraction">
-   6.3. Abstraction
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#using-the-simulator">
-   6.4. Using the simulator
+   8. Using the simulator
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#how-does-the-computer-actually-add-constants">
-   6.5. How does the computer actually add constants?
+   9. How does the computer actually add constants?
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#hardware-overview">
-   6.6. Hardware Overview
+   10. Hardware Overview
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#review-todays-class">
-   6.7. Review today’s class
+   11. Review today’s class
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#prepare-for-next-class">
-   6.8. Prepare for Next Class
+   12. Prepare for Next Class
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#more-practice">
-   6.9. More Practice
+   13. More Practice
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#questions-after-class">
-   6.10. Questions After Class
+   14. Questions After Class
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#content">
+     14.1. Content
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#more-about-the-hardware-architecture-abstractions">
+       14.1.1. More about the hardware architecture abstractions
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#how-the-cpu-performs-addition-and-stores-the-result-in-a-memory-location-on-the-ram">
+       14.1.2. how the CPU performs addition and stores the result in a memory location on the RAM
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#explain-more-levels-of-abstraction-and-how-they-are-connected">
+       14.1.3. Explain more levels of abstraction and how they are connected
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#are-there-other-simulators-that-we-can-play-with">
+     14.2. Are there other simulators that we can play with?
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#logistics">
+     14.3. Logistics
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#when-requesting-a-review-for-a-pr-or-something-similar-would-the-only-thing-to-do-be-tagging-mention-the-instructional-team">
+       14.3.1. When requesting a review for a PR or something similar, would the only thing to do be tagging (@mention) the instructional team?
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#with-our-collaborative-repo-would-we-facilitate-the-merges-and-reviews-or-would-you-need-to-have-the-last-review-of-the-information">
+       14.3.2. With our collaborative repo, would we facilitate the merges and reviews or would you need to have the last review of the information?
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#should-we-assume-that-when-you-ask-to-write-a-document-we-should-create-a-markdown-file-with-a-similar-name-as-opposed-to-an-assignment-with-the-description-add-branches-md-to-your-kwl-repo">
+       14.3.3. Should we assume that when you ask to write a document, we should create a markdown file with a similar name (as opposed to an assignment with the description “add branches.md to your KWL repo”)
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#for-my-grading-contract-if-i-choose-to-go-for-an-a-and-stick-with-the-a-but-dont-meet-the-requirements-how-much-is-my-grade-affected">
+       14.3.4. for my grading contract if i choose to go for an A and stick with the A but don’t meet the requirements how much is my grade affected
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -610,28 +746,75 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="how-do-we-study-computer-systems">
-<h1><span class="section-number">6. </span>How do we study Computer Systems?<a class="headerlink" href="#how-do-we-study-computer-systems" title="Permalink to this headline">#</a></h1>
+  <p>furtherphysical# How do we study Computer Systems?</p>
 <section id="admin">
-<h2><span class="section-number">6.1. </span>Admin<a class="headerlink" href="#admin" title="Permalink to this headline">#</a></h2>
+<h1><span class="section-number">6. </span>Admin<a class="headerlink" href="#admin" title="Permalink to this headline">#</a></h1>
 <ul class="simple">
 <li><p>make sure you have a grading contract repo</p></li>
 <li><p>you’ll track your progress in your</p></li>
 </ul>
 </section>
-<section id="systems">
-<h2><span class="section-number">6.2. </span>Systems<a class="headerlink" href="#systems" title="Permalink to this headline">#</a></h2>
+<section id="studying-systems">
+<h1><span class="section-number">7. </span>Studying Systems<a class="headerlink" href="#studying-systems" title="Permalink to this headline">#</a></h1>
+<p>When we think of something as a system, we can study it different ways:</p>
+<ul class="simple">
+<li><p>input/output behavior</p></li>
+<li><p>components</p></li>
+<li><p>abstraction layers</p></li>
+</ul>
+<p>When we study a system we can do so in two main ways.  We can look at the input/output behavior of the system as a whole and we can look at the individual components. For each component, we can look at its behavior or the subcomponents.  We can take what we know from all fo the components and piece that together.  However, for a complex system, we cannot match individual components up to the high level behavior.  This is true in both computers and other complex systems. In the first computers in the 1940s, the only things they did was arithmetic and you could match from their components al the way up pretty easily.  Modern computers connect to the internet, send signals, load complex graphics, play sounds and many other things that are harder to decompose all at once. Outside of computers, scientists have a pretty good idea of how neurons work and that appears to be the same across mammals and other species (eg squid) but we do not understand how the whole brain of a mammal works, not even smaller mammals with less complex social lives than humans.  Understanding the parts is not always enough to understand all of the complex ways the parts can work together.  Computers are much less complicated than brains.  They were made by brains.</p>
+<p>But that fact motivates another way to study a complex  system, across levels of abstraction. You can abstract away details and focus on one representation. This can be tied literally to components, but it can also be conceptual.  For example, in CSC211 you use a model of stack and heap for memory.  It’s useful for understanding programming, but is not exactly what the hardware does.  At times, it is even more useful though than understanding exactly what the hardware does.  These abstractions also serve a social, practical purpose.  In computing, and society at large really, we use <em>standards</em> these are sets of guidelines for how to build things.  Like when you use a function, you need to know it’s API and what it is supposed to do in order to use it.  The developers could change how it does that without impacting your program, as long as the API is not changed and the high level input/output behavior stays the same.</p>
+<p>Let’s take those three pieces, behavior, components, and abstraction in turn.</p>
+<section id="behavior">
+<h2><span class="section-number">7.1. </span>Behavior<a class="headerlink" href="#behavior" title="Permalink to this headline">#</a></h2>
+<p>This is probably how you first learned to use a computer.  Maybe a parent showed you how to do a few things, but then you probably tried other things.  For most of you, this may have been when you were very young and much less afraid of breaking things. Over time you learned how to do things and what behaviors to expect.  You also learned categories of things.  Like once you learned one social media app and that others were also <em>social media</em> you then looked for similar features.  Maybe you learned one video game had the option to save and expected it in the next one.</p>
+<p>Video games and social media are <em>classes</em> or <em>categories</em> of software and each game and app are <em>instances</em>.  Similarly, an Integrated Development Environment (IDE) is a category of software and VS Code, … are instances.  Also, version control is a category of software and git is an instance. A git host is also a category and GitHub is an instance.  Just as before you were worried about details you transferred features from one instance to another within categories, I want you to think about what you know from one IDE and how that would help you learn another.  We will study the actual features of IDE a=and what you might want to know about them so that you can choose your own.  Becoming a more independent developer you’ll start to have your own opinions about which one is better.  Think about about a person in your life who finds computers and technology overall intimidating or frustrating.  They likely only use one social media app if at all, or maybe they only know to make documents in Microsoft word and they think that Google Docs is too much to learn, because they didn’t transfer ideas from one to the other.</p>
+<p>We have focused on the behavior of individual applications to this point, but there is also the overall behavior of the system in broad terms, typing on the keyboard we expect the characters to show (and when they don’t for example in a shell password, we’re surprised and concerned it is not working).</p>
+</section>
+<section id="components">
+<h2><span class="section-number">7.2. </span>Components<a class="headerlink" href="#components" title="Permalink to this headline">#</a></h2>
+<p>We have the high level parts: keyboard, mouse, monitor/screen, tower/computer. Inside we also tend to know there is a power supply, a motherboard, graphics card, memory, etc.</p>
+<p>We can study how each of these parts works while not worrying about the others but having them there.  This is probably how you learned to use a mouse. You focused your attention on the mouse and saw what else happened.</p>
+<p>Or we can take an individual component and isolate it to study it alone.  For a mouse this would be hard. Without a computer attached its output is not very visible.  To do this, we would need additional tools to interpret its output and examine it.  Most computer components actually would need additional tools, to measure the electrical signals, but we could examine what happens at each part one at a time to then build up what they do.</p>
+<p>This idea, however that we can use another tool to understand each component is an important one.  This  is also a way to again, take care and study each piece even within a software-alone system without worrying about the hardware.</p>
 </section>
 <section id="abstraction">
-<h2><span class="section-number">6.3. </span>Abstraction<a class="headerlink" href="#abstraction" title="Permalink to this headline">#</a></h2>
-<p>The advantage to assembly is that it is hardware independent and human readable. It is low level and limited to what the hardware <em>can</em> do, but it is a version of that that can be run on different hardware.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This is incomplete, will come back and fill in later</p>
+<h2><span class="section-number">7.3. </span>Abstraction<a class="headerlink" href="#abstraction" title="Permalink to this headline">#</a></h2>
+<p>As we talked about the behavior and abstraction, we talked some about software and some about hardware. These are the two coarsest ways we can think about a computer system at different levels of abstraction. We can think about it only in physical terms and examine the patterns of electricity flow or we can think about only the software and not worry about the hardware, at a higher level of abstraction.</p>
+<p>However, two levels is not really enough to understand how computer systems are designed.</p>
+<p><img alt="layers" src="https://www.secplicity.org/wp-content/uploads/2018/09/AvG0R-1.jpg" /></p>
+<p>This diagram is mostly what computer scientists and engineers use to describe a computer system.</p>
+<p>Application - the software you run.</p>
+<p>Algorithm - the way that it is implemented, in mathematical level</p>
+<p>Programming language - the way that it is implemented for a computer.</p>
+<p>Let’s take a simple example, let’s say we are talking about a simple search program that we wrote that finds xx.  We can say that you put in a part of a file name and it shows you all the ones with a similar name. That description is at the application level it gives the high level behavior, but not the step by step of how it does it.  Let’s say we implemented it using bubble search then searches by … That’s the algorithm level, this is still abstract and could be implemented in different ways, but we know the steps and we can use this to know some things about how fast it will be, what types of result swill make it slower, etc. At the programming level language then we know which language it was done in and we see more details. At this level, we can see the specific data structures and controls structures.  These implementation details can also impact performance in terms of space(memory) or time.  Still at this level, we do not need to know how the actual hardware works, but we see it in increasing detail.
+At each level we have different types of operations.  At the application we might have input, press enter, get results. At the algorithm we have check the value, compare.  At the programming language level we need more specifics too, like assign or append.</p>
+<p>After the Programming language level, there is assembly.
+The advantage to assembly is that it is hardware independent and human readable. It is low level and limited to what the hardware <em>can</em> do, but it is a version of that that can be run on different hardware.
+It is much lower level.  When you compile a program, it is translated to assembly.  At this level, programs written in different level become indistinguishable. This has much lower level operations. We can do various calculations, but not things like compare. Things that were one step before, like assign become two, choose a memory location, then write to memory.
+This level of abstraction is the level of detail we will think about most.  We’ll look at the others, but spend much less time below here.</p>
+<p>Machine code translates to binary from assembly.</p>
+<p>The instruction set architecture is, notice, where the line between software and hardware lives.  This is because these are specific to the actual hardware, this is the level where there are different instructions if you have an Intel chip vs an Apple chip. This level reduces down the instructions even more specifically to the specifics things that an individual piece of hardware does and how they dit.</p>
+<p>The microarchitecture is the specific circuits: networks of smaller individual components. Again, we can treat the components as blocks and focus on how they work together. At this level we still have calculations like add, multiply, compare, negate, and we can store values and read them. That is all we have at this point though. At this level there are all binary numbers.</p>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We actually only need NAND, we will see how later.</p>
 </div>
+</aside>
+<p>The actual gates (components that implement logical operations) and registers (components that hold values) break everything down to logical operations.  Instead of adding, we have a series of <code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">nand</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code>, and <code class="docutils literal notranslate"><span class="pre">xor</span></code> put together over individual bits.  Instead of numbers, we have <code class="docutils literal notranslate"><span class="pre">registers</span></code> that store individual zeros or ones. In a modern digital, electrical computer, at this level we have to actually watch the flow of electricity through the circuit and worry about things like the number of gates and whether or not the calculations finish at the same time or having other parts wait so that they are all working together.  We will see later that when we try to allow multiple cores to work independently, we have to handle these timing issues at the higher levels as well. However, a register and gate can be implemented in different ways at the device level.</p>
+<p>The device (or transistor in modern electrical digital computers) level, is where things transition between analog and digital.  The world we live in is actually all analog.  We just pay attention to lots of things at a time scale at which they appear to be be digital.  Over time devices have changed from mechanical switches to electronic transistors.  Material science innovations at the physics level have improved the transistors further over time, allowing them to be smaller and more heat efficient.  Because of abstraction, these changes could be plugged into new hardware without having to make any changes at any software levels. However, they do <em>enable</em> improvements at the higher levels.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For example, Bayesian statistics is a philosophy that treats probability as subjective uncertainty instead of as frequency.  This has some interpretative differences, but most importantly it means that we always need an extra factor (multiplied term) in our calculations.  This makes all of the math <strong>much</strong> more complex. For many decades Bayesian statistics was not practical for anything but the simplest models.  However, with improvements to computers, that opened new options at the algorithm level.  The first large scale application of this type of statistics was by Microsoft after their researchers built a Bayesian player model for player matching in Halo.</p>
+</div>
+<p>We are going to focus today on the Assembly level and use an <em>abstraction</em> of computers called the von Neumann model for today.</p>
+<p><img alt="wikipedia von neumann" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Von_Neumann_Architecture.svg/510px-Von_Neumann_Architecture.svg.png?20130427233915" /></p>
+</section>
 </section>
 <section id="using-the-simulator">
-<h2><span class="section-number">6.4. </span>Using the simulator<a class="headerlink" href="#using-the-simulator" title="Permalink to this headline">#</a></h2>
+<h1><span class="section-number">8. </span>Using the simulator<a class="headerlink" href="#using-the-simulator" title="Permalink to this headline">#</a></h1>
 <p>On MacOS:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> path/nand2tetris/tools
 bash CPUEmulator.sh
@@ -649,8 +832,8 @@ Double click on the CPUEmulator.bat file</p>
 <p>For much more detail about how this all works <a class="reference external" href="https://www.nand2tetris.org/_files/ugd/44046b_d70026d8c1424487a451eaba3e372132.pdf">chapter 4</a> of the related text book has description of the machine code and assembly language.</p>
 </section>
 <section id="how-does-the-computer-actually-add-constants">
-<h2><span class="section-number">6.5. </span>How does the computer actually add constants?<a class="headerlink" href="#how-does-the-computer-actually-add-constants" title="Permalink to this headline">#</a></h2>
-<p>We’ll use add.hack first.</p>
+<h1><span class="section-number">9. </span>How does the computer actually add constants?<a class="headerlink" href="#how-does-the-computer-actually-add-constants" title="Permalink to this headline">#</a></h1>
+<p>We’ll use <code class="docutils literal notranslate"><span class="pre">add.hack</span></code> first.</p>
 <p>This program adds constants, 2+3.</p>
 <p>It is a program, assembly code that we are loading to the simulator’s ROM, which is memory that gets read only by the CPU.</p>
 <p>Run the simulator and watch what each line of the program does.</p>
@@ -684,14 +867,14 @@ Double click on the CPUEmulator.bat file</p>
 </div>
 </section>
 <section id="hardware-overview">
-<h2><span class="section-number">6.6. </span>Hardware Overview<a class="headerlink" href="#hardware-overview" title="Permalink to this headline">#</a></h2>
+<h1><span class="section-number">10. </span>Hardware Overview<a class="headerlink" href="#hardware-overview" title="Permalink to this headline">#</a></h1>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>Today is the first day outside of the grade free zone.</p>
 </div>
 </section>
 <section id="review-todays-class">
-<h2><span class="section-number">6.7. </span>Review today’s class<a class="headerlink" href="#review-todays-class" title="Permalink to this headline">#</a></h2>
+<h1><span class="section-number">11. </span>Review today’s class<a class="headerlink" href="#review-todays-class" title="Permalink to this headline">#</a></h1>
 <p>(required for a C or better)</p>
 <ol class="simple">
 <li><p>Review and update your listing of how data moves through a program in your <code class="docutils literal notranslate"><span class="pre">abstraction.md</span></code>. Answer reflection questions.</p></li>
@@ -700,7 +883,7 @@ Double click on the CPUEmulator.bat file</p>
 </ol>
 </section>
 <section id="prepare-for-next-class">
-<h2><span class="section-number">6.8. </span>Prepare for Next Class<a class="headerlink" href="#prepare-for-next-class" title="Permalink to this headline">#</a></h2>
+<h1><span class="section-number">12. </span>Prepare for Next Class<a class="headerlink" href="#prepare-for-next-class" title="Permalink to this headline">#</a></h1>
 <p>(required for a C or better)</p>
 <ol class="simple">
 <li><p>add a hardware term to your group repo.  Remember to check other issues and then post an issue and self-assign it before you start working so that two people do not make the same one.  Review one other PR.</p></li>
@@ -720,7 +903,7 @@ Double click on the CPUEmulator.bat file</p>
 </div>
 </section>
 <section id="more-practice">
-<h2><span class="section-number">6.9. </span>More Practice<a class="headerlink" href="#more-practice" title="Permalink to this headline">#</a></h2>
+<h1><span class="section-number">13. </span>More Practice<a class="headerlink" href="#more-practice" title="Permalink to this headline">#</a></h1>
 <p>(mostly required for a B or better)</p>
 <ol class="simple">
 <li><p>add a hardware term to your group repo.  Remember to check other issues and then post an issue and self-assign it before you start working so that two people do not make the same one.  Review one other PR.</p></li>
@@ -736,15 +919,44 @@ Double click on the CPUEmulator.bat file</p>
 </div>
 </section>
 <section id="questions-after-class">
-<h2><span class="section-number">6.10. </span>Questions After Class<a class="headerlink" href="#questions-after-class" title="Permalink to this headline">#</a></h2>
-<p>• more about the hardware architecture abstractions</p>
-<p>• When requesting a review for a PR or something similar, would the only thing to do be attaching either you the professor or the teachers assistant?
-With our collaborative repo, would we facilitate the merges and reviews or would you need to have the last review of the information?
-Should we assume that when you ask to write a document, we should create a markdown file with a similar name (as opposed to an assignment with the description “add <a class="reference external" href="http://branches.md">branches.md</a> to your KWL repo”)</p>
-<p>• Are there other simulators that we can play with?</p>
-<p>• for my grading contract if i choose to go for an A and stick with the A but don’t meet the requirements how much is my grade affected</p>
-<p>• how the CPU performs addition and stores the result in a memory location on the RAM</p>
-<p>• Explain more levels of abstraction and how they are connected</p>
+<h1><span class="section-number">14. </span>Questions After Class<a class="headerlink" href="#questions-after-class" title="Permalink to this headline">#</a></h1>
+<section id="content">
+<h2><span class="section-number">14.1. </span>Content<a class="headerlink" href="#content" title="Permalink to this headline">#</a></h2>
+<section id="more-about-the-hardware-architecture-abstractions">
+<h3><span class="section-number">14.1.1. </span>More about the hardware architecture abstractions<a class="headerlink" href="#more-about-the-hardware-architecture-abstractions" title="Permalink to this headline">#</a></h3>
+<p>We will come back to this</p>
+</section>
+<section id="how-the-cpu-performs-addition-and-stores-the-result-in-a-memory-location-on-the-ram">
+<h3><span class="section-number">14.1.2. </span>how the CPU performs addition and stores the result in a memory location on the RAM<a class="headerlink" href="#how-the-cpu-performs-addition-and-stores-the-result-in-a-memory-location-on-the-ram" title="Permalink to this headline">#</a></h3>
+<p>We will study the components of a CPU including the ALU and the adder circuit in greater detail later.  Today was a preview to introduce these terms so that we can use them as we go forward with learning more tools that will help us study the implications of hardware design choices better.</p>
+</section>
+<section id="explain-more-levels-of-abstraction-and-how-they-are-connected">
+<h3><span class="section-number">14.1.3. </span>Explain more levels of abstraction and how they are connected<a class="headerlink" href="#explain-more-levels-of-abstraction-and-how-they-are-connected" title="Permalink to this headline">#</a></h3>
+<p>I expanded some above and we will come back to these throughout the whole course.</p>
+</section>
+</section>
+<section id="are-there-other-simulators-that-we-can-play-with">
+<h2><span class="section-number">14.2. </span>Are there other simulators that we can play with?<a class="headerlink" href="#are-there-other-simulators-that-we-can-play-with" title="Permalink to this headline">#</a></h2>
+<p>Yes we will fill those in soon.</p>
+</section>
+<section id="logistics">
+<h2><span class="section-number">14.3. </span>Logistics<a class="headerlink" href="#logistics" title="Permalink to this headline">#</a></h2>
+<section id="when-requesting-a-review-for-a-pr-or-something-similar-would-the-only-thing-to-do-be-tagging-mention-the-instructional-team">
+<h3><span class="section-number">14.3.1. </span>When requesting a review for a PR or something similar, would the only thing to do be tagging (&#64;mention) the instructional team?<a class="headerlink" href="#when-requesting-a-review-for-a-pr-or-something-similar-would-the-only-thing-to-do-be-tagging-mention-the-instructional-team" title="Permalink to this headline">#</a></h3>
+<p>Yes, tag &#64;inrocompsys/instructors</p>
+</section>
+<section id="with-our-collaborative-repo-would-we-facilitate-the-merges-and-reviews-or-would-you-need-to-have-the-last-review-of-the-information">
+<h3><span class="section-number">14.3.2. </span>With our collaborative repo, would we facilitate the merges and reviews or would you need to have the last review of the information?<a class="headerlink" href="#with-our-collaborative-repo-would-we-facilitate-the-merges-and-reviews-or-would-you-need-to-have-the-last-review-of-the-information" title="Permalink to this headline">#</a></h3>
+<p>You all can merge on your own, but if you have questions, tag us.</p>
+</section>
+<section id="should-we-assume-that-when-you-ask-to-write-a-document-we-should-create-a-markdown-file-with-a-similar-name-as-opposed-to-an-assignment-with-the-description-add-branches-md-to-your-kwl-repo">
+<h3><span class="section-number">14.3.3. </span>Should we assume that when you ask to write a document, we should create a markdown file with a similar name (as opposed to an assignment with the description “add <a class="reference external" href="http://branches.md">branches.md</a> to your KWL repo”)<a class="headerlink" href="#should-we-assume-that-when-you-ask-to-write-a-document-we-should-create-a-markdown-file-with-a-similar-name-as-opposed-to-an-assignment-with-the-description-add-branches-md-to-your-kwl-repo" title="Permalink to this headline">#</a></h3>
+<p>Typically with a similar name is correct and never with any spaces in the file name.  Mostly the instructions will say exactly what to add.  If you have questions, you can (and should) always open an issue to ask for help.</p>
+</section>
+<section id="for-my-grading-contract-if-i-choose-to-go-for-an-a-and-stick-with-the-a-but-dont-meet-the-requirements-how-much-is-my-grade-affected">
+<h3><span class="section-number">14.3.4. </span>for my grading contract if i choose to go for an A and stick with the A but don’t meet the requirements how much is my grade affected<a class="headerlink" href="#for-my-grading-contract-if-i-choose-to-go-for-an-a-and-stick-with-the-a-but-dont-meet-the-requirements-how-much-is-my-grade-affected" title="Permalink to this headline">#</a></h3>
+<p>I will ask you to change your contract or take an incomplete.  If you do not respond, I will put the lowest grade you completed.</p>
+</section>
 </section>
 </section>
 
