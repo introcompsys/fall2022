@@ -57,7 +57,7 @@ To earn this grade I will:
 - review class notes regularly
 - keep my KWL chart up to date
 - complete all review and prepare activities in my KWL repo as directed
-- complete deeper explorations based on my own questions for at least 14 class sessions.
+- complete all of the more practice tasks for at least 16 of the class sessions after the grade free zone.
 
  For each deeper exploration I will write up a report with references and/or a tutorial style post with code excerpts or detailed steps and images as appropriate.
 
