@@ -1,9 +1,9 @@
 # Basic Facts
 
-### About this course
+## About this course
 
 
-### About this syllabus
+## About this syllabus
 
 This syllabus is a *living*  document.  You can get notification of changes from GitHub by "watching" the
 {{ '[repository](https://github.com/introcompsys/{/{repo})'.format(repo=repo_name) }}
@@ -12,7 +12,7 @@ You can view the date of changes and exactly what changes were made on the Githu
 Creating an {{ repo_issue }} is also a good way to ask questions about anything in the course it will prompt additions and expand the FAQ section.
 
 
-### About your instructor
+## About your instructor
 
 Name: Dr. Sarah M Brown
 Office hours:  TBA via zoom, link on BrightSpace
