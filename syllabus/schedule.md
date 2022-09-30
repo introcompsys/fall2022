@@ -16,7 +16,7 @@ We'll spend the first two classes introducing some basics of GitHub and setting 
 
 ### How do all of these topics relate?
 
-*approximatley two weeks*
+*approximately two weeks*
 
 ````{margin}
 ```{tip}
@@ -92,11 +92,11 @@ Content from above will be expanded and slotted into specific classes as we go. 
   - introductions, tool practice
 * - 2022-09-12
   - How does knowledge work in computing?
-  - [Read through the class site, notes, reflect on a thing you knw well
+  - Read through the class site, notes, reflect on a thing you knw well
   - course  FAQ, knowledge discussion
 * - 2022-09-14
   - How do I use git offline?
-  - [review notes, reflect on issues, check environment, map cs knowledge]()
+  - review notes, reflect on issues, check environment, map cs knowledge
   - cloning, pushing, terminal basics
 * - 2022-09-19
   - Why do I need to use a terminal?
@@ -124,7 +124,7 @@ Content from above will be expanded and slotted into specific classes as we go. 
   - more git, number systems
 * - 2022-10-12
   - How can git help me when I need it?
-  - [reveiw numbers and hypothesize what git could help with]()
+  - reveiw numbers and hypothesize what git could help with
   - git merges
 * - 2022-10-17
   - How do programmers build documentation?
@@ -136,7 +136,7 @@ Content from above will be expanded and slotted into specific classes as we go. 
   - shell scripting, pipes, more redirects, grep
 * - 2022-10-24
   - How do I work remotely ?
-  - [install reqs, reflect on grade, practice scrip]()
+  - install reqs, reflect on grade, practice script
   - ssh/ ssh keys, sed/ awk, file permissions
 * - 2022-10-26
   - How do programmers keep track of all these tools?
@@ -156,7 +156,7 @@ Content from above will be expanded and slotted into specific classes as we go. 
   -
 * - 2022-11-09
   - Why is the object file unreadable?
-  - [what are operators]
+  - what are operators
   - bits, bytes, and integers/character representtion
 * - 2022-11-14
   - What about non integer numbers?
@@ -164,7 +164,7 @@ Content from above will be expanded and slotted into specific classes as we go. 
   - floating point representation
 * - 2022-11-16
   - Where do those bitwise operations come from?
-  - [review simulator]
+  - review simulator
   - gates, registers, more integer
 * - 2022-11-21
   - What actually is a gate?
