@@ -24,7 +24,7 @@ latex:
   latex_documents:
     targetname: book.tex
 
-exclude_patterns            : ['_data/*',  README.md, ignore/*]  # Patterns to skip when building the book. Can be glob-style (e.g. "*skip.ipynb")
+exclude_patterns            : ['_data/*',  README.md, ignore/*, syllabus/index.md]  # Patterns to skip when building the book. Can be glob-style (e.g. "*skip.ipynb")
 
 #######################################################################################
 # Execution settings
@@ -51,6 +51,9 @@ parse:
   myst_substitutions:
     time: MW 4:30-5:45
     location: Engineering Building Room 045
+    bscalendar: |
+      [course calendar](https://brightspace.uri.edu/d2l/le/calendar/202430)
+    semester: Fall 2022
     repo_name: FIXME
     repo_commits: |
       [commit history](https://github.com/introcompsys/fall2022/commits)

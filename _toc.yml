@@ -40,7 +40,6 @@ parts:
     - file: resources/tips
     - file: resources/learning
     - file: resources/gettinghelp
-    - file: resources/terminal
     - file: resources/organization
     - file: resources/more_info_on_cpus
     - url: https://introcompsys.github.io/spring2022/resources/testimonials.html

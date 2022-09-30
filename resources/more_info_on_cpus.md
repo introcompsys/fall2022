@@ -1,3 +1,7 @@
+# More info on cpus
+
+
+```{list-table}
 :header-rows: 1
 * - Resource
   - Level
@@ -15,3 +19,4 @@
   - 1
   - Video
   - Video by Crash Course that explains what the Central Processing Unit (CPU) is and how it works.
+```
