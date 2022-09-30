@@ -15,7 +15,7 @@ Creating an {{ repo_issue }} is also a good way to ask questions about anything 
 ## About your instructor
 
 Name: Dr. Sarah M Brown
-Office hours:  TBA via zoom, link on BrightSpace
+Office hours:  listed on communication page
 
 
 Dr. Sarah M Brown is a third year Assistant Professor of Computer Science, who does research on how social context changes machine learning. Dr. Brown earned a PhD in Electrical Engineering from Northeastern University, completed a postdoctoral fellowship at University of California Berkeley, and worked as a postdoctoral research associate at Brown University before joining URI. At Brown University, Dr. Brown taught the Data and Society course for the Master's in Data Science Program. You can learn more about me at my [website](http://sarahmbrown.org/) or my research on my [lab site](https://ml4sts.com/).
