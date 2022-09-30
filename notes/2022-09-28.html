@@ -1,0 +1,1517 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>15. What is git? &#8212; Introduction to Computer Systems</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="KWL Chart" href="../activities/kwl.html" />
+    <link rel="prev" title="6. Admin" href="2022-09-26.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Introduction to Computer Systems</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    About this Site
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Syllabus
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus/about.html">
+   Basic Facts
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus/tools.html">
+   Tools and Resources
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus/grading.html">
+   Grading
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus/contract.html">
+   Grading Contract Reference
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus/schedule.html">
+   Schedule
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus/policies.html">
+   Grading Policies
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus/uri_resources.html">
+   Support
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus/uri_statements.html">
+   General URI Policies
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus/communication.html">
+   Office Hours &amp; Comms
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Notes
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="2022-09-07.html">
+   1. Welcome and Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2022-09-12.html">
+   2. Course Logistics and Learning
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2022-09-14.html">
+   3. How can I use GitHub offline?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2022-09-19.html">
+   4. Why Do I Need to Use a terminal?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2022-09-21.html">
+   5. How should I use git to stay organized this class?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2022-09-26.html">
+   6. Admin
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   15. What
+   <em>
+    is
+   </em>
+   git?
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Activities
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../activities/kwl.html">
+   KWL Chart
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../activities/review.html">
+   Review
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../activities/prepare.html">
+   Prepare for the next class
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../activities/practice.html">
+   More Practice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../activities/explore.html">
+   Deeper Explorations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../activities/projects.html">
+   Project Information
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  FAQ
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../faq/syllabus.html">
+   Syllabus and Grading FAQ
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../faq/github.html">
+   Git and GitHub
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Resources
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../resources/tips.html">
+   General Tips and Resources
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../resources/learning.html">
+   How to Study in this class
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../resources/gettinghelp.html">
+   Getting Help with Programming
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../resources/organization.html">
+   Getting Organized for class
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://introcompsys.github.io/spring2022/resources/testimonials.html">
+   Advice from Spring 2022 Students
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/introcompsys/fall2022"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/introcompsys/fall2022/issues/new?title=Issue%20on%20page%20%2Fnotes/2022-09-28.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/introcompsys/fall2022/edit/main/notes/2022-09-28.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/notes/2022-09-28.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#admin">
+   15.1. Admin
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#git-is-a-file-system">
+   15.2. Git is a File system
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#git-is-a-version-control-system">
+   15.3. Git is a Version Control System
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#git-has-two-sets-of-commands">
+   15.4. Git has two sets of commands
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#git-is-distributed">
+   15.5. Git is distributed
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#subversion-workflow">
+     15.5.1. Subversion  WOrkflow
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#integration-manager">
+     15.5.2. Integration Manager
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dictator-and-lieutenants">
+     15.5.3. dictator and lieutenants
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#anatomy-of-git">
+   15.6. Anatomy of Git
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#git-head">
+     15.6.1. Git HEAD
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#git-config">
+   15.7. Git Config
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#git-index">
+   15.8. Git Index
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#git-objects">
+   15.9. Git Objects
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#review-todays-class">
+   15.10. Review today’s class
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#prepare-for-next-class">
+   15.11. Prepare for Next Class
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#more-practice">
+   15.12. More Practice
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#questions">
+   15.13. Questions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#can-you-fork-a-repo-you-do-not-have-access-to">
+     15.13.1. Can you fork a repo you do not have access to?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-should-i-do-if-git-crashes-and-i-lose-progress">
+     15.13.2. what should I do if git crashes and I lose progress?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#which-is-easier-better-to-use-the-git-cli-or-the-github-website">
+     15.13.3. Which is easier/better to use: the git CLI, or the GitHub website?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-most-important-function-that-git-can-perform">
+     15.13.4. What most important function that git can perform?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#when-encountering-a-merge-conflict-is-it-best-to-use-the-terminal-bash-window-or-the-github-merging-features">
+     15.13.5. When encountering a merge conflict, is it best to use the terminal/bash window or the GitHub merging features?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#why-is-there-not-an-undo-command-if-you-delete-a-file-or-repo-on-git">
+     15.13.6. Why is there not an undo command if you delete a file or repo on git?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#would-a-merge-conflict-or-any-kind-of-problem-emerge-if-theres-a-file-exclusive-to-a-branch-that-isnt-main-when-we-try-to-merge-that-branchs-contents-into-main">
+     15.13.7. Would a merge conflict or any kind of problem emerge if there’s a  file exclusive to a branch that isn’t main, when we try to merge that branch’s contents into main?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-often-should-i-make-a-new-branch-in-my-kwl-repo">
+     15.13.8. How often should I make a new branch in my KWL repo?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-is-git-different-than-other-coding-languages">
+     15.13.9. how is git different than other coding languages?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#where-is-git-used-mostly-outside-this-classroom-university">
+     15.13.10. where is git used mostly (outside this classroom/university)?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#one-git-scenario-i-feel-like-i-will-reach-a-point-where-there-are-just-too-many-branches-if-im-supposed-to-make-a-new-branch-every-time-i-edit-something">
+     15.13.11. One git scenario, I feel like I will reach a point where there are just too many branches if I’m supposed to make a new branch every time I edit something.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#whats-the-difference-between-git-fork-and-git-clone">
+     15.13.12. whats the difference between git fork and git clone
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#can-we-add-arguments-to-make-git-more-specific-with-any-type-of-errors-that-may-occur-ex-merge-conflicts">
+     15.13.13. Can we add arguments to make git more specific with any type of errors that may occur, ex merge conflicts?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-does-github-differ-from-bitbucket">
+     15.13.14. How does GitHub differ from bitbucket?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#will-we-be-constantly-updating-a-kwl-item-md-file-to-the-kwl-repo-for-a-detailed-knowledge-base-on-each-of-the-items-listed-in-the-chart">
+     15.13.15. will we be constantly updating a
+     <kwl-item>
+      .md file to the kwl repo for a detailed knowledge base on each of the items listed in the chart?
+     </kwl-item>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-often-should-we-push-information-from-the-kwl-table-into-each-kwl-item-md-file">
+     15.13.16. how often should we push information from the kwl table into each
+     <kwl-item>
+      .md file?
+     </kwl-item>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#if-we-run-into-errors-using-cli-tools-what-are-ways-or-resources-that-can-help-debug-and-fix-errors">
+     15.13.17. If we run into errors using CLI tools what are ways or resources that can help debug and fix errors.
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>What is git?</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#admin">
+   15.1. Admin
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#git-is-a-file-system">
+   15.2. Git is a File system
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#git-is-a-version-control-system">
+   15.3. Git is a Version Control System
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#git-has-two-sets-of-commands">
+   15.4. Git has two sets of commands
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#git-is-distributed">
+   15.5. Git is distributed
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#subversion-workflow">
+     15.5.1. Subversion  WOrkflow
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#integration-manager">
+     15.5.2. Integration Manager
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dictator-and-lieutenants">
+     15.5.3. dictator and lieutenants
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#anatomy-of-git">
+   15.6. Anatomy of Git
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#git-head">
+     15.6.1. Git HEAD
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#git-config">
+   15.7. Git Config
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#git-index">
+   15.8. Git Index
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#git-objects">
+   15.9. Git Objects
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#review-todays-class">
+   15.10. Review today’s class
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#prepare-for-next-class">
+   15.11. Prepare for Next Class
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#more-practice">
+   15.12. More Practice
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#questions">
+   15.13. Questions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#can-you-fork-a-repo-you-do-not-have-access-to">
+     15.13.1. Can you fork a repo you do not have access to?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-should-i-do-if-git-crashes-and-i-lose-progress">
+     15.13.2. what should I do if git crashes and I lose progress?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#which-is-easier-better-to-use-the-git-cli-or-the-github-website">
+     15.13.3. Which is easier/better to use: the git CLI, or the GitHub website?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-most-important-function-that-git-can-perform">
+     15.13.4. What most important function that git can perform?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#when-encountering-a-merge-conflict-is-it-best-to-use-the-terminal-bash-window-or-the-github-merging-features">
+     15.13.5. When encountering a merge conflict, is it best to use the terminal/bash window or the GitHub merging features?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#why-is-there-not-an-undo-command-if-you-delete-a-file-or-repo-on-git">
+     15.13.6. Why is there not an undo command if you delete a file or repo on git?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#would-a-merge-conflict-or-any-kind-of-problem-emerge-if-theres-a-file-exclusive-to-a-branch-that-isnt-main-when-we-try-to-merge-that-branchs-contents-into-main">
+     15.13.7. Would a merge conflict or any kind of problem emerge if there’s a  file exclusive to a branch that isn’t main, when we try to merge that branch’s contents into main?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-often-should-i-make-a-new-branch-in-my-kwl-repo">
+     15.13.8. How often should I make a new branch in my KWL repo?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-is-git-different-than-other-coding-languages">
+     15.13.9. how is git different than other coding languages?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#where-is-git-used-mostly-outside-this-classroom-university">
+     15.13.10. where is git used mostly (outside this classroom/university)?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#one-git-scenario-i-feel-like-i-will-reach-a-point-where-there-are-just-too-many-branches-if-im-supposed-to-make-a-new-branch-every-time-i-edit-something">
+     15.13.11. One git scenario, I feel like I will reach a point where there are just too many branches if I’m supposed to make a new branch every time I edit something.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#whats-the-difference-between-git-fork-and-git-clone">
+     15.13.12. whats the difference between git fork and git clone
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#can-we-add-arguments-to-make-git-more-specific-with-any-type-of-errors-that-may-occur-ex-merge-conflicts">
+     15.13.13. Can we add arguments to make git more specific with any type of errors that may occur, ex merge conflicts?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-does-github-differ-from-bitbucket">
+     15.13.14. How does GitHub differ from bitbucket?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#will-we-be-constantly-updating-a-kwl-item-md-file-to-the-kwl-repo-for-a-detailed-knowledge-base-on-each-of-the-items-listed-in-the-chart">
+     15.13.15. will we be constantly updating a
+     <kwl-item>
+      .md file to the kwl repo for a detailed knowledge base on each of the items listed in the chart?
+     </kwl-item>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-often-should-we-push-information-from-the-kwl-table-into-each-kwl-item-md-file">
+     15.13.16. how often should we push information from the kwl table into each
+     <kwl-item>
+      .md file?
+     </kwl-item>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#if-we-run-into-errors-using-cli-tools-what-are-ways-or-resources-that-can-help-debug-and-fix-errors">
+     15.13.17. If we run into errors using CLI tools what are ways or resources that can help debug and fix errors.
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="what-is-git">
+<h1><span class="section-number">15. </span>What <em>is</em> git?<a class="headerlink" href="#what-is-git" title="Permalink to this headline">#</a></h1>
+<section id="admin">
+<h2><span class="section-number">15.1. </span>Admin<a class="headerlink" href="#admin" title="Permalink to this headline">#</a></h2>
+<p><a class="reference external" href="https://web.uri.edu/artsci/files/Curriculum-Mod-Form-1.pdf">get credit for this class toward your major</a></p>
+<ul class="simple">
+<li><p>substitution of: CSC392 Intro to Computer Systems For: 300 level elective</p></li>
+<li><p>no rationale</p></li>
+<li><p>send the form to <a class="reference external" href="mailto:ldipippo&#37;&#52;&#48;uri&#46;edu">Professor Dipippo</a></p></li>
+</ul>
+<p>Participate in research:see Prismia for a survey link</p>
+</section>
+<section id="git-is-a-file-system">
+<h2><span class="section-number">15.2. </span>Git is a File system<a class="headerlink" href="#git-is-a-file-system" title="Permalink to this headline">#</a></h2>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><a class="reference external" href="https://git-scm.com/book/en/v2">git book</a> is the official reference on git.</p>
+<p>this includes other spoken languages as well if that is helpful for you.</p>
+</div>
+<p><a class="reference external" href="https://git-scm.com/book/en/v2/Git-Internals-Plumbing-and-Porcelain">git is fundamentally a content-addressable filesystem with a VCS user interface written on top of it.</a></p>
+<p>Content-addressable filesystem means a key-value data store.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+what types of programming have you seen that use key- value pairs?<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<ul class="simple">
+<li><p class="sd-card-text">python dictionaries</p></li>
+<li><p class="sd-card-text">pointers (address,content)</p></li>
+<li><p class="sd-card-text">parameter, passed values</p></li>
+</ul>
+</div>
+</details><p>What this means is that you can insert any kind of content into a Git repository, for which Git will hand you back a unique key you can use later to retrieve that content.</p>
+</section>
+<section id="git-is-a-version-control-system">
+<h2><span class="section-number">15.3. </span>Git is a Version Control System<a class="headerlink" href="#git-is-a-version-control-system" title="Permalink to this headline">#</a></h2>
+<p>git stores <strong>snapshots</strong> of your work each time you commit.</p>
+<p><img alt="snapshot of 5 version sof 3 files" src="https://git-scm.com/book/en/v2/images/snapshots.png" /></p>
+<p>it uses 3 stages:</p>
+<p><img alt="3 stages in git" src="https://git-scm.com/book/en/v2/images/areas.png" /></p>
+</section>
+<section id="git-has-two-sets-of-commands">
+<h2><span class="section-number">15.4. </span>Git has two sets of commands<a class="headerlink" href="#git-has-two-sets-of-commands" title="Permalink to this headline">#</a></h2>
+<p>Porcelain: the user friendly VCS</p>
+<p>Plumbing: the internal workings- a toolkit for a VCS</p>
+<p>We have so far used git as a version control system.  A version control system, in general, will have operations like commit, push, pull, clone.  These may work differently under the hood or be called different things, but those are what something needs to have in order to keep track of different versions.</p>
+<p>The plumbing commands reveal the <em>way</em> that git performs version control operations.  This means, they implement file system operations for the git version control system.</p>
+<p>You can think of the plumbing vs porcelain commands like public/private methods.  As a user, you only need the public methods (porcelain commands) but those use the private ones to get things done (plumbing commands).  We will use the plumbing commands over the next few classes to examine what git <em>really</em> does when we call the porcelain commands that we will typically use.</p>
+</section>
+<section id="git-is-distributed">
+<h2><span class="section-number">15.5. </span>Git is distributed<a class="headerlink" href="#git-is-distributed" title="Permalink to this headline">#</a></h2>
+<p>What does that mean?</p>
+<p>Git runs locally.  It can run in many places, and has commands to help sync across remotes, but git does not require one copy of the repository to be the “official” copy and the others to be subordinate.  git just sees repositories.
+For human reasons, we like to have one “official” copy and treat the others as local copies, but that is a social choice, not a technological requirement of git. Even though we will typically use it with an offical copy and other copies, having a tool tht does not care, makes the tool more flexible and allows us to create workflows, or networks of copies that have any relationship we want.</p>
+<p>It’s about the workflows, or the ways we socially <em>use</em> the tool.</p>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Contributing to the course site can count for contributions to your team repo.  To contribute here, you will have to make a fork. Adding more explanation to these images is a great contribution</p>
+</div>
+</aside>
+<p>Some example workflows</p>
+<section id="subversion-workflow">
+<h3><span class="section-number">15.5.1. </span>Subversion  WOrkflow<a class="headerlink" href="#subversion-workflow" title="Permalink to this headline">#</a></h3>
+<p><img alt="subversion workflow" src="https://git-scm.com/images/about/workflow-a&#64;2x.png" /></p>
+</section>
+<section id="integration-manager">
+<h3><span class="section-number">15.5.2. </span>Integration Manager<a class="headerlink" href="#integration-manager" title="Permalink to this headline">#</a></h3>
+<p><img alt="integration manager workflow" src="https://git-scm.com/images/about/workflow-b&#64;2x.png" /></p>
+</section>
+<section id="dictator-and-lieutenants">
+<h3><span class="section-number">15.5.3. </span>dictator and lieutenants<a class="headerlink" href="#dictator-and-lieutenants" title="Permalink to this headline">#</a></h3>
+<p><img alt="dictator and lieutenants workflow" src="https://git-scm.com/images/about/workflow-c&#64;2x.png" /></p>
+</section>
+</section>
+<section id="anatomy-of-git">
+<h2><span class="section-number">15.6. </span>Anatomy of Git<a class="headerlink" href="#anatomy-of-git" title="Permalink to this headline">#</a></h2>
+<p>Let’s look at git again in our <code class="docutils literal notranslate"><span class="pre">github-inclass</span></code> repo</p>
+<p>As always, start by checking where we are:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">status</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">On</span> <span class="n">branch</span> <span class="mi">2</span><span class="o">-</span><span class="n">create</span><span class="o">-</span><span class="n">an</span><span class="o">-</span><span class="n">about</span><span class="o">-</span><span class="n">file</span>
+<span class="n">Your</span> <span class="n">branch</span> <span class="ow">is</span> <span class="n">up</span> <span class="n">to</span> <span class="n">date</span> <span class="k">with</span> <span class="s1">&#39;origin/2-create-an-about-file&#39;</span><span class="o">.</span>
+
+<span class="n">Untracked</span> <span class="n">files</span><span class="p">:</span>
+  <span class="p">(</span><span class="n">use</span> <span class="s2">&quot;git add &lt;file&gt;...&quot;</span> <span class="n">to</span> <span class="n">include</span> <span class="ow">in</span> <span class="n">what</span> <span class="n">will</span> <span class="n">be</span> <span class="n">committed</span><span class="p">)</span>
+	<span class="n">hello</span><span class="o">.</span><span class="n">md</span>
+
+<span class="n">nothing</span> <span class="n">added</span> <span class="n">to</span> <span class="n">commit</span> <span class="n">but</span> <span class="n">untracked</span> <span class="n">files</span> <span class="n">present</span> <span class="p">(</span><span class="n">use</span> <span class="s2">&quot;git add&quot;</span> <span class="n">to</span> <span class="n">track</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>I was not on the main branch, so I’ll switch back there</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git checkout main
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Switched</span> <span class="n">to</span> <span class="n">branch</span> <span class="s1">&#39;main&#39;</span>
+<span class="n">Your</span> <span class="n">branch</span> <span class="ow">is</span> <span class="n">up</span> <span class="n">to</span> <span class="n">date</span> <span class="k">with</span> <span class="s1">&#39;origin/main&#39;</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>Remember, we can see hidden files with the <code class="docutils literal notranslate"><span class="pre">-a</span></code> option.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls -a
+</pre></div>
+</div>
+<div class="highlight-output notranslate"><div class="highlight"><pre><span></span><span class="go">.		.git		README.md	hello.md</span>
+<span class="go">..		.github		about.md</span>
+</pre></div>
+</div>
+<p>of the structure of git is contained in the <code class="docutils literal notranslate"><span class="pre">.git</span></code> directory, that is called the
+“database” this contains</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> .git
+ls
+</pre></div>
+</div>
+<div class="highlight-output notranslate"><div class="highlight"><pre><span></span><span class="go">COMMIT_EDITMSG	ORIG_HEAD	description	info		packed-refs</span>
+<span class="go">FETCH_HEAD	REBASE_HEAD	hooks		logs		refs</span>
+<span class="go">HEAD		config		index		objects</span>
+</pre></div>
+</div>
+<p>We see a lot of files here. The most important ones are:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>name</p></th>
+<th class="head"><p>type</p></th>
+<th class="head"><p>purpose</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>objects</p></td>
+<td><p>directory</p></td>
+<td><p>the content for your database</p></td>
+</tr>
+<tr class="row-odd"><td><p>refs</p></td>
+<td><p>directory</p></td>
+<td><p>pointers into commit objects in that data (branches, tags, remotes and more)</p></td>
+</tr>
+<tr class="row-even"><td><p>HEAD</p></td>
+<td><p>file</p></td>
+<td><p>points to the branch you currently have checked out</p></td>
+</tr>
+<tr class="row-odd"><td><p>index</p></td>
+<td><p>file</p></td>
+<td><p>stores your staging area information.</p></td>
+</tr>
+</tbody>
+</table>
+<section id="git-head">
+<h3><span class="section-number">15.6.1. </span>Git HEAD<a class="headerlink" href="#git-head" title="Permalink to this headline">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat HEAD
+</pre></div>
+</div>
+<div class="highlight-output notranslate"><div class="highlight"><pre><span></span><span class="go">ref: refs/heads/main</span>
+</pre></div>
+</div>
+<p>this indeed is the branh we have checked out and we can confirm with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git status
+</pre></div>
+</div>
+<div class="highlight-output notranslate"><div class="highlight"><pre><span></span><span class="go">fatal: this operation must be run in a work tree</span>
+</pre></div>
+</div>
+<p>excpet we cannot call this in the <code class="docutils literal notranslate"><span class="pre">.git</span></code> directory, we have to got back up</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ..
+git status
+</pre></div>
+</div>
+<div class="highlight-output notranslate"><div class="highlight"><pre><span></span><span class="go">On branch main</span>
+<span class="go">Your branch is up to date with &#39;origin/main&#39;.</span>
+
+<span class="go">Untracked files:</span>
+<span class="go">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)</span>
+<span class="go">	hello.md</span>
+
+<span class="go">nothing added to commit but untracked files present (use &quot;git add&quot; to track)</span>
+</pre></div>
+</div>
+<p>and we indeed see that it matches.</p>
+<p>We can also confirm that it changes, that it’s not just always main by changing branches.  We can first list the branches</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git branch
+</pre></div>
+</div>
+<div class="highlight-output notranslate"><div class="highlight"><pre><span></span><span class="go">  2-create-an-about-file</span>
+<span class="go">* main</span>
+<span class="go">  organtzation</span>
+</pre></div>
+</div>
+<p>then switch to one of the others</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git checkout <span class="m">2</span>-create-an-about-file
+</pre></div>
+</div>
+<div class="highlight-output notranslate"><div class="highlight"><pre><span></span><span class="go">Switched to branch &#39;2-create-an-about-file&#39;</span>
+<span class="go">Your branch is up to date with &#39;origin/2-create-an-about-file&#39;.</span>
+</pre></div>
+</div>
+<p>And again examine HEAD</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat .git/HEAD
+</pre></div>
+</div>
+<div class="highlight-output notranslate"><div class="highlight"><pre><span></span><span class="go">ref: refs/heads/2-create-an-about-file</span>
+</pre></div>
+</div>
+<p>it indeed changes.</p>
+<p>Next, what is that file that the HEAD file points to?</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat .git/refs/heads/main
+</pre></div>
+</div>
+<div class="highlight-output notranslate"><div class="highlight"><pre><span></span><span class="go">3c9980a4883782386ea3112d521b1b95997b0be6</span>
+</pre></div>
+</div>
+<p>this is a commit, the last one that was added to the branch we checked.</p>
+<p>To confirm we switch back to main</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git checkout main
+</pre></div>
+</div>
+<div class="highlight-output notranslate"><div class="highlight"><pre><span></span><span class="go">Switched to branch &#39;main&#39;</span>
+<span class="go">Your branch is up to date with &#39;origin/main&#39;.</span>
+</pre></div>
+</div>
+<p>and check the commit history</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git log
+</pre></div>
+</div>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>when we run this it opens the log interactively, so we see something like what is to the left, but it might have a <code class="docutils literal notranslate"><span class="pre">:</span> </code> at the end.  Use enter/return
+to scroll and press <code class="docutils literal notranslate"><span class="pre">q</span></code> to exit.</p>
+</div>
+</aside>
+<div class="highlight-output notranslate"><div class="highlight"><pre><span></span><span class="go">commit 3c9980a4883782386ea3112d521b1b95997b0be6 (HEAD -&gt; main, origin/main, origin/HEAD)</span>
+<span class="go">Author: Sarah M Brown &lt;brownsarahm@uri.edu&gt;</span>
+<span class="go">Date:   Wed Sep 14 17:40:01 2022 -0400</span>
+
+<span class="go">    create about</span>
+
+<span class="go">commit ec3dd020d2767e45b6cd61f7c4ea5f6f2be9a3d8</span>
+<span class="go">Merge: 1613072 db2e41d</span>
+<span class="go">Author: Sarah Brown &lt;brownsarahm@uri.edu&gt;</span>
+<span class="go">Date:   Wed Sep 14 16:56:34 2022 -0400</span>
+
+<span class="go">    Merge pull request #4 from introcompsys/create_readme</span>
+
+<span class="go">    Create README.md</span>
+
+<span class="go">commit db2e41d48129b2c3ad09b78f1c14c2cd295e3eb2 (origin/create_readme)</span>
+<span class="go">Author: Sarah Brown &lt;brownsarahm@uri.edu&gt;</span>
+<span class="go">Date:   Wed Sep 14 16:55:23 2022 -0400</span>
+
+<span class="go">    Create README.md</span>
+
+<span class="go">commit 1613072525c141b13d3ac7db68e8c1dbee70496b</span>
+<span class="go">Author: github-classroom[bot] &lt;66690702+github-classroom[bot]@users.noreply.github.com&gt;</span>
+<span class="go">Date:   Wed Sep 14 20:51:29 2022 +0000</span>
+
+<span class="go">    Initial commit</span>
+</pre></div>
+</div>
+<div class="admonition-try-it-yourself admonition">
+<p class="admonition-title">Try it Yourself</p>
+<p>use git log to draw a map that shows where the different branches are relative
+to one another</p>
+</div>
+<p>Also notice that next to the commits, it lists what branches point to that commit.</p>
+<p>We can also see the whole list of branches</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="mi">2</span><span class="o">-</span><span class="n">create</span><span class="o">-</span><span class="n">an</span><span class="o">-</span><span class="n">about</span><span class="o">-</span><span class="n">file</span>
+<span class="o">*</span> <span class="n">main</span>
+  <span class="n">organtzation</span>
+</pre></div>
+</div>
+<p>and compare that to the <code class="docutils literal notranslate"><span class="pre">refs/head</span></code> directory.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">.</span><span class="n">git</span><span class="o">/</span><span class="n">refs</span><span class="o">/</span><span class="n">heads</span><span class="o">/</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span><span class="o">-</span><span class="n">create</span><span class="o">-</span><span class="n">an</span><span class="o">-</span><span class="n">about</span><span class="o">-</span><span class="n">file</span>	<span class="n">main</span>			<span class="n">organtzation</span>
+</pre></div>
+</div>
+<p>which they do match.</p>
+<p>there are other types of refs</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">.</span><span class="n">git</span><span class="o">/</span><span class="n">refs</span><span class="o">/</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">heads</span>	<span class="n">remotes</span>	<span class="n">tags</span>
+</pre></div>
+</div>
+<p>tags are what I use to create releases on the course website (if you watch the course <a class="reference external" href="https://github.com/introcompsys/fall2022">repo</a> you can be notified when I make major updates that way)</p>
+<p>remotes are other copies that are linked, like GitHub.</p>
+</section>
+</section>
+<section id="git-config">
+<h2><span class="section-number">15.7. </span>Git Config<a class="headerlink" href="#git-config" title="Permalink to this headline">#</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat config
+</pre></div>
+</div>
+<div class="highlight-output notranslate"><div class="highlight"><pre><span></span><span class="go">[core]</span>
+<span class="go">	repositoryformatversion = 0</span>
+<span class="go">	filemode = true</span>
+<span class="go">	bare = false</span>
+<span class="go">	logallrefupdates = true</span>
+<span class="go">	ignorecase = true</span>
+<span class="go">	precomposeunicode = true</span>
+<span class="go">[remote &quot;origin&quot;]</span>
+<span class="go">	url = https://github.com/introcompsys/github-inclass-brownsarahm.git</span>
+<span class="go">	fetch = +refs/heads/*:refs/remotes/origin/*</span>
+<span class="go">[branch &quot;main&quot;]</span>
+<span class="go">	remote = origin</span>
+<span class="go">	merge = refs/heads/main</span>
+<span class="go">[branch &quot;organtzation&quot;]</span>
+<span class="go">	remote = origin</span>
+<span class="go">	merge = refs/heads/organtzation</span>
+<span class="go">[branch &quot;2-create-an-about-file&quot;]</span>
+<span class="go">	remote = origin</span>
+<span class="go">	merge = refs/heads/2-create-an-about-file</span>
+</pre></div>
+</div>
+<p>This file tracks the different relationships between your local copy and remots that it knows.  This repository only knows one remote, named origin, with a url on GitHub.  A git repo can have multiple remotes, each with its own name and url.</p>
+<p>it also maps each local branch to its corresponding origin and the local place you would merge to when you pull from that remote branch.</p>
+</section>
+<section id="git-index">
+<h2><span class="section-number">15.8. </span>Git Index<a class="headerlink" href="#git-index" title="Permalink to this headline">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">..</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">README</span><span class="o">.</span><span class="n">md</span>	<span class="n">about</span><span class="o">.</span><span class="n">md</span>	<span class="n">hello</span><span class="o">.</span><span class="n">md</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">status</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">On</span> <span class="n">branch</span> <span class="n">main</span>
+<span class="n">Your</span> <span class="n">branch</span> <span class="ow">is</span> <span class="n">up</span> <span class="n">to</span> <span class="n">date</span> <span class="k">with</span> <span class="s1">&#39;origin/main&#39;</span><span class="o">.</span>
+
+<span class="n">Untracked</span> <span class="n">files</span><span class="p">:</span>
+  <span class="p">(</span><span class="n">use</span> <span class="s2">&quot;git add &lt;file&gt;...&quot;</span> <span class="n">to</span> <span class="n">include</span> <span class="ow">in</span> <span class="n">what</span> <span class="n">will</span> <span class="n">be</span> <span class="n">committed</span><span class="p">)</span>
+	<span class="n">hello</span><span class="o">.</span><span class="n">md</span>
+
+<span class="n">nothing</span> <span class="n">added</span> <span class="n">to</span> <span class="n">commit</span> <span class="n">but</span> <span class="n">untracked</span> <span class="n">files</span> <span class="n">present</span> <span class="p">(</span><span class="n">use</span> <span class="s2">&quot;git add&quot;</span> <span class="n">to</span> <span class="n">track</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">add</span> <span class="o">.</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">status</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">On</span> <span class="n">branch</span> <span class="n">main</span>
+<span class="n">Your</span> <span class="n">branch</span> <span class="ow">is</span> <span class="n">up</span> <span class="n">to</span> <span class="n">date</span> <span class="k">with</span> <span class="s1">&#39;origin/main&#39;</span><span class="o">.</span>
+
+<span class="n">Changes</span> <span class="n">to</span> <span class="n">be</span> <span class="n">committed</span><span class="p">:</span>
+  <span class="p">(</span><span class="n">use</span> <span class="s2">&quot;git restore --staged &lt;file&gt;...&quot;</span> <span class="n">to</span> <span class="n">unstage</span><span class="p">)</span>
+	<span class="n">new</span> <span class="n">file</span><span class="p">:</span>   <span class="n">hello</span><span class="o">.</span><span class="n">md</span>
+
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">write</span><span class="o">-</span><span class="n">tree</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">9e404</span><span class="n">c8b4b67cc0572174531d3b7364e9c88fd94</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">cat</span><span class="o">-</span><span class="n">file</span> <span class="o">-</span><span class="n">p</span> <span class="mf">9e404</span><span class="n">c8b4b67cc0572174531d3b7364e9c88fd94</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">040000</span> <span class="n">tree</span> <span class="mi">95</span><span class="n">b60ce8cdec1bc4e1df1416e0c0e6ecbd3e7a8c</span>	<span class="o">.</span><span class="n">github</span>
+<span class="mi">100644</span> <span class="n">blob</span> <span class="n">bcc1d9287b5cae329629cf3e0779b065b72dad7a</span>	<span class="n">README</span><span class="o">.</span><span class="n">md</span>
+<span class="mi">100644</span> <span class="n">blob</span> <span class="n">e69de29bb2d1d6434b8b29ae775ad8c2e48c5391</span>	<span class="n">about</span><span class="o">.</span><span class="n">md</span>
+<span class="mi">100644</span> <span class="n">blob</span> <span class="mi">3</span><span class="n">b18e512dba79e4c8300dd08aeb37f8e728b8dad</span>	<span class="n">hello</span><span class="o">.</span><span class="n">md</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">cat</span><span class="o">-</span><span class="n">file</span> <span class="o">-</span><span class="n">t</span> <span class="mf">9e404</span><span class="n">c8b4b67cc0572174531d3b7364e9c88fd94</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tree</span>
+</pre></div>
+</div>
+<p>To better understand this, we can compare it to the last commit.</p>
+<p>To view an object we actually only need enough characters to make the name unique. 4 worked for me here:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">cat</span><span class="o">-</span><span class="n">file</span> <span class="o">-</span><span class="n">p</span> <span class="mi">3</span><span class="n">c99</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tree</span> <span class="mi">2</span><span class="n">c4495ca1dc6868006365dff726cccea781cea61</span>
+<span class="n">parent</span> <span class="n">ec3dd020d2767e45b6cd61f7c4ea5f6f2be9a3d8</span>
+<span class="n">author</span> <span class="n">Sarah</span> <span class="n">M</span> <span class="n">Brown</span> <span class="o">&lt;</span><span class="n">brownsarahm</span><span class="nd">@uri</span><span class="o">.</span><span class="n">edu</span><span class="o">&gt;</span> <span class="mi">1663191601</span> <span class="o">-</span><span class="mi">0400</span>
+<span class="n">committer</span> <span class="n">Sarah</span> <span class="n">M</span> <span class="n">Brown</span> <span class="o">&lt;</span><span class="n">brownsarahm</span><span class="nd">@uri</span><span class="o">.</span><span class="n">edu</span><span class="o">&gt;</span> <span class="mi">1663191601</span> <span class="o">-</span><span class="mi">0400</span>
+
+<span class="n">create</span> <span class="n">about</span>
+</pre></div>
+</div>
+<p>the object for a commit is the information about the commit:</p>
+<ul class="simple">
+<li><p>the <code class="docutils literal notranslate"><span class="pre">tree</span></code> is the snapshot that was indexed (what we want to compare the above to).</p></li>
+<li><p>the parent ithe previous commit</p></li>
+<li><p>then there’s author &amp; committer information and time</p></li>
+<li><p>last is the commit message</p></li>
+</ul>
+<p>So, we can look at this tree object</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git cat-file -p 2c4495
+</pre></div>
+</div>
+<div class="highlight-output notranslate"><div class="highlight"><pre><span></span><span class="go">040000 tree 95b60ce8cdec1bc4e1df1416e0c0e6ecbd3e7a8c	.github</span>
+<span class="go">100644 blob bcc1d9287b5cae329629cf3e0779b065b72dad7a	README.md</span>
+<span class="go">100644 blob e69de29bb2d1d6434b8b29ae775ad8c2e48c5391	about.md</span>
+</pre></div>
+</div>
+<p>we can see that the <code class="docutils literal notranslate"><span class="pre">hello.md</span></code> blob object is the difference and the other two files even have the same hash (so they were not changed).</p>
+<p>We say that that part is only the the staging area, beacue this item is added to the objects, but it is not in the commit history yet.</p>
+</section>
+<section id="git-objects">
+<h2><span class="section-number">15.9. </span>Git Objects<a class="headerlink" href="#git-objects" title="Permalink to this headline">#</a></h2>
+<p>All of these blob objects and trees are stored in the objects folder</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">.</span><span class="n">git</span><span class="o">/</span><span class="n">objects</span><span class="o">/</span>
+<span class="n">ls</span>
+</pre></div>
+</div>
+<p>it has folders with 2 character names</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">25</span>	<span class="mi">35</span>	<span class="mi">59</span>	<span class="mi">84</span>	<span class="mi">9</span><span class="n">d</span>	<span class="n">aa</span>	<span class="n">e6</span>	<span class="n">f9</span>
+<span class="mi">2</span><span class="n">c</span>	<span class="mi">3</span><span class="n">c</span>	<span class="mi">5</span><span class="n">d</span>	<span class="mi">8</span><span class="n">b</span>	<span class="n">a0</span>	<span class="n">ad</span>	<span class="n">e7</span>	<span class="n">info</span>
+<span class="mi">30</span>	<span class="mi">40</span>	<span class="mi">7</span><span class="n">a</span>	<span class="mi">8</span><span class="n">c</span>	<span class="n">a4</span>	<span class="n">d2</span>	<span class="n">ec</span>	<span class="n">pack</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="mi">25</span>
+<span class="n">ls</span>
+</pre></div>
+</div>
+<p>that contain files that match commits and other objects’ hashes.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ecf2cf579d20d41c1ae2f9844662bbd4e43315</span>
+</pre></div>
+</div>
+<p>For example, we can confirm the last commit to main</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">../</span><span class="mi">3</span><span class="n">c</span>
+<span class="n">ls</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">9980</span><span class="n">a4883782386ea3112d521b1b95997b0be6</span>
+</pre></div>
+</div>
+<p>These objects are not human readable though as is</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span> <span class="mi">9980</span><span class="n">a4883782386ea3112d521b1b95997b0be6</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>x??A
+?:m\x?;???^?&lt;?x?n??2?4??Gp?&lt;x?e[????x?E??0t?z?%O]?9:???w	͓??T|J???&quot;E
+                        ???&quot;m????d??s#E?*?j&gt;?&gt;J	```
+
+</pre></div>
+</div>
+</section>
+<section id="review-todays-class">
+<h2><span class="section-number">15.10. </span>Review today’s class<a class="headerlink" href="#review-todays-class" title="Permalink to this headline">#</a></h2>
+<ol class="simple">
+<li><p>Practice with git log and redirects to write the commit history of your main branch for your kwl chart to a file <code class="docutils literal notranslate"><span class="pre">gitlog.txt</span></code> and commit that file to your kwl repo.</p></li>
+<li><p>Review the notes</p></li>
+<li><p>Update your kwl chart with what you have learned or new questions</p></li>
+</ol>
+</section>
+<section id="prepare-for-next-class">
+<h2><span class="section-number">15.11. </span>Prepare for Next Class<a class="headerlink" href="#prepare-for-next-class" title="Permalink to this headline">#</a></h2>
+<ol class="simple">
+<li><p>Try exploring your a repo manually and bring more questions</p></li>
+<li><p>Make sure that you have a grading contract that has been reviewed at least once</p></li>
+</ol>
+</section>
+<section id="more-practice">
+<h2><span class="section-number">15.12. </span>More Practice<a class="headerlink" href="#more-practice" title="Permalink to this headline">#</a></h2>
+<ol class="simple">
+<li><p><i class="fa-solid fa-star"></i> Read about different workflows in git and add responses to the below in a <code class="docutils literal notranslate"><span class="pre">workflows.md</span></code> in your kwl repo. Two good places to read from are <a class="reference external" href="https://git-scm.com/book/en/v2/Distributed-Git-Distributed-Workflows#ch05-distributed-git">Git Book</a> and the <a class="reference external" href="https://www.atlassian.com/git/tutorials/comparing-workflows">atlassian Docs</a></p></li>
+<li><p>Contribute either a glossary term, cheatsheet item, or additional resource/reference to your group repo.</p></li>
+<li><p>Complete one peer review of a team mate’s contribution</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>## Workflow Reflection
+
+1. What advantages might it provide that git can be used with different workflows?
+1. Which workflow do you think you would like to work with best and why?
+1. Describe a scenario that might make it better for the whole team to use a workflow other than the one you prefer.  
+</pre></div>
+</div>
+</section>
+<section id="questions">
+<h2><span class="section-number">15.13. </span>Questions<a class="headerlink" href="#questions" title="Permalink to this headline">#</a></h2>
+<section id="can-you-fork-a-repo-you-do-not-have-access-to">
+<h3><span class="section-number">15.13.1. </span>Can you fork a repo you do not have access to?<a class="headerlink" href="#can-you-fork-a-repo-you-do-not-have-access-to" title="Permalink to this headline">#</a></h3>
+<p>You cannot fork a repository that you do not have read access to.  If it is private, the owner can allow or not allow forking. You can fork public repos and then submit PRs to suggest changes.  Try making a contribution to the course site.  Add a glossary entry, link a term from the notes to the glossary or fill in a caption.</p>
+</section>
+<section id="what-should-i-do-if-git-crashes-and-i-lose-progress">
+<h3><span class="section-number">15.13.2. </span>what should I do if git crashes and I lose progress?<a class="headerlink" href="#what-should-i-do-if-git-crashes-and-i-lose-progress" title="Permalink to this headline">#</a></h3>
+<p>git should not ever have this problem. You should not ever lose work again at all
+if you commit and push frequently.</p>
+<p>I lost my whole computer a few months before I finished my PhD. I only lost 1 day’s worth of work though.  The morning’s worth of work that caused the crash and the afternoon that day recovering the computer (new harddrive and Linux instead of Windows) and then I pulled my code and kept working.</p>
+</section>
+<section id="which-is-easier-better-to-use-the-git-cli-or-the-github-website">
+<h3><span class="section-number">15.13.3. </span>Which is easier/better to use: the git CLI, or the GitHub website?<a class="headerlink" href="#which-is-easier-better-to-use-the-git-cli-or-the-github-website" title="Permalink to this headline">#</a></h3>
+<p>the git CLI is more complete and more flexible, you can batch changes together into larger commits, for example. It is better for most work.  GitHub is simple and less intimidating for novices so for small changes it is great.</p>
+</section>
+<section id="what-most-important-function-that-git-can-perform">
+<h3><span class="section-number">15.13.4. </span>What most important function that git can perform?<a class="headerlink" href="#what-most-important-function-that-git-can-perform" title="Permalink to this headline">#</a></h3>
+<p>restoring previous versions.</p>
+</section>
+<section id="when-encountering-a-merge-conflict-is-it-best-to-use-the-terminal-bash-window-or-the-github-merging-features">
+<h3><span class="section-number">15.13.5. </span>When encountering a merge conflict, is it best to use the terminal/bash window or the GitHub merging features?<a class="headerlink" href="#when-encountering-a-merge-conflict-is-it-best-to-use-the-terminal-bash-window-or-the-github-merging-features" title="Permalink to this headline">#</a></h3>
+<p>You can use the GitHub one for basic merge conflicts.  For complex ones GitHub will give you terminal commands to download the work and work offline.</p>
+</section>
+<section id="why-is-there-not-an-undo-command-if-you-delete-a-file-or-repo-on-git">
+<h3><span class="section-number">15.13.6. </span>Why is there not an undo command if you delete a file or repo on git?<a class="headerlink" href="#why-is-there-not-an-undo-command-if-you-delete-a-file-or-repo-on-git" title="Permalink to this headline">#</a></h3>
+<p>There is a way to undo with git, there is not a way to undo <code class="docutils literal notranslate"><span class="pre">rm</span></code> in bash, unless you are using some sort of backup tool, or git.</p>
+</section>
+<section id="would-a-merge-conflict-or-any-kind-of-problem-emerge-if-theres-a-file-exclusive-to-a-branch-that-isnt-main-when-we-try-to-merge-that-branchs-contents-into-main">
+<h3><span class="section-number">15.13.7. </span>Would a merge conflict or any kind of problem emerge if there’s a  file exclusive to a branch that isn’t main, when we try to merge that branch’s contents into main?<a class="headerlink" href="#would-a-merge-conflict-or-any-kind-of-problem-emerge-if-theres-a-file-exclusive-to-a-branch-that-isnt-main-when-we-try-to-merge-that-branchs-contents-into-main" title="Permalink to this headline">#</a></h3>
+<p>No, there is nothing that there can be a conflict with.  That is one strategy to use to avoid conflicts, to have multiple, smaller files.</p>
+</section>
+<section id="how-often-should-i-make-a-new-branch-in-my-kwl-repo">
+<h3><span class="section-number">15.13.8. </span>How often should I make a new branch in my KWL repo?<a class="headerlink" href="#how-often-should-i-make-a-new-branch-in-my-kwl-repo" title="Permalink to this headline">#</a></h3>
+<p>One for each group of work you want graded.  Ideally about one per course session.</p>
+</section>
+<section id="how-is-git-different-than-other-coding-languages">
+<h3><span class="section-number">15.13.9. </span>how is git different than other coding languages?<a class="headerlink" href="#how-is-git-different-than-other-coding-languages" title="Permalink to this headline">#</a></h3>
+<p>Git is a program that manages files, it is not a programming language. It is a program with many subroutines and designed for use on a shell, but still not a language.  Languages have to have certain features.</p>
+</section>
+<section id="where-is-git-used-mostly-outside-this-classroom-university">
+<h3><span class="section-number">15.13.10. </span>where is git used mostly (outside this classroom/university)?<a class="headerlink" href="#where-is-git-used-mostly-outside-this-classroom-university" title="Permalink to this headline">#</a></h3>
+<p>Literally  almost everywhere people write code.</p>
+</section>
+<section id="one-git-scenario-i-feel-like-i-will-reach-a-point-where-there-are-just-too-many-branches-if-im-supposed-to-make-a-new-branch-every-time-i-edit-something">
+<h3><span class="section-number">15.13.11. </span>One git scenario, I feel like I will reach a point where there are just too many branches if I’m supposed to make a new branch every time I edit something.<a class="headerlink" href="#one-git-scenario-i-feel-like-i-will-reach-a-point-where-there-are-just-too-many-branches-if-im-supposed-to-make-a-new-branch-every-time-i-edit-something" title="Permalink to this headline">#</a></h3>
+<p>You can delete a branch</p>
+</section>
+<section id="whats-the-difference-between-git-fork-and-git-clone">
+<h3><span class="section-number">15.13.12. </span>whats the difference between git fork and git clone<a class="headerlink" href="#whats-the-difference-between-git-fork-and-git-clone" title="Permalink to this headline">#</a></h3>
+<p>a fork keeps the copy on GitHub (or another server) a clone makes it local</p>
+</section>
+<section id="can-we-add-arguments-to-make-git-more-specific-with-any-type-of-errors-that-may-occur-ex-merge-conflicts">
+<h3><span class="section-number">15.13.13. </span>Can we add arguments to make git more specific with any type of errors that may occur, ex merge conflicts?<a class="headerlink" href="#can-we-add-arguments-to-make-git-more-specific-with-any-type-of-errors-that-may-occur-ex-merge-conflicts" title="Permalink to this headline">#</a></h3>
+<p>Git is very powerful and can be given more strict guidance on how to do a merge
+that may change if conflicts are produced or not.</p>
+</section>
+<section id="how-does-github-differ-from-bitbucket">
+<h3><span class="section-number">15.13.14. </span>How does GitHub differ from bitbucket?<a class="headerlink" href="#how-does-github-differ-from-bitbucket" title="Permalink to this headline">#</a></h3>
+<p>Pricing, being owned by Microsoft instead of Atlassian, and some in browser features.  GitHub has a more advanced API and continuous integration lately.  It also has classroom features that I use (to let you all create repos that I can manage and Mark can see automatically) that other git hosts do not have.</p>
+</section>
+<section id="will-we-be-constantly-updating-a-kwl-item-md-file-to-the-kwl-repo-for-a-detailed-knowledge-base-on-each-of-the-items-listed-in-the-chart">
+<h3><span class="section-number">15.13.15. </span>will we be constantly updating a <kwl-item>.md file to the kwl repo for a detailed knowledge base on each of the items listed in the chart?<a class="headerlink" href="#will-we-be-constantly-updating-a-kwl-item-md-file-to-the-kwl-repo-for-a-detailed-knowledge-base-on-each-of-the-items-listed-in-the-chart" title="Permalink to this headline">#</a></h3>
+<p>You only need to add files as advised.</p>
+</section>
+<section id="how-often-should-we-push-information-from-the-kwl-table-into-each-kwl-item-md-file">
+<h3><span class="section-number">15.13.16. </span>how often should we push information from the kwl table into each <kwl-item>.md file?<a class="headerlink" href="#how-often-should-we-push-information-from-the-kwl-table-into-each-kwl-item-md-file" title="Permalink to this headline">#</a></h3>
+<p>You should commit and push your work frequently.  This allows you to have a back up and restore your work freqently?</p>
+</section>
+<section id="if-we-run-into-errors-using-cli-tools-what-are-ways-or-resources-that-can-help-debug-and-fix-errors">
+<h3><span class="section-number">15.13.17. </span>If we run into errors using CLI tools what are ways or resources that can help debug and fix errors.<a class="headerlink" href="#if-we-run-into-errors-using-cli-tools-what-are-ways-or-resources-that-can-help-debug-and-fix-errors" title="Permalink to this headline">#</a></h3>
+<p>It depends on the error. We’ll see some and I encourage you to expand upon this question.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notes"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="2022-09-26.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">6. </span>Admin</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../activities/kwl.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">KWL Chart</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Professor Sarah M Brown<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
