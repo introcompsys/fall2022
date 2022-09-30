@@ -16,7 +16,7 @@ We'll spend the first two classes introducing some basics of GitHub and setting 
 
 ### How do all of these topics relate?
 
-*approximatley two weeks*
+*approximately two weeks*
 
 ````{margin}
 ```{tip}
@@ -92,27 +92,27 @@ Content from above will be expanded and slotted into specific classes as we go. 
   - introductions, tool practice
 * - 2022-09-12
   - How does knowledge work in computing?
-  - [Read through the class site, notes, reflect on a thing you know well]()
+  - Read through the class site, notes, reflect on a thing you knw well
   - course  FAQ, knowledge discussion
 * - 2022-09-14
   - How do I use git offline?
-  - [review notes, reflect on issues, check environment, map cs knowledge]()
+  - review notes, reflect on issues, check environment, map cs knowledge
   - cloning, pushing, terminal basics
 * - 2022-09-19
   - Why do I need to use a terminal?
-  - [review notes, practice git offline 2 ways, update kwl]()
+  - review notes, practice git offline 2 ways, update kwl
   - bash, organizing a project
 * - 2022-09-21
   - What are the software parts of a computer system?
-  - [practice bash, contribute to the course site, examine a software project]()
+  - [practice bash, contribute to the course site, examine a sotware project
   - hardware simulator
 * - 2022-09-26
   - What are the hardware parts of a computer system?
-  - [practice, install h/w sim, review memory]()
+  - practice, install h/w sim, review memory
   - hardware simulation
 * - 2022-09-28
   - How does git really work?
-  - [practice, begin contract, understand git]()
+  - practice, begin contract, understand git
   - grading contract Q&A, git diff, hash
 * - 2022-20-03
   - What happens under the hood of git?
@@ -120,27 +120,27 @@ Content from above will be expanded and slotted into specific classes as we go. 
   - git plumbing and more bash (pipes and find)
 * - 2022-10-05
   - Why are git commit numbers so long?
-  - [review, map git]()
+  - review, map git
   - more git, number systems
 * - 2022-10-12
   - How can git help me when I need it?
-  - [reveiw numbers and hypothesize what git could help with]()
+  - reveiw numbers and hypothesize what git could help with
   - git merges
 * - 2022-10-17
   - How do programmers build documentation?
-  - [review git recovery, practice with rebase, merge, revert, etc; confirm jupyterbook is installed]()
+  - [review git recovery, practice with rebase, merge, revert, etc; cofirm jupyterbook is installed
   - templating, jupyterbook
 * - 2022-10-19
   - How do programmers auotmate mundane tasks?
-  - [convert your kwlrepo]()
+  - convert your kwlrepo
   - shell scripting, pipes, more redirects, grep
 * - 2022-10-24
   - How do I work remotely ?
-  - [install reqs, reflect on grade, practice scrip]()
+  - install reqs, reflect on grade, practice script
   - ssh/ ssh keys, sed/ awk, file permissions
 * - 2022-10-26
   - How do programmers keep track of all these tools?
-  - [summarize IDE reflections]()
+  - summarize IDE reflections
   - IDE anatomy
 * - 2022-10-31
   - How do Developers keep track of all these tools?
@@ -156,7 +156,7 @@ Content from above will be expanded and slotted into specific classes as we go. 
   -
 * - 2022-11-09
   - Why is the object file unreadable?
-  - [what are operators]
+  - what are operators
   - bits, bytes, and integers/character representtion
 * - 2022-11-14
   - What about non integer numbers?
@@ -164,7 +164,7 @@ Content from above will be expanded and slotted into specific classes as we go. 
   - floating point representation
 * - 2022-11-16
   - Where do those bitwise operations come from?
-  - [review simulator]
+  - review simulator
   - gates, registers, more integer
 * - 2022-11-21
   - What actually is a gate?

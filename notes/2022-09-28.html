@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>15. What is git? &#8212; Introduction to Computer Systems</title>
+    <title>7. What is git? &#8212; Introduction to Computer Systems</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -53,7 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="KWL Chart" href="../activities/kwl.html" />
-    <link rel="prev" title="6. Admin" href="2022-09-26.html" />
+    <link rel="prev" title="6. How do we study Computer Systems?" href="2022-09-26.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -198,12 +198,12 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="2022-09-26.html">
-   6. Admin
+   6. How do we study Computer Systems?
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   15. What
+   7. What
    <em>
     is
    </em>
@@ -289,6 +289,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../resources/organization.html">
    Getting Organized for class
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../resources/more_info_on_cpus.html">
+   More info on cpus
   </a>
  </li>
  <li class="toctree-l1">
@@ -492,166 +497,166 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#admin">
-   15.1. Admin
+   7.1. Admin
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#git-is-a-file-system">
-   15.2. Git is a File system
+   7.2. Git is a File system
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#git-is-a-version-control-system">
-   15.3. Git is a Version Control System
+   7.3. Git is a Version Control System
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#git-has-two-sets-of-commands">
-   15.4. Git has two sets of commands
+   7.4. Git has two sets of commands
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#git-is-distributed">
-   15.5. Git is distributed
+   7.5. Git is distributed
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#subversion-workflow">
-     15.5.1. Subversion  WOrkflow
+     7.5.1. Subversion  WOrkflow
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#integration-manager">
-     15.5.2. Integration Manager
+     7.5.2. Integration Manager
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#dictator-and-lieutenants">
-     15.5.3. dictator and lieutenants
+     7.5.3. dictator and lieutenants
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#anatomy-of-git">
-   15.6. Anatomy of Git
+   7.6. Anatomy of Git
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#git-head">
-     15.6.1. Git HEAD
+     7.6.1. Git HEAD
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#git-config">
-   15.7. Git Config
+   7.7. Git Config
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#git-index">
-   15.8. Git Index
+   7.8. Git Index
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#git-objects">
-   15.9. Git Objects
+   7.9. Git Objects
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#review-todays-class">
-   15.10. Review today’s class
+   7.10. Review today’s class
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#prepare-for-next-class">
-   15.11. Prepare for Next Class
+   7.11. Prepare for Next Class
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#more-practice">
-   15.12. More Practice
+   7.12. More Practice
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#questions">
-   15.13. Questions
+   7.13. Questions
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#can-you-fork-a-repo-you-do-not-have-access-to">
-     15.13.1. Can you fork a repo you do not have access to?
+     7.13.1. Can you fork a repo you do not have access to?
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#what-should-i-do-if-git-crashes-and-i-lose-progress">
-     15.13.2. what should I do if git crashes and I lose progress?
+     7.13.2. what should I do if git crashes and I lose progress?
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#which-is-easier-better-to-use-the-git-cli-or-the-github-website">
-     15.13.3. Which is easier/better to use: the git CLI, or the GitHub website?
+     7.13.3. Which is easier/better to use: the git CLI, or the GitHub website?
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#what-most-important-function-that-git-can-perform">
-     15.13.4. What most important function that git can perform?
+     7.13.4. What most important function that git can perform?
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#when-encountering-a-merge-conflict-is-it-best-to-use-the-terminal-bash-window-or-the-github-merging-features">
-     15.13.5. When encountering a merge conflict, is it best to use the terminal/bash window or the GitHub merging features?
+     7.13.5. When encountering a merge conflict, is it best to use the terminal/bash window or the GitHub merging features?
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#why-is-there-not-an-undo-command-if-you-delete-a-file-or-repo-on-git">
-     15.13.6. Why is there not an undo command if you delete a file or repo on git?
+     7.13.6. Why is there not an undo command if you delete a file or repo on git?
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#would-a-merge-conflict-or-any-kind-of-problem-emerge-if-theres-a-file-exclusive-to-a-branch-that-isnt-main-when-we-try-to-merge-that-branchs-contents-into-main">
-     15.13.7. Would a merge conflict or any kind of problem emerge if there’s a  file exclusive to a branch that isn’t main, when we try to merge that branch’s contents into main?
+     7.13.7. Would a merge conflict or any kind of problem emerge if there’s a  file exclusive to a branch that isn’t main, when we try to merge that branch’s contents into main?
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#how-often-should-i-make-a-new-branch-in-my-kwl-repo">
-     15.13.8. How often should I make a new branch in my KWL repo?
+     7.13.8. How often should I make a new branch in my KWL repo?
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#how-is-git-different-than-other-coding-languages">
-     15.13.9. how is git different than other coding languages?
+     7.13.9. how is git different than other coding languages?
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#where-is-git-used-mostly-outside-this-classroom-university">
-     15.13.10. where is git used mostly (outside this classroom/university)?
+     7.13.10. where is git used mostly (outside this classroom/university)?
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#one-git-scenario-i-feel-like-i-will-reach-a-point-where-there-are-just-too-many-branches-if-im-supposed-to-make-a-new-branch-every-time-i-edit-something">
-     15.13.11. One git scenario, I feel like I will reach a point where there are just too many branches if I’m supposed to make a new branch every time I edit something.
+     7.13.11. One git scenario, I feel like I will reach a point where there are just too many branches if I’m supposed to make a new branch every time I edit something.
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#whats-the-difference-between-git-fork-and-git-clone">
-     15.13.12. whats the difference between git fork and git clone
+     7.13.12. whats the difference between git fork and git clone
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#can-we-add-arguments-to-make-git-more-specific-with-any-type-of-errors-that-may-occur-ex-merge-conflicts">
-     15.13.13. Can we add arguments to make git more specific with any type of errors that may occur, ex merge conflicts?
+     7.13.13. Can we add arguments to make git more specific with any type of errors that may occur, ex merge conflicts?
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#how-does-github-differ-from-bitbucket">
-     15.13.14. How does GitHub differ from bitbucket?
+     7.13.14. How does GitHub differ from bitbucket?
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#will-we-be-constantly-updating-a-kwl-item-md-file-to-the-kwl-repo-for-a-detailed-knowledge-base-on-each-of-the-items-listed-in-the-chart">
-     15.13.15. will we be constantly updating a
+     7.13.15. will we be constantly updating a
      <kwl-item>
       .md file to the kwl repo for a detailed knowledge base on each of the items listed in the chart?
      </kwl-item>
@@ -659,7 +664,7 @@ title="Print to PDF"
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#how-often-should-we-push-information-from-the-kwl-table-into-each-kwl-item-md-file">
-     15.13.16. how often should we push information from the kwl table into each
+     7.13.16. how often should we push information from the kwl table into each
      <kwl-item>
       .md file?
      </kwl-item>
@@ -667,7 +672,7 @@ title="Print to PDF"
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#if-we-run-into-errors-using-cli-tools-what-are-ways-or-resources-that-can-help-debug-and-fix-errors">
-     15.13.17. If we run into errors using CLI tools what are ways or resources that can help debug and fix errors.
+     7.13.17. If we run into errors using CLI tools what are ways or resources that can help debug and fix errors.
     </a>
    </li>
   </ul>
@@ -693,166 +698,166 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#admin">
-   15.1. Admin
+   7.1. Admin
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#git-is-a-file-system">
-   15.2. Git is a File system
+   7.2. Git is a File system
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#git-is-a-version-control-system">
-   15.3. Git is a Version Control System
+   7.3. Git is a Version Control System
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#git-has-two-sets-of-commands">
-   15.4. Git has two sets of commands
+   7.4. Git has two sets of commands
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#git-is-distributed">
-   15.5. Git is distributed
+   7.5. Git is distributed
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#subversion-workflow">
-     15.5.1. Subversion  WOrkflow
+     7.5.1. Subversion  WOrkflow
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#integration-manager">
-     15.5.2. Integration Manager
+     7.5.2. Integration Manager
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#dictator-and-lieutenants">
-     15.5.3. dictator and lieutenants
+     7.5.3. dictator and lieutenants
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#anatomy-of-git">
-   15.6. Anatomy of Git
+   7.6. Anatomy of Git
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#git-head">
-     15.6.1. Git HEAD
+     7.6.1. Git HEAD
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#git-config">
-   15.7. Git Config
+   7.7. Git Config
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#git-index">
-   15.8. Git Index
+   7.8. Git Index
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#git-objects">
-   15.9. Git Objects
+   7.9. Git Objects
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#review-todays-class">
-   15.10. Review today’s class
+   7.10. Review today’s class
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#prepare-for-next-class">
-   15.11. Prepare for Next Class
+   7.11. Prepare for Next Class
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#more-practice">
-   15.12. More Practice
+   7.12. More Practice
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#questions">
-   15.13. Questions
+   7.13. Questions
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#can-you-fork-a-repo-you-do-not-have-access-to">
-     15.13.1. Can you fork a repo you do not have access to?
+     7.13.1. Can you fork a repo you do not have access to?
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#what-should-i-do-if-git-crashes-and-i-lose-progress">
-     15.13.2. what should I do if git crashes and I lose progress?
+     7.13.2. what should I do if git crashes and I lose progress?
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#which-is-easier-better-to-use-the-git-cli-or-the-github-website">
-     15.13.3. Which is easier/better to use: the git CLI, or the GitHub website?
+     7.13.3. Which is easier/better to use: the git CLI, or the GitHub website?
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#what-most-important-function-that-git-can-perform">
-     15.13.4. What most important function that git can perform?
+     7.13.4. What most important function that git can perform?
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#when-encountering-a-merge-conflict-is-it-best-to-use-the-terminal-bash-window-or-the-github-merging-features">
-     15.13.5. When encountering a merge conflict, is it best to use the terminal/bash window or the GitHub merging features?
+     7.13.5. When encountering a merge conflict, is it best to use the terminal/bash window or the GitHub merging features?
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#why-is-there-not-an-undo-command-if-you-delete-a-file-or-repo-on-git">
-     15.13.6. Why is there not an undo command if you delete a file or repo on git?
+     7.13.6. Why is there not an undo command if you delete a file or repo on git?
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#would-a-merge-conflict-or-any-kind-of-problem-emerge-if-theres-a-file-exclusive-to-a-branch-that-isnt-main-when-we-try-to-merge-that-branchs-contents-into-main">
-     15.13.7. Would a merge conflict or any kind of problem emerge if there’s a  file exclusive to a branch that isn’t main, when we try to merge that branch’s contents into main?
+     7.13.7. Would a merge conflict or any kind of problem emerge if there’s a  file exclusive to a branch that isn’t main, when we try to merge that branch’s contents into main?
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#how-often-should-i-make-a-new-branch-in-my-kwl-repo">
-     15.13.8. How often should I make a new branch in my KWL repo?
+     7.13.8. How often should I make a new branch in my KWL repo?
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#how-is-git-different-than-other-coding-languages">
-     15.13.9. how is git different than other coding languages?
+     7.13.9. how is git different than other coding languages?
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#where-is-git-used-mostly-outside-this-classroom-university">
-     15.13.10. where is git used mostly (outside this classroom/university)?
+     7.13.10. where is git used mostly (outside this classroom/university)?
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#one-git-scenario-i-feel-like-i-will-reach-a-point-where-there-are-just-too-many-branches-if-im-supposed-to-make-a-new-branch-every-time-i-edit-something">
-     15.13.11. One git scenario, I feel like I will reach a point where there are just too many branches if I’m supposed to make a new branch every time I edit something.
+     7.13.11. One git scenario, I feel like I will reach a point where there are just too many branches if I’m supposed to make a new branch every time I edit something.
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#whats-the-difference-between-git-fork-and-git-clone">
-     15.13.12. whats the difference between git fork and git clone
+     7.13.12. whats the difference between git fork and git clone
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#can-we-add-arguments-to-make-git-more-specific-with-any-type-of-errors-that-may-occur-ex-merge-conflicts">
-     15.13.13. Can we add arguments to make git more specific with any type of errors that may occur, ex merge conflicts?
+     7.13.13. Can we add arguments to make git more specific with any type of errors that may occur, ex merge conflicts?
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#how-does-github-differ-from-bitbucket">
-     15.13.14. How does GitHub differ from bitbucket?
+     7.13.14. How does GitHub differ from bitbucket?
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#will-we-be-constantly-updating-a-kwl-item-md-file-to-the-kwl-repo-for-a-detailed-knowledge-base-on-each-of-the-items-listed-in-the-chart">
-     15.13.15. will we be constantly updating a
+     7.13.15. will we be constantly updating a
      <kwl-item>
       .md file to the kwl repo for a detailed knowledge base on each of the items listed in the chart?
      </kwl-item>
@@ -860,7 +865,7 @@ title="Print to PDF"
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#how-often-should-we-push-information-from-the-kwl-table-into-each-kwl-item-md-file">
-     15.13.16. how often should we push information from the kwl table into each
+     7.13.16. how often should we push information from the kwl table into each
      <kwl-item>
       .md file?
      </kwl-item>
@@ -868,7 +873,7 @@ title="Print to PDF"
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#if-we-run-into-errors-using-cli-tools-what-are-ways-or-resources-that-can-help-debug-and-fix-errors">
-     15.13.17. If we run into errors using CLI tools what are ways or resources that can help debug and fix errors.
+     7.13.17. If we run into errors using CLI tools what are ways or resources that can help debug and fix errors.
     </a>
    </li>
   </ul>
@@ -884,9 +889,9 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="what-is-git">
-<h1><span class="section-number">15. </span>What <em>is</em> git?<a class="headerlink" href="#what-is-git" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">7. </span>What <em>is</em> git?<a class="headerlink" href="#what-is-git" title="Permalink to this headline">#</a></h1>
 <section id="admin">
-<h2><span class="section-number">15.1. </span>Admin<a class="headerlink" href="#admin" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">7.1. </span>Admin<a class="headerlink" href="#admin" title="Permalink to this headline">#</a></h2>
 <p><a class="reference external" href="https://web.uri.edu/artsci/files/Curriculum-Mod-Form-1.pdf">get credit for this class toward your major</a></p>
 <ul class="simple">
 <li><p>substitution of: CSC392 Intro to Computer Systems For: 300 level elective</p></li>
@@ -896,7 +901,7 @@ title="Print to PDF"
 <p>Participate in research:see Prismia for a survey link</p>
 </section>
 <section id="git-is-a-file-system">
-<h2><span class="section-number">15.2. </span>Git is a File system<a class="headerlink" href="#git-is-a-file-system" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">7.2. </span>Git is a File system<a class="headerlink" href="#git-is-a-file-system" title="Permalink to this headline">#</a></h2>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><a class="reference external" href="https://git-scm.com/book/en/v2">git book</a> is the official reference on git.</p>
@@ -920,14 +925,14 @@ what types of programming have you seen that use key- value pairs?<div class="sd
 </details><p>What this means is that you can insert any kind of content into a Git repository, for which Git will hand you back a unique key you can use later to retrieve that content.</p>
 </section>
 <section id="git-is-a-version-control-system">
-<h2><span class="section-number">15.3. </span>Git is a Version Control System<a class="headerlink" href="#git-is-a-version-control-system" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">7.3. </span>Git is a Version Control System<a class="headerlink" href="#git-is-a-version-control-system" title="Permalink to this headline">#</a></h2>
 <p>git stores <strong>snapshots</strong> of your work each time you commit.</p>
 <p><img alt="snapshot of 5 version sof 3 files" src="https://git-scm.com/book/en/v2/images/snapshots.png" /></p>
 <p>it uses 3 stages:</p>
 <p><img alt="3 stages in git" src="https://git-scm.com/book/en/v2/images/areas.png" /></p>
 </section>
 <section id="git-has-two-sets-of-commands">
-<h2><span class="section-number">15.4. </span>Git has two sets of commands<a class="headerlink" href="#git-has-two-sets-of-commands" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">7.4. </span>Git has two sets of commands<a class="headerlink" href="#git-has-two-sets-of-commands" title="Permalink to this headline">#</a></h2>
 <p>Porcelain: the user friendly VCS</p>
 <p>Plumbing: the internal workings- a toolkit for a VCS</p>
 <p>We have so far used git as a version control system.  A version control system, in general, will have operations like commit, push, pull, clone.  These may work differently under the hood or be called different things, but those are what something needs to have in order to keep track of different versions.</p>
@@ -935,7 +940,7 @@ what types of programming have you seen that use key- value pairs?<div class="sd
 <p>You can think of the plumbing vs porcelain commands like public/private methods.  As a user, you only need the public methods (porcelain commands) but those use the private ones to get things done (plumbing commands).  We will use the plumbing commands over the next few classes to examine what git <em>really</em> does when we call the porcelain commands that we will typically use.</p>
 </section>
 <section id="git-is-distributed">
-<h2><span class="section-number">15.5. </span>Git is distributed<a class="headerlink" href="#git-is-distributed" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">7.5. </span>Git is distributed<a class="headerlink" href="#git-is-distributed" title="Permalink to this headline">#</a></h2>
 <p>What does that mean?</p>
 <p>Git runs locally.  It can run in many places, and has commands to help sync across remotes, but git does not require one copy of the repository to be the “official” copy and the others to be subordinate.  git just sees repositories.
 For human reasons, we like to have one “official” copy and treat the others as local copies, but that is a social choice, not a technological requirement of git. Even though we will typically use it with an offical copy and other copies, having a tool tht does not care, makes the tool more flexible and allows us to create workflows, or networks of copies that have any relationship we want.</p>
@@ -949,20 +954,20 @@ For human reasons, we like to have one “official” copy and treat the others 
 </aside>
 <p>Some example workflows</p>
 <section id="subversion-workflow">
-<h3><span class="section-number">15.5.1. </span>Subversion  WOrkflow<a class="headerlink" href="#subversion-workflow" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">7.5.1. </span>Subversion  WOrkflow<a class="headerlink" href="#subversion-workflow" title="Permalink to this headline">#</a></h3>
 <p><img alt="subversion workflow" src="https://git-scm.com/images/about/workflow-a&#64;2x.png" /></p>
 </section>
 <section id="integration-manager">
-<h3><span class="section-number">15.5.2. </span>Integration Manager<a class="headerlink" href="#integration-manager" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">7.5.2. </span>Integration Manager<a class="headerlink" href="#integration-manager" title="Permalink to this headline">#</a></h3>
 <p><img alt="integration manager workflow" src="https://git-scm.com/images/about/workflow-b&#64;2x.png" /></p>
 </section>
 <section id="dictator-and-lieutenants">
-<h3><span class="section-number">15.5.3. </span>dictator and lieutenants<a class="headerlink" href="#dictator-and-lieutenants" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">7.5.3. </span>dictator and lieutenants<a class="headerlink" href="#dictator-and-lieutenants" title="Permalink to this headline">#</a></h3>
 <p><img alt="dictator and lieutenants workflow" src="https://git-scm.com/images/about/workflow-c&#64;2x.png" /></p>
 </section>
 </section>
 <section id="anatomy-of-git">
-<h2><span class="section-number">15.6. </span>Anatomy of Git<a class="headerlink" href="#anatomy-of-git" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">7.6. </span>Anatomy of Git<a class="headerlink" href="#anatomy-of-git" title="Permalink to this headline">#</a></h2>
 <p>Let’s look at git again in our <code class="docutils literal notranslate"><span class="pre">github-inclass</span></code> repo</p>
 <p>As always, start by checking where we are:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">status</span>
@@ -1033,7 +1038,7 @@ ls
 </tbody>
 </table>
 <section id="git-head">
-<h3><span class="section-number">15.6.1. </span>Git HEAD<a class="headerlink" href="#git-head" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">7.6.1. </span>Git HEAD<a class="headerlink" href="#git-head" title="Permalink to this headline">#</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat HEAD
 </pre></div>
 </div>
@@ -1179,7 +1184,7 @@ to one another</p>
 </section>
 </section>
 <section id="git-config">
-<h2><span class="section-number">15.7. </span>Git Config<a class="headerlink" href="#git-config" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">7.7. </span>Git Config<a class="headerlink" href="#git-config" title="Permalink to this headline">#</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat config
 </pre></div>
 </div>
@@ -1208,7 +1213,7 @@ to one another</p>
 <p>it also maps each local branch to its corresponding origin and the local place you would merge to when you pull from that remote branch.</p>
 </section>
 <section id="git-index">
-<h2><span class="section-number">15.8. </span>Git Index<a class="headerlink" href="#git-index" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">7.8. </span>Git Index<a class="headerlink" href="#git-index" title="Permalink to this headline">#</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">..</span>
 </pre></div>
 </div>
@@ -1303,7 +1308,7 @@ to one another</p>
 <p>We say that that part is only the the staging area, beacue this item is added to the objects, but it is not in the commit history yet.</p>
 </section>
 <section id="git-objects">
-<h2><span class="section-number">15.9. </span>Git Objects<a class="headerlink" href="#git-objects" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">7.9. </span>Git Objects<a class="headerlink" href="#git-objects" title="Permalink to this headline">#</a></h2>
 <p>All of these blob objects and trees are stored in the objects folder</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">.</span><span class="n">git</span><span class="o">/</span><span class="n">objects</span><span class="o">/</span>
 <span class="n">ls</span>
@@ -1343,7 +1348,7 @@ to one another</p>
 </div>
 </section>
 <section id="review-todays-class">
-<h2><span class="section-number">15.10. </span>Review today’s class<a class="headerlink" href="#review-todays-class" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">7.10. </span>Review today’s class<a class="headerlink" href="#review-todays-class" title="Permalink to this headline">#</a></h2>
 <ol class="simple">
 <li><p>Practice with git log and redirects to write the commit history of your main branch for your kwl chart to a file <code class="docutils literal notranslate"><span class="pre">gitlog.txt</span></code> and commit that file to your kwl repo.</p></li>
 <li><p>Review the notes</p></li>
@@ -1351,14 +1356,14 @@ to one another</p>
 </ol>
 </section>
 <section id="prepare-for-next-class">
-<h2><span class="section-number">15.11. </span>Prepare for Next Class<a class="headerlink" href="#prepare-for-next-class" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">7.11. </span>Prepare for Next Class<a class="headerlink" href="#prepare-for-next-class" title="Permalink to this headline">#</a></h2>
 <ol class="simple">
 <li><p>Try exploring your a repo manually and bring more questions</p></li>
 <li><p>Make sure that you have a grading contract that has been reviewed at least once</p></li>
 </ol>
 </section>
 <section id="more-practice">
-<h2><span class="section-number">15.12. </span>More Practice<a class="headerlink" href="#more-practice" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">7.12. </span>More Practice<a class="headerlink" href="#more-practice" title="Permalink to this headline">#</a></h2>
 <ol class="simple">
 <li><p><i class="fa-solid fa-star"></i> Read about different workflows in git and add responses to the below in a <code class="docutils literal notranslate"><span class="pre">workflows.md</span></code> in your kwl repo. Two good places to read from are <a class="reference external" href="https://git-scm.com/book/en/v2/Distributed-Git-Distributed-Workflows#ch05-distributed-git">Git Book</a> and the <a class="reference external" href="https://www.atlassian.com/git/tutorials/comparing-workflows">atlassian Docs</a></p></li>
 <li><p>Contribute either a glossary term, cheatsheet item, or additional resource/reference to your group repo.</p></li>
@@ -1373,76 +1378,76 @@ to one another</p>
 </div>
 </section>
 <section id="questions">
-<h2><span class="section-number">15.13. </span>Questions<a class="headerlink" href="#questions" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">7.13. </span>Questions<a class="headerlink" href="#questions" title="Permalink to this headline">#</a></h2>
 <section id="can-you-fork-a-repo-you-do-not-have-access-to">
-<h3><span class="section-number">15.13.1. </span>Can you fork a repo you do not have access to?<a class="headerlink" href="#can-you-fork-a-repo-you-do-not-have-access-to" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">7.13.1. </span>Can you fork a repo you do not have access to?<a class="headerlink" href="#can-you-fork-a-repo-you-do-not-have-access-to" title="Permalink to this headline">#</a></h3>
 <p>You cannot fork a repository that you do not have read access to.  If it is private, the owner can allow or not allow forking. You can fork public repos and then submit PRs to suggest changes.  Try making a contribution to the course site.  Add a glossary entry, link a term from the notes to the glossary or fill in a caption.</p>
 </section>
 <section id="what-should-i-do-if-git-crashes-and-i-lose-progress">
-<h3><span class="section-number">15.13.2. </span>what should I do if git crashes and I lose progress?<a class="headerlink" href="#what-should-i-do-if-git-crashes-and-i-lose-progress" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">7.13.2. </span>what should I do if git crashes and I lose progress?<a class="headerlink" href="#what-should-i-do-if-git-crashes-and-i-lose-progress" title="Permalink to this headline">#</a></h3>
 <p>git should not ever have this problem. You should not ever lose work again at all
 if you commit and push frequently.</p>
 <p>I lost my whole computer a few months before I finished my PhD. I only lost 1 day’s worth of work though.  The morning’s worth of work that caused the crash and the afternoon that day recovering the computer (new harddrive and Linux instead of Windows) and then I pulled my code and kept working.</p>
 </section>
 <section id="which-is-easier-better-to-use-the-git-cli-or-the-github-website">
-<h3><span class="section-number">15.13.3. </span>Which is easier/better to use: the git CLI, or the GitHub website?<a class="headerlink" href="#which-is-easier-better-to-use-the-git-cli-or-the-github-website" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">7.13.3. </span>Which is easier/better to use: the git CLI, or the GitHub website?<a class="headerlink" href="#which-is-easier-better-to-use-the-git-cli-or-the-github-website" title="Permalink to this headline">#</a></h3>
 <p>the git CLI is more complete and more flexible, you can batch changes together into larger commits, for example. It is better for most work.  GitHub is simple and less intimidating for novices so for small changes it is great.</p>
 </section>
 <section id="what-most-important-function-that-git-can-perform">
-<h3><span class="section-number">15.13.4. </span>What most important function that git can perform?<a class="headerlink" href="#what-most-important-function-that-git-can-perform" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">7.13.4. </span>What most important function that git can perform?<a class="headerlink" href="#what-most-important-function-that-git-can-perform" title="Permalink to this headline">#</a></h3>
 <p>restoring previous versions.</p>
 </section>
 <section id="when-encountering-a-merge-conflict-is-it-best-to-use-the-terminal-bash-window-or-the-github-merging-features">
-<h3><span class="section-number">15.13.5. </span>When encountering a merge conflict, is it best to use the terminal/bash window or the GitHub merging features?<a class="headerlink" href="#when-encountering-a-merge-conflict-is-it-best-to-use-the-terminal-bash-window-or-the-github-merging-features" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">7.13.5. </span>When encountering a merge conflict, is it best to use the terminal/bash window or the GitHub merging features?<a class="headerlink" href="#when-encountering-a-merge-conflict-is-it-best-to-use-the-terminal-bash-window-or-the-github-merging-features" title="Permalink to this headline">#</a></h3>
 <p>You can use the GitHub one for basic merge conflicts.  For complex ones GitHub will give you terminal commands to download the work and work offline.</p>
 </section>
 <section id="why-is-there-not-an-undo-command-if-you-delete-a-file-or-repo-on-git">
-<h3><span class="section-number">15.13.6. </span>Why is there not an undo command if you delete a file or repo on git?<a class="headerlink" href="#why-is-there-not-an-undo-command-if-you-delete-a-file-or-repo-on-git" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">7.13.6. </span>Why is there not an undo command if you delete a file or repo on git?<a class="headerlink" href="#why-is-there-not-an-undo-command-if-you-delete-a-file-or-repo-on-git" title="Permalink to this headline">#</a></h3>
 <p>There is a way to undo with git, there is not a way to undo <code class="docutils literal notranslate"><span class="pre">rm</span></code> in bash, unless you are using some sort of backup tool, or git.</p>
 </section>
 <section id="would-a-merge-conflict-or-any-kind-of-problem-emerge-if-theres-a-file-exclusive-to-a-branch-that-isnt-main-when-we-try-to-merge-that-branchs-contents-into-main">
-<h3><span class="section-number">15.13.7. </span>Would a merge conflict or any kind of problem emerge if there’s a  file exclusive to a branch that isn’t main, when we try to merge that branch’s contents into main?<a class="headerlink" href="#would-a-merge-conflict-or-any-kind-of-problem-emerge-if-theres-a-file-exclusive-to-a-branch-that-isnt-main-when-we-try-to-merge-that-branchs-contents-into-main" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">7.13.7. </span>Would a merge conflict or any kind of problem emerge if there’s a  file exclusive to a branch that isn’t main, when we try to merge that branch’s contents into main?<a class="headerlink" href="#would-a-merge-conflict-or-any-kind-of-problem-emerge-if-theres-a-file-exclusive-to-a-branch-that-isnt-main-when-we-try-to-merge-that-branchs-contents-into-main" title="Permalink to this headline">#</a></h3>
 <p>No, there is nothing that there can be a conflict with.  That is one strategy to use to avoid conflicts, to have multiple, smaller files.</p>
 </section>
 <section id="how-often-should-i-make-a-new-branch-in-my-kwl-repo">
-<h3><span class="section-number">15.13.8. </span>How often should I make a new branch in my KWL repo?<a class="headerlink" href="#how-often-should-i-make-a-new-branch-in-my-kwl-repo" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">7.13.8. </span>How often should I make a new branch in my KWL repo?<a class="headerlink" href="#how-often-should-i-make-a-new-branch-in-my-kwl-repo" title="Permalink to this headline">#</a></h3>
 <p>One for each group of work you want graded.  Ideally about one per course session.</p>
 </section>
 <section id="how-is-git-different-than-other-coding-languages">
-<h3><span class="section-number">15.13.9. </span>how is git different than other coding languages?<a class="headerlink" href="#how-is-git-different-than-other-coding-languages" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">7.13.9. </span>how is git different than other coding languages?<a class="headerlink" href="#how-is-git-different-than-other-coding-languages" title="Permalink to this headline">#</a></h3>
 <p>Git is a program that manages files, it is not a programming language. It is a program with many subroutines and designed for use on a shell, but still not a language.  Languages have to have certain features.</p>
 </section>
 <section id="where-is-git-used-mostly-outside-this-classroom-university">
-<h3><span class="section-number">15.13.10. </span>where is git used mostly (outside this classroom/university)?<a class="headerlink" href="#where-is-git-used-mostly-outside-this-classroom-university" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">7.13.10. </span>where is git used mostly (outside this classroom/university)?<a class="headerlink" href="#where-is-git-used-mostly-outside-this-classroom-university" title="Permalink to this headline">#</a></h3>
 <p>Literally  almost everywhere people write code.</p>
 </section>
 <section id="one-git-scenario-i-feel-like-i-will-reach-a-point-where-there-are-just-too-many-branches-if-im-supposed-to-make-a-new-branch-every-time-i-edit-something">
-<h3><span class="section-number">15.13.11. </span>One git scenario, I feel like I will reach a point where there are just too many branches if I’m supposed to make a new branch every time I edit something.<a class="headerlink" href="#one-git-scenario-i-feel-like-i-will-reach-a-point-where-there-are-just-too-many-branches-if-im-supposed-to-make-a-new-branch-every-time-i-edit-something" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">7.13.11. </span>One git scenario, I feel like I will reach a point where there are just too many branches if I’m supposed to make a new branch every time I edit something.<a class="headerlink" href="#one-git-scenario-i-feel-like-i-will-reach-a-point-where-there-are-just-too-many-branches-if-im-supposed-to-make-a-new-branch-every-time-i-edit-something" title="Permalink to this headline">#</a></h3>
 <p>You can delete a branch</p>
 </section>
 <section id="whats-the-difference-between-git-fork-and-git-clone">
-<h3><span class="section-number">15.13.12. </span>whats the difference between git fork and git clone<a class="headerlink" href="#whats-the-difference-between-git-fork-and-git-clone" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">7.13.12. </span>whats the difference between git fork and git clone<a class="headerlink" href="#whats-the-difference-between-git-fork-and-git-clone" title="Permalink to this headline">#</a></h3>
 <p>a fork keeps the copy on GitHub (or another server) a clone makes it local</p>
 </section>
 <section id="can-we-add-arguments-to-make-git-more-specific-with-any-type-of-errors-that-may-occur-ex-merge-conflicts">
-<h3><span class="section-number">15.13.13. </span>Can we add arguments to make git more specific with any type of errors that may occur, ex merge conflicts?<a class="headerlink" href="#can-we-add-arguments-to-make-git-more-specific-with-any-type-of-errors-that-may-occur-ex-merge-conflicts" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">7.13.13. </span>Can we add arguments to make git more specific with any type of errors that may occur, ex merge conflicts?<a class="headerlink" href="#can-we-add-arguments-to-make-git-more-specific-with-any-type-of-errors-that-may-occur-ex-merge-conflicts" title="Permalink to this headline">#</a></h3>
 <p>Git is very powerful and can be given more strict guidance on how to do a merge
 that may change if conflicts are produced or not.</p>
 </section>
 <section id="how-does-github-differ-from-bitbucket">
-<h3><span class="section-number">15.13.14. </span>How does GitHub differ from bitbucket?<a class="headerlink" href="#how-does-github-differ-from-bitbucket" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">7.13.14. </span>How does GitHub differ from bitbucket?<a class="headerlink" href="#how-does-github-differ-from-bitbucket" title="Permalink to this headline">#</a></h3>
 <p>Pricing, being owned by Microsoft instead of Atlassian, and some in browser features.  GitHub has a more advanced API and continuous integration lately.  It also has classroom features that I use (to let you all create repos that I can manage and Mark can see automatically) that other git hosts do not have.</p>
 </section>
 <section id="will-we-be-constantly-updating-a-kwl-item-md-file-to-the-kwl-repo-for-a-detailed-knowledge-base-on-each-of-the-items-listed-in-the-chart">
-<h3><span class="section-number">15.13.15. </span>will we be constantly updating a <kwl-item>.md file to the kwl repo for a detailed knowledge base on each of the items listed in the chart?<a class="headerlink" href="#will-we-be-constantly-updating-a-kwl-item-md-file-to-the-kwl-repo-for-a-detailed-knowledge-base-on-each-of-the-items-listed-in-the-chart" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">7.13.15. </span>will we be constantly updating a <kwl-item>.md file to the kwl repo for a detailed knowledge base on each of the items listed in the chart?<a class="headerlink" href="#will-we-be-constantly-updating-a-kwl-item-md-file-to-the-kwl-repo-for-a-detailed-knowledge-base-on-each-of-the-items-listed-in-the-chart" title="Permalink to this headline">#</a></h3>
 <p>You only need to add files as advised.</p>
 </section>
 <section id="how-often-should-we-push-information-from-the-kwl-table-into-each-kwl-item-md-file">
-<h3><span class="section-number">15.13.16. </span>how often should we push information from the kwl table into each <kwl-item>.md file?<a class="headerlink" href="#how-often-should-we-push-information-from-the-kwl-table-into-each-kwl-item-md-file" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">7.13.16. </span>how often should we push information from the kwl table into each <kwl-item>.md file?<a class="headerlink" href="#how-often-should-we-push-information-from-the-kwl-table-into-each-kwl-item-md-file" title="Permalink to this headline">#</a></h3>
 <p>You should commit and push your work frequently.  This allows you to have a back up and restore your work freqently?</p>
 </section>
 <section id="if-we-run-into-errors-using-cli-tools-what-are-ways-or-resources-that-can-help-debug-and-fix-errors">
-<h3><span class="section-number">15.13.17. </span>If we run into errors using CLI tools what are ways or resources that can help debug and fix errors.<a class="headerlink" href="#if-we-run-into-errors-using-cli-tools-what-are-ways-or-resources-that-can-help-debug-and-fix-errors" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">7.13.17. </span>If we run into errors using CLI tools what are ways or resources that can help debug and fix errors.<a class="headerlink" href="#if-we-run-into-errors-using-cli-tools-what-are-ways-or-resources-that-can-help-debug-and-fix-errors" title="Permalink to this headline">#</a></h3>
 <p>It depends on the error. We’ll see some and I encourage you to expand upon this question.</p>
 </section>
 </section>
@@ -1479,7 +1484,7 @@ that may change if conflicts are produced or not.</p>
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">6. </span>Admin</p>
+            <p class="prev-next-title"><span class="section-number">6. </span>How do we study Computer Systems?</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="../activities/kwl.html" title="next page">
