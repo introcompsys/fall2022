@@ -48,6 +48,8 @@ To earn this grade I will:
 - keep my KWL chart up to date
 - complete all review and prepare activities in my KWL repo as directed
 - complete a deeper exploration on one `more practice` task or related question of my own for at least 16 classes after the grade free zone (approximately once per week).
+
+ For each deeper exploration I will write up a report with references and/or a tutorial style post with code excerpts or detailed steps and images as appropriate.
 ```
 
 
@@ -62,7 +64,7 @@ To earn this grade I will:
 - complete all review and prepare activities in my KWL repo as directed
 - complete all of the more practice tasks for at least 16 of the class sessions after the grade free zone.
 
- For each deeper exploration I will write up a report with references and/or a tutorial style post with code excerpts or detailed steps and images as appropriate.
+
 ```
 
 ### Sample C Grading Contract
