@@ -1,0 +1,1329 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>8. How can I fix things in git? &#8212; Introduction to Computer Systems</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="KWL Chart" href="../activities/kwl.html" />
+    <link rel="prev" title="7. What is git?" href="2022-09-28.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Introduction to Computer Systems</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    About this Site
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Syllabus
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus/about.html">
+   Basic Facts
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus/tools.html">
+   Tools and Resources
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus/grading.html">
+   Grading
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus/contract.html">
+   Grading Contract Reference
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus/schedule.html">
+   Schedule
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus/policies.html">
+   Grading Policies
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus/uri_resources.html">
+   Support
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus/uri_statements.html">
+   General URI Policies
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus/communication.html">
+   Office Hours &amp; Comms
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Notes
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="2022-09-07.html">
+   1. Welcome and Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2022-09-12.html">
+   2. Course Logistics and Learning
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2022-09-14.html">
+   3. How can I use GitHub offline?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2022-09-19.html">
+   4. Why Do I Need to Use a terminal?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2022-09-21.html">
+   5. How should I use git to stay organized this class?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2022-09-26.html">
+   6. How do we study Computer Systems?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2022-09-28.html">
+   7. What
+   <em>
+    is
+   </em>
+   git?
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   8. How can I fix things in git?
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Activities
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../activities/kwl.html">
+   KWL Chart
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../activities/review.html">
+   Review
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../activities/prepare.html">
+   Prepare for the next class
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../activities/practice.html">
+   More Practice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../activities/explore.html">
+   Deeper Explorations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../activities/projects.html">
+   Project Information
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  FAQ
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../faq/syllabus.html">
+   Syllabus and Grading FAQ
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../faq/github.html">
+   Git and GitHub
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Resources
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../resources/tips.html">
+   General Tips and Resources
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../resources/learning.html">
+   How to Study in this class
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../resources/gettinghelp.html">
+   Getting Help with Programming
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../resources/organization.html">
+   Getting Organized for class
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../resources/more_info_on_cpus.html">
+   More info on cpus
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://introcompsys.github.io/spring2022/resources/testimonials.html">
+   Advice from Spring 2022 Students
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/introcompsys/fall2022"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/introcompsys/fall2022/issues/new?title=Issue%20on%20page%20%2Fnotes/2022-10-03.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/introcompsys/fall2022/edit/main/notes/2022-10-03.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/notes/2022-10-03.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#moving-a-commit">
+   8.1. Moving a Commit
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#merging">
+   8.2. merging
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reverting-changes">
+   8.3. Reverting changes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#installing-from-source">
+   8.4. Installing from source
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#trouble-shooting">
+     8.4.1. Trouble shooting
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#review-todays-class">
+   8.5. Review today’s class
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#prepare-for-next-class">
+   8.6. Prepare for Next Class
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#more-practice">
+   8.7. More Practice
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#questions-after-class">
+   8.8. Questions After Class
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#will-the-use-of-the-courseutils-and-commands-be-necessary-for-the-class-or-would-it-just-make-the-class-easier">
+     8.8.1. Will the use of the courseutils and commands be necessary for the class? or would it just make the class easier?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#my-kwlfilecheck-command-is-still-not-working-how-do-i-fix-that">
+     8.8.2. My kwlfilecheck command is still not working how do I fix that?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#can-you-post-directions-for-how-to-get-the-kwl-tracking-to-work-on-m1-macs">
+     8.8.3. Can you post directions for how to get the kwl tracking to work on m1 macs
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#does-a-flash-drive-that-i-have-made-to-have-ubuntu-in-2017-works">
+     8.8.4. Does a flash drive that I have made to have ubuntu in 2017 works?
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>How can I fix things in git?</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#moving-a-commit">
+   8.1. Moving a Commit
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#merging">
+   8.2. merging
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reverting-changes">
+   8.3. Reverting changes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#installing-from-source">
+   8.4. Installing from source
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#trouble-shooting">
+     8.4.1. Trouble shooting
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#review-todays-class">
+   8.5. Review today’s class
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#prepare-for-next-class">
+   8.6. Prepare for Next Class
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#more-practice">
+   8.7. More Practice
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#questions-after-class">
+   8.8. Questions After Class
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#will-the-use-of-the-courseutils-and-commands-be-necessary-for-the-class-or-would-it-just-make-the-class-easier">
+     8.8.1. Will the use of the courseutils and commands be necessary for the class? or would it just make the class easier?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#my-kwlfilecheck-command-is-still-not-working-how-do-i-fix-that">
+     8.8.2. My kwlfilecheck command is still not working how do I fix that?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#can-you-post-directions-for-how-to-get-the-kwl-tracking-to-work-on-m1-macs">
+     8.8.3. Can you post directions for how to get the kwl tracking to work on m1 macs
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#does-a-flash-drive-that-i-have-made-to-have-ubuntu-in-2017-works">
+     8.8.4. Does a flash drive that I have made to have ubuntu in 2017 works?
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="how-can-i-fix-things-in-git">
+<h1><span class="section-number">8. </span>How can I fix things in git?<a class="headerlink" href="#how-can-i-fix-things-in-git" title="Permalink to this headline">#</a></h1>
+<section id="moving-a-commit">
+<h2><span class="section-number">8.1. </span>Moving a Commit<a class="headerlink" href="#moving-a-commit" title="Permalink to this headline">#</a></h2>
+<p>Start on your main branch of your github in class repo with a clean working directory</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">status</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">On</span> <span class="n">branch</span> <span class="n">main</span>
+<span class="n">Your</span> <span class="n">branch</span> <span class="ow">is</span> <span class="n">up</span> <span class="n">to</span> <span class="n">date</span> <span class="k">with</span> <span class="s1">&#39;origin/main&#39;</span><span class="o">.</span>
+
+<span class="n">nothing</span> <span class="n">to</span> <span class="n">commit</span><span class="p">,</span> <span class="n">working</span> <span class="n">tree</span> <span class="n">clean</span>
+</pre></div>
+</div>
+<p>Now let’s create a new file</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">touch</span> <span class="n">new_feature</span><span class="o">.</span><span class="n">md</span>
+</pre></div>
+</div>
+<p>and add commit and push it to the main branch</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">add</span> <span class="o">.</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">comit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;new feature&quot;</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;new feature&quot;</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">main</span> <span class="mi">0830</span><span class="n">c39</span><span class="p">]</span> <span class="n">new</span> <span class="n">feature</span>
+ <span class="mi">1</span> <span class="n">file</span> <span class="n">changed</span><span class="p">,</span> <span class="mi">0</span> <span class="n">insertions</span><span class="p">(</span><span class="o">+</span><span class="p">),</span> <span class="mi">0</span> <span class="n">deletions</span><span class="p">(</span><span class="o">-</span><span class="p">)</span>
+ <span class="n">create</span> <span class="n">mode</span> <span class="mi">100644</span> <span class="n">new_feature</span><span class="o">.</span><span class="n">md</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Enumerating</span> <span class="n">objects</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="n">done</span><span class="o">.</span>
+<span class="n">Counting</span> <span class="n">objects</span><span class="p">:</span> <span class="mi">100</span><span class="o">%</span> <span class="p">(</span><span class="mi">3</span><span class="o">/</span><span class="mi">3</span><span class="p">),</span> <span class="n">done</span><span class="o">.</span>
+<span class="n">Delta</span> <span class="n">compression</span> <span class="n">using</span> <span class="n">up</span> <span class="n">to</span> <span class="mi">8</span> <span class="n">threads</span>
+<span class="n">Compressing</span> <span class="n">objects</span><span class="p">:</span> <span class="mi">100</span><span class="o">%</span> <span class="p">(</span><span class="mi">2</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span> <span class="n">done</span><span class="o">.</span>
+<span class="n">Writing</span> <span class="n">objects</span><span class="p">:</span> <span class="mi">100</span><span class="o">%</span> <span class="p">(</span><span class="mi">2</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span> <span class="mi">266</span> <span class="nb">bytes</span> <span class="o">|</span> <span class="mf">266.00</span> <span class="n">KiB</span><span class="o">/</span><span class="n">s</span><span class="p">,</span> <span class="n">done</span><span class="o">.</span>
+<span class="n">Total</span> <span class="mi">2</span> <span class="p">(</span><span class="n">delta</span> <span class="mi">1</span><span class="p">),</span> <span class="n">reused</span> <span class="mi">0</span> <span class="p">(</span><span class="n">delta</span> <span class="mi">0</span><span class="p">),</span> <span class="n">pack</span><span class="o">-</span><span class="n">reused</span> <span class="mi">0</span>
+<span class="n">remote</span><span class="p">:</span> <span class="n">Resolving</span> <span class="n">deltas</span><span class="p">:</span> <span class="mi">100</span><span class="o">%</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">1</span><span class="p">),</span> <span class="n">completed</span> <span class="k">with</span> <span class="mi">1</span> <span class="n">local</span> <span class="nb">object</span><span class="o">.</span>
+<span class="n">To</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">introcompsys</span><span class="o">/</span><span class="n">github</span><span class="o">-</span><span class="n">inclass</span><span class="o">-</span><span class="n">brownsarahm</span><span class="o">.</span><span class="n">git</span>
+   <span class="mi">3</span><span class="n">c9980a</span><span class="o">.</span><span class="mf">.0830</span><span class="n">c39</span>  <span class="n">main</span> <span class="o">-&gt;</span> <span class="n">main</span>
+</pre></div>
+</div>
+<p>We can look in GitHub:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gh</span> <span class="n">repo</span> <span class="n">view</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">introcompsys</span><span class="o">/</span><span class="n">github</span><span class="o">-</span><span class="n">inclass</span><span class="o">-</span><span class="n">brownsarahm</span>
+<span class="n">github</span><span class="o">-</span><span class="n">inclass</span><span class="o">-</span><span class="n">brownsarahm</span> <span class="n">created</span> <span class="n">by</span> <span class="n">GitHub</span> <span class="n">Classroom</span>
+
+
+   <span class="n">github</span><span class="o">-</span><span class="n">inclass</span><span class="o">-</span><span class="n">brownsarahm</span>                                                 
+
+  <span class="n">github</span><span class="o">-</span><span class="n">inclass</span><span class="o">-</span><span class="n">brownsarahm</span> <span class="n">created</span> <span class="n">by</span> <span class="n">GitHub</span> <span class="n">Classroom</span>                      
+
+
+
+<span class="n">View</span> <span class="n">this</span> <span class="n">repository</span> <span class="n">on</span> <span class="n">GitHub</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">introcompsys</span><span class="o">/</span><span class="n">github</span><span class="o">-</span><span class="n">inclass</span><span class="o">-</span><span class="n">brownsarahm</span>
+</pre></div>
+</div>
+<p>This command prints the README with a link to the repo online.</p>
+<p>We had wanted to make a new feature but we realize that our work is on the main branch, not a separate feature branch.</p>
+<p>Fortunately, we can fix it!</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">status</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">On</span> <span class="n">branch</span> <span class="n">main</span>
+<span class="n">Your</span> <span class="n">branch</span> <span class="ow">is</span> <span class="n">up</span> <span class="n">to</span> <span class="n">date</span> <span class="k">with</span> <span class="s1">&#39;origin/main&#39;</span><span class="o">.</span>
+
+<span class="n">nothing</span> <span class="n">to</span> <span class="n">commit</span><span class="p">,</span> <span class="n">working</span> <span class="n">tree</span> <span class="n">clean</span>
+</pre></div>
+</div>
+<p>We can reset the the staging area and undo the last commit (remove the commit itself, but not the changes) to the last state that the staging area had with</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">reset</span> <span class="n">HEAD</span><span class="o">^</span>
+</pre></div>
+</div>
+<p>we can see what this did with</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">status</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">On</span> <span class="n">branch</span> <span class="n">main</span>
+<span class="n">Your</span> <span class="n">branch</span> <span class="ow">is</span> <span class="n">behind</span> <span class="s1">&#39;origin/main&#39;</span> <span class="n">by</span> <span class="mi">1</span> <span class="n">commit</span><span class="p">,</span> <span class="ow">and</span> <span class="n">can</span> <span class="n">be</span> <span class="n">fast</span><span class="o">-</span><span class="n">forwarded</span><span class="o">.</span>
+  <span class="p">(</span><span class="n">use</span> <span class="s2">&quot;git pull&quot;</span> <span class="n">to</span> <span class="n">update</span> <span class="n">your</span> <span class="n">local</span> <span class="n">branch</span><span class="p">)</span>
+
+<span class="n">Untracked</span> <span class="n">files</span><span class="p">:</span>
+  <span class="p">(</span><span class="n">use</span> <span class="s2">&quot;git add &lt;file&gt;...&quot;</span> <span class="n">to</span> <span class="n">include</span> <span class="ow">in</span> <span class="n">what</span> <span class="n">will</span> <span class="n">be</span> <span class="n">committed</span><span class="p">)</span>
+	<span class="n">new_feature</span><span class="o">.</span><span class="n">md</span>
+
+<span class="n">nothing</span> <span class="n">added</span> <span class="n">to</span> <span class="n">commit</span> <span class="n">but</span> <span class="n">untracked</span> <span class="n">files</span> <span class="n">present</span> <span class="p">(</span><span class="n">use</span> <span class="s2">&quot;git add&quot;</span> <span class="n">to</span> <span class="n">track</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Our file is still there, it is now not in the git commit history and the changes are back in the staging area.</p>
+<p>Now we can switch branches</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="o">-</span><span class="n">b</span> <span class="n">new_feature</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Switched</span> <span class="n">to</span> <span class="n">a</span> <span class="n">new</span> <span class="n">branch</span> <span class="s1">&#39;new_feature&#39;</span>
+</pre></div>
+</div>
+<p>and confirm</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">status</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">On</span> <span class="n">branch</span> <span class="n">new_feature</span>
+<span class="n">Untracked</span> <span class="n">files</span><span class="p">:</span>
+  <span class="p">(</span><span class="n">use</span> <span class="s2">&quot;git add &lt;file&gt;...&quot;</span> <span class="n">to</span> <span class="n">include</span> <span class="ow">in</span> <span class="n">what</span> <span class="n">will</span> <span class="n">be</span> <span class="n">committed</span><span class="p">)</span>
+	<span class="n">new_feature</span><span class="o">.</span><span class="n">md</span>
+
+<span class="n">nothing</span> <span class="n">added</span> <span class="n">to</span> <span class="n">commit</span> <span class="n">but</span> <span class="n">untracked</span> <span class="n">files</span> <span class="n">present</span> <span class="p">(</span><span class="n">use</span> <span class="s2">&quot;git add&quot;</span> <span class="n">to</span> <span class="n">track</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>and then commit to the new branch.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">add</span> <span class="o">.</span>
+<span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s1">&#39; new feature ready for PR&#39;</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">new_feature</span> <span class="n">a399978</span><span class="p">]</span>  <span class="n">new</span> <span class="n">feature</span> <span class="n">ready</span> <span class="k">for</span> <span class="n">PR</span>
+ <span class="mi">1</span> <span class="n">file</span> <span class="n">changed</span><span class="p">,</span> <span class="mi">0</span> <span class="n">insertions</span><span class="p">(</span><span class="o">+</span><span class="p">),</span> <span class="mi">0</span> <span class="n">deletions</span><span class="p">(</span><span class="o">-</span><span class="p">)</span>
+ <span class="n">create</span> <span class="n">mode</span> <span class="mi">100644</span> <span class="n">new_feature</span><span class="o">.</span><span class="n">md</span>
+</pre></div>
+</div>
+<p>Remember branches are pointers, so what we did was remove the commit (but not the snapshot) from a commit to the main branch (with info about main in it) to a new branch. This leave the main branch pointer pointed at the previous commit and moves only the new branch to the new commit.  We get a new hash because the time and commit message are different, but the content is the same.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fatal</span><span class="p">:</span> <span class="n">The</span> <span class="n">current</span> <span class="n">branch</span> <span class="n">new_feature</span> <span class="n">has</span> <span class="n">no</span> <span class="n">upstream</span> <span class="n">branch</span><span class="o">.</span>
+<span class="n">To</span> <span class="n">push</span> <span class="n">the</span> <span class="n">current</span> <span class="n">branch</span> <span class="ow">and</span> <span class="nb">set</span> <span class="n">the</span> <span class="n">remote</span> <span class="k">as</span> <span class="n">upstream</span><span class="p">,</span> <span class="n">use</span>
+
+    <span class="n">git</span> <span class="n">push</span> <span class="o">--</span><span class="nb">set</span><span class="o">-</span><span class="n">upstream</span> <span class="n">origin</span> <span class="n">new_feature</span>
+
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="o">--</span><span class="nb">set</span><span class="o">-</span><span class="n">upstream</span> <span class="n">origin</span> <span class="n">new_feature</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Enumerating</span> <span class="n">objects</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="n">done</span><span class="o">.</span>
+<span class="n">Counting</span> <span class="n">objects</span><span class="p">:</span> <span class="mi">100</span><span class="o">%</span> <span class="p">(</span><span class="mi">3</span><span class="o">/</span><span class="mi">3</span><span class="p">),</span> <span class="n">done</span><span class="o">.</span>
+<span class="n">Delta</span> <span class="n">compression</span> <span class="n">using</span> <span class="n">up</span> <span class="n">to</span> <span class="mi">8</span> <span class="n">threads</span>
+<span class="n">Compressing</span> <span class="n">objects</span><span class="p">:</span> <span class="mi">100</span><span class="o">%</span> <span class="p">(</span><span class="mi">2</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span> <span class="n">done</span><span class="o">.</span>
+<span class="n">Writing</span> <span class="n">objects</span><span class="p">:</span> <span class="mi">100</span><span class="o">%</span> <span class="p">(</span><span class="mi">2</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span> <span class="mi">278</span> <span class="nb">bytes</span> <span class="o">|</span> <span class="mf">278.00</span> <span class="n">KiB</span><span class="o">/</span><span class="n">s</span><span class="p">,</span> <span class="n">done</span><span class="o">.</span>
+<span class="n">Total</span> <span class="mi">2</span> <span class="p">(</span><span class="n">delta</span> <span class="mi">1</span><span class="p">),</span> <span class="n">reused</span> <span class="mi">0</span> <span class="p">(</span><span class="n">delta</span> <span class="mi">0</span><span class="p">),</span> <span class="n">pack</span><span class="o">-</span><span class="n">reused</span> <span class="mi">0</span>
+<span class="n">remote</span><span class="p">:</span> <span class="n">Resolving</span> <span class="n">deltas</span><span class="p">:</span> <span class="mi">100</span><span class="o">%</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">1</span><span class="p">),</span> <span class="n">completed</span> <span class="k">with</span> <span class="mi">1</span> <span class="n">local</span> <span class="nb">object</span><span class="o">.</span>
+<span class="n">remote</span><span class="p">:</span>
+<span class="n">remote</span><span class="p">:</span> <span class="n">Create</span> <span class="n">a</span> <span class="n">pull</span> <span class="n">request</span> <span class="k">for</span> <span class="s1">&#39;new_feature&#39;</span> <span class="n">on</span> <span class="n">GitHub</span> <span class="n">by</span> <span class="n">visiting</span><span class="p">:</span>
+<span class="n">remote</span><span class="p">:</span>      <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">introcompsys</span><span class="o">/</span><span class="n">github</span><span class="o">-</span><span class="n">inclass</span><span class="o">-</span><span class="n">brownsarahm</span><span class="o">/</span><span class="n">pull</span><span class="o">/</span><span class="n">new</span><span class="o">/</span><span class="n">new_feature</span>
+<span class="n">remote</span><span class="p">:</span>
+<span class="n">To</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">introcompsys</span><span class="o">/</span><span class="n">github</span><span class="o">-</span><span class="n">inclass</span><span class="o">-</span><span class="n">brownsarahm</span><span class="o">.</span><span class="n">git</span>
+ <span class="o">*</span> <span class="p">[</span><span class="n">new</span> <span class="n">branch</span><span class="p">]</span>      <span class="n">new_feature</span> <span class="o">-&gt;</span> <span class="n">new_feature</span>
+<span class="n">branch</span> <span class="s1">&#39;new_feature&#39;</span> <span class="nb">set</span> <span class="n">up</span> <span class="n">to</span> <span class="n">track</span> <span class="s1">&#39;origin/new_feature&#39;</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>If we go back to main</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="n">main</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Switched</span> <span class="n">to</span> <span class="n">branch</span> <span class="s1">&#39;main&#39;</span>
+<span class="n">Your</span> <span class="n">branch</span> <span class="ow">is</span> <span class="n">behind</span> <span class="s1">&#39;origin/main&#39;</span> <span class="n">by</span> <span class="mi">1</span> <span class="n">commit</span><span class="p">,</span> <span class="ow">and</span> <span class="n">can</span> <span class="n">be</span> <span class="n">fast</span><span class="o">-</span><span class="n">forwarded</span><span class="o">.</span>
+  <span class="p">(</span><span class="n">use</span> <span class="s2">&quot;git pull&quot;</span> <span class="n">to</span> <span class="n">update</span> <span class="n">your</span> <span class="n">local</span> <span class="n">branch</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Our changes are not here locally, but they still are on GitHub</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">README</span><span class="o">.</span><span class="n">md</span>	<span class="n">about</span><span class="o">.</span><span class="n">md</span>
+</pre></div>
+</div>
+<p>We can try to push our local to GitHub</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>To https://github.com/introcompsys/github-inclass-brownsarahm.git
+ ! [rejected]        main -&gt; main (non-fast-forward)
+error: failed to push some refs to &#39;https://github.com/introcompsys/github-inclass-brownsarahm.git&#39;
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: &#39;git pull ...&#39;) before pushing again.
+hint: See the &#39;Note about fast-forwards&#39; in &#39;git push --help&#39; for details.
+</pre></div>
+</div>
+<p>but it does not work because this is will result in losing information, git (and GitHub) will not let you lose information by accident.</p>
+<p>the <code class="docutils literal notranslate"><span class="pre">-f</span></code> option stands for force and makes it do things that we otherwise might not want to/</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="o">-</span><span class="n">f</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Total</span> <span class="mi">0</span> <span class="p">(</span><span class="n">delta</span> <span class="mi">0</span><span class="p">),</span> <span class="n">reused</span> <span class="mi">0</span> <span class="p">(</span><span class="n">delta</span> <span class="mi">0</span><span class="p">),</span> <span class="n">pack</span><span class="o">-</span><span class="n">reused</span> <span class="mi">0</span>
+<span class="n">To</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">introcompsys</span><span class="o">/</span><span class="n">github</span><span class="o">-</span><span class="n">inclass</span><span class="o">-</span><span class="n">brownsarahm</span><span class="o">.</span><span class="n">git</span>
+ <span class="o">+</span> <span class="mi">0830</span><span class="n">c39</span><span class="o">..</span><span class="mf">.3</span><span class="n">c9980a</span> <span class="n">main</span> <span class="o">-&gt;</span> <span class="n">main</span> <span class="p">(</span><span class="n">forced</span> <span class="n">update</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">log</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">commit</span> <span class="mi">3</span><span class="n">c9980a4883782386ea3112d521b1b95997b0be6</span> <span class="p">(</span><span class="n">HEAD</span> <span class="o">-&gt;</span> <span class="n">main</span><span class="p">,</span> <span class="n">origin</span><span class="o">/</span><span class="n">main</span><span class="p">,</span> <span class="n">origin</span><span class="o">/</span><span class="n">HEAD</span><span class="p">)</span>
+<span class="n">Author</span><span class="p">:</span> <span class="n">Sarah</span> <span class="n">M</span> <span class="n">Brown</span> <span class="o">&lt;</span><span class="n">brownsarahm</span><span class="nd">@uri</span><span class="o">.</span><span class="n">edu</span><span class="o">&gt;</span>
+<span class="n">Date</span><span class="p">:</span>   <span class="n">Wed</span> <span class="n">Sep</span> <span class="mi">14</span> <span class="mi">17</span><span class="p">:</span><span class="mi">40</span><span class="p">:</span><span class="mi">01</span> <span class="mi">2022</span> <span class="o">-</span><span class="mi">0400</span>
+
+    <span class="n">create</span> <span class="n">about</span>
+
+<span class="n">commit</span> <span class="n">ec3dd020d2767e45b6cd61f7c4ea5f6f2be9a3d8</span>
+<span class="n">Merge</span><span class="p">:</span> <span class="mi">1613072</span> <span class="n">db2e41d</span>
+<span class="n">Author</span><span class="p">:</span> <span class="n">Sarah</span> <span class="n">Brown</span> <span class="o">&lt;</span><span class="n">brownsarahm</span><span class="nd">@uri</span><span class="o">.</span><span class="n">edu</span><span class="o">&gt;</span>
+<span class="n">Date</span><span class="p">:</span>   <span class="n">Wed</span> <span class="n">Sep</span> <span class="mi">14</span> <span class="mi">16</span><span class="p">:</span><span class="mi">56</span><span class="p">:</span><span class="mi">34</span> <span class="mi">2022</span> <span class="o">-</span><span class="mi">0400</span>
+
+    <span class="n">Merge</span> <span class="n">pull</span> <span class="n">request</span> <span class="c1">#4 from introcompsys/create_readme</span>
+
+    <span class="n">Create</span> <span class="n">README</span><span class="o">.</span><span class="n">md</span>
+
+<span class="n">commit</span> <span class="n">db2e41d48129b2c3ad09b78f1c14c2cd295e3eb2</span> <span class="p">(</span><span class="n">origin</span><span class="o">/</span><span class="n">create_readme</span><span class="p">)</span>
+<span class="n">Author</span><span class="p">:</span> <span class="n">Sarah</span> <span class="n">Brown</span> <span class="o">&lt;</span><span class="n">brownsarahm</span><span class="nd">@uri</span><span class="o">.</span><span class="n">edu</span><span class="o">&gt;</span>
+<span class="n">Date</span><span class="p">:</span>   <span class="n">Wed</span> <span class="n">Sep</span> <span class="mi">14</span> <span class="mi">16</span><span class="p">:</span><span class="mi">55</span><span class="p">:</span><span class="mi">23</span> <span class="mi">2022</span> <span class="o">-</span><span class="mi">0400</span>
+
+    <span class="n">Create</span> <span class="n">README</span><span class="o">.</span><span class="n">md</span>
+
+<span class="n">commit</span> <span class="mi">1613072525</span><span class="n">c141b13d3ac7db68e8c1dbee70496b</span>
+<span class="n">Author</span><span class="p">:</span> <span class="n">github</span><span class="o">-</span><span class="n">classroom</span><span class="p">[</span><span class="n">bot</span><span class="p">]</span> <span class="o">&lt;</span><span class="mi">66690702</span><span class="o">+</span><span class="n">github</span><span class="o">-</span><span class="n">classroom</span><span class="p">[</span><span class="n">bot</span><span class="p">]</span><span class="nd">@users</span><span class="o">.</span><span class="n">noreply</span><span class="o">.</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">&gt;</span>
+<span class="n">Date</span><span class="p">:</span>   <span class="n">Wed</span> <span class="n">Sep</span> <span class="mi">14</span> <span class="mi">20</span><span class="p">:</span><span class="mi">51</span><span class="p">:</span><span class="mi">29</span> <span class="mi">2022</span> <span class="o">+</span><span class="mi">0000</span>
+
+    <span class="n">Initial</span> <span class="n">commit</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">status</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">On</span> <span class="n">branch</span> <span class="n">main</span>
+<span class="n">Your</span> <span class="n">branch</span> <span class="ow">is</span> <span class="n">up</span> <span class="n">to</span> <span class="n">date</span> <span class="k">with</span> <span class="s1">&#39;origin/main&#39;</span><span class="o">.</span>
+
+<span class="n">nothing</span> <span class="n">to</span> <span class="n">commit</span><span class="p">,</span> <span class="n">working</span> <span class="n">tree</span> <span class="n">clean</span>
+</pre></div>
+</div>
+</section>
+<section id="merging">
+<h2><span class="section-number">8.2. </span>merging<a class="headerlink" href="#merging" title="Permalink to this headline">#</a></h2>
+<p>We can merge offline too</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">merge</span> <span class="n">new_feature</span> <span class="n">main</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Updating</span> <span class="mi">3</span><span class="n">c9980a</span><span class="o">..</span><span class="n">a399978</span>
+<span class="n">Fast</span><span class="o">-</span><span class="n">forward</span>
+ <span class="n">new_feature</span><span class="o">.</span><span class="n">md</span> <span class="o">|</span> <span class="mi">0</span>
+ <span class="mi">1</span> <span class="n">file</span> <span class="n">changed</span><span class="p">,</span> <span class="mi">0</span> <span class="n">insertions</span><span class="p">(</span><span class="o">+</span><span class="p">),</span> <span class="mi">0</span> <span class="n">deletions</span><span class="p">(</span><span class="o">-</span><span class="p">)</span>
+ <span class="n">create</span> <span class="n">mode</span> <span class="mi">100644</span> <span class="n">new_feature</span><span class="o">.</span><span class="n">md</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">status</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">On</span> <span class="n">branch</span> <span class="n">main</span>
+<span class="n">Your</span> <span class="n">branch</span> <span class="ow">is</span> <span class="n">ahead</span> <span class="n">of</span> <span class="s1">&#39;origin/main&#39;</span> <span class="n">by</span> <span class="mi">1</span> <span class="n">commit</span><span class="o">.</span>
+  <span class="p">(</span><span class="n">use</span> <span class="s2">&quot;git push&quot;</span> <span class="n">to</span> <span class="n">publish</span> <span class="n">your</span> <span class="n">local</span> <span class="n">commits</span><span class="p">)</span>
+
+<span class="n">nothing</span> <span class="n">to</span> <span class="n">commit</span><span class="p">,</span> <span class="n">working</span> <span class="n">tree</span> <span class="n">clean</span>
+</pre></div>
+</div>
+</section>
+<section id="reverting-changes">
+<h2><span class="section-number">8.3. </span>Reverting changes<a class="headerlink" href="#reverting-changes" title="Permalink to this headline">#</a></h2>
+<p>We can undo <em>changes</em> by picking out a specific commit by its name.
+First elts make two changes and commit eahc.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s2">&quot;change 1&quot;</span> <span class="o">&gt;&gt;</span> <span class="n">new_feature</span><span class="o">.</span><span class="n">md</span>
+<span class="n">git</span> <span class="n">add</span> <span class="o">.</span>
+<span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s1">&#39;change 1&#39;</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">main</span> <span class="mi">83690</span><span class="n">bc</span><span class="p">]</span> <span class="n">change</span> <span class="mi">1</span>
+ <span class="mi">1</span> <span class="n">file</span> <span class="n">changed</span><span class="p">,</span> <span class="mi">1</span> <span class="n">insertion</span><span class="p">(</span><span class="o">+</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s2">&quot;change 2&quot;</span> <span class="o">&gt;&gt;</span> <span class="n">new_feature</span><span class="o">.</span><span class="n">md</span>
+<span class="n">git</span> <span class="n">add</span> <span class="o">.</span>
+<span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s1">&#39;change 2&#39;</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">main</span> <span class="mi">948</span><span class="n">eda1</span><span class="p">]</span> <span class="n">change</span> <span class="mi">2</span>
+ <span class="mi">1</span> <span class="n">file</span> <span class="n">changed</span><span class="p">,</span> <span class="mi">1</span> <span class="n">insertion</span><span class="p">(</span><span class="o">+</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>SO we hav e a file with two  chagnes</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span> <span class="n">new_feature</span><span class="o">.</span><span class="n">md</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">change</span> <span class="mi">1</span>
+<span class="n">change</span> <span class="mi">2</span>
+</pre></div>
+</div>
+<p>We need to know the hash of the commit that we want to undo.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">log</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">commit</span> <span class="mi">948</span><span class="n">eda10a2b03a168e9d0291a294a4922afecda5</span> <span class="p">(</span><span class="n">HEAD</span> <span class="o">-&gt;</span> <span class="n">main</span><span class="p">)</span>
+<span class="n">Author</span><span class="p">:</span> <span class="n">Sarah</span> <span class="n">M</span> <span class="n">Brown</span> <span class="o">&lt;</span><span class="n">brownsarahm</span><span class="nd">@uri</span><span class="o">.</span><span class="n">edu</span><span class="o">&gt;</span>
+<span class="n">Date</span><span class="p">:</span>   <span class="n">Mon</span> <span class="n">Oct</span> <span class="mi">3</span> <span class="mi">17</span><span class="p">:</span><span class="mi">08</span><span class="p">:</span><span class="mi">49</span> <span class="mi">2022</span> <span class="o">-</span><span class="mi">0400</span>
+
+    <span class="n">change</span> <span class="mi">2</span>
+
+<span class="n">commit</span> <span class="mi">83690</span><span class="n">bccd9be5da7c3a816dea4f14d6836674623</span>
+<span class="n">Author</span><span class="p">:</span> <span class="n">Sarah</span> <span class="n">M</span> <span class="n">Brown</span> <span class="o">&lt;</span><span class="n">brownsarahm</span><span class="nd">@uri</span><span class="o">.</span><span class="n">edu</span><span class="o">&gt;</span>
+<span class="n">Date</span><span class="p">:</span>   <span class="n">Mon</span> <span class="n">Oct</span> <span class="mi">3</span> <span class="mi">17</span><span class="p">:</span><span class="mi">08</span><span class="p">:</span><span class="mi">32</span> <span class="mi">2022</span> <span class="o">-</span><span class="mi">0400</span>
+
+    <span class="n">change</span> <span class="mi">1</span>
+
+<span class="n">commit</span> <span class="n">a399978f0f20e1b560fbaf59ec831ab42dd6a82a</span> <span class="p">(</span><span class="n">origin</span><span class="o">/</span><span class="n">new_feature</span><span class="p">,</span> <span class="n">new_feature</span><span class="p">)</span>
+<span class="n">Author</span><span class="p">:</span> <span class="n">Sarah</span> <span class="n">M</span> <span class="n">Brown</span> <span class="o">&lt;</span><span class="n">brownsarahm</span><span class="nd">@uri</span><span class="o">.</span><span class="n">edu</span><span class="o">&gt;</span>
+<span class="n">Date</span><span class="p">:</span>   <span class="n">Mon</span> <span class="n">Oct</span> <span class="mi">3</span> <span class="mi">16</span><span class="p">:</span><span class="mi">55</span><span class="p">:</span><span class="mi">41</span> <span class="mi">2022</span> <span class="o">-</span><span class="mi">0400</span>
+
+     <span class="n">new</span> <span class="n">feature</span> <span class="n">ready</span> <span class="k">for</span> <span class="n">PR</span>
+
+<span class="n">commit</span> <span class="mi">3</span><span class="n">c9980a4883782386ea3112d521b1b95997b0be6</span> <span class="p">(</span><span class="n">origin</span><span class="o">/</span><span class="n">main</span><span class="p">,</span> <span class="n">origin</span><span class="o">/</span><span class="n">HEAD</span><span class="p">)</span>
+<span class="n">Author</span><span class="p">:</span> <span class="n">Sarah</span> <span class="n">M</span> <span class="n">Brown</span> <span class="o">&lt;</span><span class="n">brownsarahm</span><span class="nd">@uri</span><span class="o">.</span><span class="n">edu</span><span class="o">&gt;</span>
+<span class="n">Date</span><span class="p">:</span>   <span class="n">Wed</span> <span class="n">Sep</span> <span class="mi">14</span> <span class="mi">17</span><span class="p">:</span><span class="mi">40</span><span class="p">:</span><span class="mi">01</span> <span class="mi">2022</span> <span class="o">-</span><span class="mi">0400</span>
+
+    <span class="n">create</span> <span class="n">about</span>
+
+<span class="n">commit</span> <span class="n">ec3dd020d2767e45b6cd61f7c4ea5f6f2be9a3d8</span>
+<span class="n">Merge</span><span class="p">:</span> <span class="mi">1613072</span> <span class="n">db2e41d</span>
+<span class="n">Author</span><span class="p">:</span> <span class="n">Sarah</span> <span class="n">Brown</span> <span class="o">&lt;</span><span class="n">brownsarahm</span><span class="nd">@uri</span><span class="o">.</span><span class="n">edu</span><span class="o">&gt;</span>
+<span class="n">Date</span><span class="p">:</span>   <span class="n">Wed</span> <span class="n">Sep</span> <span class="mi">14</span> <span class="mi">16</span><span class="p">:</span><span class="mi">56</span><span class="p">:</span><span class="mi">34</span> <span class="mi">2022</span> <span class="o">-</span><span class="mi">0400</span>
+
+</pre></div>
+</div>
+<p>We use git revert</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">revert</span> <span class="mi">83690</span><span class="n">bc</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Auto</span><span class="o">-</span><span class="n">merging</span> <span class="n">new_feature</span><span class="o">.</span><span class="n">md</span>
+<span class="n">CONFLICT</span> <span class="p">(</span><span class="n">content</span><span class="p">):</span> <span class="n">Merge</span> <span class="n">conflict</span> <span class="ow">in</span> <span class="n">new_feature</span><span class="o">.</span><span class="n">md</span>
+<span class="n">error</span><span class="p">:</span> <span class="n">could</span> <span class="ow">not</span> <span class="n">revert</span> <span class="mi">83690</span><span class="n">bc</span><span class="o">...</span> <span class="n">change</span> <span class="mi">1</span>
+<span class="n">hint</span><span class="p">:</span> <span class="n">After</span> <span class="n">resolving</span> <span class="n">the</span> <span class="n">conflicts</span><span class="p">,</span> <span class="n">mark</span> <span class="n">them</span> <span class="k">with</span>
+<span class="n">hint</span><span class="p">:</span> <span class="s2">&quot;git add/rm &lt;pathspec&gt;&quot;</span><span class="p">,</span> <span class="n">then</span> <span class="n">run</span>
+<span class="n">hint</span><span class="p">:</span> <span class="s2">&quot;git revert --continue&quot;</span><span class="o">.</span>
+<span class="n">hint</span><span class="p">:</span> <span class="n">You</span> <span class="n">can</span> <span class="n">instead</span> <span class="n">skip</span> <span class="n">this</span> <span class="n">commit</span> <span class="k">with</span> <span class="s2">&quot;git revert --skip&quot;</span><span class="o">.</span>
+<span class="n">hint</span><span class="p">:</span> <span class="n">To</span> <span class="n">abort</span> <span class="ow">and</span> <span class="n">get</span> <span class="n">back</span> <span class="n">to</span> <span class="n">the</span> <span class="n">state</span> <span class="n">before</span> <span class="s2">&quot;git revert&quot;</span><span class="p">,</span>
+<span class="n">hint</span><span class="p">:</span> <span class="n">run</span> <span class="s2">&quot;git revert --abort&quot;</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>In this case, we get a merge conflict becaues the file was so simple before, git cannot be sure how to undo that small change.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span> <span class="n">new_feature</span><span class="o">.</span><span class="n">md</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span> <span class="n">HEAD</span>
+<span class="n">change</span> <span class="mi">1</span>
+<span class="n">change</span> <span class="mi">2</span>
+<span class="o">=======</span>
+<span class="o">&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span> <span class="n">parent</span> <span class="n">of</span> <span class="mi">83690</span><span class="n">bc</span> <span class="p">(</span><span class="n">change</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nano</span> <span class="n">new_feature</span><span class="o">.</span><span class="n">md</span>
+</pre></div>
+</div>
+<p>we can use nano to resolve the merge conflict. and then check</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">status</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">On</span> <span class="n">branch</span> <span class="n">main</span>
+<span class="n">Your</span> <span class="n">branch</span> <span class="ow">is</span> <span class="n">ahead</span> <span class="n">of</span> <span class="s1">&#39;origin/main&#39;</span> <span class="n">by</span> <span class="mi">3</span> <span class="n">commits</span><span class="o">.</span>
+  <span class="p">(</span><span class="n">use</span> <span class="s2">&quot;git push&quot;</span> <span class="n">to</span> <span class="n">publish</span> <span class="n">your</span> <span class="n">local</span> <span class="n">commits</span><span class="p">)</span>
+
+<span class="n">You</span> <span class="n">are</span> <span class="n">currently</span> <span class="n">reverting</span> <span class="n">commit</span> <span class="mi">83690</span><span class="n">bc</span><span class="o">.</span>
+  <span class="p">(</span><span class="n">fix</span> <span class="n">conflicts</span> <span class="ow">and</span> <span class="n">run</span> <span class="s2">&quot;git revert --continue&quot;</span><span class="p">)</span>
+  <span class="p">(</span><span class="n">use</span> <span class="s2">&quot;git revert --skip&quot;</span> <span class="n">to</span> <span class="n">skip</span> <span class="n">this</span> <span class="n">patch</span><span class="p">)</span>
+  <span class="p">(</span><span class="n">use</span> <span class="s2">&quot;git revert --abort&quot;</span> <span class="n">to</span> <span class="n">cancel</span> <span class="n">the</span> <span class="n">revert</span> <span class="n">operation</span><span class="p">)</span>
+
+<span class="n">Unmerged</span> <span class="n">paths</span><span class="p">:</span>
+  <span class="p">(</span><span class="n">use</span> <span class="s2">&quot;git restore --staged &lt;file&gt;...&quot;</span> <span class="n">to</span> <span class="n">unstage</span><span class="p">)</span>
+  <span class="p">(</span><span class="n">use</span> <span class="s2">&quot;git add &lt;file&gt;...&quot;</span> <span class="n">to</span> <span class="n">mark</span> <span class="n">resolution</span><span class="p">)</span>
+	<span class="n">both</span> <span class="n">modified</span><span class="p">:</span>   <span class="n">new_feature</span><span class="o">.</span><span class="n">md</span>
+
+<span class="n">no</span> <span class="n">changes</span> <span class="n">added</span> <span class="n">to</span> <span class="n">commit</span> <span class="p">(</span><span class="n">use</span> <span class="s2">&quot;git add&quot;</span> <span class="ow">and</span><span class="o">/</span><span class="ow">or</span> <span class="s2">&quot;git commit -a&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>we have to add and commit to finish</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">add</span> <span class="o">.</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">status</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">On</span> <span class="n">branch</span> <span class="n">main</span>
+<span class="n">Your</span> <span class="n">branch</span> <span class="ow">is</span> <span class="n">ahead</span> <span class="n">of</span> <span class="s1">&#39;origin/main&#39;</span> <span class="n">by</span> <span class="mi">3</span> <span class="n">commits</span><span class="o">.</span>
+  <span class="p">(</span><span class="n">use</span> <span class="s2">&quot;git push&quot;</span> <span class="n">to</span> <span class="n">publish</span> <span class="n">your</span> <span class="n">local</span> <span class="n">commits</span><span class="p">)</span>
+
+<span class="n">You</span> <span class="n">are</span> <span class="n">currently</span> <span class="n">reverting</span> <span class="n">commit</span> <span class="mi">83690</span><span class="n">bc</span><span class="o">.</span>
+  <span class="p">(</span><span class="nb">all</span> <span class="n">conflicts</span> <span class="n">fixed</span><span class="p">:</span> <span class="n">run</span> <span class="s2">&quot;git revert --continue&quot;</span><span class="p">)</span>
+  <span class="p">(</span><span class="n">use</span> <span class="s2">&quot;git revert --skip&quot;</span> <span class="n">to</span> <span class="n">skip</span> <span class="n">this</span> <span class="n">patch</span><span class="p">)</span>
+  <span class="p">(</span><span class="n">use</span> <span class="s2">&quot;git revert --abort&quot;</span> <span class="n">to</span> <span class="n">cancel</span> <span class="n">the</span> <span class="n">revert</span> <span class="n">operation</span><span class="p">)</span>
+
+<span class="n">Changes</span> <span class="n">to</span> <span class="n">be</span> <span class="n">committed</span><span class="p">:</span>
+  <span class="p">(</span><span class="n">use</span> <span class="s2">&quot;git restore --staged &lt;file&gt;...&quot;</span> <span class="n">to</span> <span class="n">unstage</span><span class="p">)</span>
+	<span class="n">modified</span><span class="p">:</span>   <span class="n">new_feature</span><span class="o">.</span><span class="n">md</span>
+
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;revert chang 1&quot;</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">main</span> <span class="n">c1807f4</span><span class="p">]</span> <span class="n">revert</span> <span class="n">chang</span> <span class="mi">1</span>
+ <span class="mi">1</span> <span class="n">file</span> <span class="n">changed</span><span class="p">,</span> <span class="mi">1</span> <span class="n">insertion</span><span class="p">(</span><span class="o">+</span><span class="p">),</span> <span class="mi">1</span> <span class="n">deletion</span><span class="p">(</span><span class="o">-</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">status</span>
+</pre></div>
+</div>
+<p>and then we are all set.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">On</span> <span class="n">branch</span> <span class="n">main</span>
+<span class="n">Your</span> <span class="n">branch</span> <span class="ow">is</span> <span class="n">ahead</span> <span class="n">of</span> <span class="s1">&#39;origin/main&#39;</span> <span class="n">by</span> <span class="mi">4</span> <span class="n">commits</span><span class="o">.</span>
+  <span class="p">(</span><span class="n">use</span> <span class="s2">&quot;git push&quot;</span> <span class="n">to</span> <span class="n">publish</span> <span class="n">your</span> <span class="n">local</span> <span class="n">commits</span><span class="p">)</span>
+
+<span class="n">nothing</span> <span class="n">to</span> <span class="n">commit</span><span class="p">,</span> <span class="n">working</span> <span class="n">tree</span> <span class="n">clean</span>
+</pre></div>
+</div>
+<p>We can see git revert undoes the <em>changes</em> but *<em>adds</em> an additional comit, it is keeping track of every change and by default the commit history only moves forward.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">log</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">commit</span> <span class="n">c1807f4c764bfc47ad6cdea81453ae4c75b4df20</span> <span class="p">(</span><span class="n">HEAD</span> <span class="o">-&gt;</span> <span class="n">main</span><span class="p">)</span>
+<span class="n">Author</span><span class="p">:</span> <span class="n">Sarah</span> <span class="n">M</span> <span class="n">Brown</span> <span class="o">&lt;</span><span class="n">brownsarahm</span><span class="nd">@uri</span><span class="o">.</span><span class="n">edu</span><span class="o">&gt;</span>
+<span class="n">Date</span><span class="p">:</span>   <span class="n">Mon</span> <span class="n">Oct</span> <span class="mi">3</span> <span class="mi">17</span><span class="p">:</span><span class="mi">16</span><span class="p">:</span><span class="mi">59</span> <span class="mi">2022</span> <span class="o">-</span><span class="mi">0400</span>
+
+    <span class="n">revert</span> <span class="n">chang</span> <span class="mi">1</span>
+
+<span class="n">commit</span> <span class="mi">948</span><span class="n">eda10a2b03a168e9d0291a294a4922afecda5</span>
+<span class="n">Author</span><span class="p">:</span> <span class="n">Sarah</span> <span class="n">M</span> <span class="n">Brown</span> <span class="o">&lt;</span><span class="n">brownsarahm</span><span class="nd">@uri</span><span class="o">.</span><span class="n">edu</span><span class="o">&gt;</span>
+<span class="n">Date</span><span class="p">:</span>   <span class="n">Mon</span> <span class="n">Oct</span> <span class="mi">3</span> <span class="mi">17</span><span class="p">:</span><span class="mi">08</span><span class="p">:</span><span class="mi">49</span> <span class="mi">2022</span> <span class="o">-</span><span class="mi">0400</span>
+
+    <span class="n">change</span> <span class="mi">2</span>
+
+<span class="n">commit</span> <span class="mi">83690</span><span class="n">bccd9be5da7c3a816dea4f14d6836674623</span>
+<span class="n">Author</span><span class="p">:</span> <span class="n">Sarah</span> <span class="n">M</span> <span class="n">Brown</span> <span class="o">&lt;</span><span class="n">brownsarahm</span><span class="nd">@uri</span><span class="o">.</span><span class="n">edu</span><span class="o">&gt;</span>
+<span class="n">Date</span><span class="p">:</span>   <span class="n">Mon</span> <span class="n">Oct</span> <span class="mi">3</span> <span class="mi">17</span><span class="p">:</span><span class="mi">08</span><span class="p">:</span><span class="mi">32</span> <span class="mi">2022</span> <span class="o">-</span><span class="mi">0400</span>
+
+    <span class="n">change</span> <span class="mi">1</span>
+
+<span class="n">commit</span> <span class="n">a399978f0f20e1b560fbaf59ec831ab42dd6a82a</span> <span class="p">(</span><span class="n">origin</span><span class="o">/</span><span class="n">new_feature</span><span class="p">,</span> <span class="n">new_feature</span><span class="p">)</span>
+<span class="n">Author</span><span class="p">:</span> <span class="n">Sarah</span> <span class="n">M</span> <span class="n">Brown</span> <span class="o">&lt;</span><span class="n">brownsarahm</span><span class="nd">@uri</span><span class="o">.</span><span class="n">edu</span><span class="o">&gt;</span>
+<span class="n">Date</span><span class="p">:</span>   <span class="n">Mon</span> <span class="n">Oct</span> <span class="mi">3</span> <span class="mi">16</span><span class="p">:</span><span class="mi">55</span><span class="p">:</span><span class="mi">41</span> <span class="mi">2022</span> <span class="o">-</span><span class="mi">0400</span>
+
+     <span class="n">new</span> <span class="n">feature</span> <span class="n">ready</span> <span class="k">for</span> <span class="n">PR</span>
+
+<span class="n">commit</span> <span class="mi">3</span><span class="n">c9980a4883782386ea3112d521b1b95997b0be6</span> <span class="p">(</span><span class="n">origin</span><span class="o">/</span><span class="n">main</span><span class="p">,</span> <span class="n">origin</span><span class="o">/</span><span class="n">HEAD</span><span class="p">)</span>
+<span class="n">Author</span><span class="p">:</span> <span class="n">Sarah</span> <span class="n">M</span> <span class="n">Brown</span> <span class="o">&lt;</span><span class="n">brownsarahm</span><span class="nd">@uri</span><span class="o">.</span><span class="n">edu</span><span class="o">&gt;</span>
+<span class="n">Date</span><span class="p">:</span>   <span class="n">Wed</span> <span class="n">Sep</span> <span class="mi">14</span> <span class="mi">17</span><span class="p">:</span><span class="mi">40</span><span class="p">:</span><span class="mi">01</span> <span class="mi">2022</span> <span class="o">-</span><span class="mi">0400</span>
+
+    <span class="n">create</span> <span class="n">about</span>
+
+<span class="n">commit</span> <span class="n">ec3dd020d2767e45b6cd61f7c4ea5f6f2be9a3d8</span>
+<span class="n">Merge</span><span class="p">:</span> <span class="mi">1613072</span> <span class="n">db2e41d</span>
+</pre></div>
+</div>
+</section>
+<section id="installing-from-source">
+<h2><span class="section-number">8.4. </span>Installing from source<a class="headerlink" href="#installing-from-source" title="Permalink to this headline">#</a></h2>
+<p>Store this outside of your inclass repo</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">..</span>
+<span class="n">ls</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">2022</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="mi">19</span>			<span class="n">github</span><span class="o">-</span><span class="n">inclass</span><span class="o">-</span><span class="n">brownsarahm</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">introcompsys</span><span class="o">/</span><span class="n">courseutils</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Cloning</span> <span class="n">into</span> <span class="s1">&#39;courseutils&#39;</span><span class="o">...</span>
+<span class="n">remote</span><span class="p">:</span> <span class="n">Enumerating</span> <span class="n">objects</span><span class="p">:</span> <span class="mi">57</span><span class="p">,</span> <span class="n">done</span><span class="o">.</span>
+<span class="n">remote</span><span class="p">:</span> <span class="n">Counting</span> <span class="n">objects</span><span class="p">:</span> <span class="mi">100</span><span class="o">%</span> <span class="p">(</span><span class="mi">57</span><span class="o">/</span><span class="mi">57</span><span class="p">),</span> <span class="n">done</span><span class="o">.</span>
+<span class="n">remote</span><span class="p">:</span> <span class="n">Compressing</span> <span class="n">objects</span><span class="p">:</span> <span class="mi">100</span><span class="o">%</span> <span class="p">(</span><span class="mi">36</span><span class="o">/</span><span class="mi">36</span><span class="p">),</span> <span class="n">done</span><span class="o">.</span>
+<span class="n">remote</span><span class="p">:</span> <span class="n">Total</span> <span class="mi">57</span> <span class="p">(</span><span class="n">delta</span> <span class="mi">26</span><span class="p">),</span> <span class="n">reused</span> <span class="mi">44</span> <span class="p">(</span><span class="n">delta</span> <span class="mi">18</span><span class="p">),</span> <span class="n">pack</span><span class="o">-</span><span class="n">reused</span> <span class="mi">0</span>
+<span class="n">Receiving</span> <span class="n">objects</span><span class="p">:</span> <span class="mi">100</span><span class="o">%</span> <span class="p">(</span><span class="mi">57</span><span class="o">/</span><span class="mi">57</span><span class="p">),</span> <span class="mf">9.99</span> <span class="n">KiB</span> <span class="o">|</span> <span class="mf">3.33</span> <span class="n">MiB</span><span class="o">/</span><span class="n">s</span><span class="p">,</span> <span class="n">done</span><span class="o">.</span>
+<span class="n">Resolving</span> <span class="n">deltas</span><span class="p">:</span> <span class="mi">100</span><span class="o">%</span> <span class="p">(</span><span class="mi">26</span><span class="o">/</span><span class="mi">26</span><span class="p">),</span> <span class="n">done</span><span class="o">.</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">courseutils</span><span class="o">/</span>
+</pre></div>
+</div>
+<p>then you can install</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>on Windows this will probably need to run in either command prompt or Anaconda Prompt if you have that.</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">.</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Processing</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">brownsarahm</span><span class="o">/</span><span class="n">Documents</span><span class="o">/</span><span class="n">inclass</span><span class="o">/</span><span class="n">systems</span><span class="o">/</span><span class="n">courseutils</span>
+  <span class="n">Preparing</span> <span class="n">metadata</span> <span class="p">(</span><span class="n">setup</span><span class="o">.</span><span class="n">py</span><span class="p">)</span> <span class="o">...</span> <span class="n">done</span>
+<span class="n">Requirement</span> <span class="n">already</span> <span class="n">satisfied</span><span class="p">:</span> <span class="n">Click</span> <span class="ow">in</span> <span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Frameworks</span><span class="o">/</span><span class="n">Python</span><span class="o">.</span><span class="n">framework</span><span class="o">/</span><span class="n">Versions</span><span class="o">/</span><span class="mf">3.8</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.8</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span> <span class="p">(</span><span class="kn">from</span> <span class="nn">syscourseutils</span><span class="o">==</span><span class="mf">0.1.0</span><span class="p">)</span> <span class="p">(</span><span class="mf">7.1.2</span><span class="p">)</span>
+<span class="n">Requirement</span> <span class="n">already</span> <span class="n">satisfied</span><span class="p">:</span> <span class="n">pandas</span> <span class="ow">in</span> <span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Frameworks</span><span class="o">/</span><span class="n">Python</span><span class="o">.</span><span class="n">framework</span><span class="o">/</span><span class="n">Versions</span><span class="o">/</span><span class="mf">3.8</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.8</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span> <span class="p">(</span><span class="kn">from</span> <span class="nn">syscourseutils</span><span class="o">==</span><span class="mf">0.1.0</span><span class="p">)</span> <span class="p">(</span><span class="mf">1.4.4</span><span class="p">)</span>
+<span class="n">Requirement</span> <span class="n">already</span> <span class="n">satisfied</span><span class="p">:</span> <span class="n">lxml</span> <span class="ow">in</span> <span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Frameworks</span><span class="o">/</span><span class="n">Python</span><span class="o">.</span><span class="n">framework</span><span class="o">/</span><span class="n">Versions</span><span class="o">/</span><span class="mf">3.8</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.8</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span> <span class="p">(</span><span class="kn">from</span> <span class="nn">syscourseutils</span><span class="o">==</span><span class="mf">0.1.0</span><span class="p">)</span> <span class="p">(</span><span class="mf">4.6.3</span><span class="p">)</span>
+<span class="n">Requirement</span> <span class="n">already</span> <span class="n">satisfied</span><span class="p">:</span> <span class="n">numpy</span> <span class="ow">in</span> <span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Frameworks</span><span class="o">/</span><span class="n">Python</span><span class="o">.</span><span class="n">framework</span><span class="o">/</span><span class="n">Versions</span><span class="o">/</span><span class="mf">3.8</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.8</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span> <span class="p">(</span><span class="kn">from</span> <span class="nn">syscourseutils</span><span class="o">==</span><span class="mf">0.1.0</span><span class="p">)</span> <span class="p">(</span><span class="mf">1.23.2</span><span class="p">)</span>
+<span class="n">Requirement</span> <span class="n">already</span> <span class="n">satisfied</span><span class="p">:</span> <span class="n">pytz</span><span class="o">&gt;=</span><span class="mf">2020.1</span> <span class="ow">in</span> <span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Frameworks</span><span class="o">/</span><span class="n">Python</span><span class="o">.</span><span class="n">framework</span><span class="o">/</span><span class="n">Versions</span><span class="o">/</span><span class="mf">3.8</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.8</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span> <span class="p">(</span><span class="kn">from</span> <span class="nn">pandas</span><span class="o">-&gt;</span><span class="n">syscourseutils</span><span class="o">==</span><span class="mf">0.1.0</span><span class="p">)</span> <span class="p">(</span><span class="mf">2020.1</span><span class="p">)</span>
+<span class="n">Requirement</span> <span class="n">already</span> <span class="n">satisfied</span><span class="p">:</span> <span class="n">python</span><span class="o">-</span><span class="n">dateutil</span><span class="o">&gt;=</span><span class="mf">2.8.1</span> <span class="ow">in</span> <span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Frameworks</span><span class="o">/</span><span class="n">Python</span><span class="o">.</span><span class="n">framework</span><span class="o">/</span><span class="n">Versions</span><span class="o">/</span><span class="mf">3.8</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.8</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span> <span class="p">(</span><span class="kn">from</span> <span class="nn">pandas</span><span class="o">-&gt;</span><span class="n">syscourseutils</span><span class="o">==</span><span class="mf">0.1.0</span><span class="p">)</span> <span class="p">(</span><span class="mf">2.8.2</span><span class="p">)</span>
+<span class="n">Requirement</span> <span class="n">already</span> <span class="n">satisfied</span><span class="p">:</span> <span class="n">six</span><span class="o">&gt;=</span><span class="mf">1.5</span> <span class="ow">in</span> <span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Frameworks</span><span class="o">/</span><span class="n">Python</span><span class="o">.</span><span class="n">framework</span><span class="o">/</span><span class="n">Versions</span><span class="o">/</span><span class="mf">3.8</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.8</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span> <span class="p">(</span><span class="kn">from</span> <span class="nn">python</span><span class="o">-</span><span class="n">dateutil</span><span class="o">&gt;=</span><span class="mf">2.8.1</span><span class="o">-&gt;</span><span class="n">pandas</span><span class="o">-&gt;</span><span class="n">syscourseutils</span><span class="o">==</span><span class="mf">0.1.0</span><span class="p">)</span> <span class="p">(</span><span class="mf">1.15.0</span><span class="p">)</span>
+<span class="n">Building</span> <span class="n">wheels</span> <span class="k">for</span> <span class="n">collected</span> <span class="n">packages</span><span class="p">:</span> <span class="n">syscourseutils</span>
+  <span class="n">Building</span> <span class="n">wheel</span> <span class="k">for</span> <span class="n">syscourseutils</span> <span class="p">(</span><span class="n">setup</span><span class="o">.</span><span class="n">py</span><span class="p">)</span> <span class="o">...</span> <span class="n">done</span>
+  <span class="n">Created</span> <span class="n">wheel</span> <span class="k">for</span> <span class="n">syscourseutils</span><span class="p">:</span> <span class="n">filename</span><span class="o">=</span><span class="n">syscourseutils</span><span class="o">-</span><span class="mf">0.1.0</span><span class="o">-</span><span class="n">py3</span><span class="o">-</span><span class="n">none</span><span class="o">-</span><span class="nb">any</span><span class="o">.</span><span class="n">whl</span> <span class="n">size</span><span class="o">=</span><span class="mi">3890</span> <span class="n">sha256</span><span class="o">=</span><span class="mi">32</span><span class="n">b131a267661070bdd7cd1d858eb4921283c53f5861cf98ff1464ef878086c6</span>
+  <span class="n">Stored</span> <span class="ow">in</span> <span class="n">directory</span><span class="p">:</span> <span class="o">/</span><span class="n">private</span><span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">8</span><span class="n">g</span><span class="o">/</span><span class="n">px8bm7bj0_j31j71yh6mfd_r0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">pip</span><span class="o">-</span><span class="n">ephem</span><span class="o">-</span><span class="n">wheel</span><span class="o">-</span><span class="n">cache</span><span class="o">-</span><span class="n">d08bf6rq</span><span class="o">/</span><span class="n">wheels</span><span class="o">/</span><span class="n">b2</span><span class="o">/</span><span class="mi">4</span><span class="n">a</span><span class="o">/</span><span class="n">cc</span><span class="o">/</span><span class="n">b21f40ef23301a77d7427d6c6766b0ed01411098736a71e5c5</span>
+<span class="n">Successfully</span> <span class="n">built</span> <span class="n">syscourseutils</span>
+<span class="n">Installing</span> <span class="n">collected</span> <span class="n">packages</span><span class="p">:</span> <span class="n">syscourseutils</span>
+  <span class="n">Attempting</span> <span class="n">uninstall</span><span class="p">:</span> <span class="n">syscourseutils</span>
+    <span class="n">Found</span> <span class="n">existing</span> <span class="n">installation</span><span class="p">:</span> <span class="n">syscourseutils</span> <span class="mf">0.1.0</span>
+    <span class="n">Uninstalling</span> <span class="n">syscourseutils</span><span class="o">-</span><span class="mf">0.1.0</span><span class="p">:</span>
+      <span class="n">Successfully</span> <span class="n">uninstalled</span> <span class="n">syscourseutils</span><span class="o">-</span><span class="mf">0.1.0</span>
+<span class="n">Successfully</span> <span class="n">installed</span> <span class="n">syscourseutils</span><span class="o">-</span><span class="mf">0.1.0</span>
+</pre></div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The package is updated so for the following to work use</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">courseutils</span>
+<span class="n">git</span> <span class="n">pull</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="o">.</span>
+</pre></div>
+</div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sysgetassignment</span> <span class="o">--</span><span class="n">date</span> <span class="mi">2022</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="mi">28</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="p">[</span> <span class="p">]</span> <span class="n">Try</span> <span class="n">exploring</span> <span class="n">your</span> <span class="n">a</span> <span class="n">repo</span> <span class="n">manually</span> <span class="ow">and</span> <span class="n">bring</span> <span class="n">more</span> <span class="n">questions</span>
+<span class="o">-</span> <span class="p">[</span> <span class="p">]</span> <span class="n">Make</span> <span class="n">sure</span> <span class="n">that</span> <span class="n">you</span> <span class="n">have</span> <span class="n">a</span> <span class="n">grading</span> <span class="n">contract</span> <span class="n">that</span> <span class="n">has</span> <span class="n">been</span> <span class="n">reviewed</span> <span class="n">at</span> <span class="n">least</span> <span class="n">once</span>
+
+</pre></div>
+</div>
+<p>Then we can <em>pipe</em> the output into another command to create an issue.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sysgetassignment</span> <span class="o">|</span> <span class="n">gh</span> <span class="n">issue</span> <span class="n">create</span> <span class="o">--</span><span class="n">title</span> <span class="s2">&quot;more practice 1&quot;</span> <span class="o">--</span><span class="n">body</span><span class="o">-</span><span class="n">file</span> <span class="o">-</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<span class="n">Creating</span> <span class="n">issue</span> <span class="ow">in</span> <span class="n">introcompsys</span><span class="o">/</span><span class="n">github</span><span class="o">-</span><span class="n">inclass</span><span class="o">-</span><span class="n">brownsarahm</span>
+
+<span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">introcompsys</span><span class="o">/</span><span class="n">github</span><span class="o">-</span><span class="n">inclass</span><span class="o">-</span><span class="n">brownsarahm</span><span class="o">/</span><span class="n">issues</span><span class="o">/</span><span class="mi">8</span>
+</pre></div>
+</div>
+<section id="trouble-shooting">
+<h3><span class="section-number">8.4.1. </span>Trouble shooting<a class="headerlink" href="#trouble-shooting" title="Permalink to this headline">#</a></h3>
+<p>If anaconda or miniconda is installed: <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span></code>. Otherwise activate a python environment of your choosing</p>
+<p>Try pulling updates and reinstalling.</p>
+<p>Make sure you reactive bash.</p>
+<p>try both <code class="docutils literal notranslate"><span class="pre">pip</span></code> and <code class="docutils literal notranslate"><span class="pre">pip3</span></code></p>
+<p><a class="reference external" href="https://ubuntu.com/tutorials/create-a-usb-stick-on-windows#1-overview">if you want to make yourself a linkux computer for the cost of a flash drive</a></p>
+</section>
+</section>
+<section id="review-todays-class">
+<h2><span class="section-number">8.5. </span>Review today’s class<a class="headerlink" href="#review-todays-class" title="Permalink to this headline">#</a></h2>
+<ol class="simple">
+<li><p>Fix any open PRs you have that need to have a commit moved to a different branch, etc.</p></li>
+<li><p>In your github in class repo, create a series of commits that tell as story of how you might have made a mistake and fixed it. Use git log and redirects to write that log to a file in your KWL repo and then annotate your story.</p></li>
+<li><p>Create tracking issues for last week’s activities and link them to PRs for any activities you have already completed.</p></li>
+</ol>
+</section>
+<section id="prepare-for-next-class">
+<h2><span class="section-number">8.6. </span>Prepare for Next Class<a class="headerlink" href="#prepare-for-next-class" title="Permalink to this headline">#</a></h2>
+<ol class="simple">
+<li><p>In a <code class="docutils literal notranslate"><span class="pre">gitunderstanding.md</span></code> list 3-5 items from the following categories (1) things you have had trouble with in git in the past and how they relate to your new understanding (b) things that your understanding has changed based on today’s class © things about git you still have questions about</p></li>
+<li><p>Follow up on your grading contract as needed</p></li>
+</ol>
+</section>
+<section id="more-practice">
+<h2><span class="section-number">8.7. </span>More Practice<a class="headerlink" href="#more-practice" title="Permalink to this headline">#</a></h2>
+<ol class="simple">
+<li><p>Create an issue on your group repo for a new vocab term or cheatsheet item from your terminal, check that there is not an exisiting issue first. Write the history from this activity to <code class="docutils literal notranslate"><span class="pre">offlineissue.md</span></code> in your kwl repo.</p></li>
+<li><p>If you plan to do projects. Create <a class="reference external" href="https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/creating-and-editing-milestones-for-issues-and-pull-requests">milestones</a> for the intermediate deadlines (proposal 1, proposal 2, project 1, project 2 with deadlines)</p></li>
+</ol>
+</section>
+<section id="questions-after-class">
+<h2><span class="section-number">8.8. </span>Questions After Class<a class="headerlink" href="#questions-after-class" title="Permalink to this headline">#</a></h2>
+<section id="will-the-use-of-the-courseutils-and-commands-be-necessary-for-the-class-or-would-it-just-make-the-class-easier">
+<h3><span class="section-number">8.8.1. </span>Will the use of the courseutils and commands be necessary for the class? or would it just make the class easier?<a class="headerlink" href="#will-the-use-of-the-courseutils-and-commands-be-necessary-for-the-class-or-would-it-just-make-the-class-easier" title="Permalink to this headline">#</a></h3>
+<p>They’re for tracking your progress. We will help you get it working or work around it.</p>
+</section>
+<section id="my-kwlfilecheck-command-is-still-not-working-how-do-i-fix-that">
+<h3><span class="section-number">8.8.2. </span>My kwlfilecheck command is still not working how do I fix that?<a class="headerlink" href="#my-kwlfilecheck-command-is-still-not-working-how-do-i-fix-that" title="Permalink to this headline">#</a></h3>
+<p>There’s a missing section on the course website for that command, focus on getting <code class="docutils literal notranslate"><span class="pre">sysgetassignment</span></code> for now.  Try the things above and if it still does not create a detailed issue with what error you get and what OS you are using on the <a class="reference external" href="https://github.com/introcompsys/courseutils">repo</a></p>
+</section>
+<section id="can-you-post-directions-for-how-to-get-the-kwl-tracking-to-work-on-m1-macs">
+<h3><span class="section-number">8.8.3. </span>Can you post directions for how to get the kwl tracking to work on m1 macs<a class="headerlink" href="#can-you-post-directions-for-how-to-get-the-kwl-tracking-to-work-on-m1-macs" title="Permalink to this headline">#</a></h3>
+<p><a class="reference external" href="https://github.com/introcompsys/courseutils/issues/1"> a studen did this last year</a></p>
+</section>
+<section id="does-a-flash-drive-that-i-have-made-to-have-ubuntu-in-2017-works">
+<h3><span class="section-number">8.8.4. </span>Does a flash drive that I have made to have ubuntu in 2017 works?<a class="headerlink" href="#does-a-flash-drive-that-i-have-made-to-have-ubuntu-in-2017-works" title="Permalink to this headline">#</a></h3>
+<p>yes</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notes"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="2022-09-28.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">7. </span>What <em>is</em> git?</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../activities/kwl.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">KWL Chart</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Professor Sarah M Brown<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
