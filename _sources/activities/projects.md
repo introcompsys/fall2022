@@ -49,3 +49,14 @@ This summary report have the following sections.
 1. **Abstract** a one paragraph "abstract" type overview of what your project consists of.  This should be written for a general audience, something that anyone who has taken up to 211 could understand. It should follow guidance of a scientific abstract.
 1. **Reflection** a one paragraph reflection that summarizes challenges faced and what you learned doing your project
 1. **Artifacts** links to other materials required for assessing the project.  This can be a public facing web resource, a private repository, or a shared file on URI google Drive. 
+
+
+## Project Examples
+- One type of project would be to do a research project on a topic we cover in class and create a .md file with your findings that demonstrates your knowledge of the topic. The .md file would include an **Abstract**, **Body**, **Reflection** including what you did and what you learned from it, and a **Bibliography**. Potential research topics include:
+    - Motherboards
+    - CPUs: Their History, Evolution, and How They Work
+    - GPUs: A Graphics Card That Revolutionized Machine Learning
+    - The Differences Between Operating Systems: MacOS vs Windows VS Linux
+    - Abstraction For Dummies: Explaining Abstract Concepts to the Layman
+- Another type of project could be to create a program using the tools taught in class to maintain the program. What would be included in this would be a .md reporting your findings that demonstrates an understanding of the tools used and a link to the repository hosting the program including **documentation** written for the program.
+
