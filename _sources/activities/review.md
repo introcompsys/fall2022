@@ -11,6 +11,10 @@ kernelspec:
   name: python3
 ---
 
+```{important}
+The grade free zone covers classes 1-5, ending on 2022-09-21.
+```
+
 
 # Review
 
