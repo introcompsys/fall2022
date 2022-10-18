@@ -229,6 +229,11 @@ const thebe_selector_output = ".output, .cell_output"
    10. What are git hashes and why are they alaphanumeric?
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../notes/2022-10-17.html">
+   11. How do git references work?
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -665,6 +670,22 @@ title="Print to PDF"
 2. Learn more about one collision
 3. What impact will the swith have on how git works?
 4. If you have scripts that operate on git repos, what might you do to prepare for the switch?
+</pre></div>
+</div>
+<p><a class="reference internal" href="../notes/2022-10-17.html"><span class="doc std std-doc">2022-10-17</span></a></p>
+<ol class="simple">
+<li><p>Add &quot;version 3&quot; to the test.txt file and hash that object</p></li>
+<li><p>Add that to the index</p></li>
+<li><p>Add the tree from the first commit to the index as a subdirectory with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">read-tree</span> <span class="pre">--prefix=back</span> <span class="pre">&lt;hash&gt;</span></code></p></li>
+<li><p>Write the new tree</p></li>
+<li><p>Make a commit with message &quot;Commit 3&quot; point to that tree and have your second commit as its parent.</p></li>
+<li><p>Update your diagram in <code class="docutils literal notranslate"><span class="pre">test_repo_map.md</span></code> after the following.</p></li>
+<li><p>Update your <code class="docutils literal notranslate"><span class="pre">gitplumbingdetail.md</span></code></p></li>
+</ol>
+<div class="highlight-{index} notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="highlight-{index} notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </div>
