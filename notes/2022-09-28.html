@@ -247,6 +247,11 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../activities/team.html">
+   Team Repo
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../activities/review.html">
    Review
   </a>
@@ -259,6 +264,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../activities/practice.html">
    More Practice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../genindex.html">
+   KWL File Information
   </a>
  </li>
  <li class="toctree-l1">
@@ -1019,8 +1029,8 @@ For human reasons, we like to have one “official” copy and treat the others 
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls -a
 </pre></div>
 </div>
-<div class="highlight-output notranslate"><div class="highlight"><pre><span></span><span class="go">.		.git		README.md	hello.md</span>
-<span class="go">..		.github		about.md</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">.</span>		<span class="o">.</span><span class="n">git</span>		<span class="n">README</span><span class="o">.</span><span class="n">md</span>	<span class="n">hello</span><span class="o">.</span><span class="n">md</span>
+<span class="o">..</span>		<span class="o">.</span><span class="n">github</span>		<span class="n">about</span><span class="o">.</span><span class="n">md</span>
 </pre></div>
 </div>
 <p>of the structure of git is contained in the <code class="docutils literal notranslate"><span class="pre">.git</span></code> directory, that is called the
@@ -1029,9 +1039,9 @@ For human reasons, we like to have one “official” copy and treat the others 
 ls
 </pre></div>
 </div>
-<div class="highlight-output notranslate"><div class="highlight"><pre><span></span><span class="go">COMMIT_EDITMSG	ORIG_HEAD	description	info		packed-refs</span>
-<span class="go">FETCH_HEAD	REBASE_HEAD	hooks		logs		refs</span>
-<span class="go">HEAD		config		index		objects</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">COMMIT_EDITMSG</span>	<span class="n">ORIG_HEAD</span>	<span class="n">description</span>	<span class="n">info</span>		<span class="n">packed</span><span class="o">-</span><span class="n">refs</span>
+<span class="n">FETCH_HEAD</span>	<span class="n">REBASE_HEAD</span>	<span class="n">hooks</span>		<span class="n">logs</span>		<span class="n">refs</span>
+<span class="n">HEAD</span>		<span class="n">config</span>		<span class="n">index</span>		<span class="n">objects</span>
 </pre></div>
 </div>
 <p>We see a lot of files here. The most important ones are:</p>
@@ -1066,14 +1076,14 @@ ls
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat HEAD
 </pre></div>
 </div>
-<div class="highlight-output notranslate"><div class="highlight"><pre><span></span><span class="go">ref: refs/heads/main</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ref</span><span class="p">:</span> <span class="n">refs</span><span class="o">/</span><span class="n">heads</span><span class="o">/</span><span class="n">main</span>
 </pre></div>
 </div>
 <p>this indeed is the branh we have checked out and we can confirm with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git status
 </pre></div>
 </div>
-<div class="highlight-output notranslate"><div class="highlight"><pre><span></span><span class="go">fatal: this operation must be run in a work tree</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fatal</span><span class="p">:</span> <span class="n">this</span> <span class="n">operation</span> <span class="n">must</span> <span class="n">be</span> <span class="n">run</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">work</span> <span class="n">tree</span>
 </pre></div>
 </div>
 <p>excpet we cannot call this in the <code class="docutils literal notranslate"><span class="pre">.git</span></code> directory, we have to got back up</p>
@@ -1081,14 +1091,14 @@ ls
 git status
 </pre></div>
 </div>
-<div class="highlight-output notranslate"><div class="highlight"><pre><span></span><span class="go">On branch main</span>
-<span class="go">Your branch is up to date with &#39;origin/main&#39;.</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">On</span> <span class="n">branch</span> <span class="n">main</span>
+<span class="n">Your</span> <span class="n">branch</span> <span class="ow">is</span> <span class="n">up</span> <span class="n">to</span> <span class="n">date</span> <span class="k">with</span> <span class="s1">&#39;origin/main&#39;</span><span class="o">.</span>
 
-<span class="go">Untracked files:</span>
-<span class="go">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)</span>
-<span class="go">	hello.md</span>
+<span class="n">Untracked</span> <span class="n">files</span><span class="p">:</span>
+  <span class="p">(</span><span class="n">use</span> <span class="s2">&quot;git add &lt;file&gt;...&quot;</span> <span class="n">to</span> <span class="n">include</span> <span class="ow">in</span> <span class="n">what</span> <span class="n">will</span> <span class="n">be</span> <span class="n">committed</span><span class="p">)</span>
+	<span class="n">hello</span><span class="o">.</span><span class="n">md</span>
 
-<span class="go">nothing added to commit but untracked files present (use &quot;git add&quot; to track)</span>
+<span class="n">nothing</span> <span class="n">added</span> <span class="n">to</span> <span class="n">commit</span> <span class="n">but</span> <span class="n">untracked</span> <span class="n">files</span> <span class="n">present</span> <span class="p">(</span><span class="n">use</span> <span class="s2">&quot;git add&quot;</span> <span class="n">to</span> <span class="n">track</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>and we indeed see that it matches.</p>
@@ -1096,24 +1106,24 @@ git status
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git branch
 </pre></div>
 </div>
-<div class="highlight-output notranslate"><div class="highlight"><pre><span></span><span class="go">  2-create-an-about-file</span>
-<span class="go">* main</span>
-<span class="go">  organtzation</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="mi">2</span><span class="o">-</span><span class="n">create</span><span class="o">-</span><span class="n">an</span><span class="o">-</span><span class="n">about</span><span class="o">-</span><span class="n">file</span>
+<span class="o">*</span> <span class="n">main</span>
+  <span class="n">organtzation</span>
 </pre></div>
 </div>
 <p>then switch to one of the others</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git checkout <span class="m">2</span>-create-an-about-file
 </pre></div>
 </div>
-<div class="highlight-output notranslate"><div class="highlight"><pre><span></span><span class="go">Switched to branch &#39;2-create-an-about-file&#39;</span>
-<span class="go">Your branch is up to date with &#39;origin/2-create-an-about-file&#39;.</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Switched</span> <span class="n">to</span> <span class="n">branch</span> <span class="s1">&#39;2-create-an-about-file&#39;</span>
+<span class="n">Your</span> <span class="n">branch</span> <span class="ow">is</span> <span class="n">up</span> <span class="n">to</span> <span class="n">date</span> <span class="k">with</span> <span class="s1">&#39;origin/2-create-an-about-file&#39;</span><span class="o">.</span>
 </pre></div>
 </div>
 <p>And again examine HEAD</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat .git/HEAD
 </pre></div>
 </div>
-<div class="highlight-output notranslate"><div class="highlight"><pre><span></span><span class="go">ref: refs/heads/2-create-an-about-file</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ref</span><span class="p">:</span> <span class="n">refs</span><span class="o">/</span><span class="n">heads</span><span class="o">/</span><span class="mi">2</span><span class="o">-</span><span class="n">create</span><span class="o">-</span><span class="n">an</span><span class="o">-</span><span class="n">about</span><span class="o">-</span><span class="n">file</span>
 </pre></div>
 </div>
 <p>it indeed changes.</p>
@@ -1121,7 +1131,7 @@ git status
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat .git/refs/heads/main
 </pre></div>
 </div>
-<div class="highlight-output notranslate"><div class="highlight"><pre><span></span><span class="go">3c9980a4883782386ea3112d521b1b95997b0be6</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span><span class="n">c9980a4883782386ea3112d521b1b95997b0be6</span>
 </pre></div>
 </div>
 <p>this is a commit, the last one that was added to the branch we checked.</p>
@@ -1129,8 +1139,8 @@ git status
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git checkout main
 </pre></div>
 </div>
-<div class="highlight-output notranslate"><div class="highlight"><pre><span></span><span class="go">Switched to branch &#39;main&#39;</span>
-<span class="go">Your branch is up to date with &#39;origin/main&#39;.</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Switched</span> <span class="n">to</span> <span class="n">branch</span> <span class="s1">&#39;main&#39;</span>
+<span class="n">Your</span> <span class="n">branch</span> <span class="ow">is</span> <span class="n">up</span> <span class="n">to</span> <span class="n">date</span> <span class="k">with</span> <span class="s1">&#39;origin/main&#39;</span><span class="o">.</span>
 </pre></div>
 </div>
 <p>and check the commit history</p>
@@ -1145,32 +1155,32 @@ git status
 to scroll and press <code class="docutils literal notranslate"><span class="pre">q</span></code> to exit.</p>
 </div>
 </aside>
-<div class="highlight-output notranslate"><div class="highlight"><pre><span></span><span class="go">commit 3c9980a4883782386ea3112d521b1b95997b0be6 (HEAD -&gt; main, origin/main, origin/HEAD)</span>
-<span class="go">Author: Sarah M Brown &lt;brownsarahm@uri.edu&gt;</span>
-<span class="go">Date:   Wed Sep 14 17:40:01 2022 -0400</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">commit</span> <span class="mi">3</span><span class="n">c9980a4883782386ea3112d521b1b95997b0be6</span> <span class="p">(</span><span class="n">HEAD</span> <span class="o">-&gt;</span> <span class="n">main</span><span class="p">,</span> <span class="n">origin</span><span class="o">/</span><span class="n">main</span><span class="p">,</span> <span class="n">origin</span><span class="o">/</span><span class="n">HEAD</span><span class="p">)</span>
+<span class="n">Author</span><span class="p">:</span> <span class="n">Sarah</span> <span class="n">M</span> <span class="n">Brown</span> <span class="o">&lt;</span><span class="n">brownsarahm</span><span class="nd">@uri</span><span class="o">.</span><span class="n">edu</span><span class="o">&gt;</span>
+<span class="n">Date</span><span class="p">:</span>   <span class="n">Wed</span> <span class="n">Sep</span> <span class="mi">14</span> <span class="mi">17</span><span class="p">:</span><span class="mi">40</span><span class="p">:</span><span class="mi">01</span> <span class="mi">2022</span> <span class="o">-</span><span class="mi">0400</span>
 
-<span class="go">    create about</span>
+    <span class="n">create</span> <span class="n">about</span>
 
-<span class="go">commit ec3dd020d2767e45b6cd61f7c4ea5f6f2be9a3d8</span>
-<span class="go">Merge: 1613072 db2e41d</span>
-<span class="go">Author: Sarah Brown &lt;brownsarahm@uri.edu&gt;</span>
-<span class="go">Date:   Wed Sep 14 16:56:34 2022 -0400</span>
+<span class="n">commit</span> <span class="n">ec3dd020d2767e45b6cd61f7c4ea5f6f2be9a3d8</span>
+<span class="n">Merge</span><span class="p">:</span> <span class="mi">1613072</span> <span class="n">db2e41d</span>
+<span class="n">Author</span><span class="p">:</span> <span class="n">Sarah</span> <span class="n">Brown</span> <span class="o">&lt;</span><span class="n">brownsarahm</span><span class="nd">@uri</span><span class="o">.</span><span class="n">edu</span><span class="o">&gt;</span>
+<span class="n">Date</span><span class="p">:</span>   <span class="n">Wed</span> <span class="n">Sep</span> <span class="mi">14</span> <span class="mi">16</span><span class="p">:</span><span class="mi">56</span><span class="p">:</span><span class="mi">34</span> <span class="mi">2022</span> <span class="o">-</span><span class="mi">0400</span>
 
-<span class="go">    Merge pull request #4 from introcompsys/create_readme</span>
+    <span class="n">Merge</span> <span class="n">pull</span> <span class="n">request</span> <span class="c1">#4 from introcompsys/create_readme</span>
 
-<span class="go">    Create README.md</span>
+    <span class="n">Create</span> <span class="n">README</span><span class="o">.</span><span class="n">md</span>
 
-<span class="go">commit db2e41d48129b2c3ad09b78f1c14c2cd295e3eb2 (origin/create_readme)</span>
-<span class="go">Author: Sarah Brown &lt;brownsarahm@uri.edu&gt;</span>
-<span class="go">Date:   Wed Sep 14 16:55:23 2022 -0400</span>
+<span class="n">commit</span> <span class="n">db2e41d48129b2c3ad09b78f1c14c2cd295e3eb2</span> <span class="p">(</span><span class="n">origin</span><span class="o">/</span><span class="n">create_readme</span><span class="p">)</span>
+<span class="n">Author</span><span class="p">:</span> <span class="n">Sarah</span> <span class="n">Brown</span> <span class="o">&lt;</span><span class="n">brownsarahm</span><span class="nd">@uri</span><span class="o">.</span><span class="n">edu</span><span class="o">&gt;</span>
+<span class="n">Date</span><span class="p">:</span>   <span class="n">Wed</span> <span class="n">Sep</span> <span class="mi">14</span> <span class="mi">16</span><span class="p">:</span><span class="mi">55</span><span class="p">:</span><span class="mi">23</span> <span class="mi">2022</span> <span class="o">-</span><span class="mi">0400</span>
 
-<span class="go">    Create README.md</span>
+    <span class="n">Create</span> <span class="n">README</span><span class="o">.</span><span class="n">md</span>
 
-<span class="go">commit 1613072525c141b13d3ac7db68e8c1dbee70496b</span>
-<span class="go">Author: github-classroom[bot] &lt;66690702+github-classroom[bot]@users.noreply.github.com&gt;</span>
-<span class="go">Date:   Wed Sep 14 20:51:29 2022 +0000</span>
+<span class="n">commit</span> <span class="mi">1613072525</span><span class="n">c141b13d3ac7db68e8c1dbee70496b</span>
+<span class="n">Author</span><span class="p">:</span> <span class="n">github</span><span class="o">-</span><span class="n">classroom</span><span class="p">[</span><span class="n">bot</span><span class="p">]</span> <span class="o">&lt;</span><span class="mi">66690702</span><span class="o">+</span><span class="n">github</span><span class="o">-</span><span class="n">classroom</span><span class="p">[</span><span class="n">bot</span><span class="p">]</span><span class="nd">@users</span><span class="o">.</span><span class="n">noreply</span><span class="o">.</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">&gt;</span>
+<span class="n">Date</span><span class="p">:</span>   <span class="n">Wed</span> <span class="n">Sep</span> <span class="mi">14</span> <span class="mi">20</span><span class="p">:</span><span class="mi">51</span><span class="p">:</span><span class="mi">29</span> <span class="mi">2022</span> <span class="o">+</span><span class="mi">0000</span>
 
-<span class="go">    Initial commit</span>
+    <span class="n">Initial</span> <span class="n">commit</span>
 </pre></div>
 </div>
 <div class="admonition-try-it-yourself admonition">
@@ -1212,25 +1222,25 @@ to one another</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat config
 </pre></div>
 </div>
-<div class="highlight-output notranslate"><div class="highlight"><pre><span></span><span class="go">[core]</span>
-<span class="go">	repositoryformatversion = 0</span>
-<span class="go">	filemode = true</span>
-<span class="go">	bare = false</span>
-<span class="go">	logallrefupdates = true</span>
-<span class="go">	ignorecase = true</span>
-<span class="go">	precomposeunicode = true</span>
-<span class="go">[remote &quot;origin&quot;]</span>
-<span class="go">	url = https://github.com/introcompsys/github-inclass-brownsarahm.git</span>
-<span class="go">	fetch = +refs/heads/*:refs/remotes/origin/*</span>
-<span class="go">[branch &quot;main&quot;]</span>
-<span class="go">	remote = origin</span>
-<span class="go">	merge = refs/heads/main</span>
-<span class="go">[branch &quot;organtzation&quot;]</span>
-<span class="go">	remote = origin</span>
-<span class="go">	merge = refs/heads/organtzation</span>
-<span class="go">[branch &quot;2-create-an-about-file&quot;]</span>
-<span class="go">	remote = origin</span>
-<span class="go">	merge = refs/heads/2-create-an-about-file</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">core</span><span class="p">]</span>
+	<span class="n">repositoryformatversion</span> <span class="o">=</span> <span class="mi">0</span>
+	<span class="n">filemode</span> <span class="o">=</span> <span class="n">true</span>
+	<span class="n">bare</span> <span class="o">=</span> <span class="n">false</span>
+	<span class="n">logallrefupdates</span> <span class="o">=</span> <span class="n">true</span>
+	<span class="n">ignorecase</span> <span class="o">=</span> <span class="n">true</span>
+	<span class="n">precomposeunicode</span> <span class="o">=</span> <span class="n">true</span>
+<span class="p">[</span><span class="n">remote</span> <span class="s2">&quot;origin&quot;</span><span class="p">]</span>
+	<span class="n">url</span> <span class="o">=</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">introcompsys</span><span class="o">/</span><span class="n">github</span><span class="o">-</span><span class="n">inclass</span><span class="o">-</span><span class="n">brownsarahm</span><span class="o">.</span><span class="n">git</span>
+	<span class="n">fetch</span> <span class="o">=</span> <span class="o">+</span><span class="n">refs</span><span class="o">/</span><span class="n">heads</span><span class="o">/*</span><span class="p">:</span><span class="n">refs</span><span class="o">/</span><span class="n">remotes</span><span class="o">/</span><span class="n">origin</span><span class="o">/*</span>
+<span class="p">[</span><span class="n">branch</span> <span class="s2">&quot;main&quot;</span><span class="p">]</span>
+	<span class="n">remote</span> <span class="o">=</span> <span class="n">origin</span>
+	<span class="n">merge</span> <span class="o">=</span> <span class="n">refs</span><span class="o">/</span><span class="n">heads</span><span class="o">/</span><span class="n">main</span>
+<span class="p">[</span><span class="n">branch</span> <span class="s2">&quot;organtzation&quot;</span><span class="p">]</span>
+	<span class="n">remote</span> <span class="o">=</span> <span class="n">origin</span>
+	<span class="n">merge</span> <span class="o">=</span> <span class="n">refs</span><span class="o">/</span><span class="n">heads</span><span class="o">/</span><span class="n">organtzation</span>
+<span class="p">[</span><span class="n">branch</span> <span class="s2">&quot;2-create-an-about-file&quot;</span><span class="p">]</span>
+	<span class="n">remote</span> <span class="o">=</span> <span class="n">origin</span>
+	<span class="n">merge</span> <span class="o">=</span> <span class="n">refs</span><span class="o">/</span><span class="n">heads</span><span class="o">/</span><span class="mi">2</span><span class="o">-</span><span class="n">create</span><span class="o">-</span><span class="n">an</span><span class="o">-</span><span class="n">about</span><span class="o">-</span><span class="n">file</span>
 </pre></div>
 </div>
 <p>This file tracks the different relationships between your local copy and remots that it knows.  This repository only knows one remote, named origin, with a url on GitHub.  A git repo can have multiple remotes, each with its own name and url.</p>
@@ -1323,9 +1333,9 @@ to one another</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git cat-file -p 2c4495
 </pre></div>
 </div>
-<div class="highlight-output notranslate"><div class="highlight"><pre><span></span><span class="go">040000 tree 95b60ce8cdec1bc4e1df1416e0c0e6ecbd3e7a8c	.github</span>
-<span class="go">100644 blob bcc1d9287b5cae329629cf3e0779b065b72dad7a	README.md</span>
-<span class="go">100644 blob e69de29bb2d1d6434b8b29ae775ad8c2e48c5391	about.md</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">040000</span> <span class="n">tree</span> <span class="mi">95</span><span class="n">b60ce8cdec1bc4e1df1416e0c0e6ecbd3e7a8c</span>	<span class="o">.</span><span class="n">github</span>
+<span class="mi">100644</span> <span class="n">blob</span> <span class="n">bcc1d9287b5cae329629cf3e0779b065b72dad7a</span>	<span class="n">README</span><span class="o">.</span><span class="n">md</span>
+<span class="mi">100644</span> <span class="n">blob</span> <span class="n">e69de29bb2d1d6434b8b29ae775ad8c2e48c5391</span>	<span class="n">about</span><span class="o">.</span><span class="n">md</span>
 </pre></div>
 </div>
 <p>we can see that the <code class="docutils literal notranslate"><span class="pre">hello.md</span></code> blob object is the difference and the other two files even have the same hash (so they were not changed).</p>
@@ -1380,7 +1390,7 @@ to one another</p>
 </ol>
 </section>
 <section id="prepare-for-next-class">
-<h2><span class="section-number">7.11. </span>Prepare for Next Class<a class="headerlink" href="#prepare-for-next-class" title="Permalink to this headline">#</a></h2>
+<span id="index-0"></span><h2><span class="section-number">7.11. </span>Prepare for Next Class<a class="headerlink" href="#prepare-for-next-class" title="Permalink to this headline">#</a></h2>
 <ol class="simple">
 <li><p>Try exploring your a repo manually and bring more questions</p></li>
 <li><p>Make sure that you have a grading contract that has been reviewed at least once</p></li>
@@ -1402,7 +1412,7 @@ to one another</p>
 </div>
 </section>
 <section id="questions">
-<h2><span class="section-number">7.13. </span>Questions<a class="headerlink" href="#questions" title="Permalink to this headline">#</a></h2>
+<span id="index-1"></span><h2><span class="section-number">7.13. </span>Questions<a class="headerlink" href="#questions" title="Permalink to this headline">#</a></h2>
 <section id="can-you-fork-a-repo-you-do-not-have-access-to">
 <h3><span class="section-number">7.13.1. </span>Can you fork a repo you do not have access to?<a class="headerlink" href="#can-you-fork-a-repo-you-do-not-have-access-to" title="Permalink to this headline">#</a></h3>
 <p>You cannot fork a repository that you do not have read access to.  If it is private, the owner can allow or not allow forking. You can fork public repos and then submit PRs to suggest changes.  Try making a contribution to the course site.  Add a glossary entry, link a term from the notes to the glossary or fill in a caption.</p>
