@@ -24,7 +24,8 @@ latex:
   latex_documents:
     targetname: book.tex
 
-exclude_patterns            : ['_data/*',  README.md, ignore/*, syllabus/index.md]  # Patterns to skip when building the book. Can be glob-style (e.g. "*skip.ipynb")
+exclude_patterns            : ['_data/*',  README.md, ignore/*,
+                              syllabus/index.md, _review/*, _prepare/*, _practice/*]  # Patterns to skip when building the book. Can be glob-style (e.g. "*skip.ipynb")
 
 #######################################################################################
 # Execution settings

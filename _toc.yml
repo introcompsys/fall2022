@@ -30,9 +30,11 @@ parts:
   - caption: Activities
     chapters:
     - file: activities/kwl
+    - file: activities/team
     - file: activities/review
     - file: activities/prepare
     - file: activities/practice
+    - file: genindex
     - file: activities/explore
     - file: activities/projects
   - caption: FAQ
