@@ -30,8 +30,12 @@ git pull
 You'll probably have to [resolve a merge conflict](https://docs.github.com/en/github/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line)
 ````
 
+## What is the difference between porcelain and plumbing commands?
 
+````{toggle}
+Porcelain commands are high level commands (add, commit, push) while plumbing commands are low-level (hash-obejct, send-pack). Porcelain are used more often because they are often easier to use unless there is a specific need to use a plumbing command.
 
+````
 
 
 ## My command line says I cannot use a password
