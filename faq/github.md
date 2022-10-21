@@ -200,7 +200,7 @@ Doing each new assignment in its own branch is best practice. In a typical softw
 
 ## How would I continue to add to this FAQ page by myself?
 ````{toggle}
-Getting everything set up is really simple! Though it gets a little bit technical. This will describe the process to fork any remote repo and allow you to use ```git fetch``` to get information from the remote repo you created the fork from and ```git push``` to your fork (which can then be merged by the original owner you forked from).
+Getting everything set up is really simple! Though it gets a little bit technical. This will describe the process to fork any remote repo and allow you to use `git fetch` to get information from the remote repo you created the fork from and `git push` to your fork (which can then be merged by the original owner you forked from).
 
 This is useful for suggesting changes to a repository that you do not own or have access to at all, with the original owner still being able to accept or deny the changes.
 
@@ -208,7 +208,7 @@ On the GitHub repository you wish to fork, click the "Fork" icon at the top of t
 
 It then brings you to the new remote repository that is now under your name.
 
-Clone the repo using ```git clone <clone-link>``` in your directory of choosing.
+Clone the repo using `git clone <clone-link>` in your local directory of choice.
 
 > NOTE: This repo is not connected to the original remote repo that you forked from. It is connected to your forked repo you just created.
 
@@ -261,6 +261,4 @@ git push origin
 of course after pushing upstream for the first time. 
 
 Remember, you are not pushing to the original repo, you are pushing to your fork.  You can only pull and fetch from the original remote repo.
-
-I hope this helps!
 ````
