@@ -201,3 +201,68 @@ If you have trouble, create an issue and tag `@@rhodyprog4ds/fall20instructors` 
 ````
 Doing each new assignment in its own branch is best practice. In a typical software development flow once the codebase is stable a new branch would be created for each new feature or patch. This analogy should help you build intuition for this GitHub flow and using branches.  Also, pull requests are the best way for us to give you feedback. Also, if you create a branch when you do not need it, you can easily merge them after you are done, but it is hard to isolate things onto a branch if it's on main already.
 ````
+
+## How would I continue to add to this FAQ page by myself?
+````{toggle}
+Getting everything set up is really simple! Though it gets a little bit technical. This will describe the process to fork any remote repo and allow you to use `git fetch` to get information from the remote repo you created the fork from and `git push` to your fork (which can then be merged by the original owner you forked from).
+
+This is useful for suggesting changes to a repository that you do not own or have access to at all, with the original owner still being able to accept or deny the changes.
+
+On the GitHub repository you wish to fork, click the "Fork" icon at the top of the page. You can then rename the repo, only copy the main branch etc., however we just want to continue.
+
+It then brings you to the new remote repository that is now under your name.
+
+Clone the repo using `git clone <clone-link>` in your local directory of choice.
+
+> NOTE: This repo is not connected to the original remote repo that you forked from. It is connected to your forked repo you just created.
+
+You can use the below command 
+```
+git remote -v
+```
+where you will get (most times) the following back:
+
+> origin <https://github.com/<username>/<repo-name>.git> (fetch)
+> origin <https://github.com/<username>/<repo-name>.git> (push)
+
+Your local repository does not have the ability to pull or fetch from the original repository, only the fork you have created. You can fix this easily though.
+
+Using the command
+```
+git remote add upstream <original-repo-clone-link>
+```
+adds the original repository as a remote ref that you can use in other commands, for example ```git fetch``` or ```git pull```
+
+> NOTE: "upstream" in the above command can be replaced with whatever you want, just note that you will use that name when using other commands referencing it.
+
+When using ```git remote -v``` again, you now get the following back:
+
+> origin <https://github.com/<username>/<repo-name>.git> (fetch)
+> origin <https://github.com/<username>/<repo-name>.git> (push)
+> upstream <https://github.com/<original-owners-username>/<repo-name>.git> (fetch)
+> upstream <https://github.com/<original-owners-username>/<repo-name>.git> (push)
+
+You can now run the command 
+```
+git fetch upstream
+```
+to successfully fetch all information from the original remote repo.
+
+Running 
+```
+git merge upstream/main
+```
+then merges the fetched information from the remote repo into your local forked repo.
+
+When pushing your changes, you will continue to either use
+```
+git push
+```
+or
+```
+git push origin
+```
+of course after pushing upstream for the first time. 
+
+Remember, you are not pushing to the original repo, you are pushing to your fork.  You can only pull and fetch from the original remote repo.
+````
