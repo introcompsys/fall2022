@@ -1,6 +1,29 @@
 # Team Repo
 
+(groupcontrib)=
+## Contributions
 
+Your team repo is a place to build up a glossary of key terms and a "cookbook" of "recipes" of common things you might want to do on the shell, bash commands, git commands and others.  
+
+For the glossary, follow the [jupyterbook]() syntax.  
+
+For the cookbook, use standard markdown.
+
+to denote code inline `use single backticks`
+```
+to denote code inline `use single backticks`
+```
+
+to make a code block use 3 back ticks
+````
+```
+to make a code block use 3 back ticks
+```
+````
+
+To nest blocks use increasing numbers of back ticks.
+
+To make a link, `[show the text in squarebrackets](url/in/parenthesis)`
 
 ## Collaboration
 
