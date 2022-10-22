@@ -1,0 +1,1293 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Prepare for Next Class &#8212; Introduction to Computer Systems</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Introduction to Computer Systems</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    About this Site
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Syllabus
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus/about.html">
+   Basic Facts
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus/tools.html">
+   Tools and Resources
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus/grading.html">
+   Grading
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus/contract.html">
+   Grading Contract Reference
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus/schedule.html">
+   Schedule
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus/policies.html">
+   Grading Policies
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus/uri_resources.html">
+   Support
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus/uri_statements.html">
+   General URI Policies
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus/communication.html">
+   Office Hours &amp; Comms
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Notes
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="2022-09-07.html">
+   1. Welcome and Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2022-09-12.html">
+   2. Course Logistics and Learning
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2022-09-14.html">
+   3. How can I use GitHub offline?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2022-09-19.html">
+   4. Why Do I Need to Use a terminal?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2022-09-21.html">
+   5. How should I use git to stay organized this class?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2022-09-26.html">
+   6. How do we study Computer Systems?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2022-09-28.html">
+   7. What
+   <em>
+    is
+   </em>
+   git?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2022-10-03.html">
+   8. How can I fix things in git?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2022-10-05.html">
+   9. How does git
+   <em>
+    really
+   </em>
+   work?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2022-10-12.html">
+   10. What are git hashes and why are they alaphanumeric?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2022-10-17.html">
+   11. How do git references work?
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Activities
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../activities/kwl.html">
+   KWL Chart
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../activities/team.html">
+   Team Repo
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../activities/review.html">
+   Review
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../activities/prepare.html">
+   Prepare for the next class
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../activities/practice.html">
+   More Practice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../genindex.html">
+   KWL File Information
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../activities/explore.html">
+   Deeper Explorations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../activities/projects.html">
+   Project Information
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  FAQ
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../faq/syllabus.html">
+   Syllabus and Grading FAQ
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../faq/github.html">
+   Git and GitHub
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Resources
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../resources/tips.html">
+   General Tips and Resources
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../resources/learning.html">
+   How to Study in this class
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../resources/gettinghelp.html">
+   Getting Help with Programming
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../resources/organization.html">
+   Getting Organized for class
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../resources/more_info_on_cpus.html">
+   More info on cpus
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://introcompsys.github.io/spring2022/resources/testimonials.html">
+   Advice from Spring 2022 Students
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/introcompsys/fall2022"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/introcompsys/fall2022/issues/new?title=Issue%20on%20page%20%2Fnotes/2022-10-19.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/introcompsys/fall2022/edit/main/notes/2022-10-19.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/notes/2022-10-19.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Prepare for Next Class
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#more-practice">
+   More Practice
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#questions-after-class">
+   Questions after Class
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#can-i-add-another-language-like-c-to-git-bash">
+     Can I add another language like C to git bash?
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#does-git-rely-on-scripts-to-do-low-level-commands-for-higher-ones">
+     Does git rely on scripts to do low-level commands for higher ones?
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-could-i-make-the-checker-check-a-branch-on-my-repo-that-isnt-currently-the-selected-branch">
+     How could I make the checker check a branch on my repo that isn’t currently the selected branch?
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-is-one-thing-i-should-try-and-automate-with-bash">
+     what is one thing I should try and automate with bash
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Prepare for Next Class</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Prepare for Next Class
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#more-practice">
+   More Practice
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#questions-after-class">
+   Questions after Class
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#can-i-add-another-language-like-c-to-git-bash">
+     Can I add another language like C to git bash?
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#does-git-rely-on-scripts-to-do-low-level-commands-for-higher-ones">
+     Does git rely on scripts to do low-level commands for higher ones?
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-could-i-make-the-checker-check-a-branch-on-my-repo-that-isnt-currently-the-selected-branch">
+     How could I make the checker check a branch on my repo that isn’t currently the selected branch?
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-is-one-thing-i-should-try-and-automate-with-bash">
+     what is one thing I should try and automate with bash
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+</pre></div>
+</div>
+<p>ls</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p>2022-09-19			github-inclass-brownsarahm
+courseutils			kwl-brownsarahm
+fall2022			test</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+</pre></div>
+</div>
+<p>$NAME=Sarah</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p>-bash: =Sarah: command not found</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+</pre></div>
+</div>
+<p>$NAME=“Sarah”</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p>-bash: =Sarah: command not found</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+</pre></div>
+</div>
+<p>NAME=“Sarah”</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+</pre></div>
+</div>
+<p>echo $NAME</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p>Sarah</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+</pre></div>
+</div>
+<p>echo NAME</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p>NAME</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+</pre></div>
+</div>
+<p>for file in ls</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>do
+echo $file
+done
+ls</p>
+</div></blockquote>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+</pre></div>
+</div>
+<p>for file in <span class="math notranslate nohighlight">\((ls); do echo \)</span>file; done</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p>2022-09-19
+courseutils
+fall2022
+github-inclass-brownsarahm
+kwl-brownsarahm
+test</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+</pre></div>
+</div>
+<p>grep “test” github-inclass-brownsarahm/</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p>grep: github-inclass-brownsarahm/: Is a directory</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+</pre></div>
+</div>
+<p>grep “test” github-inclass-brownsarahm/*</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+</pre></div>
+</div>
+<p>cd github-inclass-brownsarahm/</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+</pre></div>
+</div>
+<p>ls</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p><a class="reference external" href="http://README.md">README.md</a>	<a class="reference external" href="http://about.md">about.md</a>	gitlog.txt	new_feature.md</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+</pre></div>
+</div>
+<p>cat <a class="reference external" href="http://about.md">about.md</a></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+</pre></div>
+</div>
+<p>cd …</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+</pre></div>
+</div>
+<p>ls</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p>2022-09-19			github-inclass-brownsarahm
+courseutils			kwl-brownsarahm
+fall2022			test</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+</pre></div>
+</div>
+<p>grep “version” test/*</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p>test/test.txt:version 1
+test/test.txt:version 2</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+</pre></div>
+</div>
+<p>grep “index” fall2022/*</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p>fall2022/_config.yml:exclude_patterns            : [‘_data/<em>’,  <a class="reference external" href="http://README.md">README.md</a>, ignore/</em>, syllabus/index.md]  # Patterns to skip when building the book. Can be glob-style (e.g. “*skip.ipynb”)
+grep: fall2022/_data: Is a directory
+grep: fall2022/_practice: Is a directory
+grep: fall2022/_prepare: Is a directory
+grep: fall2022/_review: Is a directory
+fall2022/_toc.yml:root: index
+fall2022/_toc.yml:    # - file: syllabus/index
+fall2022/_toc.yml:    # - file: letters/index
+fall2022/_toc.yml:# - file: assignments/index
+grep: fall2022/activities: Is a directory
+grep: fall2022/faq: Is a directory
+grep: fall2022/img: Is a directory
+grep: fall2022/notes: Is a directory
+grep: fall2022/resources: Is a directory
+grep: fall2022/syllabus: Is a directory</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+</pre></div>
+</div>
+<p>grep “index” fall2022/_review/*</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+</pre></div>
+</div>
+<p>cd fall2022/</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+</pre></div>
+</div>
+<p>git pull</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p>remote: Enumerating objects: 93, done.
+remote: Counting objects: 100% (74/74), done.
+remote: Total 93 (delta 74), reused 74 (delta 74), pack-reused 19
+Unpacking objects: 100% (93/93), 688.20 KiB | 1.26 MiB/s, done.
+From <a class="reference external" href="https://github.com/introcompsys/fall2022">https://github.com/introcompsys/fall2022</a>
+5145a35…551b0b4  main       -&gt; origin/main
+1a0ad55…c446b87  gh-pages   -&gt; origin/gh-pages
+Updating 5145a35…551b0b4
+Fast-forward
+_config.yml             |   3 ±
+_practice/2022-09-14.md |   2 +
+_practice/2022-09-26.md |   6 +±
+_practice/2022-09-28.md |   3 ++
+_practice/2022-10-03.md |   3 ++
+_practice/2022-10-05.md |   3 ++
+_practice/2022-10-12.md |   3 ++
+_prepare/2022-09-14.md  |   4 ±
+_prepare/2022-10-03.md  |   2 +
+_prepare/2022-10-05.md  |   3 ±
+_prepare/2022-10-17.md  |   2 ±
+_review/2022-09-12.md   |   2 ±
+_review/2022-09-19.md   |   3 ±
+_review/2022-09-21.md   |   2 +
+_review/2022-09-26.md   |   2 +
+_review/2022-09-28.md   |   2 +
+_review/2022-10-03.md   |   4 ±
+_review/2022-10-05.md   |   2 +
+_review/2022-10-12.md   |   5 +++
+_review/2022-10-17.md   |   4 ±
+_toc.yml                |   2 +
+activities/practice.md  | 105 +++++++++++++++++++++++++++++++++++++++++++±—–
+activities/prepare.md   | 101 ++++++++++++++++++++++++++++++++++++++++++++++++
+activities/review.md    | 106 ++++++++++++++++++++++++++++++++++++++++++±——-
+activities/team.md      |  27 +++++++++++++
+<a class="reference external" href="http://genindex.md">genindex.md</a>             |   1 +
+notes/2022-09-28.md     |  26 +++++±——
+notes/2022-10-03.md     |   1 -
+notes/2022-10-05.md     |   2 ±
+notes/2022-10-17.md     |   5 ±-
+30 files changed, 382 insertions(+), 54 deletions(-)
+create mode 100644 activities/team.md
+create mode 100644 <a class="reference external" href="http://genindex.md">genindex.md</a></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+</pre></div>
+</div>
+<p>cd …</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+</pre></div>
+</div>
+<p>grep “index” fall2022/_review/*</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p>fall2022/_review/2022-09-19.md:<code class="docutils literal notranslate"><span class="pre">{index}</span> <span class="pre">terminal</span> <span class="pre">fall2022/_review/2022-09-21.md:</span></code>{index} <a class="reference external" href="http://branches.md">branches.md</a>
+fall2022/_review/2022-09-26.md:<code class="docutils literal notranslate"><span class="pre">{index}</span> <span class="pre">abstraction.md</span> <span class="pre">fall2022/_review/2022-09-28.md:</span></code>{index} gitlog.txt
+fall2022/_review/2022-10-03.md:<code class="docutils literal notranslate"><span class="pre">{index}</span> <span class="pre">gitstory.md</span> <span class="pre">fall2022/_review/2022-10-05.md:</span></code>{index} <a class="reference external" href="http://gitplumbingreview.md">gitplumbingreview.md</a>
+fall2022/_review/2022-10-12.md:<code class="docutils literal notranslate"><span class="pre">{index}</span> <span class="pre">numbers.md</span> <span class="pre">fall2022/_review/2022-10-12.md:</span></code>{index} <a class="reference external" href="http://hexpeak.md">hexpeak.md</a>
+fall2022/_review/2022-10-17.md:```{index} test_repo_map.md</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+</pre></div>
+</div>
+<p>grep “index” fall2022/_review/* | awk ‘{print $2}’</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p>terminal
+<a class="reference external" href="http://branches.md">branches.md</a>
+<a class="reference external" href="http://abstraction.md">abstraction.md</a>
+gitlog.txt
+<a class="reference external" href="http://gitstory.md">gitstory.md</a>
+<a class="reference external" href="http://gitplumbingreview.md">gitplumbingreview.md</a>
+<a class="reference external" href="http://numbers.md">numbers.md</a>
+<a class="reference external" href="http://hexpeak.md">hexpeak.md</a>
+test_repo_map.md</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+</pre></div>
+</div>
+<p>grep “index” fall2022/_review/* | awk ‘{print $1}’</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p>fall2022/_review/2022-09-19.md:<code class="docutils literal notranslate"><span class="pre">{index}</span> <span class="pre">fall2022/_review/2022-09-21.md:</span></code>{index}
+fall2022/_review/2022-09-26.md:<code class="docutils literal notranslate"><span class="pre">{index}</span> <span class="pre">fall2022/_review/2022-09-28.md:</span></code>{index}
+fall2022/_review/2022-10-03.md:<code class="docutils literal notranslate"><span class="pre">{index}</span> <span class="pre">fall2022/_review/2022-10-05.md:</span></code>{index}
+fall2022/_review/2022-10-12.md:<code class="docutils literal notranslate"><span class="pre">{index}</span> <span class="pre">fall2022/_review/2022-10-12.md:</span></code>{index}
+fall2022/_review/2022-10-17.md:```{index}</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+</pre></div>
+</div>
+<p>grep “index” fall2022/_review/* | awk ‘{print $2}’</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p>terminal
+<a class="reference external" href="http://branches.md">branches.md</a>
+<a class="reference external" href="http://abstraction.md">abstraction.md</a>
+gitlog.txt
+<a class="reference external" href="http://gitstory.md">gitstory.md</a>
+<a class="reference external" href="http://gitplumbingreview.md">gitplumbingreview.md</a>
+<a class="reference external" href="http://numbers.md">numbers.md</a>
+<a class="reference external" href="http://hexpeak.md">hexpeak.md</a>
+test_repo_map.md</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+</pre></div>
+</div>
+<p>for file in <span class="math notranslate nohighlight">\((ls); do echo \)</span>file; done</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p>2022-09-19
+courseutils
+fall2022
+github-inclass-brownsarahm
+kwl-brownsarahm
+test</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+</pre></div>
+</div>
+<p>test -f kwl-brownsarahm/branches.md</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+</pre></div>
+</div>
+<p>test -f kwl-brownsarahm/README.md</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+</pre></div>
+</div>
+<p>test -f kwl-brownsarahm/gitlog.md</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+</pre></div>
+</div>
+<p>if test -f kwl-brownsarahm/branches.md</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>then
+echo “exists”
+fi
+exists</p>
+</div></blockquote>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+</pre></div>
+</div>
+<p>if test -f kwl-brownsarahm/gitlog.md; then echo “exists”; fi</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+</pre></div>
+</div>
+<p>echo test -f kwl-brownsarahm/gitlog.md</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p>test -f kwl-brownsarahm/gitlog.md</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+</pre></div>
+</div>
+<p>echo $(test -f kwl-brownsarahm/gitlog.md)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+</pre></div>
+</div>
+<p>nano <a class="reference external" href="http://checker.sh">checker.sh</a></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+</pre></div>
+</div>
+<p>bash <a class="reference external" href="http://checker.sh">checker.sh</a></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p>grep: fall2020/_review/*: No such file or directory</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+</pre></div>
+</div>
+<p>nano <a class="reference external" href="http://checker.sh">checker.sh</a></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+</pre></div>
+</div>
+<p>bash <a class="reference external" href="http://checker.sh">checker.sh</a></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p>fall2022/_review/2022-09-19.md:<code class="docutils literal notranslate"><span class="pre">{index}</span> <span class="pre">terminal</span> <span class="pre">fall2022/_review/2022-09-21.md:</span></code>{index} <a class="reference external" href="http://branches.md">branches.md</a>
+fall2022/_review/2022-09-26.md:<code class="docutils literal notranslate"><span class="pre">{index}</span> <span class="pre">abstraction.md</span> <span class="pre">fall2022/_review/2022-09-28.md:</span></code>{index} gitlog.txt
+fall2022/_review/2022-10-03.md:<code class="docutils literal notranslate"><span class="pre">{index}</span> <span class="pre">gitstory.md</span> <span class="pre">fall2022/_review/2022-10-05.md:</span></code>{index} <a class="reference external" href="http://gitplumbingreview.md">gitplumbingreview.md</a>
+fall2022/_review/2022-10-12.md:<code class="docutils literal notranslate"><span class="pre">{index}</span> <span class="pre">numbers.md</span> <span class="pre">fall2022/_review/2022-10-12.md:</span></code>{index} <a class="reference external" href="http://hexpeak.md">hexpeak.md</a>
+fall2022/_review/2022-10-17.md:```{index} test_repo_map.md</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+</pre></div>
+</div>
+<p>nano <a class="reference external" href="http://checker.sh">checker.sh</a></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+</pre></div>
+</div>
+<p>bash <a class="reference external" href="http://checker.sh">checker.sh</a></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p>terminal
+<a class="reference external" href="http://branches.md">branches.md</a>
+<a class="reference external" href="http://abstraction.md">abstraction.md</a>
+gitlog.txt
+<a class="reference external" href="http://gitstory.md">gitstory.md</a>
+<a class="reference external" href="http://gitplumbingreview.md">gitplumbingreview.md</a>
+<a class="reference external" href="http://numbers.md">numbers.md</a>
+<a class="reference external" href="http://hexpeak.md">hexpeak.md</a>
+test_repo_map.md</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+</pre></div>
+</div>
+<p>grep “index” fall2022/_review/* | awk ‘{print $2}’</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p>terminal
+<a class="reference external" href="http://branches.md">branches.md</a>
+<a class="reference external" href="http://abstraction.md">abstraction.md</a>
+gitlog.txt
+<a class="reference external" href="http://gitstory.md">gitstory.md</a>
+<a class="reference external" href="http://gitplumbingreview.md">gitplumbingreview.md</a>
+<a class="reference external" href="http://numbers.md">numbers.md</a>
+<a class="reference external" href="http://hexpeak.md">hexpeak.md</a>
+test_repo_map.md</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+</pre></div>
+</div>
+<p>ls kwl-brownsarahm/</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p><a class="reference external" href="http://README.md">README.md</a>	<a class="reference external" href="http://branches.md">branches.md</a>	<a class="reference external" href="http://check.sh">check.sh</a>	terminal</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+</pre></div>
+</div>
+<p>nano <a class="reference external" href="http://checker.sh">checker.sh</a></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+</pre></div>
+</div>
+<p>bash <a class="reference external" href="http://checker.sh">checker.sh</a></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p><a class="reference external" href="http://abstraction.md">abstraction.md</a>
+gitlog.txt
+<a class="reference external" href="http://gitstory.md">gitstory.md</a>
+<a class="reference external" href="http://gitplumbingreview.md">gitplumbingreview.md</a>
+<a class="reference external" href="http://numbers.md">numbers.md</a>
+<a class="reference external" href="http://hexpeak.md">hexpeak.md</a>
+test_repo_map.md</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+</pre></div>
+</div>
+<p>cd fall2022/</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+</pre></div>
+</div>
+<p>gh pr list</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p>Showing 1 of 1 open pull request in introcompsys/fall2022</p>
+<p>#18  Update <a class="reference external" href="http://github.md">github.md</a>(add …  fernans728:patch-1  about 6 days ago</p>
+<p>A new release of gh is available: 2.17.0 → 2.18.0
+To upgrade, run: brew upgrade gh
+<a class="reference external" href="https://github.com/cli/cli/releases/tag/v2.18.0">https://github.com/cli/cli/releases/tag/v2.18.0</a></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+</pre></div>
+</div>
+<p>cd …/</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+</pre></div>
+</div>
+<p>ls</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p>2022-09-19			github-inclass-brownsarahm
+<a class="reference external" href="http://checker.sh">checker.sh</a>			kwl-brownsarahm
+courseutils			test
+fall2022</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+</pre></div>
+</div>
+<p>cat <a class="reference external" href="http://checker.sh">checker.sh</a></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p>for file in <span class="math notranslate nohighlight">\((grep &quot;index&quot; fall2022/_review/* |awk '{print \)</span>2}’)
+do
+if ! test -f kwl-brownsarahm/<span class="math notranslate nohighlight">\(file; then
+echo \)</span>file
+fi
+done</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+## Review today&#39;s class
+
+```{include} ../_review/2022-10-19.md
+</pre></div>
+</div>
+<section id="prepare-for-next-class">
+<h1>Prepare for Next Class<a class="headerlink" href="#prepare-for-next-class" title="Permalink to this headline">#</a></h1>
+<ol class="simple">
+<li><p>On Windows, install Putty ( we will use this Monday)</p></li>
+<li><p>Get ready for class by creating <code class="docutils literal notranslate"><span class="pre">networking.md</span></code> in your KWL repo with notes about what you know about networking</p></li>
+<li><p>Add an issue on your KWL repo titled “Self Reflection 10/24” (there will be time on Monday for this, but giving you warning so you have time to think about it). Tag &#64;brownsarahm on this issue.</p></li>
+</ol>
+<div class="highlight-default notranslate" id="index-0"><div class="highlight"><pre><span></span>1. Are you where you want to be in this course?
+1. Have you been getting feedback on your work?
+1. If not, what could help you get back on track?
+1. What if any concepts are you most struggling with?
+</pre></div>
+</div>
+</section>
+<section id="more-practice">
+<h1>More Practice<a class="headerlink" href="#more-practice" title="Permalink to this headline">#</a></h1>
+<ol class="simple">
+<li><p>Make your script form class a nested loop to check for all 3 types of files</p></li>
+<li><p>Make a script that gets the updates to the course site and creates a single <code class="docutils literal notranslate"><span class="pre">todo-YYYY-MM-DD.md</span></code> file that has the review, prepare, and practice tasks in it  for each date that does not already exist in a <code class="docutils literal notranslate"><span class="pre">todo/</span></code> folder outside of your KWL repo. Save the script as <code class="docutils literal notranslate"><span class="pre">gathertasks.sh</span></code></p></li>
+</ol>
+<span class="target" id="index-1"></span></section>
+<section id="questions-after-class">
+<h1>Questions after Class<a class="headerlink" href="#questions-after-class" title="Permalink to this headline">#</a></h1>
+<section id="can-i-add-another-language-like-c-to-git-bash">
+<h2>Can I add another language like C to git bash?<a class="headerlink" href="#can-i-add-another-language-like-c-to-git-bash" title="Permalink to this headline">#</a></h2>
+<p>Bash is a shell scripting language.  A shell is an interface to your computer’s operating system. A terminal is how we access it. We will see that we can use a terminal to call a c compiler.</p>
+</section>
+<section id="does-git-rely-on-scripts-to-do-low-level-commands-for-higher-ones">
+<h2>Does git rely on scripts to do low-level commands for higher ones?<a class="headerlink" href="#does-git-rely-on-scripts-to-do-low-level-commands-for-higher-ones" title="Permalink to this headline">#</a></h2>
+<p>git is written mostly in <code class="docutils literal notranslate"><span class="pre">C</span></code> but there are some shell scripts <a class="reference external" href="https://github.com/git/git">in its source code</a></p>
+</section>
+<section id="how-could-i-make-the-checker-check-a-branch-on-my-repo-that-isnt-currently-the-selected-branch">
+<h2>How could I make the checker check a branch on my repo that isn’t currently the selected branch?<a class="headerlink" href="#how-could-i-make-the-checker-check-a-branch-on-my-repo-that-isnt-currently-the-selected-branch" title="Permalink to this headline">#</a></h2>
+<p>The easiest way is to switch branches and check again.  You might be able to traverse the git repo, but that is not straight forward.</p>
+</section>
+<section id="what-is-one-thing-i-should-try-and-automate-with-bash">
+<h2>what is one thing I should try and automate with bash<a class="headerlink" href="#what-is-one-thing-i-should-try-and-automate-with-bash" title="Permalink to this headline">#</a></h2>
+<p>For now see the More practice</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notes"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Professor Sarah M Brown<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
