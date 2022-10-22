@@ -12,9 +12,8 @@ kernelspec:
 ---
 
 ```{important}
-The grade free zone covers classes 1-5, ending on 2022-09-21.
+These tasks are not always based on things that we have already done.  Sometimes they are to have you start thinking about the topic that we are *about* to cover. Getting whatever you know about the topic fresh in your mind in advance of class will help what we do in class stick for you when we start.
 ```
-
 
 # Prepare for the next class
 
@@ -46,6 +45,13 @@ for prep_file in prep_file_list:
     display(Markdown('../_prepare/' + prep_file))
 ``` -->
 
+````{margin}
+
+```{important}
+The grade free zone covers classes 1-5, ending on 2022-09-21.
+```
+
+````
 
 ## 2022-09-07
 

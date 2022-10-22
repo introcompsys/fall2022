@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Prepare for Next Class &#8212; Introduction to Computer Systems</title>
+    <title>12. Bash Scripts &#8212; Introduction to Computer Systems</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -50,10 +50,10 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="KWL Chart" href="../activities/kwl.html" />
+    <link rel="prev" title="11. How do git references work?" href="2022-10-17.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -170,7 +170,7 @@ const thebe_selector_output = ".output, .cell_output"
   Notes
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="2022-09-07.html">
    1. Welcome and Introduction
@@ -232,6 +232,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="2022-10-17.html">
    11. How do git references work?
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   12. Bash Scripts
   </a>
  </li>
 </ul>
@@ -529,39 +534,44 @@ title="Print to PDF"
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Prepare for Next Class
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#review-todays-class">
+   12.1. Review today’s class
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#prepare-for-next-class">
+   12.2. Prepare for Next Class
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#more-practice">
-   More Practice
+   12.3. More Practice
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#questions-after-class">
-   Questions after Class
+   12.4. Questions after Class
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#can-i-add-another-language-like-c-to-git-bash">
-     Can I add another language like C to git bash?
+     12.4.1. Can I add another language like C to git bash?
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#does-git-rely-on-scripts-to-do-low-level-commands-for-higher-ones">
-     Does git rely on scripts to do low-level commands for higher ones?
+     12.4.2. Does git rely on scripts to do low-level commands for higher ones?
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#how-could-i-make-the-checker-check-a-branch-on-my-repo-that-isnt-currently-the-selected-branch">
-     How could I make the checker check a branch on my repo that isn’t currently the selected branch?
+     12.4.3. How could I make the checker check a branch on my repo that isn’t currently the selected branch?
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#what-is-one-thing-i-should-try-and-automate-with-bash">
-     what is one thing I should try and automate with bash
+     12.4.4. what is one thing I should try and automate with bash
     </a>
    </li>
   </ul>
@@ -575,7 +585,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Prepare for Next Class</h1>
+                <h1>Bash Scripts</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -585,39 +595,44 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Prepare for Next Class
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#review-todays-class">
+   12.1. Review today’s class
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#prepare-for-next-class">
+   12.2. Prepare for Next Class
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#more-practice">
-   More Practice
+   12.3. More Practice
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#questions-after-class">
-   Questions after Class
+   12.4. Questions after Class
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#can-i-add-another-language-like-c-to-git-bash">
-     Can I add another language like C to git bash?
+     12.4.1. Can I add another language like C to git bash?
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#does-git-rely-on-scripts-to-do-low-level-commands-for-higher-ones">
-     Does git rely on scripts to do low-level commands for higher ones?
+     12.4.2. Does git rely on scripts to do low-level commands for higher ones?
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#how-could-i-make-the-checker-check-a-branch-on-my-repo-that-isnt-currently-the-selected-branch">
-     How could I make the checker check a branch on my repo that isn’t currently the selected branch?
+     12.4.3. How could I make the checker check a branch on my repo that isn’t currently the selected branch?
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#what-is-one-thing-i-should-try-and-automate-with-bash">
-     what is one thing I should try and automate with bash
+     12.4.4. what is one thing I should try and automate with bash
     </a>
    </li>
   </ul>
@@ -632,579 +647,478 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+  <section class="tex2jax_ignore mathjax_ignore" id="bash-scripts">
+<h1><span class="section-number">12. </span>Bash Scripts<a class="headerlink" href="#bash-scripts" title="Permalink to this headline">#</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">2022</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="mi">19</span>			<span class="n">github</span><span class="o">-</span><span class="n">inclass</span><span class="o">-</span><span class="n">brownsarahm</span>
+<span class="n">courseutils</span>			<span class="n">kwl</span><span class="o">-</span><span class="n">brownsarahm</span>
+<span class="n">fall2022</span>			<span class="n">test</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$NAME=Sarah
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">bash</span><span class="p">:</span> <span class="o">=</span><span class="n">Sarah</span><span class="p">:</span> <span class="n">command</span> <span class="ow">not</span> <span class="n">found</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$NAME=&quot;Sarah&quot;
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">bash</span><span class="p">:</span> <span class="o">=</span><span class="n">Sarah</span><span class="p">:</span> <span class="n">command</span> <span class="ow">not</span> <span class="n">found</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">NAME</span><span class="o">=</span><span class="s2">&quot;Sarah&quot;</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>echo $NAME
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Sarah</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="n">NAME</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">NAME</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">ls</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt; do
+&gt; echo $file
+&gt; done
+ls
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>for file in $(ls); do echo $file; done
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">2022</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="mi">19</span>
+<span class="n">courseutils</span>
+<span class="n">fall2022</span>
+<span class="n">github</span><span class="o">-</span><span class="n">inclass</span><span class="o">-</span><span class="n">brownsarahm</span>
+<span class="n">kwl</span><span class="o">-</span><span class="n">brownsarahm</span>
+<span class="n">test</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">grep</span> <span class="s2">&quot;test&quot;</span> <span class="n">github</span><span class="o">-</span><span class="n">inclass</span><span class="o">-</span><span class="n">brownsarahm</span><span class="o">/</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">grep</span><span class="p">:</span> <span class="n">github</span><span class="o">-</span><span class="n">inclass</span><span class="o">-</span><span class="n">brownsarahm</span><span class="o">/</span><span class="p">:</span> <span class="n">Is</span> <span class="n">a</span> <span class="n">directory</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">grep</span> <span class="s2">&quot;test&quot;</span> <span class="n">github</span><span class="o">-</span><span class="n">inclass</span><span class="o">-</span><span class="n">brownsarahm</span><span class="o">/*</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">github</span><span class="o">-</span><span class="n">inclass</span><span class="o">-</span><span class="n">brownsarahm</span><span class="o">/</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">README</span><span class="o">.</span><span class="n">md</span>	<span class="n">about</span><span class="o">.</span><span class="n">md</span>	<span class="n">gitlog</span><span class="o">.</span><span class="n">txt</span>	<span class="n">new_feature</span><span class="o">.</span><span class="n">md</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span> <span class="n">about</span><span class="o">.</span><span class="n">md</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">..</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">2022</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="mi">19</span>			<span class="n">github</span><span class="o">-</span><span class="n">inclass</span><span class="o">-</span><span class="n">brownsarahm</span>
+<span class="n">courseutils</span>			<span class="n">kwl</span><span class="o">-</span><span class="n">brownsarahm</span>
+<span class="n">fall2022</span>			<span class="n">test</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">grep</span> <span class="s2">&quot;version&quot;</span> <span class="n">test</span><span class="o">/*</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">test</span><span class="o">/</span><span class="n">test</span><span class="o">.</span><span class="n">txt</span><span class="p">:</span><span class="n">version</span> <span class="mi">1</span>
+<span class="n">test</span><span class="o">/</span><span class="n">test</span><span class="o">.</span><span class="n">txt</span><span class="p">:</span><span class="n">version</span> <span class="mi">2</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">grep</span> <span class="s2">&quot;index&quot;</span> <span class="n">fall2022</span><span class="o">/*</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fall2022</span><span class="o">/</span><span class="n">_config</span><span class="o">.</span><span class="n">yml</span><span class="p">:</span><span class="n">exclude_patterns</span>            <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;_data/*&#39;</span><span class="p">,</span>  <span class="n">README</span><span class="o">.</span><span class="n">md</span><span class="p">,</span> <span class="n">ignore</span><span class="o">/*</span><span class="p">,</span> <span class="n">syllabus</span><span class="o">/</span><span class="n">index</span><span class="o">.</span><span class="n">md</span><span class="p">]</span>  <span class="c1"># Patterns to skip when building the book. Can be glob-style (e.g. &quot;*skip.ipynb&quot;)</span>
+<span class="n">grep</span><span class="p">:</span> <span class="n">fall2022</span><span class="o">/</span><span class="n">_data</span><span class="p">:</span> <span class="n">Is</span> <span class="n">a</span> <span class="n">directory</span>
+<span class="n">grep</span><span class="p">:</span> <span class="n">fall2022</span><span class="o">/</span><span class="n">_practice</span><span class="p">:</span> <span class="n">Is</span> <span class="n">a</span> <span class="n">directory</span>
+<span class="n">grep</span><span class="p">:</span> <span class="n">fall2022</span><span class="o">/</span><span class="n">_prepare</span><span class="p">:</span> <span class="n">Is</span> <span class="n">a</span> <span class="n">directory</span>
+<span class="n">grep</span><span class="p">:</span> <span class="n">fall2022</span><span class="o">/</span><span class="n">_review</span><span class="p">:</span> <span class="n">Is</span> <span class="n">a</span> <span class="n">directory</span>
+<span class="n">fall2022</span><span class="o">/</span><span class="n">_toc</span><span class="o">.</span><span class="n">yml</span><span class="p">:</span><span class="n">root</span><span class="p">:</span> <span class="n">index</span>
+<span class="n">fall2022</span><span class="o">/</span><span class="n">_toc</span><span class="o">.</span><span class="n">yml</span><span class="p">:</span>    <span class="c1"># - file: syllabus/index</span>
+<span class="n">fall2022</span><span class="o">/</span><span class="n">_toc</span><span class="o">.</span><span class="n">yml</span><span class="p">:</span>    <span class="c1"># - file: letters/index</span>
+<span class="n">fall2022</span><span class="o">/</span><span class="n">_toc</span><span class="o">.</span><span class="n">yml</span><span class="p">:</span><span class="c1"># - file: assignments/index</span>
+<span class="n">grep</span><span class="p">:</span> <span class="n">fall2022</span><span class="o">/</span><span class="n">activities</span><span class="p">:</span> <span class="n">Is</span> <span class="n">a</span> <span class="n">directory</span>
+<span class="n">grep</span><span class="p">:</span> <span class="n">fall2022</span><span class="o">/</span><span class="n">faq</span><span class="p">:</span> <span class="n">Is</span> <span class="n">a</span> <span class="n">directory</span>
+<span class="n">grep</span><span class="p">:</span> <span class="n">fall2022</span><span class="o">/</span><span class="n">img</span><span class="p">:</span> <span class="n">Is</span> <span class="n">a</span> <span class="n">directory</span>
+<span class="n">grep</span><span class="p">:</span> <span class="n">fall2022</span><span class="o">/</span><span class="n">notes</span><span class="p">:</span> <span class="n">Is</span> <span class="n">a</span> <span class="n">directory</span>
+<span class="n">grep</span><span class="p">:</span> <span class="n">fall2022</span><span class="o">/</span><span class="n">resources</span><span class="p">:</span> <span class="n">Is</span> <span class="n">a</span> <span class="n">directory</span>
+<span class="n">grep</span><span class="p">:</span> <span class="n">fall2022</span><span class="o">/</span><span class="n">syllabus</span><span class="p">:</span> <span class="n">Is</span> <span class="n">a</span> <span class="n">directory</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">grep</span> <span class="s2">&quot;index&quot;</span> <span class="n">fall2022</span><span class="o">/</span><span class="n">_review</span><span class="o">/*</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">fall2022</span><span class="o">/</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">pull</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">remote</span><span class="p">:</span> <span class="n">Enumerating</span> <span class="n">objects</span><span class="p">:</span> <span class="mi">93</span><span class="p">,</span> <span class="n">done</span><span class="o">.</span>
+<span class="n">remote</span><span class="p">:</span> <span class="n">Counting</span> <span class="n">objects</span><span class="p">:</span> <span class="mi">100</span><span class="o">%</span> <span class="p">(</span><span class="mi">74</span><span class="o">/</span><span class="mi">74</span><span class="p">),</span> <span class="n">done</span><span class="o">.</span>
+<span class="n">remote</span><span class="p">:</span> <span class="n">Total</span> <span class="mi">93</span> <span class="p">(</span><span class="n">delta</span> <span class="mi">74</span><span class="p">),</span> <span class="n">reused</span> <span class="mi">74</span> <span class="p">(</span><span class="n">delta</span> <span class="mi">74</span><span class="p">),</span> <span class="n">pack</span><span class="o">-</span><span class="n">reused</span> <span class="mi">19</span>
+<span class="n">Unpacking</span> <span class="n">objects</span><span class="p">:</span> <span class="mi">100</span><span class="o">%</span> <span class="p">(</span><span class="mi">93</span><span class="o">/</span><span class="mi">93</span><span class="p">),</span> <span class="mf">688.20</span> <span class="n">KiB</span> <span class="o">|</span> <span class="mf">1.26</span> <span class="n">MiB</span><span class="o">/</span><span class="n">s</span><span class="p">,</span> <span class="n">done</span><span class="o">.</span>
+<span class="n">From</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">introcompsys</span><span class="o">/</span><span class="n">fall2022</span>
+   <span class="mi">5145</span><span class="n">a35</span><span class="o">.</span><span class="mf">.551</span><span class="n">b0b4</span>  <span class="n">main</span>       <span class="o">-&gt;</span> <span class="n">origin</span><span class="o">/</span><span class="n">main</span>
+   <span class="mi">1</span><span class="n">a0ad55</span><span class="o">..</span><span class="n">c446b87</span>  <span class="n">gh</span><span class="o">-</span><span class="n">pages</span>   <span class="o">-&gt;</span> <span class="n">origin</span><span class="o">/</span><span class="n">gh</span><span class="o">-</span><span class="n">pages</span>
+<span class="n">Updating</span> <span class="mi">5145</span><span class="n">a35</span><span class="o">.</span><span class="mf">.551</span><span class="n">b0b4</span>
+<span class="n">Fast</span><span class="o">-</span><span class="n">forward</span>
+ <span class="n">_config</span><span class="o">.</span><span class="n">yml</span>             <span class="o">|</span>   <span class="mi">3</span> <span class="o">+-</span>
+ <span class="n">_practice</span><span class="o">/</span><span class="mi">2022</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="mf">14.</span><span class="n">md</span> <span class="o">|</span>   <span class="mi">2</span> <span class="o">+</span>
+ <span class="n">_practice</span><span class="o">/</span><span class="mi">2022</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="mf">26.</span><span class="n">md</span> <span class="o">|</span>   <span class="mi">6</span> <span class="o">++-</span>
+ <span class="n">_practice</span><span class="o">/</span><span class="mi">2022</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="mf">28.</span><span class="n">md</span> <span class="o">|</span>   <span class="mi">3</span> <span class="o">++</span>
+ <span class="n">_practice</span><span class="o">/</span><span class="mi">2022</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mf">03.</span><span class="n">md</span> <span class="o">|</span>   <span class="mi">3</span> <span class="o">++</span>
+ <span class="n">_practice</span><span class="o">/</span><span class="mi">2022</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mf">05.</span><span class="n">md</span> <span class="o">|</span>   <span class="mi">3</span> <span class="o">++</span>
+ <span class="n">_practice</span><span class="o">/</span><span class="mi">2022</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mf">12.</span><span class="n">md</span> <span class="o">|</span>   <span class="mi">3</span> <span class="o">++</span>
+ <span class="n">_prepare</span><span class="o">/</span><span class="mi">2022</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="mf">14.</span><span class="n">md</span>  <span class="o">|</span>   <span class="mi">4</span> <span class="o">+-</span>
+ <span class="n">_prepare</span><span class="o">/</span><span class="mi">2022</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mf">03.</span><span class="n">md</span>  <span class="o">|</span>   <span class="mi">2</span> <span class="o">+</span>
+ <span class="n">_prepare</span><span class="o">/</span><span class="mi">2022</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mf">05.</span><span class="n">md</span>  <span class="o">|</span>   <span class="mi">3</span> <span class="o">+-</span>
+ <span class="n">_prepare</span><span class="o">/</span><span class="mi">2022</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mf">17.</span><span class="n">md</span>  <span class="o">|</span>   <span class="mi">2</span> <span class="o">+-</span>
+ <span class="n">_review</span><span class="o">/</span><span class="mi">2022</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="mf">12.</span><span class="n">md</span>   <span class="o">|</span>   <span class="mi">2</span> <span class="o">+-</span>
+ <span class="n">_review</span><span class="o">/</span><span class="mi">2022</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="mf">19.</span><span class="n">md</span>   <span class="o">|</span>   <span class="mi">3</span> <span class="o">+-</span>
+ <span class="n">_review</span><span class="o">/</span><span class="mi">2022</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="mf">21.</span><span class="n">md</span>   <span class="o">|</span>   <span class="mi">2</span> <span class="o">+</span>
+ <span class="n">_review</span><span class="o">/</span><span class="mi">2022</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="mf">26.</span><span class="n">md</span>   <span class="o">|</span>   <span class="mi">2</span> <span class="o">+</span>
+ <span class="n">_review</span><span class="o">/</span><span class="mi">2022</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="mf">28.</span><span class="n">md</span>   <span class="o">|</span>   <span class="mi">2</span> <span class="o">+</span>
+ <span class="n">_review</span><span class="o">/</span><span class="mi">2022</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mf">03.</span><span class="n">md</span>   <span class="o">|</span>   <span class="mi">4</span> <span class="o">+-</span>
+ <span class="n">_review</span><span class="o">/</span><span class="mi">2022</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mf">05.</span><span class="n">md</span>   <span class="o">|</span>   <span class="mi">2</span> <span class="o">+</span>
+ <span class="n">_review</span><span class="o">/</span><span class="mi">2022</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mf">12.</span><span class="n">md</span>   <span class="o">|</span>   <span class="mi">5</span> <span class="o">+++</span>
+ <span class="n">_review</span><span class="o">/</span><span class="mi">2022</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mf">17.</span><span class="n">md</span>   <span class="o">|</span>   <span class="mi">4</span> <span class="o">+-</span>
+ <span class="n">_toc</span><span class="o">.</span><span class="n">yml</span>                <span class="o">|</span>   <span class="mi">2</span> <span class="o">+</span>
+ <span class="n">activities</span><span class="o">/</span><span class="n">practice</span><span class="o">.</span><span class="n">md</span>  <span class="o">|</span> <span class="mi">105</span> <span class="o">++++++++++++++++++++++++++++++++++++++++++++------</span>
+ <span class="n">activities</span><span class="o">/</span><span class="n">prepare</span><span class="o">.</span><span class="n">md</span>   <span class="o">|</span> <span class="mi">101</span> <span class="o">++++++++++++++++++++++++++++++++++++++++++++++++</span>
+ <span class="n">activities</span><span class="o">/</span><span class="n">review</span><span class="o">.</span><span class="n">md</span>    <span class="o">|</span> <span class="mi">106</span> <span class="o">+++++++++++++++++++++++++++++++++++++++++++--------</span>
+ <span class="n">activities</span><span class="o">/</span><span class="n">team</span><span class="o">.</span><span class="n">md</span>      <span class="o">|</span>  <span class="mi">27</span> <span class="o">+++++++++++++</span>
+ <span class="n">genindex</span><span class="o">.</span><span class="n">md</span>             <span class="o">|</span>   <span class="mi">1</span> <span class="o">+</span>
+ <span class="n">notes</span><span class="o">/</span><span class="mi">2022</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="mf">28.</span><span class="n">md</span>     <span class="o">|</span>  <span class="mi">26</span> <span class="o">++++++-------</span>
+ <span class="n">notes</span><span class="o">/</span><span class="mi">2022</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mf">03.</span><span class="n">md</span>     <span class="o">|</span>   <span class="mi">1</span> <span class="o">-</span>
+ <span class="n">notes</span><span class="o">/</span><span class="mi">2022</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mf">05.</span><span class="n">md</span>     <span class="o">|</span>   <span class="mi">2</span> <span class="o">+-</span>
+ <span class="n">notes</span><span class="o">/</span><span class="mi">2022</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mf">17.</span><span class="n">md</span>     <span class="o">|</span>   <span class="mi">5</span> <span class="o">+--</span>
+ <span class="mi">30</span> <span class="n">files</span> <span class="n">changed</span><span class="p">,</span> <span class="mi">382</span> <span class="n">insertions</span><span class="p">(</span><span class="o">+</span><span class="p">),</span> <span class="mi">54</span> <span class="n">deletions</span><span class="p">(</span><span class="o">-</span><span class="p">)</span>
+ <span class="n">create</span> <span class="n">mode</span> <span class="mi">100644</span> <span class="n">activities</span><span class="o">/</span><span class="n">team</span><span class="o">.</span><span class="n">md</span>
+ <span class="n">create</span> <span class="n">mode</span> <span class="mi">100644</span> <span class="n">genindex</span><span class="o">.</span><span class="n">md</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">..</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">grep</span> <span class="s2">&quot;index&quot;</span> <span class="n">fall2022</span><span class="o">/</span><span class="n">_review</span><span class="o">/*</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>fall2022/_review/2022-09-19.md:```{index} terminal
+fall2022/_review/2022-09-21.md:```{index} branches.md
+fall2022/_review/2022-09-26.md:```{index} abstraction.md
+fall2022/_review/2022-09-28.md:```{index} gitlog.txt
+fall2022/_review/2022-10-03.md:```{index} gitstory.md
+fall2022/_review/2022-10-05.md:```{index} gitplumbingreview.md
+fall2022/_review/2022-10-12.md:```{index} numbers.md
+fall2022/_review/2022-10-12.md:```{index} hexpeak.md
+fall2022/_review/2022-10-17.md:```{index} test_repo_map.md
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">grep</span> <span class="s2">&quot;index&quot;</span> <span class="n">fall2022</span><span class="o">/</span><span class="n">_review</span><span class="o">/*</span> <span class="o">|</span> <span class="n">awk</span> <span class="s1">&#39;{print $2}&#39;</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">terminal</span>
+<span class="n">branches</span><span class="o">.</span><span class="n">md</span>
+<span class="n">abstraction</span><span class="o">.</span><span class="n">md</span>
+<span class="n">gitlog</span><span class="o">.</span><span class="n">txt</span>
+<span class="n">gitstory</span><span class="o">.</span><span class="n">md</span>
+<span class="n">gitplumbingreview</span><span class="o">.</span><span class="n">md</span>
+<span class="n">numbers</span><span class="o">.</span><span class="n">md</span>
+<span class="n">hexpeak</span><span class="o">.</span><span class="n">md</span>
+<span class="n">test_repo_map</span><span class="o">.</span><span class="n">md</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">grep</span> <span class="s2">&quot;index&quot;</span> <span class="n">fall2022</span><span class="o">/</span><span class="n">_review</span><span class="o">/*</span> <span class="o">|</span> <span class="n">awk</span> <span class="s1">&#39;{print $1}&#39;</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>fall2022/_review/2022-09-19.md:```{index}
+fall2022/_review/2022-09-21.md:```{index}
+fall2022/_review/2022-09-26.md:```{index}
+fall2022/_review/2022-09-28.md:```{index}
+fall2022/_review/2022-10-03.md:```{index}
+fall2022/_review/2022-10-05.md:```{index}
+fall2022/_review/2022-10-12.md:```{index}
+fall2022/_review/2022-10-12.md:```{index}
+fall2022/_review/2022-10-17.md:```{index}
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">grep</span> <span class="s2">&quot;index&quot;</span> <span class="n">fall2022</span><span class="o">/</span><span class="n">_review</span><span class="o">/*</span> <span class="o">|</span> <span class="n">awk</span> <span class="s1">&#39;{print $2}&#39;</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">terminal</span>
+<span class="n">branches</span><span class="o">.</span><span class="n">md</span>
+<span class="n">abstraction</span><span class="o">.</span><span class="n">md</span>
+<span class="n">gitlog</span><span class="o">.</span><span class="n">txt</span>
+<span class="n">gitstory</span><span class="o">.</span><span class="n">md</span>
+<span class="n">gitplumbingreview</span><span class="o">.</span><span class="n">md</span>
+<span class="n">numbers</span><span class="o">.</span><span class="n">md</span>
+<span class="n">hexpeak</span><span class="o">.</span><span class="n">md</span>
+<span class="n">test_repo_map</span><span class="o">.</span><span class="n">md</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>for file in $(ls); do echo $file; done
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">2022</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="mi">19</span>
+<span class="n">courseutils</span>
+<span class="n">fall2022</span>
+<span class="n">github</span><span class="o">-</span><span class="n">inclass</span><span class="o">-</span><span class="n">brownsarahm</span>
+<span class="n">kwl</span><span class="o">-</span><span class="n">brownsarahm</span>
+<span class="n">test</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">test</span> <span class="o">-</span><span class="n">f</span> <span class="n">kwl</span><span class="o">-</span><span class="n">brownsarahm</span><span class="o">/</span><span class="n">branches</span><span class="o">.</span><span class="n">md</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">test</span> <span class="o">-</span><span class="n">f</span> <span class="n">kwl</span><span class="o">-</span><span class="n">brownsarahm</span><span class="o">/</span><span class="n">README</span><span class="o">.</span><span class="n">md</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">test</span> <span class="o">-</span><span class="n">f</span> <span class="n">kwl</span><span class="o">-</span><span class="n">brownsarahm</span><span class="o">/</span><span class="n">gitlog</span><span class="o">.</span><span class="n">md</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">test</span> <span class="o">-</span><span class="n">f</span> <span class="n">kwl</span><span class="o">-</span><span class="n">brownsarahm</span><span class="o">/</span><span class="n">branches</span><span class="o">.</span><span class="n">md</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">then</span>
+<span class="o">&gt;</span> <span class="n">echo</span> <span class="s2">&quot;exists&quot;</span>
+<span class="o">&gt;</span> <span class="n">fi</span>
+<span class="n">exists</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">test</span> <span class="o">-</span><span class="n">f</span> <span class="n">kwl</span><span class="o">-</span><span class="n">brownsarahm</span><span class="o">/</span><span class="n">gitlog</span><span class="o">.</span><span class="n">md</span><span class="p">;</span> <span class="n">then</span> <span class="n">echo</span> <span class="s2">&quot;exists&quot;</span><span class="p">;</span> <span class="n">fi</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="n">test</span> <span class="o">-</span><span class="n">f</span> <span class="n">kwl</span><span class="o">-</span><span class="n">brownsarahm</span><span class="o">/</span><span class="n">gitlog</span><span class="o">.</span><span class="n">md</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">test</span> <span class="o">-</span><span class="n">f</span> <span class="n">kwl</span><span class="o">-</span><span class="n">brownsarahm</span><span class="o">/</span><span class="n">gitlog</span><span class="o">.</span><span class="n">md</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>echo $(test -f kwl-brownsarahm/gitlog.md)
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nano</span> <span class="n">checker</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bash</span> <span class="n">checker</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">grep</span><span class="p">:</span> <span class="n">fall2020</span><span class="o">/</span><span class="n">_review</span><span class="o">/*</span><span class="p">:</span> <span class="n">No</span> <span class="n">such</span> <span class="n">file</span> <span class="ow">or</span> <span class="n">directory</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nano</span> <span class="n">checker</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bash</span> <span class="n">checker</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>fall2022/_review/2022-09-19.md:```{index} terminal
+fall2022/_review/2022-09-21.md:```{index} branches.md
+fall2022/_review/2022-09-26.md:```{index} abstraction.md
+fall2022/_review/2022-09-28.md:```{index} gitlog.txt
+fall2022/_review/2022-10-03.md:```{index} gitstory.md
+fall2022/_review/2022-10-05.md:```{index} gitplumbingreview.md
+fall2022/_review/2022-10-12.md:```{index} numbers.md
+fall2022/_review/2022-10-12.md:```{index} hexpeak.md
+fall2022/_review/2022-10-17.md:```{index} test_repo_map.md
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nano</span> <span class="n">checker</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bash</span> <span class="n">checker</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">terminal</span>
+<span class="n">branches</span><span class="o">.</span><span class="n">md</span>
+<span class="n">abstraction</span><span class="o">.</span><span class="n">md</span>
+<span class="n">gitlog</span><span class="o">.</span><span class="n">txt</span>
+<span class="n">gitstory</span><span class="o">.</span><span class="n">md</span>
+<span class="n">gitplumbingreview</span><span class="o">.</span><span class="n">md</span>
+<span class="n">numbers</span><span class="o">.</span><span class="n">md</span>
+<span class="n">hexpeak</span><span class="o">.</span><span class="n">md</span>
+<span class="n">test_repo_map</span><span class="o">.</span><span class="n">md</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">grep</span> <span class="s2">&quot;index&quot;</span> <span class="n">fall2022</span><span class="o">/</span><span class="n">_review</span><span class="o">/*</span> <span class="o">|</span> <span class="n">awk</span> <span class="s1">&#39;{print $2}&#39;</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">terminal</span>
+<span class="n">branches</span><span class="o">.</span><span class="n">md</span>
+<span class="n">abstraction</span><span class="o">.</span><span class="n">md</span>
+<span class="n">gitlog</span><span class="o">.</span><span class="n">txt</span>
+<span class="n">gitstory</span><span class="o">.</span><span class="n">md</span>
+<span class="n">gitplumbingreview</span><span class="o">.</span><span class="n">md</span>
+<span class="n">numbers</span><span class="o">.</span><span class="n">md</span>
+<span class="n">hexpeak</span><span class="o">.</span><span class="n">md</span>
+<span class="n">test_repo_map</span><span class="o">.</span><span class="n">md</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="n">kwl</span><span class="o">-</span><span class="n">brownsarahm</span><span class="o">/</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">README</span><span class="o">.</span><span class="n">md</span>	<span class="n">branches</span><span class="o">.</span><span class="n">md</span>	<span class="n">check</span><span class="o">.</span><span class="n">sh</span>	<span class="n">terminal</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nano</span> <span class="n">checker</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bash</span> <span class="n">checker</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">abstraction</span><span class="o">.</span><span class="n">md</span>
+<span class="n">gitlog</span><span class="o">.</span><span class="n">txt</span>
+<span class="n">gitstory</span><span class="o">.</span><span class="n">md</span>
+<span class="n">gitplumbingreview</span><span class="o">.</span><span class="n">md</span>
+<span class="n">numbers</span><span class="o">.</span><span class="n">md</span>
+<span class="n">hexpeak</span><span class="o">.</span><span class="n">md</span>
+<span class="n">test_repo_map</span><span class="o">.</span><span class="n">md</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">fall2022</span><span class="o">/</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gh</span> <span class="n">pr</span> <span class="nb">list</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+Showing 1 of 1 open pull request in introcompsys/fall2022
 
-</pre></div>
-</div>
-<p>ls</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<p>2022-09-19			github-inclass-brownsarahm
-courseutils			kwl-brownsarahm
-fall2022			test</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+#18  Update github.md(add ...  fernans728:patch-1  about 6 days ago
 
-</pre></div>
-</div>
-<p>$NAME=Sarah</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<p>-bash: =Sarah: command not found</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
 
-</pre></div>
-</div>
-<p>$NAME=“Sarah”</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<p>-bash: =Sarah: command not found</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-
-</pre></div>
-</div>
-<p>NAME=“Sarah”</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-
-</pre></div>
-</div>
-<p>echo $NAME</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<p>Sarah</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-
-</pre></div>
-</div>
-<p>echo NAME</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<p>NAME</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-
-</pre></div>
-</div>
-<p>for file in ls</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<blockquote>
-<div><p>do
-echo $file
-done
-ls</p>
-</div></blockquote>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-
-</pre></div>
-</div>
-<p>for file in <span class="math notranslate nohighlight">\((ls); do echo \)</span>file; done</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<p>2022-09-19
-courseutils
-fall2022
-github-inclass-brownsarahm
-kwl-brownsarahm
-test</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-
-</pre></div>
-</div>
-<p>grep “test” github-inclass-brownsarahm/</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<p>grep: github-inclass-brownsarahm/: Is a directory</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-
-</pre></div>
-</div>
-<p>grep “test” github-inclass-brownsarahm/*</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-
-</pre></div>
-</div>
-<p>cd github-inclass-brownsarahm/</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-
-</pre></div>
-</div>
-<p>ls</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<p><a class="reference external" href="http://README.md">README.md</a>	<a class="reference external" href="http://about.md">about.md</a>	gitlog.txt	new_feature.md</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-
-</pre></div>
-</div>
-<p>cat <a class="reference external" href="http://about.md">about.md</a></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-
-</pre></div>
-</div>
-<p>cd …</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-
-</pre></div>
-</div>
-<p>ls</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<p>2022-09-19			github-inclass-brownsarahm
-courseutils			kwl-brownsarahm
-fall2022			test</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-
-</pre></div>
-</div>
-<p>grep “version” test/*</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<p>test/test.txt:version 1
-test/test.txt:version 2</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-
-</pre></div>
-</div>
-<p>grep “index” fall2022/*</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<p>fall2022/_config.yml:exclude_patterns            : [‘_data/<em>’,  <a class="reference external" href="http://README.md">README.md</a>, ignore/</em>, syllabus/index.md]  # Patterns to skip when building the book. Can be glob-style (e.g. “*skip.ipynb”)
-grep: fall2022/_data: Is a directory
-grep: fall2022/_practice: Is a directory
-grep: fall2022/_prepare: Is a directory
-grep: fall2022/_review: Is a directory
-fall2022/_toc.yml:root: index
-fall2022/_toc.yml:    # - file: syllabus/index
-fall2022/_toc.yml:    # - file: letters/index
-fall2022/_toc.yml:# - file: assignments/index
-grep: fall2022/activities: Is a directory
-grep: fall2022/faq: Is a directory
-grep: fall2022/img: Is a directory
-grep: fall2022/notes: Is a directory
-grep: fall2022/resources: Is a directory
-grep: fall2022/syllabus: Is a directory</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-
-</pre></div>
-</div>
-<p>grep “index” fall2022/_review/*</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-
-</pre></div>
-</div>
-<p>cd fall2022/</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-
-</pre></div>
-</div>
-<p>git pull</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<p>remote: Enumerating objects: 93, done.
-remote: Counting objects: 100% (74/74), done.
-remote: Total 93 (delta 74), reused 74 (delta 74), pack-reused 19
-Unpacking objects: 100% (93/93), 688.20 KiB | 1.26 MiB/s, done.
-From <a class="reference external" href="https://github.com/introcompsys/fall2022">https://github.com/introcompsys/fall2022</a>
-5145a35…551b0b4  main       -&gt; origin/main
-1a0ad55…c446b87  gh-pages   -&gt; origin/gh-pages
-Updating 5145a35…551b0b4
-Fast-forward
-_config.yml             |   3 ±
-_practice/2022-09-14.md |   2 +
-_practice/2022-09-26.md |   6 +±
-_practice/2022-09-28.md |   3 ++
-_practice/2022-10-03.md |   3 ++
-_practice/2022-10-05.md |   3 ++
-_practice/2022-10-12.md |   3 ++
-_prepare/2022-09-14.md  |   4 ±
-_prepare/2022-10-03.md  |   2 +
-_prepare/2022-10-05.md  |   3 ±
-_prepare/2022-10-17.md  |   2 ±
-_review/2022-09-12.md   |   2 ±
-_review/2022-09-19.md   |   3 ±
-_review/2022-09-21.md   |   2 +
-_review/2022-09-26.md   |   2 +
-_review/2022-09-28.md   |   2 +
-_review/2022-10-03.md   |   4 ±
-_review/2022-10-05.md   |   2 +
-_review/2022-10-12.md   |   5 +++
-_review/2022-10-17.md   |   4 ±
-_toc.yml                |   2 +
-activities/practice.md  | 105 +++++++++++++++++++++++++++++++++++++++++++±—–
-activities/prepare.md   | 101 ++++++++++++++++++++++++++++++++++++++++++++++++
-activities/review.md    | 106 ++++++++++++++++++++++++++++++++++++++++++±——-
-activities/team.md      |  27 +++++++++++++
-<a class="reference external" href="http://genindex.md">genindex.md</a>             |   1 +
-notes/2022-09-28.md     |  26 +++++±——
-notes/2022-10-03.md     |   1 -
-notes/2022-10-05.md     |   2 ±
-notes/2022-10-17.md     |   5 ±-
-30 files changed, 382 insertions(+), 54 deletions(-)
-create mode 100644 activities/team.md
-create mode 100644 <a class="reference external" href="http://genindex.md">genindex.md</a></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-
-</pre></div>
-</div>
-<p>cd …</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-
-</pre></div>
-</div>
-<p>grep “index” fall2022/_review/*</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<p>fall2022/_review/2022-09-19.md:<code class="docutils literal notranslate"><span class="pre">{index}</span> <span class="pre">terminal</span> <span class="pre">fall2022/_review/2022-09-21.md:</span></code>{index} <a class="reference external" href="http://branches.md">branches.md</a>
-fall2022/_review/2022-09-26.md:<code class="docutils literal notranslate"><span class="pre">{index}</span> <span class="pre">abstraction.md</span> <span class="pre">fall2022/_review/2022-09-28.md:</span></code>{index} gitlog.txt
-fall2022/_review/2022-10-03.md:<code class="docutils literal notranslate"><span class="pre">{index}</span> <span class="pre">gitstory.md</span> <span class="pre">fall2022/_review/2022-10-05.md:</span></code>{index} <a class="reference external" href="http://gitplumbingreview.md">gitplumbingreview.md</a>
-fall2022/_review/2022-10-12.md:<code class="docutils literal notranslate"><span class="pre">{index}</span> <span class="pre">numbers.md</span> <span class="pre">fall2022/_review/2022-10-12.md:</span></code>{index} <a class="reference external" href="http://hexpeak.md">hexpeak.md</a>
-fall2022/_review/2022-10-17.md:```{index} test_repo_map.md</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-
-</pre></div>
-</div>
-<p>grep “index” fall2022/_review/* | awk ‘{print $2}’</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<p>terminal
-<a class="reference external" href="http://branches.md">branches.md</a>
-<a class="reference external" href="http://abstraction.md">abstraction.md</a>
-gitlog.txt
-<a class="reference external" href="http://gitstory.md">gitstory.md</a>
-<a class="reference external" href="http://gitplumbingreview.md">gitplumbingreview.md</a>
-<a class="reference external" href="http://numbers.md">numbers.md</a>
-<a class="reference external" href="http://hexpeak.md">hexpeak.md</a>
-test_repo_map.md</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-
-</pre></div>
-</div>
-<p>grep “index” fall2022/_review/* | awk ‘{print $1}’</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<p>fall2022/_review/2022-09-19.md:<code class="docutils literal notranslate"><span class="pre">{index}</span> <span class="pre">fall2022/_review/2022-09-21.md:</span></code>{index}
-fall2022/_review/2022-09-26.md:<code class="docutils literal notranslate"><span class="pre">{index}</span> <span class="pre">fall2022/_review/2022-09-28.md:</span></code>{index}
-fall2022/_review/2022-10-03.md:<code class="docutils literal notranslate"><span class="pre">{index}</span> <span class="pre">fall2022/_review/2022-10-05.md:</span></code>{index}
-fall2022/_review/2022-10-12.md:<code class="docutils literal notranslate"><span class="pre">{index}</span> <span class="pre">fall2022/_review/2022-10-12.md:</span></code>{index}
-fall2022/_review/2022-10-17.md:```{index}</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-
-</pre></div>
-</div>
-<p>grep “index” fall2022/_review/* | awk ‘{print $2}’</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<p>terminal
-<a class="reference external" href="http://branches.md">branches.md</a>
-<a class="reference external" href="http://abstraction.md">abstraction.md</a>
-gitlog.txt
-<a class="reference external" href="http://gitstory.md">gitstory.md</a>
-<a class="reference external" href="http://gitplumbingreview.md">gitplumbingreview.md</a>
-<a class="reference external" href="http://numbers.md">numbers.md</a>
-<a class="reference external" href="http://hexpeak.md">hexpeak.md</a>
-test_repo_map.md</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-
-</pre></div>
-</div>
-<p>for file in <span class="math notranslate nohighlight">\((ls); do echo \)</span>file; done</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<p>2022-09-19
-courseutils
-fall2022
-github-inclass-brownsarahm
-kwl-brownsarahm
-test</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-
-</pre></div>
-</div>
-<p>test -f kwl-brownsarahm/branches.md</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-
-</pre></div>
-</div>
-<p>test -f kwl-brownsarahm/README.md</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-
-</pre></div>
-</div>
-<p>test -f kwl-brownsarahm/gitlog.md</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-
-</pre></div>
-</div>
-<p>if test -f kwl-brownsarahm/branches.md</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<blockquote>
-<div><p>then
-echo “exists”
-fi
-exists</p>
-</div></blockquote>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-
-</pre></div>
-</div>
-<p>if test -f kwl-brownsarahm/gitlog.md; then echo “exists”; fi</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-
-</pre></div>
-</div>
-<p>echo test -f kwl-brownsarahm/gitlog.md</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<p>test -f kwl-brownsarahm/gitlog.md</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-
-</pre></div>
-</div>
-<p>echo $(test -f kwl-brownsarahm/gitlog.md)</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-
-</pre></div>
-</div>
-<p>nano <a class="reference external" href="http://checker.sh">checker.sh</a></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-
-</pre></div>
-</div>
-<p>bash <a class="reference external" href="http://checker.sh">checker.sh</a></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<p>grep: fall2020/_review/*: No such file or directory</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-
-</pre></div>
-</div>
-<p>nano <a class="reference external" href="http://checker.sh">checker.sh</a></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-
-</pre></div>
-</div>
-<p>bash <a class="reference external" href="http://checker.sh">checker.sh</a></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<p>fall2022/_review/2022-09-19.md:<code class="docutils literal notranslate"><span class="pre">{index}</span> <span class="pre">terminal</span> <span class="pre">fall2022/_review/2022-09-21.md:</span></code>{index} <a class="reference external" href="http://branches.md">branches.md</a>
-fall2022/_review/2022-09-26.md:<code class="docutils literal notranslate"><span class="pre">{index}</span> <span class="pre">abstraction.md</span> <span class="pre">fall2022/_review/2022-09-28.md:</span></code>{index} gitlog.txt
-fall2022/_review/2022-10-03.md:<code class="docutils literal notranslate"><span class="pre">{index}</span> <span class="pre">gitstory.md</span> <span class="pre">fall2022/_review/2022-10-05.md:</span></code>{index} <a class="reference external" href="http://gitplumbingreview.md">gitplumbingreview.md</a>
-fall2022/_review/2022-10-12.md:<code class="docutils literal notranslate"><span class="pre">{index}</span> <span class="pre">numbers.md</span> <span class="pre">fall2022/_review/2022-10-12.md:</span></code>{index} <a class="reference external" href="http://hexpeak.md">hexpeak.md</a>
-fall2022/_review/2022-10-17.md:```{index} test_repo_map.md</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-
-</pre></div>
-</div>
-<p>nano <a class="reference external" href="http://checker.sh">checker.sh</a></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-
-</pre></div>
-</div>
-<p>bash <a class="reference external" href="http://checker.sh">checker.sh</a></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<p>terminal
-<a class="reference external" href="http://branches.md">branches.md</a>
-<a class="reference external" href="http://abstraction.md">abstraction.md</a>
-gitlog.txt
-<a class="reference external" href="http://gitstory.md">gitstory.md</a>
-<a class="reference external" href="http://gitplumbingreview.md">gitplumbingreview.md</a>
-<a class="reference external" href="http://numbers.md">numbers.md</a>
-<a class="reference external" href="http://hexpeak.md">hexpeak.md</a>
-test_repo_map.md</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-
-</pre></div>
-</div>
-<p>grep “index” fall2022/_review/* | awk ‘{print $2}’</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<p>terminal
-<a class="reference external" href="http://branches.md">branches.md</a>
-<a class="reference external" href="http://abstraction.md">abstraction.md</a>
-gitlog.txt
-<a class="reference external" href="http://gitstory.md">gitstory.md</a>
-<a class="reference external" href="http://gitplumbingreview.md">gitplumbingreview.md</a>
-<a class="reference external" href="http://numbers.md">numbers.md</a>
-<a class="reference external" href="http://hexpeak.md">hexpeak.md</a>
-test_repo_map.md</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-
-</pre></div>
-</div>
-<p>ls kwl-brownsarahm/</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<p><a class="reference external" href="http://README.md">README.md</a>	<a class="reference external" href="http://branches.md">branches.md</a>	<a class="reference external" href="http://check.sh">check.sh</a>	terminal</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-
-</pre></div>
-</div>
-<p>nano <a class="reference external" href="http://checker.sh">checker.sh</a></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-
-</pre></div>
-</div>
-<p>bash <a class="reference external" href="http://checker.sh">checker.sh</a></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<p><a class="reference external" href="http://abstraction.md">abstraction.md</a>
-gitlog.txt
-<a class="reference external" href="http://gitstory.md">gitstory.md</a>
-<a class="reference external" href="http://gitplumbingreview.md">gitplumbingreview.md</a>
-<a class="reference external" href="http://numbers.md">numbers.md</a>
-<a class="reference external" href="http://hexpeak.md">hexpeak.md</a>
-test_repo_map.md</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-
-</pre></div>
-</div>
-<p>cd fall2022/</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-
-</pre></div>
-</div>
-<p>gh pr list</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<p>Showing 1 of 1 open pull request in introcompsys/fall2022</p>
-<p>#18  Update <a class="reference external" href="http://github.md">github.md</a>(add …  fernans728:patch-1  about 6 days ago</p>
-<p>A new release of gh is available: 2.17.0 → 2.18.0
+A new release of gh is available: 2.17.0 → 2.18.0
 To upgrade, run: brew upgrade gh
-<a class="reference external" href="https://github.com/cli/cli/releases/tag/v2.18.0">https://github.com/cli/cli/releases/tag/v2.18.0</a></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+https://github.com/cli/cli/releases/tag/v2.18.0
 
 </pre></div>
 </div>
-<p>cd …/</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">../</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-
 </pre></div>
 </div>
-<p>ls</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span>
 </pre></div>
 </div>
-<p>2022-09-19			github-inclass-brownsarahm
-<a class="reference external" href="http://checker.sh">checker.sh</a>			kwl-brownsarahm
-courseutils			test
-fall2022</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">2022</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="mi">19</span>			<span class="n">github</span><span class="o">-</span><span class="n">inclass</span><span class="o">-</span><span class="n">brownsarahm</span>
+<span class="n">checker</span><span class="o">.</span><span class="n">sh</span>			<span class="n">kwl</span><span class="o">-</span><span class="n">brownsarahm</span>
+<span class="n">courseutils</span>			<span class="n">test</span>
+<span class="n">fall2022</span>
 </pre></div>
 </div>
-<p>cat <a class="reference external" href="http://checker.sh">checker.sh</a></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span> <span class="n">checker</span><span class="o">.</span><span class="n">sh</span>
 </pre></div>
 </div>
-<p>for file in <span class="math notranslate nohighlight">\((grep &quot;index&quot; fall2022/_review/* |awk '{print \)</span>2}’)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>for file in $(grep &quot;index&quot; fall2022/_review/* |awk &#39;{print $2}&#39;)
 do
-if ! test -f kwl-brownsarahm/<span class="math notranslate nohighlight">\(file; then
-echo \)</span>file
+if ! test -f kwl-brownsarahm/$file; then
+echo $file
 fi
-done</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-
+done
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-## Review today&#39;s class
-
-```{include} ../_review/2022-10-19.md
 </pre></div>
 </div>
+<section id="review-todays-class">
+<h2><span class="section-number">12.1. </span>Review today’s class<a class="headerlink" href="#review-todays-class" title="Permalink to this headline">#</a></h2>
+<ol class="simple">
+<li><p>Update your KWL Chart learned column with what you’ve learned</p></li>
+<li><p>Make a <a class="reference internal" href="../activities/team.html#groupcontrib"><span class="std std-ref">contribution</span></a> to your group repo and do a peer review of a team member’s PR.</p></li>
+<li><p>Use the gh cli, grep, and bash to create <code class="docutils literal notranslate"><span class="pre">group_contributions.md</span></code> to your KWL repo with a list of all of your PRs. Append your history from creating this to the bottom of the file after <code class="docutils literal notranslate"><span class="pre">##</span> <span class="pre">Commands</span></code></p></li>
+<li><p>Move your checker script into your kwl repo and update the paths so that it still works</p></li>
+</ol>
+<span class="target" id="index-0"></span></section>
 <section id="prepare-for-next-class">
-<h1>Prepare for Next Class<a class="headerlink" href="#prepare-for-next-class" title="Permalink to this headline">#</a></h1>
+<span id="index-1"></span><h2><span class="section-number">12.2. </span>Prepare for Next Class<a class="headerlink" href="#prepare-for-next-class" title="Permalink to this headline">#</a></h2>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Prepare for class tasks are not always based on things that we have already done.  Sometimes they are to have you start thinking about the topic that we are <em>about</em> to cover. Getting whatever you know about the topic fresh in your mind in advance of class will help what we do in class stick for you when we start.</p>
+</div>
+</aside>
 <ol class="simple">
 <li><p>On Windows, install Putty ( we will use this Monday)</p></li>
 <li><p>Get ready for class by creating <code class="docutils literal notranslate"><span class="pre">networking.md</span></code> in your KWL repo with notes about what you know about networking</p></li>
 <li><p>Add an issue on your KWL repo titled “Self Reflection 10/24” (there will be time on Monday for this, but giving you warning so you have time to think about it). Tag &#64;brownsarahm on this issue.</p></li>
 </ol>
-<div class="highlight-default notranslate" id="index-0"><div class="highlight"><pre><span></span>1. Are you where you want to be in this course?
+<div class="highlight-default notranslate" id="index-2"><div class="highlight"><pre><span></span>1. Are you where you want to be in this course?
 1. Have you been getting feedback on your work?
 1. If not, what could help you get back on track?
 1. What if any concepts are you most struggling with?
@@ -1212,29 +1126,30 @@ done</p>
 </div>
 </section>
 <section id="more-practice">
-<h1>More Practice<a class="headerlink" href="#more-practice" title="Permalink to this headline">#</a></h1>
+<h2><span class="section-number">12.3. </span>More Practice<a class="headerlink" href="#more-practice" title="Permalink to this headline">#</a></h2>
 <ol class="simple">
 <li><p>Make your script form class a nested loop to check for all 3 types of files</p></li>
 <li><p>Make a script that gets the updates to the course site and creates a single <code class="docutils literal notranslate"><span class="pre">todo-YYYY-MM-DD.md</span></code> file that has the review, prepare, and practice tasks in it  for each date that does not already exist in a <code class="docutils literal notranslate"><span class="pre">todo/</span></code> folder outside of your KWL repo. Save the script as <code class="docutils literal notranslate"><span class="pre">gathertasks.sh</span></code></p></li>
 </ol>
-<span class="target" id="index-1"></span></section>
+<span class="target" id="index-3"></span></section>
 <section id="questions-after-class">
-<h1>Questions after Class<a class="headerlink" href="#questions-after-class" title="Permalink to this headline">#</a></h1>
+<span id="index-4"></span><h2><span class="section-number">12.4. </span>Questions after Class<a class="headerlink" href="#questions-after-class" title="Permalink to this headline">#</a></h2>
 <section id="can-i-add-another-language-like-c-to-git-bash">
-<h2>Can I add another language like C to git bash?<a class="headerlink" href="#can-i-add-another-language-like-c-to-git-bash" title="Permalink to this headline">#</a></h2>
+<h3><span class="section-number">12.4.1. </span>Can I add another language like C to git bash?<a class="headerlink" href="#can-i-add-another-language-like-c-to-git-bash" title="Permalink to this headline">#</a></h3>
 <p>Bash is a shell scripting language.  A shell is an interface to your computer’s operating system. A terminal is how we access it. We will see that we can use a terminal to call a c compiler.</p>
 </section>
 <section id="does-git-rely-on-scripts-to-do-low-level-commands-for-higher-ones">
-<h2>Does git rely on scripts to do low-level commands for higher ones?<a class="headerlink" href="#does-git-rely-on-scripts-to-do-low-level-commands-for-higher-ones" title="Permalink to this headline">#</a></h2>
+<h3><span class="section-number">12.4.2. </span>Does git rely on scripts to do low-level commands for higher ones?<a class="headerlink" href="#does-git-rely-on-scripts-to-do-low-level-commands-for-higher-ones" title="Permalink to this headline">#</a></h3>
 <p>git is written mostly in <code class="docutils literal notranslate"><span class="pre">C</span></code> but there are some shell scripts <a class="reference external" href="https://github.com/git/git">in its source code</a></p>
 </section>
 <section id="how-could-i-make-the-checker-check-a-branch-on-my-repo-that-isnt-currently-the-selected-branch">
-<h2>How could I make the checker check a branch on my repo that isn’t currently the selected branch?<a class="headerlink" href="#how-could-i-make-the-checker-check-a-branch-on-my-repo-that-isnt-currently-the-selected-branch" title="Permalink to this headline">#</a></h2>
+<h3><span class="section-number">12.4.3. </span>How could I make the checker check a branch on my repo that isn’t currently the selected branch?<a class="headerlink" href="#how-could-i-make-the-checker-check-a-branch-on-my-repo-that-isnt-currently-the-selected-branch" title="Permalink to this headline">#</a></h3>
 <p>The easiest way is to switch branches and check again.  You might be able to traverse the git repo, but that is not straight forward.</p>
 </section>
 <section id="what-is-one-thing-i-should-try-and-automate-with-bash">
-<h2>what is one thing I should try and automate with bash<a class="headerlink" href="#what-is-one-thing-i-should-try-and-automate-with-bash" title="Permalink to this headline">#</a></h2>
+<h3><span class="section-number">12.4.4. </span>what is one thing I should try and automate with bash<a class="headerlink" href="#what-is-one-thing-i-should-try-and-automate-with-bash" title="Permalink to this headline">#</a></h3>
 <p>For now see the More practice</p>
+</section>
 </section>
 </section>
 
@@ -1265,6 +1180,20 @@ done</p>
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="2022-10-17.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">11. </span>How do git references work?</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../activities/kwl.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">KWL Chart</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </footer>
         </div>
