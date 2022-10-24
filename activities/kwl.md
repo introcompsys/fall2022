@@ -75,6 +75,23 @@ After your KWL repo is a jupyterbook, you may want to move your chart into a cha
 ```
 
 
+
+## Required Files
+
+### Prepare
+
+```{include} prepare-files.md
+```
+
+### Review
+
+```{include} review-files.md
+```
+
+### More Practice
+```{include} practice-files.md
+```
+
 <!--
 ## Added Files
 
