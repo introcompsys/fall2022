@@ -5,9 +5,8 @@ worflows.md
 offlineissue.md
 gitplumbingdetail.md
 numbers.md
-Add
-Add
 gitplumbingdetail.md
 test_repo_map.md
 checker.sh
 gathertasks.sh
+actions.md
