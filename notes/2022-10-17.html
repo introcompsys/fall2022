@@ -540,18 +540,33 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#git-references">
+   11.1. Git References
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#git-tags">
+   11.2. Git Tags
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adding-a-remote">
+   11.3. Adding a remote
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#review-todays-class">
-   11.1. Review today’s class
+   11.4. Review today’s class
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#prepare-for-next-class">
-   11.2. Prepare for Next Class
+   11.5. Prepare for Next Class
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#more-practice">
-   11.3. More Practice
+   11.6. More Practice
   </a>
  </li>
 </ul>
@@ -574,18 +589,33 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#git-references">
+   11.1. Git References
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#git-tags">
+   11.2. Git Tags
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adding-a-remote">
+   11.3. Adding a remote
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#review-todays-class">
-   11.1. Review today’s class
+   11.4. Review today’s class
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#prepare-for-next-class">
-   11.2. Prepare for Next Class
+   11.5. Prepare for Next Class
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#more-practice">
-   11.3. More Practice
+   11.6. More Practice
   </a>
  </li>
 </ul>
@@ -600,13 +630,9 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="how-do-git-references-work">
 <h1><span class="section-number">11. </span>How do git references work?<a class="headerlink" href="#how-do-git-references-work" title="Permalink to this headline">#</a></h1>
+<p>We will go back to the test repo and review waht we have there.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">../</span><span class="n">test</span><span class="o">/</span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span>
+<span class="n">ls</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">test</span><span class="o">.</span><span class="n">txt</span>
@@ -637,18 +663,21 @@ title="Print to PDF"
 
 </pre></div>
 </div>
+<p>We have a few files and we have content staged and unstaged as changes to those files.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">log</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fatal</span><span class="p">:</span> <span class="n">your</span> <span class="n">current</span> <span class="n">branch</span> <span class="s1">&#39;main&#39;</span> <span class="n">does</span> <span class="ow">not</span> <span class="n">have</span> <span class="nb">any</span> <span class="n">commits</span> <span class="n">yet</span>
 </pre></div>
 </div>
+<p>Notice, we have no commits yet even though we had written a commit.  This is because the main branch does not point to any commit.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fin</span> <span class="o">.</span><span class="n">git</span><span class="o">/</span><span class="n">objects</span><span class="o">/</span> <span class="o">-</span><span class="nb">type</span> <span class="n">f</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">bash</span><span class="p">:</span> <span class="n">fin</span><span class="p">:</span> <span class="n">command</span> <span class="ow">not</span> <span class="n">found</span>
 </pre></div>
 </div>
+<p>To get a better look, we can list the objects.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">find</span> <span class="o">.</span><span class="n">git</span><span class="o">/</span><span class="n">objects</span><span class="o">/</span> <span class="o">-</span><span class="nb">type</span> <span class="n">f</span>
 </pre></div>
 </div>
@@ -659,6 +688,14 @@ title="Print to PDF"
 <span class="o">.</span><span class="n">git</span><span class="o">/</span><span class="n">objects</span><span class="o">//</span><span class="mi">83</span><span class="o">/</span><span class="n">baae61804e65cc73a7201a7252750c76066a30</span>
 </pre></div>
 </div>
+<p>We can see that indeed we have one object that is a commit</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">cat</span><span class="o">-</span><span class="n">file</span> <span class="o">-</span><span class="n">t</span> <span class="n">e0913</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">commit</span>
+</pre></div>
+</div>
+<p>And we can look at its contents</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">cat</span><span class="o">-</span><span class="n">file</span> <span class="o">-</span><span class="n">p</span> <span class="n">e0913</span>
 </pre></div>
 </div>
@@ -669,54 +706,24 @@ title="Print to PDF"
 <span class="n">first</span> <span class="n">commit</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">cat</span><span class="o">-</span><span class="n">file</span> <span class="o">-</span><span class="n">t</span> <span class="n">e0913</span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">commit</span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">log</span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fatal</span><span class="p">:</span> <span class="n">your</span> <span class="n">current</span> <span class="n">branch</span> <span class="s1">&#39;main&#39;</span> <span class="n">does</span> <span class="ow">not</span> <span class="n">have</span> <span class="nb">any</span> <span class="n">commits</span> <span class="n">yet</span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">status</span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">On</span> <span class="n">branch</span> <span class="n">main</span>
-
-<span class="n">No</span> <span class="n">commits</span> <span class="n">yet</span>
-
-<span class="n">Changes</span> <span class="n">to</span> <span class="n">be</span> <span class="n">committed</span><span class="p">:</span>
-  <span class="p">(</span><span class="n">use</span> <span class="s2">&quot;git rm --cached &lt;file&gt;...&quot;</span> <span class="n">to</span> <span class="n">unstage</span><span class="p">)</span>
-	<span class="n">new</span> <span class="n">file</span><span class="p">:</span>   <span class="n">test</span><span class="o">.</span><span class="n">txt</span>
-
-<span class="n">Changes</span> <span class="ow">not</span> <span class="n">staged</span> <span class="k">for</span> <span class="n">commit</span><span class="p">:</span>
-  <span class="p">(</span><span class="n">use</span> <span class="s2">&quot;git add &lt;file&gt;...&quot;</span> <span class="n">to</span> <span class="n">update</span> <span class="n">what</span> <span class="n">will</span> <span class="n">be</span> <span class="n">committed</span><span class="p">)</span>
-  <span class="p">(</span><span class="n">use</span> <span class="s2">&quot;git restore &lt;file&gt;...&quot;</span> <span class="n">to</span> <span class="n">discard</span> <span class="n">changes</span> <span class="ow">in</span> <span class="n">working</span> <span class="n">directory</span><span class="p">)</span>
-	<span class="n">modified</span><span class="p">:</span>   <span class="n">test</span><span class="o">.</span><span class="n">txt</span>
-
-</pre></div>
-</div>
+<p>Let’s add one more new file to review</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s2">&quot;new file&quot;</span> <span class="o">&gt;</span> <span class="n">new</span><span class="o">.</span><span class="n">txt</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
+<p>first we hash the object. The <code class="docutils literal notranslate"><span class="pre">-w</span></code> option writes to the directory.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="nb">hash</span><span class="o">-</span><span class="nb">object</span> <span class="o">-</span><span class="n">w</span> <span class="n">new</span><span class="o">.</span><span class="n">txt</span>
 </pre></div>
 </div>
+<p>then we get the hash back</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fa49b077972391ad58037050f2a75f74e3671e92</span>
 </pre></div>
 </div>
+<p>Then we stage it.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">update</span><span class="o">-</span><span class="n">index</span> <span class="o">--</span><span class="n">add</span> <span class="o">--</span><span class="n">cacheinfo</span> <span class="mi">100644</span> \
+<span class="o">&gt;</span> <span class="n">fa49b077972391ad58037050f2a75f74e3671e92</span> <span class="n">new</span><span class="o">.</span><span class="n">txt</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">fa49b077972391ad58037050f2a75f74e3671e92</span> <span class="n">new</span><span class="o">.</span><span class="n">txt</span>
-</pre></div>
-</div>
+<p>and again we can look on the overall repo</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">status</span>
 </pre></div>
 </div>
@@ -736,6 +743,7 @@ title="Print to PDF"
 
 </pre></div>
 </div>
+<p>and list out the <code class="docutils literal notranslate"><span class="pre">.git</span></code> objects</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">find</span> <span class="o">.</span><span class="n">git</span><span class="o">/</span><span class="n">objects</span><span class="o">/</span> <span class="o">-</span><span class="nb">type</span> <span class="n">f</span>
 </pre></div>
 </div>
@@ -754,10 +762,9 @@ title="Print to PDF"
 <span class="n">version</span> <span class="mi">2</span>
 </pre></div>
 </div>
+<p>then we can stage the second version of our first file</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">update</span><span class="o">-</span><span class="n">index</span> <span class="o">--</span><span class="n">add</span> <span class="o">--</span><span class="n">cacheinfo</span> <span class="mi">100644</span> \
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="mi">0</span><span class="n">c1e7391ca4e59584f8b773ecdbbb9467eba1547</span> <span class="n">test</span><span class="o">.</span><span class="n">txt</span>
+<span class="o">&gt;</span> <span class="mi">0</span><span class="n">c1e7391ca4e59584f8b773ecdbbb9467eba1547</span> <span class="n">test</span><span class="o">.</span><span class="n">txt</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">status</span>
@@ -774,6 +781,8 @@ title="Print to PDF"
 
 </pre></div>
 </div>
+<p>and now we see that everything is staged.</p>
+<p>Then we confirm what hash is our previous commit</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">cat</span><span class="o">-</span><span class="n">file</span> <span class="o">-</span><span class="n">t</span> <span class="n">e0913</span>
 </pre></div>
 </div>
@@ -790,6 +799,7 @@ title="Print to PDF"
 <span class="n">first</span> <span class="n">commit</span>
 </pre></div>
 </div>
+<p>Next we write a tree object from the staging area</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">write</span><span class="o">-</span><span class="n">tree</span>
 </pre></div>
 </div>
@@ -803,12 +813,15 @@ title="Print to PDF"
 <span class="mi">100644</span> <span class="n">blob</span> <span class="mi">0</span><span class="n">c1e7391ca4e59584f8b773ecdbbb9467eba1547</span>	<span class="n">test</span><span class="o">.</span><span class="n">txt</span>
 </pre></div>
 </div>
+<p>This tree has the current version of each file.</p>
+<p>Now we can make a new commit.  We will echo the message into the commit-tree plumbing function with a pipr and then we will tell this commit to point to the tree we just created and that its parent is the first commit.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s2">&quot;second commit&quot;</span> <span class="o">|</span> <span class="n">git</span> <span class="n">commit</span><span class="o">-</span><span class="n">tree</span> <span class="mi">163</span><span class="n">b4</span> <span class="o">-</span><span class="n">p</span> <span class="n">e0913</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cf857a865c6088ab9bf90e2732df967f8e2582ab</span>
 </pre></div>
 </div>
+<p>But still when we check status</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">status</span>
 </pre></div>
 </div>
@@ -823,12 +836,7 @@ title="Print to PDF"
 
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">find</span> <span class="o">.</span><span class="n">git</span><span class="o">/</span><span class="nb">object</span> <span class="o">-</span><span class="nb">type</span> <span class="n">f</span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">find</span><span class="p">:</span> <span class="o">.</span><span class="n">git</span><span class="o">/</span><span class="nb">object</span><span class="p">:</span> <span class="n">No</span> <span class="n">such</span> <span class="n">file</span> <span class="ow">or</span> <span class="n">directory</span>
-</pre></div>
-</div>
+<p>The files look staged.  This is beacuse of what <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> does.  It compares the current working directory (what we see when we do ls) to the staging area and the content that the current branch points to.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">find</span> <span class="o">.</span><span class="n">git</span><span class="o">/</span><span class="n">objects</span> <span class="o">-</span><span class="nb">type</span> <span class="n">f</span>
 </pre></div>
 </div>
@@ -842,12 +850,9 @@ title="Print to PDF"
 <span class="o">.</span><span class="n">git</span><span class="o">/</span><span class="n">objects</span><span class="o">/</span><span class="mi">83</span><span class="o">/</span><span class="n">baae61804e65cc73a7201a7252750c76066a30</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">cat</span><span class="o">-</span><span class="n">file</span> <span class="o">-</span><span class="n">t</span> <span class="n">e0913</span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">commit</span>
-</pre></div>
-</div>
+<section id="git-references">
+<h2><span class="section-number">11.1. </span>Git References<a class="headerlink" href="#git-references" title="Permalink to this headline">#</a></h2>
+<p>Recall the <code class="docutils literal notranslate"><span class="pre">.git</span></code> directory has many other files in it.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">.</span><span class="n">git</span>
 </pre></div>
 </div>
@@ -855,6 +860,7 @@ title="Print to PDF"
 <span class="n">config</span>		<span class="n">hooks</span>		<span class="n">info</span>		<span class="n">refs</span>
 </pre></div>
 </div>
+<p>Let’s look at the refs dir.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">.</span><span class="n">git</span><span class="o">/</span><span class="n">refs</span><span class="o">/</span>
 </pre></div>
 </div>
@@ -867,15 +873,8 @@ title="Print to PDF"
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">staus</span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span><span class="p">:</span> <span class="s1">&#39;staus&#39;</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">a</span> <span class="n">git</span> <span class="n">command</span><span class="o">.</span> <span class="n">See</span> <span class="s1">&#39;git --help&#39;</span><span class="o">.</span>
-
-<span class="n">The</span> <span class="n">most</span> <span class="n">similar</span> <span class="n">command</span> <span class="ow">is</span>
-	<span class="n">status</span>
-</pre></div>
-</div>
+<p>there’s nothing in the heads dir</p>
+<p>Though when we use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">status</span>
 </pre></div>
 </div>
@@ -890,12 +889,12 @@ title="Print to PDF"
 
 </pre></div>
 </div>
+<p>we see it is “on main” this is because we set the branch to main , but since we have not written there, we have to do it directly. Notice that when we use the porcelain command for commit, it does this automatically; the porcelain commands do many things.</p>
+<p>We can write tothat file directly</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="n">cf857a865c6088ab9bf90e2732df967f8e2582ab</span> <span class="o">&gt;</span> <span class="o">.</span><span class="n">git</span><span class="o">/</span><span class="n">refs</span><span class="o">/</span><span class="n">heads</span><span class="o">/</span><span class="n">main</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
+<p>And now if we check git status</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">status</span>
 </pre></div>
 </div>
@@ -903,12 +902,12 @@ title="Print to PDF"
 <span class="n">nothing</span> <span class="n">to</span> <span class="n">commit</span><span class="p">,</span> <span class="n">working</span> <span class="n">tree</span> <span class="n">clean</span>
 </pre></div>
 </div>
+<p>we see what we expec.</p>
+<p>Alternatively, we can use only a short reference to the hash if we use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">update-ref</span></code></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">update</span><span class="o">-</span><span class="n">ref</span> <span class="n">refs</span><span class="o">/</span><span class="n">heads</span><span class="o">/</span><span class="n">main</span> <span class="n">cf857</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
+<p>Now git log also works.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">log</span>
 </pre></div>
 </div>
@@ -925,10 +924,8 @@ title="Print to PDF"
     <span class="n">first</span> <span class="n">commit</span>
 </pre></div>
 </div>
+<p>Lets create a branch at the point of our first commit.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">update</span><span class="o">-</span><span class="n">ref</span> <span class="n">refs</span><span class="o">/</span><span class="n">heads</span><span class="o">/</span><span class="n">test</span> <span class="n">e0913</span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">log</span>
@@ -947,18 +944,19 @@ title="Print to PDF"
     <span class="n">first</span> <span class="n">commit</span>
 </pre></div>
 </div>
+<p>Notice that the commit history in <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span></code> also lists the branches.</p>
+<p>We can also look at the HEAD pointer</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">symbolic</span><span class="o">-</span><span class="n">ref</span> <span class="n">HEAD</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">refs</span><span class="o">/</span><span class="n">heads</span><span class="o">/</span><span class="n">main</span>
 </pre></div>
 </div>
+<p>update the HEAD directly</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">symbolic</span><span class="o">-</span><span class="n">ref</span> <span class="n">HEAD</span> <span class="n">refs</span><span class="o">/</span><span class="n">heads</span><span class="o">/</span><span class="n">test</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
+<p>and see what this does.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">status</span>
 </pre></div>
 </div>
@@ -970,6 +968,11 @@ title="Print to PDF"
 
 </pre></div>
 </div>
+<p>This is only part of what <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span></code> does, because it switches the branch, but does not update the working directory.</p>
+</section>
+<section id="git-tags">
+<h2><span class="section-number">11.2. </span>Git Tags<a class="headerlink" href="#git-tags" title="Permalink to this headline">#</a></h2>
+<p>Just like branches, but used differently.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">.</span><span class="n">git</span><span class="o">/</span><span class="n">refs</span><span class="o">/</span>
 </pre></div>
 </div>
@@ -1020,18 +1023,18 @@ title="Print to PDF"
     <span class="n">first</span> <span class="n">commit</span>
 </pre></div>
 </div>
+</section>
+<section id="adding-a-remote">
+<h2><span class="section-number">11.3. </span>Adding a remote<a class="headerlink" href="#adding-a-remote" title="Permalink to this headline">#</a></h2>
+<p>We created this repo locally, and we have not set a remote.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<p>we can add one with</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">origin</span> <span class="o">&lt;</span><span class="n">url</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">remote</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">origin</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">introcompsys</span><span class="o">/</span><span class="n">toy</span><span class="o">-</span><span class="n">repo</span><span class="o">-</span><span class="n">brownsarahm</span><span class="o">.</span><span class="n">git</span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
+<p>in my case, I’ll use <code class="docutils literal notranslate"><span class="pre">https://github.com/introcompsys/toy-repo-brownsarahm.git</span></code> you should use your own.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span>
 </pre></div>
 </div>
@@ -1076,6 +1079,7 @@ title="Print to PDF"
 
 </pre></div>
 </div>
+<p>adding a remote directly doesn’t link the local branch to the remote branch, so we do that next.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="o">-</span><span class="n">u</span> <span class="n">origin</span> <span class="n">main</span>
 </pre></div>
 </div>
@@ -1103,18 +1107,16 @@ title="Print to PDF"
 <span class="o">.</span><span class="n">git</span><span class="o">/</span><span class="n">objects</span><span class="o">//</span><span class="mi">83</span><span class="o">/</span><span class="n">baae61804e65cc73a7201a7252750c76066a30</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
+</section>
 <section id="review-todays-class">
-<h2><span class="section-number">11.1. </span>Review today’s class<a class="headerlink" href="#review-todays-class" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">11.4. </span>Review today’s class<a class="headerlink" href="#review-todays-class" title="Permalink to this headline">#</a></h2>
 <ol class="simple">
 <li><p>Read the notes and repeat the activity if needed</p></li>
 <li><p>use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">cat-file</span></code> over the objects to draw a graph diagram of your current status in your test directory include your drawing in <code class="docutils literal notranslate"><span class="pre">test_repo_map.md</span></code> using <a class="reference external" href="https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/">mermaid</a> syntax to diagram it. Name each node in your graph with 5-7 characters of the hash and the type. eg <code class="docutils literal notranslate"><span class="pre">0c913</span> <span class="pre">commit</span></code></p></li>
 </ol>
 </section>
 <section id="prepare-for-next-class">
-<span id="index-0"></span><h2><span class="section-number">11.2. </span>Prepare for Next Class<a class="headerlink" href="#prepare-for-next-class" title="Permalink to this headline">#</a></h2>
+<span id="index-0"></span><h2><span class="section-number">11.5. </span>Prepare for Next Class<a class="headerlink" href="#prepare-for-next-class" title="Permalink to this headline">#</a></h2>
 <ol class="simple">
 <li><p>Bring ideas of what you want to write a bash script for and/or a small command line program</p></li>
 <li><p><strong>Windows only, but important</strong> <a class="reference external" href="https://prishitakapoor2.medium.com/configuring-git-bash-to-run-python-for-windows-a624aa4ae2c5">get python working in GitBash</a></p></li>
@@ -1122,7 +1124,7 @@ title="Print to PDF"
 </ol>
 </section>
 <section id="more-practice">
-<h2><span class="section-number">11.3. </span>More Practice<a class="headerlink" href="#more-practice" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">11.6. </span>More Practice<a class="headerlink" href="#more-practice" title="Permalink to this headline">#</a></h2>
 <ol class="simple">
 <li><p>Add “version 3” to the test.txt file and hash that object</p></li>
 <li><p>Add that to the staging area</p></li>

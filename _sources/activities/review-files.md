@@ -1,4 +1,4 @@
-terminal
+terminal.md
 branches.md
 abstraction.md
 gitlog.txt
