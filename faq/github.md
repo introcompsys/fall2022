@@ -6,6 +6,33 @@
 
 ````
  -->
+ ## Git Steps for Pushing to Your Remote Repository
+````{toggle}
+Follow these steps to push to your remote repository:
+- ```git checkout main```: to switch to main branch
+- ```git pull```: to make sure your main branch is up to date before creating a new branch off main
+- ```git checkout -b <new branch name>```: to create a new branch and to switch to it
+  - Make your branch names meaningful! This helps both you and us know what is happening on the branch
+  - For example:
+    - A meaningful name would be ```2022-09-17-prepare``` or ```2022-09-17-deeper-exploration```
+- ```git status```: to see what files will be committed
+- ```git add <file>```: do this for each file that needs to be added
+- ```git commit -m "commit message"```: to commit your changes/additions with a meaningful message
+- ```git push```: if the branch is already on Github
+  - If not, you may need to do ```git push --set-upstream origin <branch name>``` followed by ```git push```
+
+Now check your Github to make sure everything is there. Don't forget to create a pull request and add us as "Reviewers" when you are ready for the work to be reviewed. 
+
+````
+
+
+
+
+<!--
+````{toggle}
+
+````
+ -->
 ## I can't push to my repository, I get an error that updates were rejected
 ````{toggle}
 If your error looks like this...
