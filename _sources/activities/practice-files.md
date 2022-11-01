@@ -13,3 +13,4 @@ actions.md
 ssh.md
 hpc.md
 octal.md
+assemblycompare.md

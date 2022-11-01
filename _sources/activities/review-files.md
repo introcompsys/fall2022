@@ -9,3 +9,4 @@ hexpeak.md
 test_repo_map.md
 group_contributions.md
 checker.sh
+gcctips.md
