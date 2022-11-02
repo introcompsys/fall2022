@@ -550,6 +550,11 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#git-steps-for-pushing-to-your-remote-repository">
+   Git Steps for Pushing to Your Remote Repository
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#i-cant-push-to-my-repository-i-get-an-error-that-updates-were-rejected">
    I can’t push to my repository, I get an error that updates were rejected
   </a>
@@ -599,6 +604,11 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#git-steps-for-pushing-to-your-remote-repository">
+   Git Steps for Pushing to Your Remote Repository
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#i-cant-push-to-my-repository-i-get-an-error-that-updates-were-rejected">
    I can’t push to my repository, I get an error that updates were rejected
   </a>
@@ -645,6 +655,40 @@ title="Print to PDF"
 
 ````
  -->
+<section id="git-steps-for-pushing-to-your-remote-repository">
+<h2>Git Steps for Pushing to Your Remote Repository<a class="headerlink" href="#git-steps-for-pushing-to-your-remote-repository" title="Permalink to this headline">#</a></h2>
+<div class="toggle docutils container">
+<p>Follow these steps to push to your remote repository:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">main</span></code>: to switch to main branch</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code>: to make sure your main branch is up to date before creating a new branch off main</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">-b</span> <span class="pre">&lt;new</span> <span class="pre">branch</span> <span class="pre">name&gt;</span></code>: to create a new branch and to switch to it</p>
+<ul>
+<li><p>Make your branch names meaningful! This helps both you and us know what is happening on the branch</p></li>
+<li><p>For example:</p>
+<ul>
+<li><p>A meaningful name would be <code class="docutils literal notranslate"><span class="pre">2022-09-17-prepare</span></code> or <code class="docutils literal notranslate"><span class="pre">2022-09-17-deeper-exploration</span></code></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code>: to see what files will be committed</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">&lt;file&gt;</span></code>: do this for each file that needs to be added</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">-m</span> <span class="pre">&quot;commit</span> <span class="pre">message&quot;</span></code>: to commit your changes/additions with a meaningful message</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code>: if the branch is already on Github</p>
+<ul>
+<li><p>If not, you may need to do <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">--set-upstream</span> <span class="pre">origin</span> <span class="pre">&lt;branch</span> <span class="pre">name&gt;</span></code></p></li>
+</ul>
+</li>
+</ul>
+<p>Now check your repository in your browser to make sure everything is there. Don’t forget to create a pull request and add us as “Reviewers” when you are ready for the work to be reviewed.</p>
+</div>
+<!--
+````{toggle}
+
+````
+ -->
+</section>
 <section id="i-cant-push-to-my-repository-i-get-an-error-that-updates-were-rejected">
 <h2>I can’t push to my repository, I get an error that updates were rejected<a class="headerlink" href="#i-cant-push-to-my-repository-i-get-an-error-that-updates-were-rejected" title="Permalink to this headline">#</a></h2>
 <div class="toggle docutils container">
