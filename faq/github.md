@@ -19,7 +19,7 @@ Follow these steps to push to your remote repository:
 - ```git add <file>```: do this for each file that needs to be added
 - ```git commit -m "commit message"```: to commit your changes/additions with a meaningful message
 - ```git push```: if the branch is already on Github
-  - If not, you may need to do ```git push --set-upstream origin <branch name>``` followed by ```git push```
+  - If not, you may need to do ```git push --set-upstream origin <branch name>``` 
 
 Now check your Github to make sure everything is there. Don't forget to create a pull request and add us as "Reviewers" when you are ready for the work to be reviewed. 
 
