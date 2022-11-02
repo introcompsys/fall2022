@@ -21,7 +21,7 @@ Follow these steps to push to your remote repository:
 - ```git push```: if the branch is already on Github
   - If not, you may need to do ```git push --set-upstream origin <branch name>``` 
 
-Now check your Github to make sure everything is there. Don't forget to create a pull request and add us as "Reviewers" when you are ready for the work to be reviewed. 
+Now check your repository in your browser to make sure everything is there. Don't forget to create a pull request and add us as "Reviewers" when you are ready for the work to be reviewed. 
 
 ````
 
