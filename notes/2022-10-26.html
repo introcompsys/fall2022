@@ -1140,7 +1140,7 @@ salloc: Relinquishing job allocation 26350
 <section id="more-practice">
 <h2><span class="section-number">14.9. </span>More Practice<a class="headerlink" href="#more-practice" title="Permalink to this headline">#</a></h2>
 <ol>
-<li><p>Create an sbatch script to run your script from the review on a compute node. <a class="reference external" href="https://web.uri.edu/hpc-research-computing/using-seawulf/#sbatch">see the options</a></p></li>
+<li><p>Create an sbatch script to run your script from the review on a compute node. <a class="reference external" href="https://web.uri.edu/hpc-research-computing/using-seawulf/#sbatch">see the options</a> <a class="reference external" href="https://slurm.schedmd.com/sbatch.html">official sbatch docs while URI docs are down</a></p></li>
 <li><p><strong>priority</strong> File permissions are represented numerically often in octal, by transforming the permissions for each level (owner, group, all) as binary into a number. Add <code class="docutils literal notranslate"><span class="pre">octal.md</span></code> to your KWL repo and answer the following. Try to think through it on your own, but you may look up the answers, as long as you link to (or ideally cite using jupyterbook citations) a high quality source.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>1. Transform the permissions [`r--`, `rw-`, `rwx`] to octal, by treating it as three bits.
 1. Transform the permission we changed our script to `rwxr-xr-x` to octal.
