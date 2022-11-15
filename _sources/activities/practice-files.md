@@ -16,3 +16,5 @@ octal.md
 assemblycompare.md
 overflow.md`
 readingbytes.md
+nandhalf.md
+addertypes.md
