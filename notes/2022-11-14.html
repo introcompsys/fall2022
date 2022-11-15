@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>17. How can we use logical operations? &#8212; Introduction to Computer Systems</title>
+    <title>18. How can we use logical operations? &#8212; Introduction to Computer Systems</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -55,7 +55,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="KWL Chart" href="../activities/kwl.html" />
-    <link rel="prev" title="16. Why is the object file not human readable?" href="2022-11-02.html" />
+    <link rel="prev" title="17. Float Representation" href="2022-11-07.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -261,9 +261,14 @@ const thebe_selector_output = ".output, .cell_output"
    16. Why is the object file not human readable?
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2022-11-07.html">
+   17. Float Representation
+  </a>
+ </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   17. How can we use logical operations?
+   18. How can we use logical operations?
   </a>
  </li>
 </ul>
@@ -563,67 +568,67 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   17. How can we use logical operations?
+   18. How can we use logical operations?
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#why-do-we-need-to-think-about-bitwise-operations">
-   18. Why do we need to think about bitwise operations?
+   19. Why do we need to think about bitwise operations?
   </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#bitwise-operators">
-     18.1. Bitwise operators
+     19.1. Bitwise operators
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#adding-with-gates">
-     18.2. Adding with gates
+     19.2. Adding with gates
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#review-todays-class">
-     18.3. Review today’s class
+     19.3. Review today’s class
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#prepare-for-next-class">
-     18.4. Prepare for Next Class
+     19.4. Prepare for Next Class
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#more-practice">
-     18.5. More Practice
+     19.5. More Practice
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#questions-after-class">
-     18.6. Questions after class
+     19.6. Questions after class
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#why-would-we-need-the-carry-bit-if-we-can-do-the-math-fine-without-it">
-       18.6.1. why would we need the carry bit if we can do the math fine without it?
+       19.6.1. why would we need the carry bit if we can do the math fine without it?
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#these-logic-gates-are-used-for-making-circuits-right">
-       18.6.2. these logic gates are used for making circuits right?
+       19.6.2. these logic gates are used for making circuits right?
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#how-do-half-adders-work-i-am-confused-on-how-the-1-and-0s-are-represented-and-how-things-are-stored">
-       18.6.3. How do half-adders work? I am confused on how the 1 and 0’s are represented, and how things are stored
+       19.6.3. How do half-adders work? I am confused on how the 1 and 0’s are represented, and how things are stored
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#why-cant-the-or-logical-expression-in-the-full-adder-be-an-xor-from-testing-i-cant-get-a-scenario-where-either-will-output-a-different-result">
-       18.6.4. Why can’t the OR logical expression in the full adder be an XOR? From testing, I can’t get a scenario where either will output a different result.
+       19.6.4. Why can’t the OR logical expression in the full adder be an XOR? From testing, I can’t get a scenario where either will output a different result.
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#is-bitwise-useful-in-just-embedded-programming-or-other-areas-of-industry">
-       18.6.5. Is bitwise useful in just embedded programming or other areas of industry?
+       19.6.5. Is bitwise useful in just embedded programming or other areas of industry?
       </a>
      </li>
     </ul>
@@ -651,67 +656,67 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   17. How can we use logical operations?
+   18. How can we use logical operations?
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#why-do-we-need-to-think-about-bitwise-operations">
-   18. Why do we need to think about bitwise operations?
+   19. Why do we need to think about bitwise operations?
   </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#bitwise-operators">
-     18.1. Bitwise operators
+     19.1. Bitwise operators
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#adding-with-gates">
-     18.2. Adding with gates
+     19.2. Adding with gates
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#review-todays-class">
-     18.3. Review today’s class
+     19.3. Review today’s class
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#prepare-for-next-class">
-     18.4. Prepare for Next Class
+     19.4. Prepare for Next Class
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#more-practice">
-     18.5. More Practice
+     19.5. More Practice
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#questions-after-class">
-     18.6. Questions after class
+     19.6. Questions after class
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#why-would-we-need-the-carry-bit-if-we-can-do-the-math-fine-without-it">
-       18.6.1. why would we need the carry bit if we can do the math fine without it?
+       19.6.1. why would we need the carry bit if we can do the math fine without it?
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#these-logic-gates-are-used-for-making-circuits-right">
-       18.6.2. these logic gates are used for making circuits right?
+       19.6.2. these logic gates are used for making circuits right?
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#how-do-half-adders-work-i-am-confused-on-how-the-1-and-0s-are-represented-and-how-things-are-stored">
-       18.6.3. How do half-adders work? I am confused on how the 1 and 0’s are represented, and how things are stored
+       19.6.3. How do half-adders work? I am confused on how the 1 and 0’s are represented, and how things are stored
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#why-cant-the-or-logical-expression-in-the-full-adder-be-an-xor-from-testing-i-cant-get-a-scenario-where-either-will-output-a-different-result">
-       18.6.4. Why can’t the OR logical expression in the full adder be an XOR? From testing, I can’t get a scenario where either will output a different result.
+       19.6.4. Why can’t the OR logical expression in the full adder be an XOR? From testing, I can’t get a scenario where either will output a different result.
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#is-bitwise-useful-in-just-embedded-programming-or-other-areas-of-industry">
-       18.6.5. Is bitwise useful in just embedded programming or other areas of industry?
+       19.6.5. Is bitwise useful in just embedded programming or other areas of industry?
       </a>
      </li>
     </ul>
@@ -729,10 +734,10 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="how-can-we-use-logical-operations">
-<h1><span class="section-number">17. </span>How can we use logical operations?<a class="headerlink" href="#how-can-we-use-logical-operations" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">18. </span>How can we use logical operations?<a class="headerlink" href="#how-can-we-use-logical-operations" title="Permalink to this headline">#</a></h1>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="why-do-we-need-to-think-about-bitwise-operations">
-<h1><span class="section-number">18. </span>Why do we need to think about bitwise operations?<a class="headerlink" href="#why-do-we-need-to-think-about-bitwise-operations" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">19. </span>Why do we need to think about bitwise operations?<a class="headerlink" href="#why-do-we-need-to-think-about-bitwise-operations" title="Permalink to this headline">#</a></h1>
 <p>Understanding them is prereq to what we will see today and that will help you understand hardware overall.</p>
 <p>You of course will not <em>need</em> every single thing we teach you in every single class.</p>
 <ul class="simple">
@@ -740,7 +745,7 @@ title="Print to PDF"
 <li><p>Seeing a topic in more detail than you will use all the time actually helps you build intuition, or deep understanding, of the topic overall, and help you remember what you need to remember</p></li>
 </ul>
 <section id="bitwise-operators">
-<h2><span class="section-number">18.1. </span>Bitwise operators<a class="headerlink" href="#bitwise-operators" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">19.1. </span>Bitwise operators<a class="headerlink" href="#bitwise-operators" title="Permalink to this headline">#</a></h2>
 <ul>
 <li><p>&amp; : and</p></li>
 <li><p>| : or</p></li>
@@ -756,7 +761,7 @@ title="Print to PDF"
 </ul>
 <p>Let’s review truth tables for and, or, and xor.</p>
 <table class="table" id="truth-and">
-<caption><span class="caption-number">Table 18.1 </span><span class="caption-text">AND</span><a class="headerlink" href="#truth-and" title="Permalink to this table">#</a></caption>
+<caption><span class="caption-number">Table 19.1 </span><span class="caption-text">AND</span><a class="headerlink" href="#truth-and" title="Permalink to this table">#</a></caption>
 <colgroup>
 <col style="width: 33%" />
 <col style="width: 33%" />
@@ -788,7 +793,7 @@ title="Print to PDF"
 </tbody>
 </table>
 <table class="table" id="truth-or">
-<caption><span class="caption-number">Table 18.2 </span><span class="caption-text">OR</span><a class="headerlink" href="#truth-or" title="Permalink to this table">#</a></caption>
+<caption><span class="caption-number">Table 19.2 </span><span class="caption-text">OR</span><a class="headerlink" href="#truth-or" title="Permalink to this table">#</a></caption>
 <colgroup>
 <col style="width: 33%" />
 <col style="width: 33%" />
@@ -820,7 +825,7 @@ title="Print to PDF"
 </tbody>
 </table>
 <table class="table" id="truth-xor">
-<caption><span class="caption-number">Table 18.3 </span><span class="caption-text">XOR</span><a class="headerlink" href="#truth-xor" title="Permalink to this table">#</a></caption>
+<caption><span class="caption-number">Table 19.3 </span><span class="caption-text">XOR</span><a class="headerlink" href="#truth-xor" title="Permalink to this table">#</a></caption>
 <colgroup>
 <col style="width: 33%" />
 <col style="width: 33%" />
@@ -855,7 +860,7 @@ title="Print to PDF"
 <p>There are more gate operations; you can see a simulation for <a class="reference external" href="https://lodev.org/logicemu/#id=gates16">16 gates</a></p>
 </section>
 <section id="adding-with-gates">
-<h2><span class="section-number">18.2. </span>Adding with gates<a class="headerlink" href="#adding-with-gates" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">19.2. </span>Adding with gates<a class="headerlink" href="#adding-with-gates" title="Permalink to this headline">#</a></h2>
 <p>Let’s review adding binary numbers</p>
 <ul class="simple">
 <li><p>add the two bits</p></li>
@@ -869,7 +874,7 @@ title="Print to PDF"
 <p>In this case in the ones place we add 0 + 1 to get one, the two ones add to 0 with carry then 1 + 0 + 0 gives another 1.</p>
 <p>let’s make a truth table for adding two bits.</p>
 <table class="table" id="truth-add">
-<caption><span class="caption-number">Table 18.4 </span><span class="caption-text">Add</span><a class="headerlink" href="#truth-add" title="Permalink to this table">#</a></caption>
+<caption><span class="caption-number">Table 19.4 </span><span class="caption-text">Add</span><a class="headerlink" href="#truth-add" title="Permalink to this table">#</a></caption>
 <colgroup>
 <col style="width: 25%" />
 <col style="width: 25%" />
@@ -916,11 +921,11 @@ title="Print to PDF"
 <p>Alternatively, we can “lookahead” with the carry bit, passing it forward multiple places all at once, as shown in this <a class="reference external" href="https://lodev.org/logicemu/#id=cla_adder">4 bit carry lookahead adder</a>.</p>
 </section>
 <section id="review-todays-class">
-<h2><span class="section-number">18.3. </span>Review today’s class<a class="headerlink" href="#review-todays-class" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">19.3. </span>Review today’s class<a class="headerlink" href="#review-todays-class" title="Permalink to this headline">#</a></h2>
 <p>Compare the 2 bit multiplier to the full adder in <code class="docutils literal notranslate"><span class="pre">multiplication.md</span></code>. Use comparison  with the full adder to explain how the 2bit multiplier works works, relative to the fact that multiplication can be thought of like repeated addition.</p>
 </section>
 <section id="prepare-for-next-class">
-<span id="index-0"></span><h2><span class="section-number">18.4. </span>Prepare for Next Class<a class="headerlink" href="#prepare-for-next-class" title="Permalink to this headline">#</a></h2>
+<span id="index-0"></span><h2><span class="section-number">19.4. </span>Prepare for Next Class<a class="headerlink" href="#prepare-for-next-class" title="Permalink to this headline">#</a></h2>
 <ol>
 <li><p>Read <a class="reference external" href="https://hackaday.com/2017/01/03/make-logic-gates-out-of-almost-anything/">gates out of anything</a> and watch the <a class="reference external" href="https://www.youtube.com/watch?v=kPguktA674w">marble adder</a>. Create <code class="docutils literal notranslate"><span class="pre">gates.md</span></code> and answer the questions below:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>1. What do all of the gates described have in common?
@@ -932,7 +937,7 @@ title="Print to PDF"
 </ol>
 </section>
 <section id="more-practice">
-<span id="index-1"></span><h2><span class="section-number">18.5. </span>More Practice<a class="headerlink" href="#more-practice" title="Permalink to this headline">#</a></h2>
+<span id="index-1"></span><h2><span class="section-number">19.5. </span>More Practice<a class="headerlink" href="#more-practice" title="Permalink to this headline">#</a></h2>
 <ol>
 <li><p>(priority) While we saw many types of gates today, but we actually could get all of the operations needed using only NAND gates. Work out how to use NAND gates to implement a half adder and describe it in <code class="docutils literal notranslate"><span class="pre">nandhalf.md</span></code></p></li>
 <li><p>In <code class="docutils literal notranslate"><span class="pre">addertypes.md</span></code> compare ripple adders and lookahead adders.</p>
@@ -945,26 +950,26 @@ title="Print to PDF"
 </ol>
 <span class="target" id="index-2"></span></section>
 <section id="questions-after-class">
-<span id="index-3"></span><h2><span class="section-number">18.6. </span>Questions after class<a class="headerlink" href="#questions-after-class" title="Permalink to this headline">#</a></h2>
+<span id="index-3"></span><h2><span class="section-number">19.6. </span>Questions after class<a class="headerlink" href="#questions-after-class" title="Permalink to this headline">#</a></h2>
 <section id="why-would-we-need-the-carry-bit-if-we-can-do-the-math-fine-without-it">
-<h3><span class="section-number">18.6.1. </span>why would we need the carry bit if we can do the math fine without it?<a class="headerlink" href="#why-would-we-need-the-carry-bit-if-we-can-do-the-math-fine-without-it" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">19.6.1. </span>why would we need the carry bit if we can do the math fine without it?<a class="headerlink" href="#why-would-we-need-the-carry-bit-if-we-can-do-the-math-fine-without-it" title="Permalink to this headline">#</a></h3>
 <p>We have the carry bit in the circuit always so that it’s available when we do need it.</p>
 </section>
 <section id="these-logic-gates-are-used-for-making-circuits-right">
-<h3><span class="section-number">18.6.2. </span>these logic gates are used for making circuits right?<a class="headerlink" href="#these-logic-gates-are-used-for-making-circuits-right" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">19.6.2. </span>these logic gates are used for making circuits right?<a class="headerlink" href="#these-logic-gates-are-used-for-making-circuits-right" title="Permalink to this headline">#</a></h3>
 <p>yes</p>
 </section>
 <section id="how-do-half-adders-work-i-am-confused-on-how-the-1-and-0s-are-represented-and-how-things-are-stored">
-<h3><span class="section-number">18.6.3. </span>How do half-adders work? I am confused on how the 1 and 0’s are represented, and how things are stored<a class="headerlink" href="#how-do-half-adders-work-i-am-confused-on-how-the-1-and-0s-are-represented-and-how-things-are-stored" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">19.6.3. </span>How do half-adders work? I am confused on how the 1 and 0’s are represented, and how things are stored<a class="headerlink" href="#how-do-half-adders-work-i-am-confused-on-how-the-1-and-0s-are-represented-and-how-things-are-stored" title="Permalink to this headline">#</a></h3>
 <p>In a digital computer, these are stored in registers as high (on/1) and low (off/0).  The gates are electronic devices that given different inputs have a specific output.</p>
 <p>However the gate can be represented using anything with on and off positions.  See the <a class="reference external" href="https://www.youtube.com/watch?v=kPguktA674w">marble adder</a> for example.</p>
 </section>
 <section id="why-cant-the-or-logical-expression-in-the-full-adder-be-an-xor-from-testing-i-cant-get-a-scenario-where-either-will-output-a-different-result">
-<h3><span class="section-number">18.6.4. </span>Why can’t the OR logical expression in the full adder be an XOR? From testing, I can’t get a scenario where either will output a different result.<a class="headerlink" href="#why-cant-the-or-logical-expression-in-the-full-adder-be-an-xor-from-testing-i-cant-get-a-scenario-where-either-will-output-a-different-result" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">19.6.4. </span>Why can’t the OR logical expression in the full adder be an XOR? From testing, I can’t get a scenario where either will output a different result.<a class="headerlink" href="#why-cant-the-or-logical-expression-in-the-full-adder-be-an-xor-from-testing-i-cant-get-a-scenario-where-either-will-output-a-different-result" title="Permalink to this headline">#</a></h3>
 <p>It could be an XOR. Good catch.  The reason it is an or gate is because an or gate is cheaper to build and we would never see at the input the one state that the xor and or would be different.  The two ands can never both be 1, which is the only case when or and xor are different.</p>
 </section>
 <section id="is-bitwise-useful-in-just-embedded-programming-or-other-areas-of-industry">
-<h3><span class="section-number">18.6.5. </span>Is bitwise useful in just embedded programming or other areas of industry?<a class="headerlink" href="#is-bitwise-useful-in-just-embedded-programming-or-other-areas-of-industry" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">19.6.5. </span>Is bitwise useful in just embedded programming or other areas of industry?<a class="headerlink" href="#is-bitwise-useful-in-just-embedded-programming-or-other-areas-of-industry" title="Permalink to this headline">#</a></h3>
 <p>Bitwise operations are useful in understanding what the computer does and that helps build up understanding of everything we need to do in a computer and for anticipating when things could go wrong.  It is directly applied primarily in working with hardware directly.  But also sometimes in other representations and for compression.</p>
 <p>For example, in machine learning algorithms, we need the data to be all numerical, but often the inputs that we wish to use might be, fundamentally multiple categories that are most interpretable as a single word. Like <code class="docutils literal notranslate"><span class="pre">pet</span></code> for example, we might have values for <code class="docutils literal notranslate"><span class="pre">cat</span></code>, <code class="docutils literal notranslate"><span class="pre">dog</span></code>, <code class="docutils literal notranslate"><span class="pre">fish</span></code>.  But we want to represent these for an algorithm, we don’t want to put them in an order, so we switch from one column to three, one for each animal.  Then we put a 1 in each row.</p>
 <table class="table">
@@ -1050,11 +1055,11 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="2022-11-02.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="2022-11-07.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">16. </span>Why is the object file not human readable?</p>
+            <p class="prev-next-title"><span class="section-number">17. </span>Float Representation</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="../activities/kwl.html" title="next page">
