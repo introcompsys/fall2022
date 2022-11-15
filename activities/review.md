@@ -184,3 +184,11 @@ Activities:
 Activities:
 ```{include} ../_review/2022-11-02.md
 ```
+
+## 2022-11-14
+
+[related notes](../notes/2022-11-14)
+
+Activities:
+```{include} ../_review/2022-11-14.md
+```
