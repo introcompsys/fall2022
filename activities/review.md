@@ -185,10 +185,27 @@ Activities:
 ```{include} ../_review/2022-11-02.md
 ```
 
+
+## 2022-11-07
+
+[related notes](../notes/2022-11-07)
+
+Activities:
+```{include} ../_review/2022-11-07.md
+```
+
 ## 2022-11-14
 
 [related notes](../notes/2022-11-14)
 
 Activities:
 ```{include} ../_review/2022-11-14.md
+```
+
+## 2022-11-16
+
+[related notes](../notes/2022-11-16)
+
+Activities:
+```{include} ../_review/2022-11-16.md
 ```
