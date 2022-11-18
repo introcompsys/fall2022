@@ -13,4 +13,5 @@ gcctips.md
 bitwise.md
 readingbytes.md
 overflow.md
+cdouble.md
 multiplication.md

@@ -612,6 +612,26 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#questions">
    16.8. Questions
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-does-byte-bytearray-num-work">
+     16.8.1. How does byte(bytearray(
+     <num>
+      ) work?
+     </num>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-are-the-and-operators-used-for">
+     16.8.2. What are the ‘&amp;’ and ‘|’ operators used for?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-do-you-mean-by-ones-compliment">
+     16.8.3. What do you mean by “ones compliment”?
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -671,6 +691,26 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#questions">
    16.8. Questions
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-does-byte-bytearray-num-work">
+     16.8.1. How does byte(bytearray(
+     <num>
+      ) work?
+     </num>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-are-the-and-operators-used-for">
+     16.8.2. What are the ‘&amp;’ and ‘|’ operators used for?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-do-you-mean-by-ones-compliment">
+     16.8.3. What do you mean by “ones compliment”?
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -1040,6 +1080,24 @@ in the <code class="docutils literal notranslate"><span class="pre">open</span><
 </section>
 <section id="questions">
 <h2><span class="section-number">16.8. </span>Questions<a class="headerlink" href="#questions" title="Permalink to this headline">#</a></h2>
+<section id="how-does-byte-bytearray-num-work">
+<h3><span class="section-number">16.8.1. </span>How does byte(bytearray(<num>) work?<a class="headerlink" href="#how-does-byte-bytearray-num-work" title="Permalink to this headline">#</a></h3>
+<p>It casts it to a bytearray then a bytes object. <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#binary-sequence-types-bytes-bytearray-memoryview">see the docs</a></p>
+</section>
+<section id="what-are-the-and-operators-used-for">
+<h3><span class="section-number">16.8.2. </span>What are the ‘&amp;’ and ‘|’ operators used for?<a class="headerlink" href="#what-are-the-and-operators-used-for" title="Permalink to this headline">#</a></h3>
+<p>They’re occasionally used for calculating things if highly compressed, otherwise they are used</p>
+</section>
+<section id="what-do-you-mean-by-ones-compliment">
+<h3><span class="section-number">16.8.3. </span>What do you mean by “ones compliment”?<a class="headerlink" href="#what-do-you-mean-by-ones-compliment" title="Permalink to this headline">#</a></h3>
+<p>This is ont type of representation for negative numbers in binary.  In ones complement, we flip all of the bits.  The first bit is always the indicator for a negative or positive number.  So, if we want to represent negative thirteen in eight bits we would start with thirteen: 00001101 then flip all fo the bits to get 11110010. If we were to read this number, we would know that this is a negative number because the first digit is a 1, so to figure out the value, we would flip all of the bits back and get 00001101.</p>
+<p>In any notation where the first bit is the sign, the highest number we can represent is reduce in favor of representing both positive and negative numbers.  That is, if we drop to four bits instead of being able to have 1111 be the highest number: 15 and 0000 be the lowest number: 0. The highest number would be 0111 = 7, and the lowest will be 1000 = -7.</p>
+<p>Two’s complement flips the bits and adds one.  This is more commonly used because we can represent a large range of numbers.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Comparing these is a good deeper Exploration</p>
+</div>
+</section>
 </section>
 </section>
 

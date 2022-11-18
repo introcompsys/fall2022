@@ -699,21 +699,41 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#do-we-eventually-switch-our-computers-to-use-more-than-64-bits">
-     20.9.1. Do we eventually switch our computers to use more than 64 bits?
+    <a class="reference internal nav-link" href="#what-is-an-l1-and-l2-cache">
+     20.9.1. What is an L1 and L2 cache?
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#are-certain-gates-more-commonly-used-in-cpu-design">
-     20.9.2. Are certain gates more commonly used in CPU design?
+    <a class="reference internal nav-link" href="#what-are-the-pc-mar-mdr-etc-and-what-do-they-do">
+     20.9.2. What are the PC, MAR, MDR, etc. and what do they do
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#how-like-literally-how-is-even-remotely-possible-to-assemble-modern-day-cpus-and-the-size-and-scale-they-are">
-     20.9.3. How like literally how is even remotely possible to assemble modern day cpus and the size and scale they are
+    <a class="reference internal nav-link" href="#how-does-a-motherboard-work-with-all-of-these">
+     20.9.3. how does a motherboard work with all of these
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#when-defining-a-computer-is-it-best-to-define-the-most-current-model-of-a-computer-or-how-everything-functions-bare-bones">
+     20.9.4. When defining a computer, is it best to define the most current model of a computer? Or how everything functions bare bones?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-do-quantum-computer-logic-gates-differ-from-what-we-use-now-exactly">
+     20.9.5. How do Quantum computer logic gates differ from what we use now exactly
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   20.10. Prepare for Next Class
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   20.11. More Practice
+  </a>
  </li>
 </ul>
 
@@ -814,21 +834,41 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#do-we-eventually-switch-our-computers-to-use-more-than-64-bits">
-     20.9.1. Do we eventually switch our computers to use more than 64 bits?
+    <a class="reference internal nav-link" href="#what-is-an-l1-and-l2-cache">
+     20.9.1. What is an L1 and L2 cache?
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#are-certain-gates-more-commonly-used-in-cpu-design">
-     20.9.2. Are certain gates more commonly used in CPU design?
+    <a class="reference internal nav-link" href="#what-are-the-pc-mar-mdr-etc-and-what-do-they-do">
+     20.9.2. What are the PC, MAR, MDR, etc. and what do they do
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#how-like-literally-how-is-even-remotely-possible-to-assemble-modern-day-cpus-and-the-size-and-scale-they-are">
-     20.9.3. How like literally how is even remotely possible to assemble modern day cpus and the size and scale they are
+    <a class="reference internal nav-link" href="#how-does-a-motherboard-work-with-all-of-these">
+     20.9.3. how does a motherboard work with all of these
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#when-defining-a-computer-is-it-best-to-define-the-most-current-model-of-a-computer-or-how-everything-functions-bare-bones">
+     20.9.4. When defining a computer, is it best to define the most current model of a computer? Or how everything functions bare bones?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-do-quantum-computer-logic-gates-differ-from-what-we-use-now-exactly">
+     20.9.5. How do Quantum computer logic gates differ from what we use now exactly
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   20.10. Prepare for Next Class
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   20.11. More Practice
+  </a>
  </li>
 </ul>
 
@@ -1049,27 +1089,54 @@ at a Confrence at Dartmouth in Hanover New Hampshire and he use a telegraph to d
 </section>
 <section id="questions-after-class">
 <h2><span class="section-number">20.9. </span>Questions After Class<a class="headerlink" href="#questions-after-class" title="Permalink to this headline">#</a></h2>
-<section id="do-we-eventually-switch-our-computers-to-use-more-than-64-bits">
-<h3><span class="section-number">20.9.1. </span>Do we eventually switch our computers to use more than 64 bits?<a class="headerlink" href="#do-we-eventually-switch-our-computers-to-use-more-than-64-bits" title="Permalink to this headline">#</a></h3>
-<div class="toggle docutils container">
-<p>We really get just about all of the precision we need out of 64 bits and creating registers, ALUs, buses, etc with more than that is more expensive and slower, so mostly there seems to be no need, for general purpose computing.</p>
-<p>Switching from 32 to 64 was important not only for precise calculations because we can use memory tricks to circumvent that anyway, but for the ALU to participate in addressing memory.  With 32 bit registers we can only express 2^32 addresses for the RAM, so we can only access 4Gibibytes or 3.8GB RAM (we’ll cover this translations later), with 64 bit registers we can address 2^64= 2^32*2^32 so we squared the amount of memory we can address this is 16 Exibbytes or a little bit fewer Exabytes, which is far more than we need for regular computing, while more than 4GB of RAM is quite desirable for everyday use.</p>
-<p>So, it’s really that the extra cost provides no realizable benefits, more than the absolute cost.</p>
+<section id="what-is-an-l1-and-l2-cache">
+<h3><span class="section-number">20.9.1. </span>What is an L1 and L2 cache?<a class="headerlink" href="#what-is-an-l1-and-l2-cache" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="what-are-the-pc-mar-mdr-etc-and-what-do-they-do">
+<h3><span class="section-number">20.9.2. </span>What are the PC, MAR, MDR, etc. and what do they do<a class="headerlink" href="#what-are-the-pc-mar-mdr-etc-and-what-do-they-do" title="Permalink to this headline">#</a></h3>
+<p>They are various registers that each have a specific role.  Learning all of these these in more detail is a good Deeper Exploration or a single one is in more practice.</p>
+</section>
+<section id="how-does-a-motherboard-work-with-all-of-these">
+<h3><span class="section-number">20.9.3. </span>how does a motherboard work with all of these<a class="headerlink" href="#how-does-a-motherboard-work-with-all-of-these" title="Permalink to this headline">#</a></h3>
+<p>A motherboard contains all most of those components.  This is also a good Deeper explroation.</p>
+</section>
+<section id="when-defining-a-computer-is-it-best-to-define-the-most-current-model-of-a-computer-or-how-everything-functions-bare-bones">
+<h3><span class="section-number">20.9.4. </span>When defining a computer, is it best to define the most current model of a computer? Or how everything functions bare bones?<a class="headerlink" href="#when-defining-a-computer-is-it-best-to-define-the-most-current-model-of-a-computer-or-how-everything-functions-bare-bones" title="Permalink to this headline">#</a></h3>
+<p>What definition dependsd on the context.  If you are talking to a child who is trying to learn basic typing they need to know different things than a teenager trying to choose what type of comptuer to bring to college, which is different than the model you need to keep in mind when you’re working in a high level language, which is different than what you need when you are writing drivers.</p>
+</section>
+<section id="how-do-quantum-computer-logic-gates-differ-from-what-we-use-now-exactly">
+<h3><span class="section-number">20.9.5. </span>How do Quantum computer logic gates differ from what we use now exactly<a class="headerlink" href="#how-do-quantum-computer-logic-gates-differ-from-what-we-use-now-exactly" title="Permalink to this headline">#</a></h3>
+<p>Quantum computers operate on a fundamentally different object, instead of bits they have <a class="reference external" href="https://quantum-computing.ibm.com/composer/docs/iqx/guide/the-qubit">qubits</a>.  There represent, essetially some uncertainty, or randomness in the behavior, so then there are different operations needed.</p>
+<p>URI has a <a class="reference external" href="https://web.uri.edu/physics/quantum/">MS in Quantum Computing in the Physics Dept</a></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>## Review today&#39;s class
+
+```{include} ../_review/2022-11-16.md
+</pre></div>
 </div>
 </section>
-<section id="are-certain-gates-more-commonly-used-in-cpu-design">
-<h3><span class="section-number">20.9.2. </span>Are certain gates more commonly used in CPU design?<a class="headerlink" href="#are-certain-gates-more-commonly-used-in-cpu-design" title="Permalink to this headline">#</a></h3>
-<div class="toggle docutils container">
-<p>See the exercise from the last class, but yes!</p>
+</section>
+<section id="id1">
+<h2><span class="section-number">20.10. </span>Prepare for Next Class<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<ol class="simple" id="index-0">
+<li><p>Read about <a class="reference external" href="https://cacm.acm.org/opinion/articles/259395-systems-abstractions/fulltext">systems abstractions</a> in CACM. Answer reflection questions below:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>1. How many of these are familiar/not?
+1. How has you undertanding of these changed during this course.
+1. Do you think you understand this article more now than you would have at the beginning of the semester
+1. Write 3 questions and their answers that could be a quiz to see if someone understood or had misconceptions about the abstractions in this article.
+</pre></div>
 </div>
+<ol class="simple">
+<li><p>Study the components of a computer system that we learned today from the diagrams. Bring questions to class</p></li>
+</ol>
 </section>
-<section id="how-like-literally-how-is-even-remotely-possible-to-assemble-modern-day-cpus-and-the-size-and-scale-they-are">
-<h3><span class="section-number">20.9.3. </span>How like literally how is even remotely possible to assemble modern day cpus and the size and scale they are<a class="headerlink" href="#how-like-literally-how-is-even-remotely-possible-to-assemble-modern-day-cpus-and-the-size-and-scale-they-are" title="Permalink to this headline">#</a></h3>
-<div class="toggle docutils container">
-<p>Computers got smaller by better physics that allows for smaller implementations of the gates. This is a good topic for a deeper exploration.</p>
-</div>
-</section>
-</section>
+<section id="id2">
+<h2><span class="section-number">20.11. </span>More Practice<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
+<ol class="simple">
+<li><p>Pick a component that is in the more detailed von Neumann that we did not discuss in detail and contribute to your group repo. Coordinate with your team so that each contribution is a different component.</p></li>
+<li><p>Map out what you know about computer hardware in some form of visual or outline in <code class="docutils literal notranslate"><span class="pre">hardwaremap.md</span></code> and bring three questions to class.</p></li>
+</ol>
+<span class="target" id="index-1"></span></section>
 </section>
 
     <script type="text/x-thebe-config">

@@ -16,5 +16,7 @@ octal.md
 assemblycompare.md
 overflow.md`
 readingbytes.md
+floatexpt.md
 nandhalf.md
 addertypes.md
+hardwaremap.md
