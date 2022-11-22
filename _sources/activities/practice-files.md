@@ -20,3 +20,5 @@ floatexpt.md
 nandhalf.md
 addertypes.md
 hardwaremap.md
+systeminteraction.md
+whymultithread.md

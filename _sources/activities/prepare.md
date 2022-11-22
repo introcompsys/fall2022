@@ -206,10 +206,21 @@ Activities:
 ```{include} ../_prepare/2022-11-14.md
 ```
 
+
+
 ## 2022-11-16
 
 [related notes](../notes/2022-11-16)
 
 Activities:
 ```{include} ../_prepare/2022-11-16.md
+```
+
+
+## 2022-11-21
+
+[related notes](../notes/2022-11-21)
+
+Activities:
+```{include} ../_prepare/2022-11-21.md
 ```
