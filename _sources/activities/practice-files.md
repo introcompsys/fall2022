@@ -22,3 +22,4 @@ addertypes.md
 hardwaremap.md
 systeminteraction.md
 whymultithread.md
+favoriteide.md

@@ -16,3 +16,5 @@ overflow.md
 cdouble.md
 multiplication.md
 threaded.md
+frequentide.md
+newide.md
