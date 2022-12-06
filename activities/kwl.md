@@ -93,7 +93,7 @@ After your KWL repo is a jupyterbook, you may want to move your chart into a cha
 
 
 ```{code-cell} ipython3
-:tags: ["hide-input"]
+:tags: ["remove-input"]
 
 import pandas as pd
 
@@ -118,6 +118,13 @@ prac_df = pd.DataFrame([[date_file[0][:10],date_file[1]] for date_file in [a.spl
                       columns = ['date','file'])
 prac_df['type'] = 'practice'
 
-check_df = pd.concat([rev_df,prep_df,prac_df])
-check_df.sort_values(by='date')
+check_df = pd.concat([rev_df,prep_df,prac_df]).reset_index().drop(columns=['index'])
+
+
+
+grade_free_dates = ['2022-09-14','2022-09-19','2022-09-21']
+gz = {True:'grade-free',False:'graded'}
+zoner = lambda d: gz[d in grade_free_dates]
+check_df['zone'] = check_df['date'].apply(zoner)
+check_df.sort_values(by='date').style.hide(axis="index")
 ```
