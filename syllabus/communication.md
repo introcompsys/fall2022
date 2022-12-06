@@ -36,8 +36,8 @@ TBA
 ```{code-cell}
 :tags: ["remove-input"]
 
-help_df.style.hide_index()
-``` 
+help_df.style.hide(axis="index")
+```
 
 <!--
 Online office hours locations are linked in the #help channel on slack
