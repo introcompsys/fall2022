@@ -445,6 +445,35 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/introcompsys/fall2022/main?urlpath=tree/activities/kwl.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -529,6 +558,23 @@ title="Edit this page"
   <div class="menu-dropdown__content">
     <ul>
       <li>
+        <a href="../_sources/activities/kwl.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download notebook file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
         <a href="../_sources/activities/kwl.md"
    class="headerbtn"
    data-toggle="tooltip"
@@ -602,23 +648,6 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#required-files">
    Required Files
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#prepare">
-     Prepare
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#review">
-     Review
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#more-practice">
-     More Practice
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -653,23 +682,6 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#required-files">
    Required Files
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#prepare">
-     Prepare
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#review">
-     Review
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#more-practice">
-     More Practice
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -755,346 +767,354 @@ After your KWL repo is a jupyterbook, you may want to move your chart into a cha
 </section>
 <section id="required-files">
 <h2>Required Files<a class="headerlink" href="#required-files" title="Permalink to this headline">#</a></h2>
-<section id="prepare">
-<h3>Prepare<a class="headerlink" href="#prepare" title="Permalink to this headline">#</a></h3>
-<p><a class="reference external" href="http://gitreflection.md">gitreflection.md</a>
-<a class="reference external" href="http://gitunderstanding.md">gitunderstanding.md</a>
-<a class="reference external" href="http://idethoughts.md">idethoughts.md</a>
-<a class="reference external" href="http://networking.md">networking.md</a>
-<a class="reference external" href="http://operators.md">operators.md</a>
-<a class="reference external" href="http://fractionalbinary.md">fractionalbinary.md</a></p>
-<p><a class="reference external" href="http://gates.md">gates.md</a>
-<a class="reference external" href="http://systemsabstractions.md">systemsabstractions.md</a></p>
-</section>
-<section id="review">
-<h3>Review<a class="headerlink" href="#review" title="Permalink to this headline">#</a></h3>
-<p><a class="reference external" href="http://terminal.md">terminal.md</a>
-<a class="reference external" href="http://branches.md">branches.md</a>
-<a class="reference external" href="http://abstraction.md">abstraction.md</a>
-gitlog.txt
-<a class="reference external" href="http://gitstory.md">gitstory.md</a>
-<a class="reference external" href="http://gitplumbingreview.md">gitplumbingreview.md</a>
-<a class="reference external" href="http://numbers.md">numbers.md</a>
-<a class="reference external" href="http://hexpeak.md">hexpeak.md</a>
-test_repo_map.md
-group_contributions.md
-<a class="reference external" href="http://checker.sh">checker.sh</a>
-<a class="reference external" href="http://gcctips.md">gcctips.md</a>
-<a class="reference external" href="http://bitwise.md">bitwise.md</a>
-<a class="reference external" href="http://readingbytes.md">readingbytes.md</a>
-<a class="reference external" href="http://overflow.md">overflow.md</a>
-<a class="reference external" href="http://cdouble.md">cdouble.md</a>
-<a class="reference external" href="http://multiplication.md">multiplication.md</a>
-<a class="reference external" href="http://threaded.md">threaded.md</a>
-<a class="reference external" href="http://frequentide.md">frequentide.md</a>
-<a class="reference external" href="http://newide.md">newide.md</a></p>
-</section>
-<section id="more-practice">
-<h3>More Practice<a class="headerlink" href="#more-practice" title="Permalink to this headline">#</a></h3>
-<p><a class="reference external" href="http://gitoffline.md">gitoffline.md</a>
-<a class="reference external" href="http://abstraction.md">abstraction.md</a>
-<a class="reference external" href="http://assemblyexplore.md">assemblyexplore.md</a>
-<a class="reference external" href="http://worflows.md">worflows.md</a>
-<a class="reference external" href="http://offlineissue.md">offlineissue.md</a>
-<a class="reference external" href="http://gitplumbingdetail.md">gitplumbingdetail.md</a>
-<a class="reference external" href="http://numbers.md">numbers.md</a>
-<a class="reference external" href="http://gitplumbingdetail.md">gitplumbingdetail.md</a>
-test_repo_map.md
-<a class="reference external" href="http://checker.sh">checker.sh</a>
-<a class="reference external" href="http://gathertasks.sh">gathertasks.sh</a>
-<a class="reference external" href="http://actions.md">actions.md</a>
-<a class="reference external" href="http://ssh.md">ssh.md</a>
-<a class="reference external" href="http://hpc.md">hpc.md</a>
-<a class="reference external" href="http://octal.md">octal.md</a>
-<a class="reference external" href="http://assemblycompare.md">assemblycompare.md</a>
-overflow.md`
-<a class="reference external" href="http://readingbytes.md">readingbytes.md</a>
-<a class="reference external" href="http://floatexpt.md">floatexpt.md</a>
-<a class="reference external" href="http://nandhalf.md">nandhalf.md</a>
-<a class="reference external" href="http://addertypes.md">addertypes.md</a>
-<a class="reference external" href="http://hardwaremap.md">hardwaremap.md</a>
-<a class="reference external" href="http://systeminteraction.md">systeminteraction.md</a>
-<a class="reference external" href="http://whymultithread.md">whymultithread.md</a>
-<a class="reference external" href="http://favoriteide.md">favoriteide.md</a>
-<a class="reference external" href="http://newlanguage.md">newlanguage.md</a>
-<a class="reference external" href="http://languagelearning.md">languagelearning.md</a></p>
-<!--
-## Added Files
-
-```{list-table}
-:header-rows: 1
-
-* - file
-  - content (link to instructions)
-  - type (prepare/practice)
-  - zone
-* - README.md
-  - the chart, (or usage)
-  - default
-  - all
-  - 2022-01-25
-* -  gitoffline.md
-  - [reflection (extra exercises, add & commit out of order)](../notes/2022-02-01)
-  - prepare (and practice)
-  - grade free
-  - 2022-02-01
-* -  terminal.md
-  - [reflection](../notes/2022-02-03)
-  - prepare
-  - grade free
-  - 2022-02-03
-* -  software.md
-  - [examine a software project](../notes/2022-02-03)
-  - prepare
-  - grade free
-  - 2022-02-03
-* -  abstraction.md
-  - [how you think about abstraction](../notes/2022-02-08) and [updates (and reconcilation)](../notes/2022-02-10)
-  - prepare (practice)
-  - grade free
-  - 2022-02-10
-* -  chart.md
-  - [your chart (from README)](../notes/2022-02-08)
-  - practice
-  - grade free
-  - 2022-02-08
-* -  reorg.md
-  - [ntoes/troubleshooting ](../notes/2022-02-08)
-  - practice
-  - grade free  
-  - 2022-02-08
-* -  stdinouterr.md
-  - [ echo and redirect practice](../notes/2022-02-08)
-  - practice
-  - grade free
-  - 2022-02-08  
-* - hardwaresurvey.md
-  - [challenges & reminders (more exercises)](../notes/2022-02-10) [reflection](../notes/2022-02-10)
-  - prepare and (practice)
-  - grade free
-  - 2022-02-10
-* - gitlog.txt
-  - [git log output](../notes/2022-02-15)
-  - prepare
-  - graded
-  - 2022-02-15
-* - workflows.md
-  - [compare git workflows](../notes/2022-02-15)
-  - practice
-  - graded
-  - 2022-02-15
-* -  gitplumbing.md
-  - [map plumbing to porcelain (and memory device)](../notes/2022-02-17)
-  - prepare (and practice)
-  - graded
-  - 2022-02-17
-* -  gitunderstanding.md
-  - [how your undersanding has changed](../notes/2022-02-17)
-  - prepare
-  - graded
-  - 2022-02-17
-* -  idethoughts.md
-  - [notes on ide usage](../notes/2022-02-17)
-  - prepare
-  - graded
-  - 2022-02-17
-* -  numbers.md
-  - [usage of nondecimal number systems (and number conversions)](../notes/2022-02-22)
-  - prepare
-  - graded
-  - 2022-02-22
-* -  hexspeak.md
-  - [summarize & generate](../notes/2022-02-22)
-  - prepare
-  - graded
-  - 2022-02-22
-* -  gitstory.md
-  - [tutorial of using git for a challenge](../notes/2022-02-24)
-  - prepare
-  - graded
-  - 2022-02-24
-* - gitstory2.md
-  - [tutorial of using git for a challenge](../notes/2022-02-24)
-  - practice
-  - graded
-  - 2022-02-24
-* -  donotcommit.md
-  - [tutorial of using git for a challenge](../notes/2022-02-24)
-  - practice
-  - graded
-  - 2022-02-24
-* -  jupyterbooktroubleshooting.md
-  - [problems with jupyterbook](../notes/2022-03-01)
-  - prepare
-  - graded
-  - 2022-03-01
-* - templating.md
-  - [how template based engines work](../notes/2022-03-01)
-  - prepare
-  - graded
-  - 2022-03-01
-* - docs.md
-  - [documentation ecosystem of a language other than python](../notes/2022-03-01)
-  - prepare
-  - graded
-  - 2022-03-01
-* - octal.md
-  - [pracitce with octal numbers in file permissions](../notes/2022-03-08)
-  - practice
-  - graded
-  - 2022-03-08
-* - hpc.md
-  - [reflect on HPC systems](../notes/2022-03-08)
-  - practice
-  - graded
-  - 2022-03-08
-* - ide.md
-  - [featrures in most used ide](../notes/2022-03-24)
-  - prepare
-  - graded
-  - 2022-03-24
-* - languages.md
-  - [compare two languages](../notes/2022-03-24)
-  - prepare
-  - graded
-  - 2022-03-24
-* - favoriteide.md
-  - [compare three ides](../notes/2022-03-24)
-  - practice
-  - graded
-  - 2022-03-24
-* - `gcctips.md`
-  - [c compilation notes](../notes/2022-03-31)
-  - prepare
-  - graded
-  - 2022-03-31
-* - `operators.md`
-  - [operators in programming and math](../notes/2022-03-31)
-  - prepare
-  - graded
-  - 2022-03-31
-* - `bitwise.md`
-  - [practice with bitwise operations](../notes/2022-04-05)
-  - prepare
-  - graded
-  - 2022-04-05
-* - `readingbytes.md`
-  - [review how reading bytes works](../notes/2022-04-05)
-  - prepare
-  - graded
-  - 2022-04-05
-* - `overflow.md`
-  - [compare integer overflow](../notes/2022-04-05)
-  - prepare
-  - graded
-  - 2022-04-05
-* - `overflow.md`
-  - [compare integer overflow](../notes/2022-04-05)
-  - practice
-  - graded
-  - 2022-04-05
-* - `cdouble.md`
-  - [c program with double comparison](../notes/2022-04-07)
-  - prepare
-  - graded
-  - 2022-04-07
-* - `readingbytes.md`
-  - [c program with double comparison](../notes/2022-04-07)
-  - practice
-  - graded
-  - 2022-04-07
-* - `floatexp.md`
-  - [c program with double comparison](../notes/2022-04-07)
-  - practice
-  - graded
-  - 2022-04-07
-* - `multiplication.md`
-  - [interpret mulitplication as addition](../notes/2022-04-12)
-  - prepare
-  - graded
-  - 2022-04-12
-* - `addertypes.md`
-  - [compare adders](../notes/2022-04-12)
-  - practice
-  - graded
-  - 2022-04-12
-* - `systemsabstractions.md`
-  - [reflect on an article](../notes/2022-04-14)
-  - prepare
-  - graded
-  - 2022-04-14
-* - `history-<event>.md`
-  - [summarize and evaluate an aspect of computer history](../notes/2022-04-14)
-  - practice
-  - graded
-  - 2022-04-14
-* - `hardwaremap.md`
-  - [visualize current hardware knowledge](../notes/2022-04-14)
-  - practice
-  - graded
-  - 2022-04-14
-* - `systemsprogramming.md`
-  - [learn about systemsvs application programming](../notes/2022-04-19)
-  - prepare
-  - graded
-  - 2022-04-19
-* - `timing.md`
-  - [experiment with timing of operations](../notes/2022-04-19)
-  - practice
-  - graded
-  - 2022-04-19
-* - `kernelproc.md`
-  - [check your processes](../notes/2022-04-19)
-  - practice
-  - graded
-  - 2022-04-19
-* - `singlevmultithread.md`
-  - [compare single vs multi threaded program](../notes/2022-04-21)
-  - prepare
-  - graded
-  - 2022-04-21
-* - `systeminteraction.md`
-  - [compare systems libraries in multiple languages](../notes/2022-04-21)
-  - practice
-  - graded
-  - 2022-04-21
-* - `whymultithread.md`
-  - [learn more applications of threads](../notes/2022-04-21)
-  - practice
-  - graded
-  - 2022-04-21
-* - `review.md`
-  - review questions from class [April 26](../notes/2022-04-26) AND [April 28](../notes/2022-04-28)
-  - prepare
-  - graded
-  - 2022-04-26
-* - `filesystem.md`
-  - [compare and contrast the two file systems we saw in class](../notes/2022-04-26)
-  - practice
-  - graded
-  - 2022-04-26
-* - `whypointers.md`
-  - [explain why the concept of pointers is important with examples](../notes/2022-04-26)
-  - practice
-  - graded
-  - 2022-04-26
-* - `skillup.md`
-  - [Reflect on how thise course impacts programming/debugging skills](../notes/2022-04-26)
-  - practice
-  - graded
-  - 2022-04-26
-* - `surprisingfacts.md`
-  - [explain contradictions we saw](../notes/2022-04-28)
-  - practice
-  - graded
-  - 2022-04-28
-* - `projectplanning.md`
-  - [compare languages and git workflows](../notes/2022-04-28)
-  - practice
-  - graded
-  - 2022-04-28
-``` -->
-</section>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+</style>
+<table id="T_d1aa8">
+  <thead>
+    <tr>
+      <th id="T_d1aa8_level0_col0" class="col_heading level0 col0" >date</th>
+      <th id="T_d1aa8_level0_col1" class="col_heading level0 col1" >file</th>
+      <th id="T_d1aa8_level0_col2" class="col_heading level0 col2" >type</th>
+      <th id="T_d1aa8_level0_col3" class="col_heading level0 col3" >zone</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td id="T_d1aa8_row0_col0" class="data row0 col0" >_practice/</td>
+      <td id="T_d1aa8_row0_col1" class="data row0 col1" >languagelearning.md</td>
+      <td id="T_d1aa8_row0_col2" class="data row0 col2" >practice</td>
+      <td id="T_d1aa8_row0_col3" class="data row0 col3" >graded</td>
+    </tr>
+    <tr>
+      <td id="T_d1aa8_row1_col0" class="data row1 col0" >_practice/</td>
+      <td id="T_d1aa8_row1_col1" class="data row1 col1" >abstraction.md</td>
+      <td id="T_d1aa8_row1_col2" class="data row1 col2" >practice</td>
+      <td id="T_d1aa8_row1_col3" class="data row1 col3" >graded</td>
+    </tr>
+    <tr>
+      <td id="T_d1aa8_row2_col0" class="data row2 col0" >_practice/</td>
+      <td id="T_d1aa8_row2_col1" class="data row2 col1" >assemblyexplore.md</td>
+      <td id="T_d1aa8_row2_col2" class="data row2 col2" >practice</td>
+      <td id="T_d1aa8_row2_col3" class="data row2 col3" >graded</td>
+    </tr>
+    <tr>
+      <td id="T_d1aa8_row3_col0" class="data row3 col0" >_practice/</td>
+      <td id="T_d1aa8_row3_col1" class="data row3 col1" >worflows.md</td>
+      <td id="T_d1aa8_row3_col2" class="data row3 col2" >practice</td>
+      <td id="T_d1aa8_row3_col3" class="data row3 col3" >graded</td>
+    </tr>
+    <tr>
+      <td id="T_d1aa8_row4_col0" class="data row4 col0" >_practice/</td>
+      <td id="T_d1aa8_row4_col1" class="data row4 col1" >offlineissue.md</td>
+      <td id="T_d1aa8_row4_col2" class="data row4 col2" >practice</td>
+      <td id="T_d1aa8_row4_col3" class="data row4 col3" >graded</td>
+    </tr>
+    <tr>
+      <td id="T_d1aa8_row5_col0" class="data row5 col0" >_practice/</td>
+      <td id="T_d1aa8_row5_col1" class="data row5 col1" >gitplumbingdetail.md</td>
+      <td id="T_d1aa8_row5_col2" class="data row5 col2" >practice</td>
+      <td id="T_d1aa8_row5_col3" class="data row5 col3" >graded</td>
+    </tr>
+    <tr>
+      <td id="T_d1aa8_row6_col0" class="data row6 col0" >_practice/</td>
+      <td id="T_d1aa8_row6_col1" class="data row6 col1" >numbers.md</td>
+      <td id="T_d1aa8_row6_col2" class="data row6 col2" >practice</td>
+      <td id="T_d1aa8_row6_col3" class="data row6 col3" >graded</td>
+    </tr>
+    <tr>
+      <td id="T_d1aa8_row7_col0" class="data row7 col0" >_practice/</td>
+      <td id="T_d1aa8_row7_col1" class="data row7 col1" >gitplumbingdetail.md</td>
+      <td id="T_d1aa8_row7_col2" class="data row7 col2" >practice</td>
+      <td id="T_d1aa8_row7_col3" class="data row7 col3" >graded</td>
+    </tr>
+    <tr>
+      <td id="T_d1aa8_row8_col0" class="data row8 col0" >_practice/</td>
+      <td id="T_d1aa8_row8_col1" class="data row8 col1" >test_repo_map.md</td>
+      <td id="T_d1aa8_row8_col2" class="data row8 col2" >practice</td>
+      <td id="T_d1aa8_row8_col3" class="data row8 col3" >graded</td>
+    </tr>
+    <tr>
+      <td id="T_d1aa8_row9_col0" class="data row9 col0" >_practice/</td>
+      <td id="T_d1aa8_row9_col1" class="data row9 col1" >checker.sh</td>
+      <td id="T_d1aa8_row9_col2" class="data row9 col2" >practice</td>
+      <td id="T_d1aa8_row9_col3" class="data row9 col3" >graded</td>
+    </tr>
+    <tr>
+      <td id="T_d1aa8_row10_col0" class="data row10 col0" >_practice/</td>
+      <td id="T_d1aa8_row10_col1" class="data row10 col1" >gathertasks.sh</td>
+      <td id="T_d1aa8_row10_col2" class="data row10 col2" >practice</td>
+      <td id="T_d1aa8_row10_col3" class="data row10 col3" >graded</td>
+    </tr>
+    <tr>
+      <td id="T_d1aa8_row11_col0" class="data row11 col0" >_practice/</td>
+      <td id="T_d1aa8_row11_col1" class="data row11 col1" >actions.md</td>
+      <td id="T_d1aa8_row11_col2" class="data row11 col2" >practice</td>
+      <td id="T_d1aa8_row11_col3" class="data row11 col3" >graded</td>
+    </tr>
+    <tr>
+      <td id="T_d1aa8_row12_col0" class="data row12 col0" >_practice/</td>
+      <td id="T_d1aa8_row12_col1" class="data row12 col1" >gitoffline.md</td>
+      <td id="T_d1aa8_row12_col2" class="data row12 col2" >practice</td>
+      <td id="T_d1aa8_row12_col3" class="data row12 col3" >graded</td>
+    </tr>
+    <tr>
+      <td id="T_d1aa8_row13_col0" class="data row13 col0" >_practice/</td>
+      <td id="T_d1aa8_row13_col1" class="data row13 col1" >ssh.md</td>
+      <td id="T_d1aa8_row13_col2" class="data row13 col2" >practice</td>
+      <td id="T_d1aa8_row13_col3" class="data row13 col3" >graded</td>
+    </tr>
+    <tr>
+      <td id="T_d1aa8_row14_col0" class="data row14 col0" >_practice/</td>
+      <td id="T_d1aa8_row14_col1" class="data row14 col1" >octal.md</td>
+      <td id="T_d1aa8_row14_col2" class="data row14 col2" >practice</td>
+      <td id="T_d1aa8_row14_col3" class="data row14 col3" >graded</td>
+    </tr>
+    <tr>
+      <td id="T_d1aa8_row15_col0" class="data row15 col0" >_practice/</td>
+      <td id="T_d1aa8_row15_col1" class="data row15 col1" >assemblycompare.md</td>
+      <td id="T_d1aa8_row15_col2" class="data row15 col2" >practice</td>
+      <td id="T_d1aa8_row15_col3" class="data row15 col3" >graded</td>
+    </tr>
+    <tr>
+      <td id="T_d1aa8_row16_col0" class="data row16 col0" >_practice/</td>
+      <td id="T_d1aa8_row16_col1" class="data row16 col1" >overflow.md`</td>
+      <td id="T_d1aa8_row16_col2" class="data row16 col2" >practice</td>
+      <td id="T_d1aa8_row16_col3" class="data row16 col3" >graded</td>
+    </tr>
+    <tr>
+      <td id="T_d1aa8_row17_col0" class="data row17 col0" >_practice/</td>
+      <td id="T_d1aa8_row17_col1" class="data row17 col1" >readingbytes.md</td>
+      <td id="T_d1aa8_row17_col2" class="data row17 col2" >practice</td>
+      <td id="T_d1aa8_row17_col3" class="data row17 col3" >graded</td>
+    </tr>
+    <tr>
+      <td id="T_d1aa8_row18_col0" class="data row18 col0" >_practice/</td>
+      <td id="T_d1aa8_row18_col1" class="data row18 col1" >floatexpt.md</td>
+      <td id="T_d1aa8_row18_col2" class="data row18 col2" >practice</td>
+      <td id="T_d1aa8_row18_col3" class="data row18 col3" >graded</td>
+    </tr>
+    <tr>
+      <td id="T_d1aa8_row19_col0" class="data row19 col0" >_practice/</td>
+      <td id="T_d1aa8_row19_col1" class="data row19 col1" >nandhalf.md</td>
+      <td id="T_d1aa8_row19_col2" class="data row19 col2" >practice</td>
+      <td id="T_d1aa8_row19_col3" class="data row19 col3" >graded</td>
+    </tr>
+    <tr>
+      <td id="T_d1aa8_row20_col0" class="data row20 col0" >_practice/</td>
+      <td id="T_d1aa8_row20_col1" class="data row20 col1" >addertypes.md</td>
+      <td id="T_d1aa8_row20_col2" class="data row20 col2" >practice</td>
+      <td id="T_d1aa8_row20_col3" class="data row20 col3" >graded</td>
+    </tr>
+    <tr>
+      <td id="T_d1aa8_row21_col0" class="data row21 col0" >_practice/</td>
+      <td id="T_d1aa8_row21_col1" class="data row21 col1" >hardwaremap.md</td>
+      <td id="T_d1aa8_row21_col2" class="data row21 col2" >practice</td>
+      <td id="T_d1aa8_row21_col3" class="data row21 col3" >graded</td>
+    </tr>
+    <tr>
+      <td id="T_d1aa8_row22_col0" class="data row22 col0" >_practice/</td>
+      <td id="T_d1aa8_row22_col1" class="data row22 col1" >systeminteraction.md</td>
+      <td id="T_d1aa8_row22_col2" class="data row22 col2" >practice</td>
+      <td id="T_d1aa8_row22_col3" class="data row22 col3" >graded</td>
+    </tr>
+    <tr>
+      <td id="T_d1aa8_row23_col0" class="data row23 col0" >_practice/</td>
+      <td id="T_d1aa8_row23_col1" class="data row23 col1" >whymultithread.md</td>
+      <td id="T_d1aa8_row23_col2" class="data row23 col2" >practice</td>
+      <td id="T_d1aa8_row23_col3" class="data row23 col3" >graded</td>
+    </tr>
+    <tr>
+      <td id="T_d1aa8_row24_col0" class="data row24 col0" >_practice/</td>
+      <td id="T_d1aa8_row24_col1" class="data row24 col1" >favoriteide.md</td>
+      <td id="T_d1aa8_row24_col2" class="data row24 col2" >practice</td>
+      <td id="T_d1aa8_row24_col3" class="data row24 col3" >graded</td>
+    </tr>
+    <tr>
+      <td id="T_d1aa8_row25_col0" class="data row25 col0" >_practice/</td>
+      <td id="T_d1aa8_row25_col1" class="data row25 col1" >hpc.md</td>
+      <td id="T_d1aa8_row25_col2" class="data row25 col2" >practice</td>
+      <td id="T_d1aa8_row25_col3" class="data row25 col3" >graded</td>
+    </tr>
+    <tr>
+      <td id="T_d1aa8_row26_col0" class="data row26 col0" >_practice/</td>
+      <td id="T_d1aa8_row26_col1" class="data row26 col1" >newlanguage.md</td>
+      <td id="T_d1aa8_row26_col2" class="data row26 col2" >practice</td>
+      <td id="T_d1aa8_row26_col3" class="data row26 col3" >graded</td>
+    </tr>
+    <tr>
+      <td id="T_d1aa8_row27_col0" class="data row27 col0" >_prepare/2</td>
+      <td id="T_d1aa8_row27_col1" class="data row27 col1" >systemsabstractions.md</td>
+      <td id="T_d1aa8_row27_col2" class="data row27 col2" >prepare</td>
+      <td id="T_d1aa8_row27_col3" class="data row27 col3" >graded</td>
+    </tr>
+    <tr>
+      <td id="T_d1aa8_row28_col0" class="data row28 col0" >_prepare/2</td>
+      <td id="T_d1aa8_row28_col1" class="data row28 col1" >fractionalbinary.md</td>
+      <td id="T_d1aa8_row28_col2" class="data row28 col2" >prepare</td>
+      <td id="T_d1aa8_row28_col3" class="data row28 col3" >graded</td>
+    </tr>
+    <tr>
+      <td id="T_d1aa8_row29_col0" class="data row29 col0" >_prepare/2</td>
+      <td id="T_d1aa8_row29_col1" class="data row29 col1" >operators.md</td>
+      <td id="T_d1aa8_row29_col2" class="data row29 col2" >prepare</td>
+      <td id="T_d1aa8_row29_col3" class="data row29 col3" >graded</td>
+    </tr>
+    <tr>
+      <td id="T_d1aa8_row30_col0" class="data row30 col0" >_prepare/2</td>
+      <td id="T_d1aa8_row30_col1" class="data row30 col1" >networking.md</td>
+      <td id="T_d1aa8_row30_col2" class="data row30 col2" >prepare</td>
+      <td id="T_d1aa8_row30_col3" class="data row30 col3" >graded</td>
+    </tr>
+    <tr>
+      <td id="T_d1aa8_row31_col0" class="data row31 col0" >_prepare/2</td>
+      <td id="T_d1aa8_row31_col1" class="data row31 col1" >idethoughts.md</td>
+      <td id="T_d1aa8_row31_col2" class="data row31 col2" >prepare</td>
+      <td id="T_d1aa8_row31_col3" class="data row31 col3" >graded</td>
+    </tr>
+    <tr>
+      <td id="T_d1aa8_row32_col0" class="data row32 col0" >_prepare/2</td>
+      <td id="T_d1aa8_row32_col1" class="data row32 col1" >gitunderstanding.md</td>
+      <td id="T_d1aa8_row32_col2" class="data row32 col2" >prepare</td>
+      <td id="T_d1aa8_row32_col3" class="data row32 col3" >graded</td>
+    </tr>
+    <tr>
+      <td id="T_d1aa8_row33_col0" class="data row33 col0" >_prepare/2</td>
+      <td id="T_d1aa8_row33_col1" class="data row33 col1" >gitreflection.md</td>
+      <td id="T_d1aa8_row33_col2" class="data row33 col2" >prepare</td>
+      <td id="T_d1aa8_row33_col3" class="data row33 col3" >graded</td>
+    </tr>
+    <tr>
+      <td id="T_d1aa8_row34_col0" class="data row34 col0" >_prepare/2</td>
+      <td id="T_d1aa8_row34_col1" class="data row34 col1" >gates.md</td>
+      <td id="T_d1aa8_row34_col2" class="data row34 col2" >prepare</td>
+      <td id="T_d1aa8_row34_col3" class="data row34 col3" >graded</td>
+    </tr>
+    <tr>
+      <td id="T_d1aa8_row35_col0" class="data row35 col0" >_review/20</td>
+      <td id="T_d1aa8_row35_col1" class="data row35 col1" >branches.md</td>
+      <td id="T_d1aa8_row35_col2" class="data row35 col2" >review</td>
+      <td id="T_d1aa8_row35_col3" class="data row35 col3" >graded</td>
+    </tr>
+    <tr>
+      <td id="T_d1aa8_row36_col0" class="data row36 col0" >_review/20</td>
+      <td id="T_d1aa8_row36_col1" class="data row36 col1" >abstraction.md</td>
+      <td id="T_d1aa8_row36_col2" class="data row36 col2" >review</td>
+      <td id="T_d1aa8_row36_col3" class="data row36 col3" >graded</td>
+    </tr>
+    <tr>
+      <td id="T_d1aa8_row37_col0" class="data row37 col0" >_review/20</td>
+      <td id="T_d1aa8_row37_col1" class="data row37 col1" >gitlog.txt</td>
+      <td id="T_d1aa8_row37_col2" class="data row37 col2" >review</td>
+      <td id="T_d1aa8_row37_col3" class="data row37 col3" >graded</td>
+    </tr>
+    <tr>
+      <td id="T_d1aa8_row38_col0" class="data row38 col0" >_review/20</td>
+      <td id="T_d1aa8_row38_col1" class="data row38 col1" >gitstory.md</td>
+      <td id="T_d1aa8_row38_col2" class="data row38 col2" >review</td>
+      <td id="T_d1aa8_row38_col3" class="data row38 col3" >graded</td>
+    </tr>
+    <tr>
+      <td id="T_d1aa8_row39_col0" class="data row39 col0" >_review/20</td>
+      <td id="T_d1aa8_row39_col1" class="data row39 col1" >gitplumbingreview.md</td>
+      <td id="T_d1aa8_row39_col2" class="data row39 col2" >review</td>
+      <td id="T_d1aa8_row39_col3" class="data row39 col3" >graded</td>
+    </tr>
+    <tr>
+      <td id="T_d1aa8_row40_col0" class="data row40 col0" >_review/20</td>
+      <td id="T_d1aa8_row40_col1" class="data row40 col1" >numbers.md</td>
+      <td id="T_d1aa8_row40_col2" class="data row40 col2" >review</td>
+      <td id="T_d1aa8_row40_col3" class="data row40 col3" >graded</td>
+    </tr>
+    <tr>
+      <td id="T_d1aa8_row41_col0" class="data row41 col0" >_review/20</td>
+      <td id="T_d1aa8_row41_col1" class="data row41 col1" >hexpeak.md</td>
+      <td id="T_d1aa8_row41_col2" class="data row41 col2" >review</td>
+      <td id="T_d1aa8_row41_col3" class="data row41 col3" >graded</td>
+    </tr>
+    <tr>
+      <td id="T_d1aa8_row42_col0" class="data row42 col0" >_review/20</td>
+      <td id="T_d1aa8_row42_col1" class="data row42 col1" >test_repo_map.md</td>
+      <td id="T_d1aa8_row42_col2" class="data row42 col2" >review</td>
+      <td id="T_d1aa8_row42_col3" class="data row42 col3" >graded</td>
+    </tr>
+    <tr>
+      <td id="T_d1aa8_row43_col0" class="data row43 col0" >_review/20</td>
+      <td id="T_d1aa8_row43_col1" class="data row43 col1" >group_contributions.md</td>
+      <td id="T_d1aa8_row43_col2" class="data row43 col2" >review</td>
+      <td id="T_d1aa8_row43_col3" class="data row43 col3" >graded</td>
+    </tr>
+    <tr>
+      <td id="T_d1aa8_row44_col0" class="data row44 col0" >_review/20</td>
+      <td id="T_d1aa8_row44_col1" class="data row44 col1" >bitwise.md</td>
+      <td id="T_d1aa8_row44_col2" class="data row44 col2" >review</td>
+      <td id="T_d1aa8_row44_col3" class="data row44 col3" >graded</td>
+    </tr>
+    <tr>
+      <td id="T_d1aa8_row45_col0" class="data row45 col0" >_review/20</td>
+      <td id="T_d1aa8_row45_col1" class="data row45 col1" >gcctips.md</td>
+      <td id="T_d1aa8_row45_col2" class="data row45 col2" >review</td>
+      <td id="T_d1aa8_row45_col3" class="data row45 col3" >graded</td>
+    </tr>
+    <tr>
+      <td id="T_d1aa8_row46_col0" class="data row46 col0" >_review/20</td>
+      <td id="T_d1aa8_row46_col1" class="data row46 col1" >readingbytes.md</td>
+      <td id="T_d1aa8_row46_col2" class="data row46 col2" >review</td>
+      <td id="T_d1aa8_row46_col3" class="data row46 col3" >graded</td>
+    </tr>
+    <tr>
+      <td id="T_d1aa8_row47_col0" class="data row47 col0" >_review/20</td>
+      <td id="T_d1aa8_row47_col1" class="data row47 col1" >overflow.md</td>
+      <td id="T_d1aa8_row47_col2" class="data row47 col2" >review</td>
+      <td id="T_d1aa8_row47_col3" class="data row47 col3" >graded</td>
+    </tr>
+    <tr>
+      <td id="T_d1aa8_row48_col0" class="data row48 col0" >_review/20</td>
+      <td id="T_d1aa8_row48_col1" class="data row48 col1" >cdouble.md</td>
+      <td id="T_d1aa8_row48_col2" class="data row48 col2" >review</td>
+      <td id="T_d1aa8_row48_col3" class="data row48 col3" >graded</td>
+    </tr>
+    <tr>
+      <td id="T_d1aa8_row49_col0" class="data row49 col0" >_review/20</td>
+      <td id="T_d1aa8_row49_col1" class="data row49 col1" >multiplication.md</td>
+      <td id="T_d1aa8_row49_col2" class="data row49 col2" >review</td>
+      <td id="T_d1aa8_row49_col3" class="data row49 col3" >graded</td>
+    </tr>
+    <tr>
+      <td id="T_d1aa8_row50_col0" class="data row50 col0" >_review/20</td>
+      <td id="T_d1aa8_row50_col1" class="data row50 col1" >threaded.md</td>
+      <td id="T_d1aa8_row50_col2" class="data row50 col2" >review</td>
+      <td id="T_d1aa8_row50_col3" class="data row50 col3" >graded</td>
+    </tr>
+    <tr>
+      <td id="T_d1aa8_row51_col0" class="data row51 col0" >_review/20</td>
+      <td id="T_d1aa8_row51_col1" class="data row51 col1" >frequentide.md</td>
+      <td id="T_d1aa8_row51_col2" class="data row51 col2" >review</td>
+      <td id="T_d1aa8_row51_col3" class="data row51 col3" >graded</td>
+    </tr>
+    <tr>
+      <td id="T_d1aa8_row52_col0" class="data row52 col0" >_review/20</td>
+      <td id="T_d1aa8_row52_col1" class="data row52 col1" >newide.md</td>
+      <td id="T_d1aa8_row52_col2" class="data row52 col2" >review</td>
+      <td id="T_d1aa8_row52_col3" class="data row52 col3" >graded</td>
+    </tr>
+    <tr>
+      <td id="T_d1aa8_row53_col0" class="data row53 col0" >_review/20</td>
+      <td id="T_d1aa8_row53_col1" class="data row53 col1" >checker.sh</td>
+      <td id="T_d1aa8_row53_col2" class="data row53 col2" >review</td>
+      <td id="T_d1aa8_row53_col3" class="data row53 col3" >graded</td>
+    </tr>
+    <tr>
+      <td id="T_d1aa8_row54_col0" class="data row54 col0" >_review/20</td>
+      <td id="T_d1aa8_row54_col1" class="data row54 col1" >terminal.md</td>
+      <td id="T_d1aa8_row54_col2" class="data row54 col2" >review</td>
+      <td id="T_d1aa8_row54_col3" class="data row54 col3" >graded</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
 </section>
 </section>
 
