@@ -27,6 +27,7 @@ jobs:
     - name: get required files
       run: |
         bash files.sh
+        cat _data/review_list.txt
 
     # Build book
     - name: Build the book
