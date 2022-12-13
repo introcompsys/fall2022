@@ -239,6 +239,7 @@ Activities:
 
 ## 2022-12-05
 
+(counts as 2)  
 [related notes](../notes/2022-12-05)
 
 Activities:
@@ -247,8 +248,20 @@ Activities:
 
 ## 2022-12-07
 
+(counts as 2)   
 [related notes](../notes/2022-12-07)
 
 Activities:
 ```{include} ../_review/2022-12-07.md
+```
+
+
+## 2022-12-12
+
+(counts as 3)
+
+[related notes](../notes/2022-12-12)
+
+Activities:
+```{include} ../_review/2022-12-12.md
 ```
