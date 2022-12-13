@@ -215,13 +215,22 @@ Activities:
 
 [related notes](../notes/2022-12-05)
 
-Activities:
+Activities (counts as 2):
 ```{include} ../_practice/2022-12-05.md
 ```
 ## 2022-12-07
 
 [related notes](../notes/2022-12-07)
 
-Activities:
+Activities (counts as 2):
 ```{include} ../_practice/2022-12-07.md
+```
+
+
+## 2022-12-12
+
+[related notes](../notes/2022-12-12)
+
+Activities (counts as 2):
+```{include} ../_practice/2022-12-12.md
 ```
